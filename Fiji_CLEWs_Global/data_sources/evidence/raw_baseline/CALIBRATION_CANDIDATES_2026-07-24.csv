@@ -1,0 +1,15 @@
+System,Metric,Technology_or_crop,Year,Observed,Unit,Source,Applied_in_raw_model
+Land,National land area,Fiji,,18273,km2,Fiji government project documentation,Structural domain only
+Electricity,Installed capacity,Hydropower,2021,133.4,MW,Fiji REI Investment Plan,False
+Electricity,Installed capacity,Oil-fired thermal,2021,182,MW,Fiji REI Investment Plan,False
+Electricity,Installed capacity,Wind,2021,9.8,MW,Fiji REI Investment Plan,False
+Electricity,Installed capacity,Biomass,2021,34,MW,Fiji REI Investment Plan,False
+Electricity,Generation,Hydropower,2021,544,GWh,Fiji REI Investment Plan,False
+Electricity,Generation,Oil-fired thermal,2021,327,GWh,Fiji REI Investment Plan,False
+Electricity,Generation,Wind,2021,0.2,GWh,Fiji REI Investment Plan,False
+Electricity,Generation,Biomass,2021,61,GWh,Fiji REI Investment Plan,False
+Agriculture,Harvested area,Sugar cane,2020,380,km2,FAOSTAT,False
+Agriculture,Harvested area,Coconut,2020,54.2,km2,FAOSTAT,False
+Agriculture,Harvested area,Taro/yam/root proxy,2020,43.46,km2,FAOSTAT,False
+Agriculture,Harvested area,Cassava,2020,35.95,km2,FAOSTAT,False
+Agriculture,Harvested area,Other crops aggregate,2020,116.76,km2,FAOSTAT,False

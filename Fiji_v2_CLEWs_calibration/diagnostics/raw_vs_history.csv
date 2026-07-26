@@ -1,0 +1,14 @@
+System,Metric,Technology_or_crop,Model_technology,Historical_year,Model_year,Observed,Modelled,Unit,Gap_percent,Applied_in_raw_model,Interpretation,Source
+Electricity,Installed capacity,Hydropower,PWRHYDFJIXX01,2021,2021,133.4,209,MW,56.671664,False,Diagnostic only; not fitted,Fiji REI Investment Plan
+Electricity,Installed capacity,Oil-fired thermal,PWROILFJIXX01,2021,2021,182,74,MW,-59.340659,False,Diagnostic only; not fitted,Fiji REI Investment Plan
+Electricity,Installed capacity,Wind,PWRWONFJIXX01,2021,2021,9.8,10,MW,2.040816,False,Diagnostic only; not fitted,Fiji REI Investment Plan
+Electricity,Installed capacity,Biomass,PWRBIOFJIXX01,2021,2021,34,69.7,MW,105.000000,False,Diagnostic only; not fitted,Fiji REI Investment Plan
+Electricity,Generation,Hydropower,PWRHYDFJIXX01,2021,2021,544,625.269558,GWh,14.939257,False,Diagnostic only; not fitted,Fiji REI Investment Plan
+Electricity,Generation,Oil-fired thermal,PWROILFJIXX01,2021,2021,327,0,GWh,-100.000000,False,Diagnostic only; not fitted,Fiji REI Investment Plan
+Electricity,Generation,Wind,PWRWONFJIXX01,2021,2021,0.2,0,GWh,-100.000000,False,Diagnostic only; not fitted,Fiji REI Investment Plan
+Electricity,Generation,Biomass,PWRBIOFJIXX01,2021,2021,61,305.286,GWh,400.468852,False,Diagnostic only; not fitted,Fiji REI Investment Plan
+Agriculture,Harvested area,Sugar cane,LNDSGCHRTOT,2020,2021,380,1569.0909,km2,312.918658,False,Diagnostic only; not fitted,FAOSTAT
+Agriculture,Harvested area,Coconut,LNDCONHRTOT,2020,2021,54.2,44.243878,km2,-18.369229,False,Diagnostic only; not fitted,FAOSTAT
+Agriculture,Harvested area,Taro/yam/root proxy,LNDYAMHRTOT,2020,2021,43.46,59.223846,km2,36.272080,False,Diagnostic only; not fitted,FAOSTAT
+Agriculture,Harvested area,Cassava,LNDCASHRTOT,2020,2021,35.95,73.357143,km2,104.053249,False,Diagnostic only; not fitted,FAOSTAT
+Agriculture,Harvested area,Other crops aggregate,LNDOTHHRTOT,2020,2021,116.76,67.992391,km2,-41.767394,False,Diagnostic only; not fitted,FAOSTAT

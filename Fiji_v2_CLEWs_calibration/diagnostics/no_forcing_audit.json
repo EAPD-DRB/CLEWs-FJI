@@ -1,0 +1,11 @@
+{
+  "model": "Fiji CLEWs Global raw uncalibrated model",
+  "historical_forcing_added": false,
+  "status": "PASS",
+  "checks_passed": 12,
+  "checks_total": 12,
+  "positive_equality_locks": [],
+  "calibration_config_hits": [],
+  "calibration_source_hits": [],
+  "historical_comparison_is_diagnostic_only": true
+}

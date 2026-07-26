@@ -1,0 +1,11 @@
+Scenario: Fiji raw uncalibrated model
+Status: Optimal
+Objective: -240.33220528
+Rows: 79021
+Columns: 68160
+Matrix nonzeros: 539767
+Objective-row nonzeros: 7470
+Solver: CBC 2.10.12
+Generator: GLPK 5.0
+Historical forcing added: No
+Validated: 2026-07-24

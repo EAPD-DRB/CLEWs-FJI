@@ -1,0 +1,30 @@
+{
+    "schema_version": 1,
+    "constraint_id": "CO_fji_reserve_proxy",
+    "constraint_name": "RESERVE_PROXY_RUN_CHECK_IF_DEMAND_OR_MARGIN_CHANGES",
+    "demand_commodity": "ELCFJIXX02",
+    "upstream_tagged_commodity": "ELCFJIXX01",
+    "reserve_margin_by_scenario": {
+        "SC_0": 1.0
+    },
+    "capacity_credit_by_technology": {
+        "PWRBIOFJIXX01": 0.9,
+        "PWRCCGFJIXX00": 0.9,
+        "PWRCCGFJIXX01": 0.9,
+        "PWRCOAFJIXX01": 0.9,
+        "PWRCOGFJIXX01": 0.5,
+        "PWRCSPFJIXX01": 0.3,
+        "PWRGEOFJIXX01": 0.9,
+        "PWRHYDFJIXX01": 0.3,
+        "PWROCGFJIXX00": 0.9,
+        "PWROCGFJIXX01": 0.9,
+        "PWROILFJIXX01": 0.9,
+        "PWROTHFJIXX01": 0.9,
+        "PWRPETFJIXX01": 0.9,
+        "PWRURNFJIXX01": 0.9,
+        "PWRWASFJIXX01": 0.9,
+        "PWRWAVFJIXX01": 0.1,
+        "PWRWOFFJIXX01": 0.1,
+        "PWRWONFJIXX01": 0.1
+    }
+}

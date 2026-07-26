@@ -1,0 +1,6 @@
+year,split,total_generation_mwh,efl_generation_mwh,hydro_mwh,thermal_mwh,wind_mwh,solar_mwh,ipp_mwh,station_auxiliary_mwh,hydro_capacity_mw,thermal_capacity_mw,wind_capacity_mw,biomass_capacity_mw,generation_source_id,generation_locator,capacity_source_id,capacity_locator
+2020,calibration,976372,909278,558173,349970,1136,0,67094,12575,133.4,182,9.8,34,DS-EFL-AR-2024,"printed p. 88, Generation Statistics for the Past Ten (10) Years",DS-FJI-REI-IP,"printed pp. 23-24; Table 3.1"
+2021,calibration,937018,875965,547862,327810,293,0,61053,11498,133.4,182,9.8,34,DS-EFL-AR-2024,"printed p. 88, Generation Statistics for the Past Ten (10) Years",DS-FJI-REI-IP,"printed pp. 23-24; Table 3.1"
+2022,calibration,1081461,1007991,598096,409801,93,0,73471,12330,133.4,182,9.8,34,DS-EFL-AR-2024,"printed p. 88, Generation Statistics for the Past Ten (10) Years",DS-FJI-REI-IP,"printed pp. 23-24; Table 3.1"
+2023,validation,1120982,1044867,539258,505547,62,0,76115,12319,133.4,182,9.8,34,DS-EFL-AR-2024,"printed p. 88, Generation Statistics for the Past Ten (10) Years",DS-FJI-REI-IP,"printed pp. 23-24; Table 3.1"
+2024,validation,1218906,1155106,630506,523752,718,131,63799,12179,133.4,182,9.8,34,DS-EFL-AR-2024,"printed p. 88, Generation Statistics for the Past Ten (10) Years",DS-FJI-REI-IP,"printed pp. 23-24; Table 3.1"

@@ -1,0 +1,13 @@
+Category,Check,Status,Finding,Evidence
+Solver,Raw model has an optimal solution,PASS,Optimal - objective value -240.33220528,model/data.sol; model/solver_status.txt
+Solver,Solver metadata declares no historical forcing,PASS,Historical forcing added: No,model/solver_status.txt
+Structure,Model horizon is continuous from 2021 through 2050,PASS,2021-2050 (30 years),model/inputs/YEAR.csv
+Results,Required raw result tables are present,PASS,All present,model/results
+Integrity,OSeMOSYS inputs have unique parameter indices,PASS,0 duplicate rows across 33179 data rows,68 CSV files in model/inputs
+No forcing,No positive lower-equals-upper activity or capacity locks,PASS,0 positive equality locks,Four activity/capacity lower-upper parameter pairs
+No forcing,Calibration hooks are absent from configuration and generator source,PASS,No calibration hooks,config/config.yaml; overrides/config.yaml; overrides/workflow/scripts/clewsy.py
+Country adaptation,Fiji land-cell area is preserved,PASS,18273.000 km2,geospatial/FJI_land_cells_with_attributes.csv
+Provenance,Required current documentation and provenance ledgers are present,PASS,All present,documentation; data_sources; config/upstream_versions.json; active case README
+Provenance,"Source, assumption, calculation, and map identifiers are unique",PASS,30 sources; 16 assumptions; 7 calculations; 12 map rows,data_sources/
+Provenance,All ledger cross-references resolve,PASS,All references resolve,data_sources/ASSUMPTIONS.csv; CALCULATIONS.csv; MODEL_DATA_MAP.csv
+Reproducibility,Upstream revisions and immutable pre-tracking backups are retained,PASS,4 pinned commits; 2 baseline archives,config/upstream_versions.json; backups/

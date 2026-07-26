@@ -1,0 +1,144 @@
+{
+  "upstream_objective": -240.33220528,
+  "muiogo_objective": -2267.3628049,
+  "objective_difference": -2027.03059962,
+  "objective_ratio": 9.434286188396598,
+  "overlapping_result_files": 15,
+  "files": [
+    {
+      "file": "AccumulatedNewCapacity.csv",
+      "upstream_nonzero_rows": 198,
+      "matching_rows": 147,
+      "match_fraction": 0.7424242424242424,
+      "muiogo_extra_nonzero_rows": 2489,
+      "mean_absolute_error": 0.02532860156921718,
+      "max_absolute_error": 0.459625236
+    },
+    {
+      "file": "AnnualFixedOperatingCost.csv",
+      "upstream_nonzero_rows": 134,
+      "matching_rows": 59,
+      "match_fraction": 0.44029850746268656,
+      "muiogo_extra_nonzero_rows": 2,
+      "mean_absolute_error": 1.5109437953509697,
+      "max_absolute_error": 6.53654085592
+    },
+    {
+      "file": "AnnualTechnologyEmission.csv",
+      "upstream_nonzero_rows": 38,
+      "matching_rows": 0,
+      "match_fraction": 0.0,
+      "muiogo_extra_nonzero_rows": 0,
+      "mean_absolute_error": 0.2212958224396562,
+      "max_absolute_error": 0.5539266610297
+    },
+    {
+      "file": "AnnualTechnologyEmissionByMode.csv",
+      "upstream_nonzero_rows": 38,
+      "matching_rows": 0,
+      "match_fraction": 0.0,
+      "muiogo_extra_nonzero_rows": 0,
+      "mean_absolute_error": 0.2212958224396562,
+      "max_absolute_error": 0.5539266610297
+    },
+    {
+      "file": "AnnualVariableOperatingCost.csv",
+      "upstream_nonzero_rows": 153,
+      "matching_rows": 87,
+      "match_fraction": 0.5686274509803921,
+      "muiogo_extra_nonzero_rows": 119,
+      "mean_absolute_error": 24.723211459142654,
+      "max_absolute_error": 146.1116476237528
+    },
+    {
+      "file": "CapitalInvestment.csv",
+      "upstream_nonzero_rows": 159,
+      "matching_rows": 125,
+      "match_fraction": 0.7861635220125787,
+      "muiogo_extra_nonzero_rows": 42,
+      "mean_absolute_error": 2.3659127494027676,
+      "max_absolute_error": 68.08278
+    },
+    {
+      "file": "Demand.csv",
+      "upstream_nonzero_rows": 120,
+      "matching_rows": 120,
+      "match_fraction": 1.0,
+      "muiogo_extra_nonzero_rows": 0,
+      "mean_absolute_error": 5.088522196198634e-17,
+      "max_absolute_error": 4.440892098500626e-16
+    },
+    {
+      "file": "NewCapacity.csv",
+      "upstream_nonzero_rows": 542,
+      "matching_rows": 134,
+      "match_fraction": 0.24723247232472326,
+      "muiogo_extra_nonzero_rows": 2107,
+      "mean_absolute_error": 706619.1067160522,
+      "max_absolute_error": 999998.9321976
+    },
+    {
+      "file": "RateOfActivity.csv",
+      "upstream_nonzero_rows": 2550,
+      "matching_rows": 1442,
+      "match_fraction": 0.5654901960784313,
+      "muiogo_extra_nonzero_rows": 228,
+      "mean_absolute_error": 6.839485841991386,
+      "max_absolute_error": 167.63889
+    },
+    {
+      "file": "RateOfProductionByTechnologyByMode.csv",
+      "upstream_nonzero_rows": 4624,
+      "matching_rows": 3121,
+      "match_fraction": 0.6749567474048442,
+      "muiogo_extra_nonzero_rows": 469,
+      "mean_absolute_error": 4.361864679349308,
+      "max_absolute_error": 167.63889
+    },
+    {
+      "file": "RateOfUseByTechnologyByMode.csv",
+      "upstream_nonzero_rows": 2612,
+      "matching_rows": 1853,
+      "match_fraction": 0.7094180704441041,
+      "muiogo_extra_nonzero_rows": 293,
+      "mean_absolute_error": 3.398546134735859,
+      "max_absolute_error": 87.839855
+    },
+    {
+      "file": "SalvageValue.csv",
+      "upstream_nonzero_rows": 79,
+      "matching_rows": 45,
+      "match_fraction": 0.569620253164557,
+      "muiogo_extra_nonzero_rows": 42,
+      "mean_absolute_error": 3.699895572321645,
+      "max_absolute_error": 36.788133
+    },
+    {
+      "file": "TotalAnnualTechnologyActivityByMode.csv",
+      "upstream_nonzero_rows": 815,
+      "matching_rows": 536,
+      "match_fraction": 0.6576687116564417,
+      "muiogo_extra_nonzero_rows": 10,
+      "mean_absolute_error": 0.5453812001107965,
+      "max_absolute_error": 11.857787
+    },
+    {
+      "file": "TotalCapacityAnnual.csv",
+      "upstream_nonzero_rows": 667,
+      "matching_rows": 206,
+      "match_fraction": 0.30884557721139433,
+      "muiogo_extra_nonzero_rows": 2079,
+      "mean_absolute_error": 574194.2459293014,
+      "max_absolute_error": 999998.9321976
+    },
+    {
+      "file": "TotalTechnologyModelPeriodActivity.csv",
+      "upstream_nonzero_rows": 28,
+      "matching_rows": 12,
+      "match_fraction": 0.42857142857142855,
+      "muiogo_extra_nonzero_rows": 0,
+      "mean_absolute_error": 13.70913799973214,
+      "max_absolute_error": 96.057799419
+    }
+  ]
+}

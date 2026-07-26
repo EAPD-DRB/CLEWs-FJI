@@ -1,0 +1,11 @@
+{
+  "model": "Fiji CLEWs Global raw uncalibrated model",
+  "generated": "2026-07-25",
+  "status": "PASS",
+  "checks_passed": 12,
+  "checks_total": 12,
+  "numerical_model_inputs_changed_by_tracking_reorganization": false,
+  "historical_forcing_added": false,
+  "provenance_structure": "Philippines v12 convention",
+  "technical_report": "diagnostics/technical_qa.csv"
+}

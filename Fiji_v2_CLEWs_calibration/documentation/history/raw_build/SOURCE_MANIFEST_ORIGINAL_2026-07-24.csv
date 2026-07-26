@@ -1,0 +1,12 @@
+Source,Publisher,URL,Use in model,Reference period,Accessed
+CLEWs Global project page,Simon Fraser University,https://www.sfu.ca/fas/research/fas-research-labs/delta-e/projects/clews---global-model.html,Framework description,Current,2026-07-24
+CLEWs Global source,DeltaE,https://github.com/DeltaE/CLEWs_Global,Workflow and default model data,Commit 8df78c66be104e446f84a7dbb0df1c0a4fda4080,2026-07-24
+Fiji Renewable Energy Integration Investment Plan,Government of Fiji,https://mecc.gov.fj/wp-content/uploads/2025/12/Fiji_CIF_REI_IP_12234.pdf,"Installed power capacity, generation, and national policy context",2021 and policy targets,2026-07-24
+Fiji Electricity 2024,Fiji Bureau of Statistics,https://www.statsfiji.gov.fj/electricity-2024/,Official electricity-report cross-check,2024,2026-07-24
+Fiji National Energy Policy 2023–2030,Government of Fiji,https://www.mims.gov.fj/wp-content/uploads/2025/05/National-Energy-Policy-2023-2030.pdf,Policy context,2023–2030,2026-07-24
+Revised/updated NDC of Fiji,International Energy Agency,https://www.iea.org/policies/11838-revisedupdated-ndc-of-fiji,2030 NDC scenario targets,2030,2026-07-24
+Fiji official project documentation,Government of Fiji,https://fiji.gov.fj/getattachment/2e544cd4-06c7-45c8-b773-8dcf3e06249c/Fiji-Northern-Connectivity-ESMP.aspx,Structural model-domain area normalization,Current,2026-07-24
+GADM 4.1 Fiji boundaries,GADM/UC Davis,https://geodata.ucdavis.edu/gadm/gadm4.1/shp/gadm41_FJI_shp.zip,National boundary and land-cell generation,4.1,2026-07-24
+FAOSTAT Crops and livestock products,Food and Agriculture Organization,https://www.fao.org/faostat/en/#data/QCL,Harvested area and crop production,2020,2026-07-24
+Global Agro-Ecological Zones v4,Food and Agriculture Organization,https://gaez.fao.org/,Crop yield and water raster inputs,RCP4.5,2026-07-24
+OSeMOSYS Global,OSeMOSYS,https://github.com/OSeMOSYS/osemosys_global,Energy system structure and global defaults,Commit 036fdd0,2026-07-24

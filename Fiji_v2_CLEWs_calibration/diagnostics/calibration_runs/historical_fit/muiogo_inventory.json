@@ -1,0 +1,7420 @@
+{
+  "schema_version": 1,
+  "model_path": "/Users/sato/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2",
+  "metadata": {
+    "case_name": "Fiji_v2",
+    "description": "Fiji v2 annual electricity backcast: 2020-2022 calibration; 2023-2024 held-out validation. Land, water, and agriculture remain uncalibrated.",
+    "version": "5.4",
+    "date": "2026-07-25"
+  },
+  "dimensions": {
+    "years": [
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025",
+      "2026",
+      "2027",
+      "2028",
+      "2029",
+      "2030",
+      "2031",
+      "2032",
+      "2033",
+      "2034",
+      "2035",
+      "2036",
+      "2037",
+      "2038",
+      "2039",
+      "2040",
+      "2041",
+      "2042",
+      "2043",
+      "2044",
+      "2045",
+      "2046",
+      "2047",
+      "2048",
+      "2049",
+      "2050"
+    ],
+    "technologies": 132,
+    "commodities": 107,
+    "emissions": 1,
+    "scenarios": 1,
+    "time_slices": 4,
+    "technology_groups": 6,
+    "parameters_found": 50
+  },
+  "domain_signals": {
+    "energy": true,
+    "land": true,
+    "water": true,
+    "climate": true,
+    "nexus": true
+  },
+  "reference_counts": {
+    "technology": 132,
+    "commodity": 107,
+    "emission": 1,
+    "scenario": 1
+  },
+  "saved_results": [
+    {
+      "label": "Historical_Backcast",
+      "first_line": "Optimal - objective value -1387.57013590",
+      "appears_optimal": true
+    }
+  ],
+  "potential_history_fixed_bounds": [
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_0"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_8i6dh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_l13pc"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_ljqfh"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_q7j15"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_sk1uz"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual activity",
+      "lower_parameter": "TAL",
+      "upper_parameter": "TAU",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_ukomp"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_0rdfg"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_0rdfg"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_0rdfg"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_0rdfg"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_0rdfg"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_3334w"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_3334w"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_3334w"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_3334w"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_3334w"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_3fjcq"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_3fjcq"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_3fjcq"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_3fjcq"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_3fjcq"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_4ghu2"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_4q8wr"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_7huzy"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_7huzy"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_7huzy"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_7huzy"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_7huzy"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_d1q76"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_gxxm6"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_i7pxa"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_kpbm5"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_kpbm5"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_kpbm5"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_kpbm5"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_kpbm5"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_l7dyv"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_me1ls"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_o4mcu"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_ogtdn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_q9073"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_r3bht"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_sfd2k"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_sfd2k"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_sfd2k"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_sfd2k"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_sfd2k"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_tgzfn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_tgzfn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_tgzfn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_tgzfn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_tgzfn"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_vyduf"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_vyduf"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_vyduf"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_vyduf"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_vyduf"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_w665d"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_w665d"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_w665d"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_w665d"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_w665d"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_y9n4t"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_y9n4t"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_y9n4t"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_y9n4t"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_y9n4t"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2020",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2021",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2022",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2023",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2024",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2025",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2026",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2027",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2028",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2029",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2030",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2031",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2032",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2033",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2034",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2035",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2036",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2037",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2038",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2039",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2040",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2041",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2042",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2043",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2044",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2045",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2046",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2047",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2048",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2049",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    },
+    {
+      "kind": "annual capacity investment",
+      "lower_parameter": "TAMinCI",
+      "upper_parameter": "TAMaxCI",
+      "scenario": "SC_0",
+      "year": "2050",
+      "identity": {
+        "TechId": "TEC_zhht9"
+      },
+      "value": 0.0
+    }
+  ],
+  "findings": [
+    {
+      "level": "fail",
+      "code": "placeholder_commodity_descriptions",
+      "message": "107/107 commodity descriptions are blank or placeholders",
+      "evidence": [
+        "COM_0",
+        "COM_kwsea",
+        "COM_7m5wn",
+        "COM_kzo5g",
+        "COM_v1zdx",
+        "COM_xpkia",
+        "COM_a3p24",
+        "COM_3drm3",
+        "COM_xlqus",
+        "COM_mga07",
+        "COM_lqioj",
+        "COM_vuyjc",
+        "COM_b68ng",
+        "COM_agjuu",
+        "COM_0f9pp",
+        "COM_zpa8h",
+        "COM_vltgg",
+        "COM_joqwg",
+        "COM_mkmpm",
+        "COM_lpui8",
+        "COM_h6kiq",
+        "COM_76sum",
+        "COM_rhr1u",
+        "COM_ext3r",
+        "COM_ethcq"
+      ]
+    },
+    {
+      "level": "warn",
+      "code": "exact_bound_pairs",
+      "message": "639 exact lower/upper bound matches may history-fix outcomes",
+      "evidence": [
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2020",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2021",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2022",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2023",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2024",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2025",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2026",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2027",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2028",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2029",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2030",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2031",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2032",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2033",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2034",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2035",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2036",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2037",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2038",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2039",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2040",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2041",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2042",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2043",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        },
+        {
+          "kind": "annual activity",
+          "lower_parameter": "TAL",
+          "upper_parameter": "TAU",
+          "scenario": "SC_0",
+          "year": "2044",
+          "identity": {
+            "TechId": "TEC_0"
+          },
+          "value": 0.0
+        }
+      ]
+    }
+  ],
+  "screening_warning": "Heuristic inventory only. Spot-check domain detection, saved-result freshness, and every exact-bound finding before using them in a calibration grade."
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "model": "Fiji_v2",
+  "run": "Historical_Backcast",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Historical_Backcast solve is optimal",
+      "status": "PASS",
+      "finding": "Optimal - objective value -1387.57013590",
+      "evidence": "WebAPP/DataStorage/Fiji_v2/res/Historical_Backcast/results.txt"
+    },
+    {
+      "check": "CSV and MUIO horizons are identical and continuous",
+      "status": "PASS",
+      "finding": "2020-2050, 31 years",
+      "evidence": "model/inputs/YEAR.csv; WebAPP/DataStorage/Fiji_v2/genData.json"
+    },
+    {
+      "check": "Malformed land-code electricity branch is absent",
+      "status": "PASS",
+      "finding": "PWRTRNA01, ELCFJI01, and ELCFJI02 removed",
+      "evidence": "model/inputs/*.csv; WebAPP/DataStorage/Fiji_v2/genData.json"
+    },
+    {
+      "check": "Valid grid-node electricity chain remains connected",
+      "status": "PASS",
+      "finding": "generation -> ELCFJIXX01 -> PWRTRNFJIXX -> ELCFJIXX02 -> demand",
+      "evidence": "InputActivityRatio.csv; OutputActivityRatio.csv; SpecifiedAnnualDemand.csv"
+    },
+    {
+      "check": "OSeMOSYS input indices are unique",
+      "status": "PASS",
+      "finding": "0 duplicates across 34187 rows",
+      "evidence": "Fiji_v2_CLEWs_calibration/model/inputs/*.csv"
+    },
+    {
+      "check": "No positive lower-equals-upper history locks",
+      "status": "PASS",
+      "finding": "0 positive exact locks",
+      "evidence": "Four activity/capacity lower-upper parameter pairs"
+    },
+    {
+      "check": "Retained primary-source files match registered hashes",
+      "status": "PASS",
+      "finding": "All source hashes match",
+      "evidence": "data_sources/evidence/calibration/SOURCE_EXTRACTS.md"
+    },
+    {
+      "check": "Build manifest pins evidence and the calibration/validation split",
+      "status": "PASS",
+      "finding": "evidence 88fdb0216ab5448029eeca4ab98e2af05f3c5b700b6c59569bc2b7fcfe176d75; calibration [2020, 2021, 2022]; validation [2023, 2024]",
+      "evidence": "diagnostics/calibration_runs/build_manifest.json"
+    },
+    {
+      "check": "Held-out material generation fit meets the declared annual threshold",
+      "status": "PASS",
+      "finding": "2023-2024 MAPE 9.939%",
+      "evidence": "diagnostics/calibration_runs/historical_fit/summary.json"
+    },
+    {
+      "check": "Held-out renewable-share fit meets the declared annual threshold",
+      "status": "PASS",
+      "finding": "2023-2024 renewable-share MAE 5.133 percentage points",
+      "evidence": "diagnostics/calibration_runs/historical_fit/summary.json"
+    },
+    {
+      "check": "No held-out material annual generation outcome misses by more than 20%",
+      "status": "PASS",
+      "finding": "Worst: 2024 thermal_generation at 19.374%",
+      "evidence": "diagnostics/calibration_runs/historical_fit/history_comparisons.csv"
+    }
+  ],
+  "failed_checks": 0,
+  "scope": "Technical and annual national grid-supply energy calibration only; not a validation of the full land-water-agriculture nexus."
+}

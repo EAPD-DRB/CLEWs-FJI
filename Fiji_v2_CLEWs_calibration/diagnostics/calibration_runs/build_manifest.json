@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "build_date": "2026-07-26",
+  "raw_package": "Fiji_CLEWs_Global",
+  "raw_case": "WebAPP/DataStorage/Fiji_CLEWs_Global",
+  "target_package": "Fiji_v2_CLEWs_calibration",
+  "target_case": "WebAPP/DataStorage/Fiji_v2",
+  "calibration_years": [
+    2020,
+    2021,
+    2022
+  ],
+  "validation_years": [
+    2023,
+    2024
+  ],
+  "evidence_file": "Fiji_v2_CLEWs_calibration/data_sources/evidence/calibration/historical_electricity_2020_2024.csv",
+  "evidence_sha256": "88fdb0216ab5448029eeca4ab98e2af05f3c5b700b6c59569bc2b7fcfe176d75",
+  "parameters": {
+    "biomass_availability_factor": 0.22564464141821108,
+    "wind_availability_factor_2020_2024": 0.005909669803994657,
+    "future_demand_scale_from_raw": 1.2257155307262568,
+    "observed_capacity_gw": {
+      "biomass": 0.034,
+      "hydro": 0.1334,
+      "oil": 0.182,
+      "wind": 0.0098
+    },
+    "historical_supply_requirement_pj": {
+      "2020": 3.5149391999999997,
+      "2021": 3.3732648,
+      "2022": 3.8932596,
+      "2023": 4.0355352,
+      "2024": 4.3880615999999995
+    }
+  },
+  "implementation": {
+    "csv_files_extended_to_2020": 40,
+    "removed_upstream_electricity_branch_csv_rows": {
+      "CapacityToActivityUnit.csv": 1,
+      "FUEL.csv": 2,
+      "InputActivityRatio.csv": 31,
+      "OutputActivityRatio.csv": 31,
+      "TECHNOLOGY.csv": 1
+    },
+    "historical_power_investment_cells_set_to_zero": 60,
+    "technology_ids": {
+      "PWRBIOFJIXX01": "TEC_w665d",
+      "PWRHYDFJIXX01": "TEC_3fjcq",
+      "PWROILFJIXX01": "TEC_7huzy",
+      "PWRWONFJIXX01": "TEC_0rdfg"
+    },
+    "demand_commodity_id": "COM_3drm3",
+    "power_technologies_blocked_2020_2024": 21,
+    "removed_upstream_electricity_branch": {
+      "technologies": [
+        "PWRTRNA01"
+      ],
+      "fuels": [
+        "ELCFJI01",
+        "ELCFJI02"
+      ],
+      "muiogo_ids": [
+        "COM_bd17e",
+        "COM_lljxb",
+        "TEC_kpbm5"
+      ],
+      "json_references_removed": {
+        "RYTCM.json": 52,
+        "genData.json": 3,
+        "RYC.json": 4,
+        "RYCTs.json": 8,
+        "RT.json": 5,
+        "RYTTs.json": 4,
+        "RYTM.json": 130,
+        "RYT.json": 11
+      }
+    }
+  },
+  "claim_boundary": "Annual national grid-supply mix only. Total supply and installed fleet are exogenous. No land, water, agriculture, hourly dispatch, reliability, network, or reservoir calibration claim."
+}

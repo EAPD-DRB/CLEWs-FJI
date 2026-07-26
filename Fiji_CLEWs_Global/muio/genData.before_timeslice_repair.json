@@ -1,0 +1,3382 @@
+{
+    "osy-version": "5.4",
+    "osy-casename": "Fiji_CLEWs_Global",
+    "osy-desc": "Raw, uncalibrated Fiji CLEWs Global full-nexus model.",
+    "osy-date": "2026-07-25",
+    "osy-currency": "USD",
+    "osy-mo": "26",
+    "osy-tech": [
+        {
+            "TechId": "TEC_0",
+            "Tech": "MINCOAFJI",
+            "Desc": "MINCOAFJI (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_kwsea"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_d3uwl",
+            "Tech": "MINCOAINT",
+            "Desc": "MINCOAINT (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_7m5wn"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_sk1uz",
+            "Tech": "MINCOGFJI",
+            "Desc": "MINCOGFJI (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_kzo5g"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_ye752",
+            "Tech": "MINCOGINT",
+            "Desc": "MINCOGINT (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_v1zdx"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_ljqfh",
+            "Tech": "MINGASFJI",
+            "Desc": "MINGASFJI (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_xlqus"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_slcwp",
+            "Tech": "MINGASINT",
+            "Desc": "MINGASINT (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_mga07"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_l13pc",
+            "Tech": "MINOILFJI",
+            "Desc": "MINOILFJI (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_b68ng"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_9e83x",
+            "Tech": "MINOILINT",
+            "Desc": "MINOILINT (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_agjuu"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_q7j15",
+            "Tech": "MINOTHFJI",
+            "Desc": "MINOTHFJI (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_0f9pp"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_n7186",
+            "Tech": "MINOTHINT",
+            "Desc": "MINOTHINT (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_zpa8h"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_ukomp",
+            "Tech": "MINPETFJI",
+            "Desc": "MINPETFJI (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_vltgg"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_tpg5r",
+            "Tech": "MINPETINT",
+            "Desc": "MINPETINT (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_joqwg"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_8i6dh",
+            "Tech": "MINURNFJI",
+            "Desc": "MINURNFJI (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_lpui8"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_hzbbd",
+            "Tech": "MINURNINT",
+            "Desc": "MINURNINT (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_h6kiq"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_tgzfn",
+            "Tech": "PWRBCKFJIXX",
+            "Desc": "PWRBCKFJIXX (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_w665d",
+            "Tech": "PWRBIOFJIXX01",
+            "Desc": "PWRBIOFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_0"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_o4mcu",
+            "Tech": "PWRCCGFJIXX00",
+            "Desc": "PWRCCGFJIXX00 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_xlqus",
+                "COM_mga07"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [
+                "EMI_0"
+            ],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_me1ls",
+            "Tech": "PWRCCGFJIXX01",
+            "Desc": "PWRCCGFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_xlqus",
+                "COM_mga07"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [
+                "EMI_0"
+            ],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_vyduf",
+            "Tech": "PWRCCSFJIXX01",
+            "Desc": "PWRCCSFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_kwsea",
+                "COM_7m5wn"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [
+                "EMI_0"
+            ],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_ogtdn",
+            "Tech": "PWRCOAFJIXX01",
+            "Desc": "PWRCOAFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_kwsea",
+                "COM_7m5wn"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [
+                "EMI_0"
+            ],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_i7pxa",
+            "Tech": "PWRCOGFJIXX01",
+            "Desc": "PWRCOGFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_kzo5g",
+                "COM_v1zdx"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [
+                "EMI_0"
+            ],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_q9073",
+            "Tech": "PWRCSPFJIXX01",
+            "Desc": "PWRCSPFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_xpkia"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_gxxm6",
+            "Tech": "PWRGEOFJIXX01",
+            "Desc": "PWRGEOFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_lqioj"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_3fjcq",
+            "Tech": "PWRHYDFJIXX01",
+            "Desc": "PWRHYDFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_vuyjc"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_4q8wr",
+            "Tech": "PWROCGFJIXX00",
+            "Desc": "PWROCGFJIXX00 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_xlqus",
+                "COM_mga07"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [
+                "EMI_0"
+            ],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_zhht9",
+            "Tech": "PWROCGFJIXX01",
+            "Desc": "PWROCGFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_xlqus",
+                "COM_mga07"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [
+                "EMI_0"
+            ],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_7huzy",
+            "Tech": "PWROILFJIXX01",
+            "Desc": "PWROILFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_b68ng",
+                "COM_agjuu"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [
+                "EMI_0"
+            ],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_r3bht",
+            "Tech": "PWROTHFJIXX01",
+            "Desc": "PWROTHFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_0f9pp",
+                "COM_zpa8h"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [
+                "EMI_0"
+            ],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_3334w",
+            "Tech": "PWRPETFJIXX01",
+            "Desc": "PWRPETFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_vltgg",
+                "COM_joqwg"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [
+                "EMI_0"
+            ],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_y9n4t",
+            "Tech": "PWRSPVFJIXX01",
+            "Desc": "PWRSPVFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_mkmpm"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_5ohy3",
+            "Tech": "PWRTRNFJIXX",
+            "Desc": "PWRTRNFJIXX (energy networks).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_a3p24"
+            ],
+            "OAR": [
+                "COM_3drm3"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_xla13"
+            ]
+        },
+        {
+            "TechId": "TEC_4ghu2",
+            "Tech": "PWRURNFJIXX01",
+            "Desc": "PWRURNFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_lpui8",
+                "COM_h6kiq"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_sfd2k",
+            "Tech": "PWRWASFJIXX01",
+            "Desc": "PWRWASFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_76sum"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [
+                "EMI_0"
+            ],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_l7dyv",
+            "Tech": "PWRWAVFJIXX01",
+            "Desc": "PWRWAVFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_rhr1u"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_d1q76",
+            "Tech": "PWRWOFFJIXX01",
+            "Desc": "PWRWOFFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_ext3r"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_0rdfg",
+            "Tech": "PWRWONFJIXX01",
+            "Desc": "PWRWONFJIXX01 (power generation).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_ethcq"
+            ],
+            "OAR": [
+                "COM_a3p24"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_0"
+            ]
+        },
+        {
+            "TechId": "TEC_224sk",
+            "Tech": "RNWBIOFJIXX",
+            "Desc": "RNWBIOFJIXX (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_0"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_2gzsm",
+            "Tech": "RNWCSPFJIXX",
+            "Desc": "RNWCSPFJIXX (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_xpkia"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_gogxh",
+            "Tech": "RNWGEOFJIXX",
+            "Desc": "RNWGEOFJIXX (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_lqioj"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_lehmx",
+            "Tech": "RNWHYDFJIXX",
+            "Desc": "RNWHYDFJIXX (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_vuyjc"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_2b4rh",
+            "Tech": "RNWSPVFJIXX",
+            "Desc": "RNWSPVFJIXX (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_mkmpm"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_q80fi",
+            "Tech": "RNWWASFJIXX",
+            "Desc": "RNWWASFJIXX (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_76sum"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_6aejt",
+            "Tech": "RNWWAVFJIXX",
+            "Desc": "RNWWAVFJIXX (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_rhr1u"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_om9kt",
+            "Tech": "RNWWOFFJIXX",
+            "Desc": "RNWWOFFJIXX (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_ext3r"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_vvtoa",
+            "Tech": "RNWWONFJIXX",
+            "Desc": "RNWWONFJIXX (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_ethcq"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_61k6i",
+            "Tech": "DEMAGRDSL",
+            "Desc": "DEMAGRDSL (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_eev5t"
+            ],
+            "OAR": [
+                "COM_ffefe"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_tyhoh",
+            "Tech": "DEMAGRELCFJIXX02",
+            "Desc": "DEMAGRELCFJIXX02 (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_3drm3"
+            ],
+            "OAR": [
+                "COM_9xfjn"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_ouocg",
+            "Tech": "DEMCOMKER",
+            "Desc": "DEMCOMKER (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_5jlc9"
+            ],
+            "OAR": [
+                "COM_w9ztj"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_5hsli",
+            "Tech": "DEMCOMDSL",
+            "Desc": "DEMCOMDSL (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_eev5t"
+            ],
+            "OAR": [
+                "COM_pvvjs"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_3tz6f",
+            "Tech": "DEMCOMLPG",
+            "Desc": "DEMCOMLPG (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_eb7ry"
+            ],
+            "OAR": [
+                "COM_4aji7"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_rcx6k",
+            "Tech": "DEMCOMBIO",
+            "Desc": "DEMCOMBIO (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_iiwdd"
+            ],
+            "OAR": [
+                "COM_vd464"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_mz98x",
+            "Tech": "DEMCOMNGS",
+            "Desc": "DEMCOMNGS (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_m0d5g"
+            ],
+            "OAR": [
+                "COM_jmaab"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_u2tl0",
+            "Tech": "DEMCOMELCFJIXX02",
+            "Desc": "DEMCOMELCFJIXX02 (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_3drm3"
+            ],
+            "OAR": [
+                "COM_dhzoy"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_3bfrp",
+            "Tech": "DEMINDCOA",
+            "Desc": "DEMINDCOA (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_s6dat"
+            ],
+            "OAR": [
+                "COM_ksawb"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_f1i05",
+            "Tech": "DEMINDLPG",
+            "Desc": "DEMINDLPG (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_eb7ry"
+            ],
+            "OAR": [
+                "COM_p5gx7"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_z1csv",
+            "Tech": "DEMINDKER",
+            "Desc": "DEMINDKER (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_5jlc9"
+            ],
+            "OAR": [
+                "COM_moowh"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_8jqbw",
+            "Tech": "DEMINDDSL",
+            "Desc": "DEMINDDSL (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_eev5t"
+            ],
+            "OAR": [
+                "COM_wi8wz"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_llff7",
+            "Tech": "DEMINDHFO",
+            "Desc": "DEMINDHFO (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_x6igb"
+            ],
+            "OAR": [
+                "COM_oys29"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_dvguv",
+            "Tech": "DEMINDOHC",
+            "Desc": "DEMINDOHC (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_acvja"
+            ],
+            "OAR": [
+                "COM_33yz4"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_gix3n",
+            "Tech": "DEMINDBIO",
+            "Desc": "DEMINDBIO (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_iiwdd"
+            ],
+            "OAR": [
+                "COM_5rm8g"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_3u3uo",
+            "Tech": "DEMINDNGS",
+            "Desc": "DEMINDNGS (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_m0d5g"
+            ],
+            "OAR": [
+                "COM_kj0ed"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_lurrn",
+            "Tech": "DEMINDELCFJIXX02",
+            "Desc": "DEMINDELCFJIXX02 (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_3drm3"
+            ],
+            "OAR": [
+                "COM_9ek33"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_o3l23",
+            "Tech": "DEMRESLPG",
+            "Desc": "DEMRESLPG (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_eb7ry"
+            ],
+            "OAR": [
+                "COM_ctrss"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_p274q",
+            "Tech": "DEMRESKER",
+            "Desc": "DEMRESKER (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_5jlc9"
+            ],
+            "OAR": [
+                "COM_r783x"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_mjx07",
+            "Tech": "DEMRESBIO",
+            "Desc": "DEMRESBIO (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_iiwdd"
+            ],
+            "OAR": [
+                "COM_vqli5"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_ir7rg",
+            "Tech": "DEMRESNGS",
+            "Desc": "DEMRESNGS (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_m0d5g"
+            ],
+            "OAR": [
+                "COM_a4rza"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_y7mqp",
+            "Tech": "DEMRESELCFJIXX02",
+            "Desc": "DEMRESELCFJIXX02 (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_3drm3"
+            ],
+            "OAR": [
+                "COM_8hyud"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_hkde1",
+            "Tech": "DEMTRAGSL",
+            "Desc": "DEMTRAGSL (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_ccvwm"
+            ],
+            "OAR": [
+                "COM_1sea7"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_idrbt",
+            "Tech": "DEMTRAKER",
+            "Desc": "DEMTRAKER (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_5jlc9"
+            ],
+            "OAR": [
+                "COM_bhge7"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_o8w47",
+            "Tech": "DEMTRADSL",
+            "Desc": "DEMTRADSL (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_eev5t"
+            ],
+            "OAR": [
+                "COM_rbmum"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_azkvi",
+            "Tech": "DEMTRAHFO",
+            "Desc": "DEMTRAHFO (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_x6igb"
+            ],
+            "OAR": [
+                "COM_3epvf"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_chys6",
+            "Tech": "DEMTRANGS",
+            "Desc": "DEMTRANGS (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_m0d5g"
+            ],
+            "OAR": [
+                "COM_ojz9i"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_5y9wn",
+            "Tech": "DEMTRAELCFJIXX02",
+            "Desc": "DEMTRAELCFJIXX02 (energy demand).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_3drm3"
+            ],
+            "OAR": [
+                "COM_sbabn"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_mxz3o"
+            ]
+        },
+        {
+            "TechId": "TEC_08xfu",
+            "Tech": "IMPCOA",
+            "Desc": "IMPCOA (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_s6dat"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_l2igr",
+            "Tech": "IMPCRU",
+            "Desc": "IMPCRU (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_f4por"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_0uf1m",
+            "Tech": "IMPLPG",
+            "Desc": "IMPLPG (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_eb7ry"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_k4kjz",
+            "Tech": "IMPGSL",
+            "Desc": "IMPGSL (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_ccvwm"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_o4ngu",
+            "Tech": "IMPKER",
+            "Desc": "IMPKER (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_5jlc9"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_dxw4w",
+            "Tech": "IMPDSL",
+            "Desc": "IMPDSL (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_eev5t"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_f53th",
+            "Tech": "IMPHFO",
+            "Desc": "IMPHFO (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_x6igb"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_uwhll",
+            "Tech": "MINCOA",
+            "Desc": "MINCOA (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_s6dat"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_ty12e",
+            "Tech": "MINNGS",
+            "Desc": "MINNGS (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_m0d5g"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_ohke2",
+            "Tech": "MINCRU",
+            "Desc": "MINCRU (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_f4por"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_f4v6v",
+            "Tech": "RNWWND",
+            "Desc": "RNWWND (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_b3uy4"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_3h4gr",
+            "Tech": "RNWHYD",
+            "Desc": "RNWHYD (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_sxifc"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_jmpkt",
+            "Tech": "RNWBIO",
+            "Desc": "RNWBIO (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_iiwdd"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_45itu",
+            "Tech": "RNWSOL",
+            "Desc": "RNWSOL (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_k9xua"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_r0y3e",
+            "Tech": "RNWGEO",
+            "Desc": "RNWGEO (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_maqmd"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_0ps1a",
+            "Tech": "EXPCOA",
+            "Desc": "EXPCOA (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_s6dat"
+            ],
+            "OAR": [],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_a1gcl",
+            "Tech": "EXPNGS",
+            "Desc": "EXPNGS (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_m0d5g"
+            ],
+            "OAR": [],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_yu5fa",
+            "Tech": "EXPCRU",
+            "Desc": "EXPCRU (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_f4por"
+            ],
+            "OAR": [],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_9rt7e",
+            "Tech": "EXPGSL",
+            "Desc": "EXPGSL (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_ccvwm"
+            ],
+            "OAR": [],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_etuxv",
+            "Tech": "EXPKER",
+            "Desc": "EXPKER (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_5jlc9"
+            ],
+            "OAR": [],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_0mbap",
+            "Tech": "EXPHFO",
+            "Desc": "EXPHFO (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_x6igb"
+            ],
+            "OAR": [],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_fpccs",
+            "Tech": "EXPBIO",
+            "Desc": "EXPBIO (energy supply).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_iiwdd"
+            ],
+            "OAR": [],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_j4kg7"
+            ]
+        },
+        {
+            "TechId": "TEC_nhtu8",
+            "Tech": "MINLNDTOT",
+            "Desc": "MINLNDTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_syc8d"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_9xb30",
+            "Tech": "DEMAGRGWTFJI",
+            "Desc": "DEMAGRGWTFJI (water).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_9xfjn"
+            ],
+            "OAR": [
+                "COM_bw755"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_q2b4x"
+            ]
+        },
+        {
+            "TechId": "TEC_xxdwf",
+            "Tech": "DEMAGRSURFJI",
+            "Desc": "DEMAGRSURFJI (water).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_a2ev2"
+            ],
+            "OAR": [
+                "COM_bw755"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_q2b4x"
+            ]
+        },
+        {
+            "TechId": "TEC_eg0v2",
+            "Tech": "DEMPUBGWTFJI",
+            "Desc": "DEMPUBGWTFJI (water).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_dhzoy"
+            ],
+            "OAR": [
+                "COM_mmv3k"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_q2b4x"
+            ]
+        },
+        {
+            "TechId": "TEC_7bgci",
+            "Tech": "DEMPUBSURFJI",
+            "Desc": "DEMPUBSURFJI (water).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_a2ev2"
+            ],
+            "OAR": [
+                "COM_mmv3k"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_q2b4x"
+            ]
+        },
+        {
+            "TechId": "TEC_4m7y7",
+            "Tech": "MINPRCFJI",
+            "Desc": "MINPRCFJI (water).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [],
+            "OAR": [
+                "COM_dc2rl"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_q2b4x"
+            ]
+        },
+        {
+            "TechId": "TEC_p3xv9",
+            "Tech": "LNDYAMLITOT",
+            "Desc": "LNDYAMLITOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_equ8e"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_8xy4f",
+            "Tech": "LNDYAMLRTOT",
+            "Desc": "LNDYAMLRTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_gj19n"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_r7yo6",
+            "Tech": "LNDCONLRTOT",
+            "Desc": "LNDCONLRTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_s40pd"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_zb86d",
+            "Tech": "LNDCASHITOT",
+            "Desc": "LNDCASHITOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_an1ks"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_xmwcr",
+            "Tech": "LNDCASLRTOT",
+            "Desc": "LNDCASLRTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_p1jsv"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_0lrk0",
+            "Tech": "LNDSGCHITOT",
+            "Desc": "LNDSGCHITOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_16wi8"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_t1dxm",
+            "Tech": "LNDSGCLITOT",
+            "Desc": "LNDSGCLITOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_cm2n7"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_lqjgn",
+            "Tech": "LNDCONHRTOT",
+            "Desc": "LNDCONHRTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_5mchc"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_h2wu1",
+            "Tech": "LNDCONHITOT",
+            "Desc": "LNDCONHITOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_0x4z1"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_5pxxn",
+            "Tech": "LNDCONLITOT",
+            "Desc": "LNDCONLITOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_5la8v"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_dh9z9",
+            "Tech": "LNDCASHRTOT",
+            "Desc": "LNDCASHRTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_g8fgy"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_q7xb8",
+            "Tech": "LNDYAMHITOT",
+            "Desc": "LNDYAMHITOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_dtsat"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_w7g39",
+            "Tech": "LNDCASLITOT",
+            "Desc": "LNDCASLITOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_dd9nf"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_vqzuj",
+            "Tech": "LNDYAMHRTOT",
+            "Desc": "LNDYAMHRTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_z5kp6"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_i6sob",
+            "Tech": "LNDSGCHRTOT",
+            "Desc": "LNDSGCHRTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_jwr30"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_dsvmo",
+            "Tech": "LNDSGCLRTOT",
+            "Desc": "LNDSGCLRTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_9e4ts"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_uhpu5",
+            "Tech": "LNDOTHLITOT",
+            "Desc": "LNDOTHLITOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_9mkvu"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_eybr8",
+            "Tech": "LNDOTHHITOT",
+            "Desc": "LNDOTHHITOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_ddd0g"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_ui3s5",
+            "Tech": "LNDOTHLRTOT",
+            "Desc": "LNDOTHLRTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_dhprq"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_6so1y",
+            "Tech": "LNDOTHHRTOT",
+            "Desc": "LNDOTHHRTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_ms78x"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_ih09w",
+            "Tech": "LNDAGRFJIC01",
+            "Desc": "LNDAGRFJIC01 (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_bw755",
+                "COM_h2ei2",
+                "COM_z79nx",
+                "COM_an1ks",
+                "COM_g8fgy",
+                "COM_dd9nf",
+                "COM_p1jsv",
+                "COM_0x4z1",
+                "COM_5mchc",
+                "COM_5la8v",
+                "COM_s40pd",
+                "COM_ykwq7",
+                "COM_619qy",
+                "COM_ddd0g",
+                "COM_ms78x",
+                "COM_9mkvu",
+                "COM_dhprq",
+                "COM_rzrfa",
+                "COM_16wi8",
+                "COM_jwr30",
+                "COM_cm2n7",
+                "COM_9e4ts",
+                "COM_xefp7",
+                "COM_dtsat",
+                "COM_z5kp6",
+                "COM_equ8e",
+                "COM_gj19n",
+                "COM_dc2rl"
+            ],
+            "OAR": [
+                "COM_nj0y1",
+                "COM_u8mne",
+                "COM_hqpyh",
+                "COM_lann1",
+                "COM_kdi0c",
+                "COM_94hkx",
+                "COM_fezct",
+                "COM_a2ev2"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_s15qx",
+            "Tech": "LNDAGRFJIC02",
+            "Desc": "LNDAGRFJIC02 (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_bw755",
+                "COM_h2ei2",
+                "COM_z79nx",
+                "COM_an1ks",
+                "COM_g8fgy",
+                "COM_dd9nf",
+                "COM_p1jsv",
+                "COM_0x4z1",
+                "COM_5mchc",
+                "COM_5la8v",
+                "COM_s40pd",
+                "COM_ykwq7",
+                "COM_619qy",
+                "COM_ddd0g",
+                "COM_ms78x",
+                "COM_9mkvu",
+                "COM_dhprq",
+                "COM_rzrfa",
+                "COM_16wi8",
+                "COM_jwr30",
+                "COM_cm2n7",
+                "COM_9e4ts",
+                "COM_xefp7",
+                "COM_dtsat",
+                "COM_z5kp6",
+                "COM_equ8e",
+                "COM_gj19n",
+                "COM_dc2rl"
+            ],
+            "OAR": [
+                "COM_nj0y1",
+                "COM_u8mne",
+                "COM_hqpyh",
+                "COM_lann1",
+                "COM_kdi0c",
+                "COM_94hkx",
+                "COM_fezct",
+                "COM_a2ev2"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_gidel",
+            "Tech": "LNDAGRFJIC03",
+            "Desc": "LNDAGRFJIC03 (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_bw755",
+                "COM_h2ei2",
+                "COM_z79nx",
+                "COM_an1ks",
+                "COM_g8fgy",
+                "COM_dd9nf",
+                "COM_p1jsv",
+                "COM_0x4z1",
+                "COM_5mchc",
+                "COM_5la8v",
+                "COM_s40pd",
+                "COM_ykwq7",
+                "COM_619qy",
+                "COM_ddd0g",
+                "COM_ms78x",
+                "COM_9mkvu",
+                "COM_dhprq",
+                "COM_rzrfa",
+                "COM_16wi8",
+                "COM_jwr30",
+                "COM_cm2n7",
+                "COM_9e4ts",
+                "COM_xefp7",
+                "COM_dtsat",
+                "COM_z5kp6",
+                "COM_equ8e",
+                "COM_gj19n",
+                "COM_dc2rl"
+            ],
+            "OAR": [
+                "COM_nj0y1",
+                "COM_u8mne",
+                "COM_hqpyh",
+                "COM_lann1",
+                "COM_kdi0c",
+                "COM_94hkx",
+                "COM_fezct",
+                "COM_a2ev2"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_c3115",
+            "Tech": "LNDAGRFJIC04",
+            "Desc": "LNDAGRFJIC04 (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_bw755",
+                "COM_h2ei2",
+                "COM_z79nx",
+                "COM_an1ks",
+                "COM_g8fgy",
+                "COM_dd9nf",
+                "COM_p1jsv",
+                "COM_0x4z1",
+                "COM_5mchc",
+                "COM_5la8v",
+                "COM_s40pd",
+                "COM_ykwq7",
+                "COM_619qy",
+                "COM_ddd0g",
+                "COM_ms78x",
+                "COM_9mkvu",
+                "COM_dhprq",
+                "COM_rzrfa",
+                "COM_16wi8",
+                "COM_jwr30",
+                "COM_cm2n7",
+                "COM_9e4ts",
+                "COM_xefp7",
+                "COM_dtsat",
+                "COM_z5kp6",
+                "COM_equ8e",
+                "COM_gj19n",
+                "COM_dc2rl"
+            ],
+            "OAR": [
+                "COM_nj0y1",
+                "COM_u8mne",
+                "COM_hqpyh",
+                "COM_lann1",
+                "COM_kdi0c",
+                "COM_94hkx",
+                "COM_fezct",
+                "COM_a2ev2"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_tn7mb",
+            "Tech": "LNDBARTOT",
+            "Desc": "LNDBARTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_h2ei2"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_8mlj4",
+            "Tech": "LNDBLTTOT",
+            "Desc": "LNDBLTTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_z79nx"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_3huf8",
+            "Tech": "LNDFORTOT",
+            "Desc": "LNDFORTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_ykwq7"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_4mkyv",
+            "Tech": "LNDGRSTOT",
+            "Desc": "LNDGRSTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_619qy"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_d09ks",
+            "Tech": "LNDOTHTOT",
+            "Desc": "LNDOTHTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_rzrfa"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_symm1",
+            "Tech": "LNDWATTOT",
+            "Desc": "LNDWATTOT (land and crops).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_syc8d"
+            ],
+            "OAR": [
+                "COM_xefp7"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_x4v2r"
+            ]
+        },
+        {
+            "TechId": "TEC_kpbm5",
+            "Tech": "PWRTRNA01",
+            "Desc": "PWRTRNA01 (energy networks).",
+            "CapUnitId": "GW",
+            "ActUnitId": "PJ",
+            "IAR": [
+                "COM_bd17e"
+            ],
+            "OAR": [
+                "COM_lljxb"
+            ],
+            "EAR": [],
+            "INCR": [],
+            "ITCR": [],
+            "TG": [
+                "TG_xla13"
+            ]
+        }
+    ],
+    "osy-techGroups": [
+        {
+            "TechGroup": "Power generation",
+            "TechGroupId": "TG_0",
+            "Desc": "Electricity generation and conversion technologies."
+        },
+        {
+            "TechGroup": "Energy networks",
+            "TechGroupId": "TG_xla13",
+            "Desc": "Electricity transmission and distribution technologies."
+        },
+        {
+            "TechGroup": "Energy supply",
+            "TechGroupId": "TG_j4kg7",
+            "Desc": "Primary energy extraction, imports, exports, and renewable supply."
+        },
+        {
+            "TechGroup": "Energy demand",
+            "TechGroupId": "TG_mxz3o",
+            "Desc": "Final energy demand technologies."
+        },
+        {
+            "TechGroup": "Land and crops",
+            "TechGroupId": "TG_x4v2r",
+            "Desc": "Land allocation, crop production, and crop processing technologies."
+        },
+        {
+            "TechGroup": "Water",
+            "TechGroupId": "TG_q2b4x",
+            "Desc": "Groundwater, surface-water, and public/agricultural water technologies."
+        }
+    ],
+    "osy-comm": [
+        {
+            "CommId": "COM_0",
+            "Comm": "BIOFJIXX",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_kwsea",
+            "Comm": "COAFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_7m5wn",
+            "Comm": "COAINT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_kzo5g",
+            "Comm": "COGFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_v1zdx",
+            "Comm": "COGINT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_xpkia",
+            "Comm": "CSPFJIXX",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_a3p24",
+            "Comm": "ELCFJIXX01",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_3drm3",
+            "Comm": "ELCFJIXX02",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_xlqus",
+            "Comm": "GASFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_mga07",
+            "Comm": "GASINT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_lqioj",
+            "Comm": "GEOFJIXX",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_vuyjc",
+            "Comm": "HYDFJIXX",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_b68ng",
+            "Comm": "OILFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_agjuu",
+            "Comm": "OILINT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_0f9pp",
+            "Comm": "OTHFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_zpa8h",
+            "Comm": "OTHINT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_vltgg",
+            "Comm": "PETFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_joqwg",
+            "Comm": "PETINT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_mkmpm",
+            "Comm": "SPVFJIXX",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_lpui8",
+            "Comm": "URNFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_h6kiq",
+            "Comm": "URNINT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_76sum",
+            "Comm": "WASFJIXX",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_rhr1u",
+            "Comm": "WAVFJIXX",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_ext3r",
+            "Comm": "WOFFJIXX",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_ethcq",
+            "Comm": "WONFJIXX",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_ffefe",
+            "Comm": "AGRDSL",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_eev5t",
+            "Comm": "DSL",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_9xfjn",
+            "Comm": "AGRELCFJIXX02",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_w9ztj",
+            "Comm": "COMKER",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_5jlc9",
+            "Comm": "KER",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_pvvjs",
+            "Comm": "COMDSL",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_4aji7",
+            "Comm": "COMLPG",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_eb7ry",
+            "Comm": "LPG",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_vd464",
+            "Comm": "COMBIO",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_iiwdd",
+            "Comm": "BIO",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_jmaab",
+            "Comm": "COMNGS",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_m0d5g",
+            "Comm": "NGS",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_dhzoy",
+            "Comm": "COMELCFJIXX02",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_ksawb",
+            "Comm": "INDCOA",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_s6dat",
+            "Comm": "COA",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_p5gx7",
+            "Comm": "INDLPG",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_moowh",
+            "Comm": "INDKER",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_wi8wz",
+            "Comm": "INDDSL",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_oys29",
+            "Comm": "INDHFO",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_x6igb",
+            "Comm": "HFO",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_33yz4",
+            "Comm": "INDOHC",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_acvja",
+            "Comm": "OHC",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_5rm8g",
+            "Comm": "INDBIO",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_kj0ed",
+            "Comm": "INDNGS",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_9ek33",
+            "Comm": "INDELCFJIXX02",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_ctrss",
+            "Comm": "RESLPG",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_r783x",
+            "Comm": "RESKER",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_vqli5",
+            "Comm": "RESBIO",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_a4rza",
+            "Comm": "RESNGS",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_8hyud",
+            "Comm": "RESELCFJIXX02",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_1sea7",
+            "Comm": "TRAGSL",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_ccvwm",
+            "Comm": "GSL",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_bhge7",
+            "Comm": "TRAKER",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_rbmum",
+            "Comm": "TRADSL",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_3epvf",
+            "Comm": "TRAHFO",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_ojz9i",
+            "Comm": "TRANGS",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_sbabn",
+            "Comm": "TRAELCFJIXX02",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_f4por",
+            "Comm": "CRU",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_b3uy4",
+            "Comm": "WND",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_sxifc",
+            "Comm": "HYD",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_k9xua",
+            "Comm": "SOL",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_maqmd",
+            "Comm": "GEO",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_syc8d",
+            "Comm": "LTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_bw755",
+            "Comm": "AGRWATFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_94hkx",
+            "Comm": "WTREVTFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_fezct",
+            "Comm": "WTRGRCFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_mmv3k",
+            "Comm": "PUBWATFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_dc2rl",
+            "Comm": "WTRPRCFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_a2ev2",
+            "Comm": "WTRSURFJI",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_kdi0c",
+            "Comm": "CRPYAM",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_equ8e",
+            "Comm": "LYAMLITOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_gj19n",
+            "Comm": "LYAMLRTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_u8mne",
+            "Comm": "CRPCON",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_s40pd",
+            "Comm": "LCONLRTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_nj0y1",
+            "Comm": "CRPCAS",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_an1ks",
+            "Comm": "LCASHITOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_p1jsv",
+            "Comm": "LCASLRTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_lann1",
+            "Comm": "CRPSGC",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_16wi8",
+            "Comm": "LSGCHITOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_cm2n7",
+            "Comm": "LSGCLITOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_5mchc",
+            "Comm": "LCONHRTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_0x4z1",
+            "Comm": "LCONHITOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_5la8v",
+            "Comm": "LCONLITOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_g8fgy",
+            "Comm": "LCASHRTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_dtsat",
+            "Comm": "LYAMHITOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_dd9nf",
+            "Comm": "LCASLITOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_z5kp6",
+            "Comm": "LYAMHRTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_jwr30",
+            "Comm": "LSGCHRTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_9e4ts",
+            "Comm": "LSGCLRTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_hqpyh",
+            "Comm": "CRPOTH",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_9mkvu",
+            "Comm": "LOTHLITOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_ddd0g",
+            "Comm": "LOTHHITOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_dhprq",
+            "Comm": "LOTHLRTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_ms78x",
+            "Comm": "LOTHHRTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_h2ei2",
+            "Comm": "LBARTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_z79nx",
+            "Comm": "LBLTTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_ykwq7",
+            "Comm": "LFORTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_619qy",
+            "Comm": "LGRSTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_rzrfa",
+            "Comm": "LOTHTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_xefp7",
+            "Comm": "LWATTOT",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_bd17e",
+            "Comm": "ELCFJI01",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        },
+        {
+            "CommId": "COM_lljxb",
+            "Comm": "ELCFJI02",
+            "Desc": "Default commodity",
+            "UnitId": "PJ"
+        }
+    ],
+    "osy-ts": [
+        {
+            "TsId": "TS_0",
+            "Ts": "S1D2",
+            "Desc": "Wet season, night.",
+            "SE": "SE_0",
+            "DT": "DT_0",
+            "DTB": "DTB_0"
+        },
+        {
+            "TsId": "TS_1lga4",
+            "Ts": "S1D1",
+            "Desc": "Wet season, day.",
+            "SE": "SE_0",
+            "DT": "DT_0",
+            "DTB": "DTB_0"
+        },
+        {
+            "TsId": "TS_zllu0",
+            "Ts": "S2D2",
+            "Desc": "Dry season, night.",
+            "SE": "SE_0",
+            "DT": "DT_0",
+            "DTB": "DTB_0"
+        },
+        {
+            "TsId": "TS_gh8y1",
+            "Ts": "S2D1",
+            "Desc": "Dry season, day.",
+            "SE": "SE_0",
+            "DT": "DT_0",
+            "DTB": "DTB_0"
+        }
+    ],
+    "osy-se": [
+        {
+            "SeId": "SE_0",
+            "Se": 1,
+            "Desc": "Wet season."
+        },
+        {
+            "SeId": "SE_r08ve",
+            "Se": 2,
+            "Desc": "Dry season."
+        }
+    ],
+    "osy-dt": [
+        {
+            "DtId": "DT_0",
+            "Dt": 1,
+            "Desc": "Representative day type."
+        }
+    ],
+    "osy-dtb": [
+        {
+            "DtbId": "DTB_0",
+            "Dtb": 1,
+            "Desc": "Day."
+        },
+        {
+            "DtbId": "DTB_wo6t3",
+            "Dtb": 2,
+            "Desc": "Night."
+        }
+    ],
+    "osy-emis": [
+        {
+            "EmisId": "EMI_0",
+            "Emis": "CO2FJI",
+            "Desc": "Default emission",
+            "UnitId": "Ton"
+        }
+    ],
+    "osy-stg": [],
+    "osy-scenarios": [
+        {
+            "ScenarioId": "SC_0",
+            "Scenario": "SC_0",
+            "Desc": "Base scenario",
+            "Active": true
+        }
+    ],
+    "osy-constraints": [],
+    "osy-years": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026",
+        "2027",
+        "2028",
+        "2029",
+        "2030",
+        "2031",
+        "2032",
+        "2033",
+        "2034",
+        "2035",
+        "2036",
+        "2037",
+        "2038",
+        "2039",
+        "2040",
+        "2041",
+        "2042",
+        "2043",
+        "2044",
+        "2045",
+        "2046",
+        "2047",
+        "2048",
+        "2049",
+        "2050"
+    ]
+}

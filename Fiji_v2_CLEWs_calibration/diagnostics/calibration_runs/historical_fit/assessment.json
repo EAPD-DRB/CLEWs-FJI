@@ -1,0 +1,170 @@
+{
+  "model": {
+    "name": "Fiji v2 CLEWs annual electricity calibration",
+    "country": "Fiji",
+    "version": "Fiji v2, 2026-07-25",
+    "claimed_scope": [
+      "energy"
+    ],
+    "calibration_period": "2020-2022",
+    "validation_period": "2023-2024",
+    "intended_use": "exploratory annual renewable-pathway and policy-scenario comparison"
+  },
+  "gates": {
+    "executable_case": {
+      "status": "pass",
+      "evidence": "Historical_Backcast solved Optimal with CBC; validation_summary.json."
+    },
+    "referential_integrity": {
+      "status": "pass",
+      "evidence": "muiogo_inventory.json resolves 132 technologies, 107 commodities, one emission, and one scenario. Commodity descriptions remain generic metadata, but identifiers and parameter references resolve."
+    },
+    "physical_accounting": {
+      "status": "pass",
+      "evidence": "Annual grid-supply balance closes within MUIO CSV output precision; 0 duplicate input indices; reserve-margin proxy check reports zero mismatches."
+    },
+    "scope_integrity": {
+      "status": "pass",
+      "evidence": "README, CURRENT_MODEL.md, genData.json, and validation_summary.json restrict the claim to annual national grid-supply energy. Land, water, agriculture, reliability, and network calibration are expressly excluded."
+    },
+    "historical_evidence": {
+      "status": "pass",
+      "evidence": "EFL 2024 Annual Report and Fiji Renewable Energy Integration Investment Plan are retained with SHA-256 hashes, page/table locators, boundary notes, and a machine-readable 2020-2024 table."
+    },
+    "forcing_disclosure": {
+      "status": "pass",
+      "evidence": "parameter_register.csv and assessment_comparisons.csv classify every comparison E, J, or H. Positive lower-equals-upper lock audit found zero positive exact locks."
+    },
+    "reproducibility": {
+      "status": "pass",
+      "evidence": "build_fiji_v2.py, solve_muiogo_case.py, score_historical_fit.py, validate_fiji_v2.py, source hashes, build_manifest.json, and the retained solved case reproduce the experiment."
+    }
+  },
+  "dimensions": {
+    "evidence_provenance": {
+      "score": 86,
+      "rationale": "The two core official publications are retained, hashed, page-located, transcribed, and connected to assumptions and calculations. Uncertainty intervals and a complete plant/outage register are still absent.",
+      "evidence": [
+        "data_sources/evidence/calibration/SOURCE_EXTRACTS.md",
+        "data_sources/evidence/calibration/historical_electricity_2020_2024.csv"
+      ]
+    },
+    "country_representation": {
+      "score": 68,
+      "rationale": "The main Fiji grid-supplying hydro, thermal, biomass/IPP, and wind fleet categories are corrected, but one national copper plate, four time slices, generic costs, and generic fuel chains omit material island and operating detail.",
+      "evidence": [
+        "data_sources/evidence/calibration/parameter_register.csv",
+        "documentation/KNOWN_LIMITATIONS.md"
+      ]
+    },
+    "historical_initial_state": {
+      "score": 82,
+      "rationale": "The 2021 fleet and 2020-2024 annual grid-supply boundary are explicitly initialized from official evidence. Holding the 2021 fleet constant across all five years is a documented approximation.",
+      "evidence": [
+        "diagnostics/calibration_runs/build_manifest.json",
+        "diagnostics/calibration_runs/historical_fit/assessment_comparisons.csv"
+      ]
+    },
+    "physical_accounting_integrity": {
+      "score": 88,
+      "rationale": "The case is optimal, input indices are unique, annual electricity balances close, source hashes match, and the derived reserve proxy is current. The lossless conduit and station-use boundary are simplified.",
+      "evidence": [
+        "diagnostics/calibration_runs/validation_summary.json",
+        "WebAPP/DataStorage/Fiji_v2/res/Historical_Backcast/results.txt"
+      ]
+    },
+    "historical_reproduction": {
+      "score": 78,
+      "rationale": "Material held-out hydro, thermal, and IPP outcomes have 9.94% MAPE and renewable share has 5.13 percentage-point MAE. The model misses 2024 hydro and thermal by 16.5% and 19.4%, and sub-GWh wind behavior is not reproduced.",
+      "evidence": [
+        "diagnostics/calibration_runs/historical_fit/summary.json",
+        "diagnostics/calibration_runs/historical_fit/history_comparison.json"
+      ]
+    },
+    "nexus_fidelity": {
+      "score": 55,
+      "rationale": "The full model still contains land, water, climate, and biomass links, but this v2 release neither claims nor tests their historical fidelity. Biomass is represented through an aggregate effective availability rather than a validated cane-bagasse-mill balance.",
+      "evidence": [
+        "documentation/CURRENT_MODEL.md",
+        "documentation/KNOWN_LIMITATIONS.md"
+      ]
+    },
+    "forcing_independence": {
+      "score": 80,
+      "rationale": "Most weighted comparisons are endogenous, total supply and fleet are transparently J, and no positive exact outcome locks exist. Calibration-period biomass and wind are H because their availability factors use those outcomes; both are retested endogenously in 2023-2024.",
+      "evidence": [
+        "diagnostics/calibration_runs/historical_fit/history_comparison.json",
+        "data_sources/evidence/calibration/parameter_register.csv"
+      ]
+    },
+    "heldout_validation": {
+      "score": 75,
+      "rationale": "Two complete held-out annual periods test the frozen generation behavior. Most material outcomes pass declared tolerances, but 2024 approaches the 20% limit and there is no held-out seasonal or plant-level test.",
+      "evidence": [
+        "diagnostics/calibration_runs/historical_fit/history_comparisons.csv",
+        "diagnostics/calibration_runs/validation_summary.json"
+      ]
+    },
+    "robustness_reproducibility": {
+      "score": 68,
+      "rationale": "The build, solve, score, source verification, forcing audit, and validation are automated and rerunnable. Formal cost, weather, structural, and parameter-sensitivity experiments have not yet been completed.",
+      "evidence": [
+        "scripts/build_fiji_v2.py",
+        "scripts/validate_fiji_v2.py",
+        "diagnostics/calibration_runs/build_manifest.json"
+      ]
+    }
+  },
+  "domains": {
+    "energy": {
+      "score": 76,
+      "rationale": "Annual national grid-supply mix is credibly initialized and meaningfully validated, but the model lacks weather-responsive hydro, island grids, losses, plant detail, and robust cost/fuel calibration."
+    }
+  },
+  "forcing": {
+    "endogenous_weight": 24.6,
+    "justified_weight": 1.5,
+    "history_fixed_weight": 3.15
+  },
+  "heldout_validation_present": true,
+  "robustness_tests_present": false,
+  "confidence": "medium",
+  "fitness": [
+    {
+      "use": "exploratory annual renewable-pathway comparison",
+      "rating": "conditionally suitable",
+      "rationale": "Use it to screen broad annual generation and capacity pathways only after adding scenario-specific cost, fuel, target, and weather sensitivities; do not read the optimizer's single path as a forecast."
+    },
+    {
+      "use": "official investment plan or least-cost procurement decision",
+      "rating": "unsuitable",
+      "rationale": "Fuel prices, technology costs, financing, island networks, project constraints, and uncertainty have not been validated to decision-grade standards."
+    },
+    {
+      "use": "operational adequacy, reliability, or dispatch",
+      "rating": "unsuitable",
+      "rationale": "Four time slices and one national node cannot represent chronology, unit commitment, reserves, island-grid limits, storage operation, or loss-of-load risk."
+    }
+  ],
+  "strengths": [
+    "Optimal, fully reproducible MUIO case with a frozen 2023-2024 holdout.",
+    "Official evidence is retained with hashes, locators, boundaries, and forcing classifications.",
+    "Held-out material generation MAPE is below 10% and renewable-share MAE is about 5.1 percentage points.",
+    "No positive lower-equals-upper generation or capacity outcome locks were introduced."
+  ],
+  "weaknesses": [
+    "The fixed wet/dry hydro profile cannot explain the high-hydro 2024 weather year.",
+    "Wind output is sub-GWh and is not reproduced reliably.",
+    "The one-node lossless annual representation omits island grids, losses, station use, chronology, and reliability.",
+    "Costs, fuel prices, heat rates, project constraints, land, water, and the cane-bagasse balance remain uncalibrated.",
+    "MUIO commodity descriptions are generic placeholders even though identifier references resolve."
+  ],
+  "required_improvements": [
+    "Add observed rainfall/inflow, reservoir, outage, and plant-level hydro evidence and test a weather-responsive hydro formulation.",
+    "Calibrate delivered fuel prices, thermal heat rates, fixed and variable costs, and technology investment costs with uncertainty ranges.",
+    "Represent the principal island systems, network losses, existing units, commissioning, retirement, and documented project pipelines.",
+    "Build a traceable cane-bagasse-mill balance for biomass instead of relying on aggregate effective availability.",
+    "Run fuel-price, demand, cost, weather, target, and structural sensitivities before using v2 to rank renewable pathways.",
+    "Calibrate and validate the land, water, climate, and cross-nexus modules separately before making a full CLEWs claim."
+  ]
+}

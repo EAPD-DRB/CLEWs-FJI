@@ -1,0 +1,10 @@
+CLEWs_Global repository: https://github.com/DeltaE/CLEWs_Global.git
+CLEWs_Global commit: 8df78c66be104e446f84a7dbb0df1c0a4fda4080
+CLEWs_GAEZ commit: 30ec12e6524dc9c8ce474ffe1a467508f992007f
+clewsy commit: 6eefaf2abc6d91917c0fddfeea373db37443a8dd
+osemosys_global commit: 036fdd07cc0dc31df1649cdc1689a8aa35a83a36
+GADM release: 4.1
+Fiji GADM download: https://geodata.ucdavis.edu/gadm/gadm4.1/shp/gadm41_FJI_shp.zip
+Solver used: CBC 2.10.12
+Model generator: GLPK 5.0
+Validation date: 2026-07-24

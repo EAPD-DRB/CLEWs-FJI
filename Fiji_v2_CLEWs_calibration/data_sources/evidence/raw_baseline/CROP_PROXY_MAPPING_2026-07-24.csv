@@ -1,0 +1,11 @@
+FAOSTAT_item,Model_code,GAEZ_layer,Treatment
+Sugar cane,SGC,Sugarcane,Direct
+"Coconuts, in shell",CON,Coconut,Direct
+Taro,YAM,Yam,Proxy
+Yams,YAM,Yam,Direct
+"Edible roots and tubers with high starch or inulin content, n.e.c., fresh",YAM,Yam,Proxy
+"Cassava, fresh",CAS,Cassava,Direct
+"Other fruits, n.e.c.",OTH,Fruits,Aggregated other crops
+"Other vegetables, fresh n.e.c.",OTH,Vegetables,Aggregated other crops
+"Pepper (Piper spp.), raw",OTH,Vegetables,Aggregated other crops
+All remaining top-ten crops not individually modelled,OTH,Available proxy layers,Aggregated other crops

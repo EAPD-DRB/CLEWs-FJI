@@ -1,0 +1,17 @@
+year,category,observed_gwh,raw_gwh,v2_gwh,v2_split,raw_source,v2_source
+2021,hydro,547.862,625.269558,526.333333,calibration,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2021,thermal,327.810,0,343.333333,calibration,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2021,wind,0.293,0,0.138889,calibration,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2021,biomass_ipp,61.053,305.286,67.194444,calibration,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2022,hydro,598.096,573.551163,526.333333,calibration,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2022,thermal,409.801,73.940617,487.777778,calibration,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2022,wind,0.093,0,0.138889,calibration,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2022,biomass_ipp,73.471,305.286,67.194444,calibration,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2023,hydro,539.258,662.267271,526.333333,validation,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2023,thermal,505.547,0,527.277778,validation,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2023,wind,0.062,4.668949,0.138889,validation,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2023,biomass_ipp,76.115,305.286002,67.194444,validation,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2024,hydro,630.506,684.489502,526.333333,validation,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2024,thermal,523.752,0,625.222222,validation,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2024,wind,0.718,4.668949,0.138889,validation,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
+2024,biomass_ipp,63.799,305.286003,67.194444,validation,diagnostics/raw_electricity_trajectory_2021_2025.csv,Historical_Backcast
