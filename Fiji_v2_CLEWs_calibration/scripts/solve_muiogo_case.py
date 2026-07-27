@@ -14,9 +14,17 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("run", nargs="?", default="Historical_Backcast")
     parser.add_argument("--reuse-existing", action="store_true")
+    parser.add_argument(
+        "--muiogo-root",
+        type=Path,
+        default=Path(__file__).resolve().parents[2],
+        help="MUIOGO repository containing API/ and WebAPP/",
+    )
     args = parser.parse_args()
 
-    repo = Path(__file__).resolve().parents[2]
+    repo = args.muiogo_root.resolve()
+    if not (repo / "API").is_dir() or not (repo / "WebAPP").is_dir():
+        raise SystemExit(f"Not a MUIOGO repository: {repo}")
     sys.path.insert(0, str(repo / "API"))
     from Classes.Case.DataFileClass import DataFile
 

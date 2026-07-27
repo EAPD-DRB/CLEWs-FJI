@@ -11,7 +11,7 @@
 | Gate | Status | Evidence |
 |---|---|---|
 | Executable Case | pass | Historical_Backcast solved Optimal with CBC; validation_summary.json. |
-| Referential Integrity | pass | muiogo_inventory.json resolves 132 technologies, 107 commodities, one emission, and one scenario. Commodity descriptions remain generic metadata, but identifiers and parameter references resolve. |
+| Referential Integrity | pass | The refreshed post-OHC muiogo_inventory.json resolves 130 technologies, 103 commodities, one emission, and one scenario. Commodity descriptions remain generic metadata, but identifiers and parameter references resolve. |
 | Physical Accounting | pass | Annual grid-supply balance closes within MUIO CSV output precision; 0 duplicate input indices; reserve-margin proxy check reports zero mismatches. |
 | Scope Integrity | pass | README, CURRENT_MODEL.md, genData.json, and validation_summary.json restrict the claim to annual national grid-supply energy. Land, water, agriculture, reliability, and network calibration are expressly excluded. |
 | Historical Evidence | pass | EFL 2024 Annual Report and Fiji Renewable Energy Integration Investment Plan are retained with SHA-256 hashes, page/table locators, boundary notes, and a machine-readable 2020-2024 table. |

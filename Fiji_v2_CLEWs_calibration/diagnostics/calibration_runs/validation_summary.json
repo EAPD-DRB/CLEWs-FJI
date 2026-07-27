@@ -3,6 +3,58 @@
   "model": "Fiji_v2",
   "run": "Historical_Backcast",
   "status": "PASS",
+  "validated_at": "2026-07-27T16:50:56.908110+00:00",
+  "provenance": {
+    "case_folder": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2",
+    "dimensions": {
+      "technologies": 130,
+      "commodities": 103,
+      "years": 31,
+      "timeslices": 4
+    },
+    "artifacts": {
+      "res/Historical_Backcast/data.txt": {
+        "sha256": "14b40ab8eed9f3e2b7c54946b6b9c55ae6845bab7bb1a8a6b5a0fd7be71e9dd9",
+        "modified_at": "2026-07-27T16:07:17.340362+00:00"
+      },
+      "res/Historical_Backcast/data_processed.txt": {
+        "sha256": "21bc0d40dad7a32d00b9277917743149d0c8ea1ab46968c24fa2ad2dc9cec94f",
+        "modified_at": "2026-07-27T16:07:29.628462+00:00"
+      },
+      "res/Historical_Backcast/lp.lp": {
+        "sha256": "97c3873d7845b631c73510854bda4b20d080408c463aba46c6d66e168d874dd7",
+        "modified_at": "2026-07-27T16:07:32.171859+00:00"
+      },
+      "res/Historical_Backcast/results.txt": {
+        "sha256": "f403f1d4a95a4080ce6578559b8ffb30373b003ac5b33e727464212265a711f4",
+        "modified_at": "2026-07-27T16:07:33.115231+00:00"
+      },
+      "res/Historical_Backcast/csv/ObjectiveValue.csv": {
+        "sha256": "92b5a143658b2723700568292ac7a550ff5993a2f8acad1a4aba71240b17d5a9",
+        "modified_at": "2026-07-27T16:07:33.331560+00:00"
+      }
+    },
+    "reserve_margin_proxy": {
+      "status": "CURRENT",
+      "case_folder": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2",
+      "constraint_id": "CO_fji_reserve_proxy",
+      "constraint_name": "RESERVE_PROXY_RUN_CHECK_IF_DEMAND_OR_MARGIN_CHANGES",
+      "warning": "DERIVED RESERVE PROXY: run manage_reserve_margin_proxy.py --check after changing annual demand, demand profile, YearSplit, CapacityToActivityUnit, capacity credits, reserve margin, model years, timeslices, or scenarios. Run it with --update before solving when the check reports STALE.",
+      "input_fingerprint_sha256": "656ca888c6a06a96971a7621ea1f5dd5113b7305b9a33cb0d6bb8a36acaf1e71",
+      "scenarios": {
+        "SC_0": {
+          "reserve_margin": 1.0,
+          "first_year_requirement": 3.970080580879387,
+          "last_year_requirement": 11.726127279832154,
+          "peak_timeslices": [
+            "S1D1"
+          ]
+        }
+      },
+      "mismatch_count": 0,
+      "mismatches": []
+    }
+  },
   "checks": [
     {
       "check": "Historical_Backcast solve is optimal",
@@ -17,10 +69,22 @@
       "evidence": "model/inputs/YEAR.csv; WebAPP/DataStorage/Fiji_v2/genData.json"
     },
     {
+      "check": "MUIO dimensions match the post-OHC Fiji v2.0.1 structure",
+      "status": "PASS",
+      "finding": "130 technologies; 103 commodities",
+      "evidence": "WebAPP/DataStorage/Fiji_v2/genData.json"
+    },
+    {
       "check": "Malformed land-code electricity branch is absent",
       "status": "PASS",
       "finding": "PWRTRNA01, ELCFJI01, and ELCFJI02 removed",
       "evidence": "model/inputs/*.csv; WebAPP/DataStorage/Fiji_v2/genData.json"
+    },
+    {
+      "check": "Unsupported other-hydrocarbons branch is absent",
+      "status": "PASS",
+      "finding": "OHC, DEMINDOHC, and INDOHC removed",
+      "evidence": "model/inputs/*.csv; active MUIO JSON; regenerated solver files"
     },
     {
       "check": "Valid grid-node electricity chain remains connected",
@@ -31,7 +95,7 @@
     {
       "check": "OSeMOSYS input indices are unique",
       "status": "PASS",
-      "finding": "0 duplicates across 34187 rows",
+      "finding": "0 duplicates across 34122 rows",
       "evidence": "Fiji_v2_CLEWs_calibration/model/inputs/*.csv"
     },
     {
@@ -41,9 +105,15 @@
       "evidence": "Four activity/capacity lower-upper parameter pairs"
     },
     {
-      "check": "Retained primary-source files match registered hashes",
+      "check": "Reserve-margin proxy matches the active inputs",
       "status": "PASS",
-      "finding": "All source hashes match",
+      "finding": "CURRENT; 0 mismatch(es)",
+      "evidence": "WebAPP/DataStorage/Fiji_v2/reserve_margin_proxy.json and active inputs"
+    },
+    {
+      "check": "Primary-source checksums are registered and bundled files match",
+      "status": "PASS",
+      "finding": "2 source hashes registered; 0 source files bundled",
       "evidence": "data_sources/evidence/calibration/SOURCE_EXTRACTS.md"
     },
     {
@@ -69,6 +139,12 @@
       "status": "PASS",
       "finding": "Worst: 2024 thermal_generation at 19.374%",
       "evidence": "diagnostics/calibration_runs/historical_fit/history_comparisons.csv"
+    },
+    {
+      "check": "Regenerated run is newer than the active model inputs",
+      "status": "PASS",
+      "finding": "All required run artifacts postdate the active inputs",
+      "evidence": "MUIO source JSON and Historical_Backcast generated artifacts"
     }
   ],
   "failed_checks": 0,

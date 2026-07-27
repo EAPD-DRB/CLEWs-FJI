@@ -31,10 +31,8 @@ These limitations are part of the result, not optional caveats.
   service. Reintroducing one requires evidence for its physical fuel,
   material demand, supply chain, and accounting boundary; reported non-energy
   lubricant or bitumen use must not be treated as combustion demand.
-- The stored `Historical_Backcast` solve predates the surgical removal of the
-  dormant OHC branch. No result change is expected, but exact solver parity
-  with the current structural input set has not been rerun at the user's
-  direction.
+- The post-OHC `Historical_Backcast` recertification preserved the objective,
+  score and reported calibration metrics. The removed OHC branch was dormant.
 - MUIO commodity descriptions remain generic placeholders, although
   identifier references resolve.
 

@@ -1,5 +1,6 @@
 {
   "run": "Historical_Backcast",
+  "case_folder": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2",
   "calibration_years": [
     2020,
     2021,

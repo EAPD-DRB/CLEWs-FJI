@@ -126,6 +126,43 @@
       "solve_run": false
     }
   },
+  "phase_0_recertification": {
+    "date": "2026-07-27",
+    "source_input_commit": "195c8fb40022565adb024dcec55a71f48b6e5b3e",
+    "case": "Fiji_v2",
+    "run": "Historical_Backcast",
+    "dimensions": {
+      "technologies": 130,
+      "commodities": 103,
+      "years": 31,
+      "timeslices": 4
+    },
+    "solver": "CBC",
+    "status": "Optimal",
+    "objective": -1387.5701359,
+    "active_gen_data_sha256": "6a585ab82bc8064f4df87ad37a96deeec2f53c024673d62da0a717497d4a09be",
+    "generated_artifacts_sha256": {
+      "data.txt": "14b40ab8eed9f3e2b7c54946b6b9c55ae6845bab7bb1a8a6b5a0fd7be71e9dd9",
+      "data_processed.txt": "21bc0d40dad7a32d00b9277917743149d0c8ea1ab46968c24fa2ad2dc9cec94f",
+      "lp.lp": "97c3873d7845b631c73510854bda4b20d080408c463aba46c6d66e168d874dd7",
+      "results.txt": "f403f1d4a95a4080ce6578559b8ffb30373b003ac5b33e727464212265a711f4",
+      "ObjectiveValue.csv": "92b5a143658b2723700568292ac7a550ff5993a2f8acad1a4aba71240b17d5a9"
+    },
+    "portable_archive_sha256": "6186c3ee14559fc4f8c07242859b91717242e8662353d8adb90cf80256fde6d1",
+    "reserve_margin_proxy": {
+      "status": "CURRENT",
+      "mismatch_count": 0,
+      "input_fingerprint_sha256": "656ca888c6a06a96971a7621ea1f5dd5113b7305b9a33cb0d6bb8a36acaf1e71"
+    },
+    "ohc_references_in_active_inputs_and_run": 0,
+    "score_change": {
+      "weighted_score": 0,
+      "held_out_generation_mape_percentage_points": 0,
+      "held_out_renewable_share_mae_percentage_points": 0
+    },
+    "validation_summary": "diagnostics/calibration_runs/validation_summary.json",
+    "note": "MUIOGO batch execution also regenerated Raw and Raw_ReserveProxy from the same active Fiji_v2 inputs. Those two folders are byte-identical to Historical_Backcast and are not preserved raw baselines."
+  },
   "claim_boundary": "Annual national grid-supply mix only. Total supply and installed fleet are exogenous. No land, water, agriculture, hourly dispatch, reliability, network, or reservoir calibration claim.",
   "last_structural_edit_date": "2026-07-26"
 }

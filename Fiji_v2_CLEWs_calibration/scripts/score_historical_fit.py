@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 from collections import defaultdict
@@ -13,7 +14,6 @@ from typing import Any
 REPO = Path(__file__).resolve().parents[2]
 PACKAGE = REPO / "Fiji_v2_CLEWs_calibration"
 CASE = REPO / "WebAPP" / "DataStorage" / "Fiji_v2"
-RUN = CASE / "res" / "Historical_Backcast"
 EVIDENCE = (
     PACKAGE
     / "data_sources"
@@ -37,20 +37,38 @@ OBSERVATION_FIELDS = {
 PJ_TO_GWH = 1.0 / 0.0036
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--case-folder",
+        type=Path,
+        default=CASE,
+        help="Fiji_v2 MUIO case folder (defaults to the colocated MUIOGO case)",
+    )
+    parser.add_argument("--run", default="Historical_Backcast")
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=OUT,
+        help="directory for refreshed historical-fit diagnostics",
+    )
+    return parser.parse_args()
+
+
 def rows(path: Path) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8-sig") as stream:
         return list(csv.DictReader(stream))
 
 
-def locate_result(filename: str) -> Path:
-    candidates = sorted(RUN.rglob(filename))
+def locate_result(run_folder: Path, filename: str) -> Path:
+    candidates = sorted(run_folder.rglob(filename))
     if not candidates:
-        raise FileNotFoundError(f"{filename} not found below {RUN}")
+        raise FileNotFoundError(f"{filename} not found below {run_folder}")
     return candidates[0]
 
 
-def parse_production() -> dict[tuple[str, int], float]:
-    path = locate_result("TotalAnnualTechnologyActivityByMode.csv")
+def parse_production(run_folder: Path) -> dict[tuple[str, int], float]:
+    path = locate_result(run_folder, "TotalAnnualTechnologyActivityByMode.csv")
     result: dict[tuple[str, int], float] = defaultdict(float)
     for row in rows(path):
         technology = row.get("TECHNOLOGY") or row.get("Technology") or row.get("t")
@@ -70,8 +88,17 @@ def pct_error(model: float, observed: float) -> float | None:
 
 
 def main() -> None:
+    args = parse_args()
+    case_folder = args.case_folder.resolve()
+    run_folder = case_folder / "res" / args.run
+    output_dir = args.output_dir.resolve()
+    if not (case_folder / "genData.json").is_file():
+        raise FileNotFoundError(f"Not a MUIO case folder: {case_folder}")
+    if not run_folder.is_dir():
+        raise FileNotFoundError(f"Saved run not found: {run_folder}")
+
     evidence = {int(row["year"]): row for row in rows(EVIDENCE)}
-    production = parse_production()
+    production = parse_production(run_folder)
     comparisons: list[dict[str, Any]] = []
 
     for year in sorted(evidence):
@@ -177,8 +204,8 @@ def main() -> None:
             / len(share_rows),
         }
 
-    OUT.mkdir(parents=True, exist_ok=True)
-    comparison_path = OUT / "history_comparisons.csv"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    comparison_path = output_dir / "history_comparisons.csv"
     with comparison_path.open("w", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(comparisons[0]))
         writer.writeheader()
@@ -254,18 +281,24 @@ def main() -> None:
                 ),
             }
         )
-    assessment_path = OUT / "assessment_comparisons.csv"
+    assessment_path = output_dir / "assessment_comparisons.csv"
     with assessment_path.open("w", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=list(assessment_rows[0]))
         writer.writeheader()
         writer.writerows(assessment_rows)
 
+    try:
+        assessment_reference = str(assessment_path.relative_to(PACKAGE.parent))
+    except ValueError:
+        assessment_reference = str(assessment_path)
+
     summary = {
-        "run": "Historical_Backcast",
+        "run": args.run,
+        "case_folder": str(case_folder),
         "calibration_years": [2020, 2021, 2022],
         "validation_years": [2023, 2024],
         "metrics": by_split,
-        "assessment_comparisons": str(assessment_path.relative_to(REPO)),
+        "assessment_comparisons": assessment_reference,
         "credit_rule": (
             "Only class E rows receive independent reproduction credit. "
             "Demand/total supply and fleet are J. Calibration-period biomass "
@@ -275,7 +308,7 @@ def main() -> None:
             "output is below 1 GWh and percentage errors are unstable."
         ),
     }
-    (OUT / "summary.json").write_text(
+    (output_dir / "summary.json").write_text(
         json.dumps(summary, indent=2) + "\n", encoding="utf-8"
     )
     print(json.dumps(summary, indent=2))

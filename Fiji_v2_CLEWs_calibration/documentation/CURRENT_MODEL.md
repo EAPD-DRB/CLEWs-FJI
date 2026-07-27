@@ -4,16 +4,15 @@
 
 The active case is `WebAPP/DataStorage/Fiji_v2`. It contains 130
 technologies, 103 commodities, four time slices, and a continuous 2020–2050
-horizon. The most recent stored solve is `Historical_Backcast`; it predates
-the 26 July OHC-only structural prune and was not rerun. The removed branch
-was dormant, so no dispatch change is expected, but exact current-input/solve
-parity has not been recertified.
+horizon. The most recent stored solve is the 27 July post-OHC
+`Historical_Backcast`. It is Optimal and uses the current v2.0.1 inputs.
+The objective and calibration metrics are unchanged from the pre-OHC result.
 
 The source/input package on `EAPD-DRB/CLEWs-FJI` `main` is v2.0.1. Its
 portable `Fiji_v2_v2.0.1_MUIO.zip` contains the corrected editable inputs and
-excludes solver results. The latest tagged release and the stored calibration
-solve remain v2.0.0/pre-OHC until the documented Phase 0 recertification is
-performed.
+excludes solver results. The latest tagged release remains v2.0.0, while the
+main-branch v2.0.1 inputs and diagnostics are recertified in
+`history/calibration/PHASE_0_RECERTIFICATION_2026-07-27.md`.
 
 | Component | Current v2 status |
 |---|---|

@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "model_path": "/Users/sato/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2",
+  "model_path": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2",
   "metadata": {
     "case_name": "Fiji_v2",
     "description": "Fiji v2 annual electricity backcast: 2020-2022 calibration; 2023-2024 held-out validation. Land, water, and agriculture remain uncalibrated.",
     "version": "5.4",
-    "date": "2026-07-25"
+    "date": "2026-07-26"
   },
   "dimensions": {
     "years": [
@@ -41,8 +41,8 @@
       "2049",
       "2050"
     ],
-    "technologies": 132,
-    "commodities": 107,
+    "technologies": 130,
+    "commodities": 103,
     "emissions": 1,
     "scenarios": 1,
     "time_slices": 4,
@@ -57,14 +57,24 @@
     "nexus": true
   },
   "reference_counts": {
-    "technology": 132,
-    "commodity": 107,
+    "technology": 130,
+    "commodity": 103,
     "emission": 1,
     "scenario": 1
   },
   "saved_results": [
     {
       "label": "Historical_Backcast",
+      "first_line": "Optimal - objective value -1387.57013590",
+      "appears_optimal": true
+    },
+    {
+      "label": "Raw",
+      "first_line": "Optimal - objective value -1387.57013590",
+      "appears_optimal": true
+    },
+    {
+      "label": "Raw_ReserveProxy",
       "first_line": "Optimal - objective value -1387.57013590",
       "appears_optimal": true
     }
@@ -4389,61 +4399,6 @@
       "scenario": "SC_0",
       "year": "2020",
       "identity": {
-        "TechId": "TEC_kpbm5"
-      },
-      "value": 0.0
-    },
-    {
-      "kind": "annual capacity investment",
-      "lower_parameter": "TAMinCI",
-      "upper_parameter": "TAMaxCI",
-      "scenario": "SC_0",
-      "year": "2021",
-      "identity": {
-        "TechId": "TEC_kpbm5"
-      },
-      "value": 0.0
-    },
-    {
-      "kind": "annual capacity investment",
-      "lower_parameter": "TAMinCI",
-      "upper_parameter": "TAMaxCI",
-      "scenario": "SC_0",
-      "year": "2022",
-      "identity": {
-        "TechId": "TEC_kpbm5"
-      },
-      "value": 0.0
-    },
-    {
-      "kind": "annual capacity investment",
-      "lower_parameter": "TAMinCI",
-      "upper_parameter": "TAMaxCI",
-      "scenario": "SC_0",
-      "year": "2023",
-      "identity": {
-        "TechId": "TEC_kpbm5"
-      },
-      "value": 0.0
-    },
-    {
-      "kind": "annual capacity investment",
-      "lower_parameter": "TAMinCI",
-      "upper_parameter": "TAMaxCI",
-      "scenario": "SC_0",
-      "year": "2024",
-      "identity": {
-        "TechId": "TEC_kpbm5"
-      },
-      "value": 0.0
-    },
-    {
-      "kind": "annual capacity investment",
-      "lower_parameter": "TAMinCI",
-      "upper_parameter": "TAMaxCI",
-      "scenario": "SC_0",
-      "year": "2020",
-      "identity": {
         "TechId": "TEC_l7dyv"
       },
       "value": 0.0
@@ -7104,7 +7059,7 @@
     {
       "level": "fail",
       "code": "placeholder_commodity_descriptions",
-      "message": "107/107 commodity descriptions are blank or placeholders",
+      "message": "103/103 commodity descriptions are blank or placeholders",
       "evidence": [
         "COM_0",
         "COM_kwsea",
@@ -7136,7 +7091,7 @@
     {
       "level": "warn",
       "code": "exact_bound_pairs",
-      "message": "639 exact lower/upper bound matches may history-fix outcomes",
+      "message": "634 exact lower/upper bound matches may history-fix outcomes",
       "evidence": [
         {
           "kind": "annual activity",

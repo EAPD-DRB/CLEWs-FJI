@@ -11,9 +11,9 @@
 The v2.0.1 archive contains the editable MUIO parameter JSON and view
 metadata after removal of `OHC`, `DEMINDOHC`, and `INDOHC`. It excludes the
 `res/` folder and generated `lp.lp`; both are regenerated when the case is
-solved. The most recent stored `Historical_Backcast` and calibration
-diagnostics predate the OHC-only prune and are not represented as recertified
-v2.0.1 results.
+solved. The 27 July 2026 `Historical_Backcast` recertification uses these
+inputs, solves Optimal and preserves the earlier objective and fit metrics.
+Solver results remain intentionally excluded from this portable archive.
 
 The immutable repository archive `Fiji_v2_v2.0.0_MUIO.zip` remains the tagged
 v2.0.0 package.

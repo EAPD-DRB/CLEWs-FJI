@@ -23,7 +23,7 @@
     },
     "referential_integrity": {
       "status": "pass",
-      "evidence": "muiogo_inventory.json resolves 132 technologies, 107 commodities, one emission, and one scenario. Commodity descriptions remain generic metadata, but identifiers and parameter references resolve."
+      "evidence": "The refreshed post-OHC muiogo_inventory.json resolves 130 technologies, 103 commodities, one emission, and one scenario. Commodity descriptions remain generic metadata, but identifiers and parameter references resolve."
     },
     "physical_accounting": {
       "status": "pass",

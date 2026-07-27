@@ -19,9 +19,9 @@ The latest tagged release remains
 That release and its archive remain immutable. Version 2.0.1 applies the
 documented removal of the dormant unsupported
 `OHC -> DEMINDOHC -> INDOHC` branch to the active inputs and provides a
-result-free corrected MUIO archive. The saved historical solve and calibration
-diagnostics still predate that correction and are explicitly marked pending
-recertification; no calibration result was changed in this source/input patch.
+result-free corrected MUIO archive. The 27 July post-OHC recertification is
+Optimal and preserves the objective, calibration metrics, grade and confidence
+of the earlier result.
 
 Fiji v2 is not a calibration of the full land-water-agriculture nexus,
 investment economics, island networks, or operational reliability. Read

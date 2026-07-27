@@ -3,19 +3,29 @@
 
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import json
 import math
+import re
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+
+from manage_reserve_margin_proxy import (
+    check_proxy,
+    expected_proxy,
+    load_case,
+    read_json,
+    validate_config,
+)
 
 
 REPO = Path(__file__).resolve().parents[2]
 ROOT = REPO / "Fiji_v2_CLEWs_calibration"
 INPUTS = ROOT / "model" / "inputs"
 CASE = REPO / "WebAPP" / "DataStorage" / "Fiji_v2"
-RUN = CASE / "res" / "Historical_Backcast"
 FIT = ROOT / "diagnostics" / "calibration_runs" / "historical_fit"
 OUTPUT = ROOT / "diagnostics" / "calibration_runs" / "validation_summary.json"
 EVIDENCE = (
@@ -29,6 +39,8 @@ REMOVED_UPSTREAM_TECHNOLOGIES = {"PWRTRNA01"}
 REMOVED_UPSTREAM_FUELS = {"ELCFJI01", "ELCFJI02"}
 REMOVED_OHC_TECHNOLOGIES = {"DEMINDOHC"}
 REMOVED_OHC_FUELS = {"INDOHC", "OHC"}
+EXPECTED_POST_OHC_TECHNOLOGIES = 130
+EXPECTED_POST_OHC_COMMODITIES = 103
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
@@ -58,6 +70,30 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--case-folder",
+        type=Path,
+        default=CASE,
+        help="Fiji_v2 MUIO case folder (defaults to the colocated MUIOGO case)",
+    )
+    parser.add_argument("--run", default="Historical_Backcast")
+    parser.add_argument(
+        "--fit-folder",
+        type=Path,
+        default=FIT,
+        help="folder containing the refreshed historical-fit diagnostics",
+    )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=OUTPUT,
+        help="path for the machine-readable validation summary",
+    )
+    return parser.parse_args()
+
+
 def value_map(path: Path) -> tuple[list[str], dict[tuple[str, ...], float]]:
     with path.open(newline="", encoding="utf-8-sig") as stream:
         reader = csv.DictReader(stream)
@@ -69,7 +105,17 @@ def value_map(path: Path) -> tuple[list[str], dict[tuple[str, ...], float]]:
 
 
 def main() -> None:
-    first_line = (RUN / "results.txt").read_text(
+    args = parse_args()
+    case = args.case_folder.resolve()
+    run = case / "res" / args.run
+    fit_folder = args.fit_folder.resolve()
+    output = args.output.resolve()
+    if not (case / "genData.json").is_file():
+        raise FileNotFoundError(f"Not a MUIO case folder: {case}")
+    if not run.is_dir():
+        raise FileNotFoundError(f"Saved run not found: {run}")
+
+    first_line = (run / "results.txt").read_text(
         encoding="utf-8", errors="replace"
     ).splitlines()[0]
     check(
@@ -80,13 +126,23 @@ def main() -> None:
     )
 
     years = [int(row["VALUE"]) for row in read_rows(INPUTS / "YEAR.csv")]
-    gen_data = json.loads((CASE / "genData.json").read_text(encoding="utf-8"))
+    gen_data = json.loads((case / "genData.json").read_text(encoding="utf-8"))
     check(
         "CSV and MUIO horizons are identical and continuous",
         years == list(range(2020, 2051))
         and [str(year) for year in years] == gen_data["osy-years"],
         f"{years[0]}-{years[-1]}, {len(years)} years",
         "model/inputs/YEAR.csv; WebAPP/DataStorage/Fiji_v2/genData.json",
+    )
+
+    technology_count = len(gen_data["osy-tech"])
+    commodity_count = len(gen_data["osy-comm"])
+    check(
+        "MUIO dimensions match the post-OHC Fiji v2.0.1 structure",
+        technology_count == EXPECTED_POST_OHC_TECHNOLOGIES
+        and commodity_count == EXPECTED_POST_OHC_COMMODITIES,
+        f"{technology_count} technologies; {commodity_count} commodities",
+        "WebAPP/DataStorage/Fiji_v2/genData.json",
     )
 
     branch_references: list[str] = []
@@ -130,6 +186,19 @@ def main() -> None:
             | (muiogo_fuels & REMOVED_OHC_FUELS)
         )
     )
+    ohc_pattern = re.compile(r"(?<![A-Z0-9_])(DEMINDOHC|INDOHC|OHC)(?![A-Z0-9_])")
+    runtime_paths = [
+        *sorted(case.glob("*.json")),
+        *sorted((case / "view").glob("*.json")),
+        run / "data.txt",
+        run / "data_processed.txt",
+        run / "results.txt",
+    ]
+    for path in runtime_paths:
+        if path.is_file() and ohc_pattern.search(
+            path.read_text(encoding="utf-8", errors="replace")
+        ):
+            ohc_references.append(str(path.relative_to(case)))
     check(
         "Unsupported other-hydrocarbons branch is absent",
         not ohc_references,
@@ -138,7 +207,7 @@ def main() -> None:
             if not ohc_references
             else "; ".join(ohc_references[:10])
         ),
-        "model/inputs/*.csv; WebAPP/DataStorage/Fiji_v2/genData.json",
+        "model/inputs/*.csv; active MUIO JSON; regenerated solver files",
     )
 
     input_ratios = read_rows(INPUTS / "InputActivityRatio.csv")
@@ -228,6 +297,23 @@ def main() -> None:
         "Four activity/capacity lower-upper parameter pairs",
     )
 
+    proxy_config = read_json(ROOT / "muio" / "reserve_margin_proxy_config.json")
+    validate_config(proxy_config)
+    case_data = load_case(case)
+    expected_reserve_proxy = expected_proxy(case_data, proxy_config)
+    reserve_proxy_report = check_proxy(
+        case, case_data, proxy_config, expected_reserve_proxy, 1e-10
+    )
+    check(
+        "Reserve-margin proxy matches the active inputs",
+        reserve_proxy_report["status"] == "CURRENT",
+        (
+            f"{reserve_proxy_report['status']}; "
+            f"{reserve_proxy_report['mismatch_count']} mismatch(es)"
+        ),
+        "WebAPP/DataStorage/Fiji_v2/reserve_margin_proxy.json and active inputs",
+    )
+
     expected_hashes = {
         "EFL_2024_Annual_Report.pdf": "b3427b8e597399f31aabc2ab315b1a72a24138e20cd8faa5c3fec2894f0fe956",
         "Fiji_REI_Investment_Plan_2023.pdf": "3d291fad4853905d40486f253d974483a9b788881c6ea9e02e6ba725989790e1",
@@ -271,7 +357,7 @@ def main() -> None:
         "diagnostics/calibration_runs/build_manifest.json",
     )
 
-    fit = json.loads((FIT / "summary.json").read_text(encoding="utf-8"))
+    fit = json.loads((fit_folder / "summary.json").read_text(encoding="utf-8"))
     validation = fit["metrics"]["validation"]
     check(
         "Held-out material generation fit meets the declared annual threshold",
@@ -289,7 +375,7 @@ def main() -> None:
         "diagnostics/calibration_runs/historical_fit/summary.json",
     )
 
-    comparison_rows = read_rows(FIT / "history_comparisons.csv")
+    comparison_rows = read_rows(fit_folder / "history_comparisons.csv")
     heldout = [row for row in comparison_rows if row["split"] == "validation"]
     worst_material = max(
         (
@@ -307,12 +393,62 @@ def main() -> None:
         "diagnostics/calibration_runs/historical_fit/history_comparisons.csv",
     )
 
+    active_input_files = [
+        path
+        for path in case.glob("*.json")
+        if path.is_file()
+    ]
+    newest_input_mtime = max(path.stat().st_mtime for path in active_input_files)
+    result_files = [
+        run / "data.txt",
+        run / "data_processed.txt",
+        run / "lp.lp",
+        run / "results.txt",
+        run / "csv" / "ObjectiveValue.csv",
+    ]
+    missing_result_files = [str(path) for path in result_files if not path.is_file()]
+    oldest_result_mtime = (
+        min(path.stat().st_mtime for path in result_files)
+        if not missing_result_files
+        else 0
+    )
+    check(
+        "Regenerated run is newer than the active model inputs",
+        not missing_result_files and oldest_result_mtime >= newest_input_mtime,
+        (
+            "All required run artifacts postdate the active inputs"
+            if not missing_result_files and oldest_result_mtime >= newest_input_mtime
+            else f"Missing/stale artifacts: {missing_result_files}"
+        ),
+        "MUIO source JSON and Historical_Backcast generated artifacts",
+    )
+
     failed = [item for item in checks if item["status"] == "FAIL"]
     result = {
         "schema_version": 1,
         "model": "Fiji_v2",
-        "run": "Historical_Backcast",
+        "run": args.run,
         "status": "PASS" if not failed else "FAIL",
+        "validated_at": datetime.now(timezone.utc).isoformat(),
+        "provenance": {
+            "case_folder": str(case),
+            "dimensions": {
+                "technologies": technology_count,
+                "commodities": commodity_count,
+                "years": len(years),
+                "timeslices": len(gen_data["osy-ts"]),
+            },
+            "artifacts": {
+                str(path.relative_to(case)): {
+                    "sha256": sha256(path),
+                    "modified_at": datetime.fromtimestamp(
+                        path.stat().st_mtime, timezone.utc
+                    ).isoformat(),
+                }
+                for path in result_files
+            },
+            "reserve_margin_proxy": reserve_proxy_report,
+        },
         "checks": checks,
         "failed_checks": len(failed),
         "scope": (
@@ -320,8 +456,8 @@ def main() -> None:
             "not a validation of the full land-water-agriculture nexus."
         ),
     }
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, indent=2))
     if failed:
         raise SystemExit(1)
