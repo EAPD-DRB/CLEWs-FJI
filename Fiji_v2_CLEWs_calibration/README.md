@@ -26,7 +26,7 @@ operational reliability.
 - Known limitations: `documentation/KNOWN_LIMITATIONS.md`
 - Calibration assessment:
   `diagnostics/calibration_runs/historical_fit/scorecard.md`
-- Technical validation:
+- Most recent technical validation, before the OHC-only prune:
   `diagnostics/calibration_runs/validation_summary.json`
 - Chronological record: `documentation/HISTORY.md`
 
@@ -34,12 +34,19 @@ operational reliability.
 
 - Immutable raw reference: `Fiji_CLEWs_Global`
 - Fiji v2 build package: `Fiji_v2_CLEWs_calibration`
-- Portable active MUIO case: `muio/Fiji_v2_v2.0.0_MUIO.zip`
-- Solved run: `Historical_Backcast`
+- Active MUIO case: `WebAPP/DataStorage/Fiji_v2`
+- Most recent solved run: `Historical_Backcast` (pre-OHC-only prune)
+- Current result-free MUIO archive: `muio/Fiji_v2_v2.0.1_MUIO.zip`
 
 The raw package, raw MUIO case, retained sources, and v2 evidence are never
 silently overwritten. `scripts/build_fiji_v2.py` starts from the raw inputs
 and records every v2 transformation in a machine-readable manifest.
+
+The v2.0.1 source/input patch removes the dormant unsupported
+`OHC -> DEMINDOHC -> INDOHC` branch. Its portable archive contains the
+corrected editable inputs and excludes saved solver results. The most recent
+stored solve and calibration score predate that dormant-branch correction;
+exact solve/input parity has not yet been recertified.
 
 ## What is supplied and what is tested
 
@@ -80,6 +87,14 @@ From the repository root:
 
 If the named run already exists, solve it with `--reuse-existing`. The reserve
 proxy check must report zero mismatches before a solve.
+
+To reapply only the documented Fiji structural exclusions without cloning the
+raw reference, recalibrating, or solving:
+
+```bash
+python3 Fiji_v2_CLEWs_calibration/scripts/build_fiji_v2.py \
+  --prune-excluded-branches-only
+```
 
 ## Plain interpretation
 

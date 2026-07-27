@@ -1,15 +1,17 @@
 # Fiji v2 historical electricity evidence
 
-## Cited sources
+## Source records
 
-| Publication | Source file SHA-256 | Extraction |
+| File | Publication | SHA-256 | Extraction |
 |---|---|---|---|
-| Energy Fiji Limited, *2024 Annual Report* | `b3427b8e597399f31aabc2ab315b1a72a24138e20cd8faa5c3fec2894f0fe956` | 25 July 2026 |
-| Government of Fiji, *Renewable Energy Integration Investment Plan* | `3d291fad4853905d40486f253d974483a9b788881c6ea9e02e6ba725989790e1` | 25 July 2026 |
+| `../external/EFL_2024_Annual_Report.pdf` | Energy Fiji Limited, *2024 Annual Report* | `b3427b8e597399f31aabc2ab315b1a72a24138e20cd8faa5c3fec2894f0fe956` | 25 July 2026 |
+| `../external/Fiji_REI_Investment_Plan_2023.pdf` | Government of Fiji, *Renewable Energy Integration Investment Plan* | `3d291fad4853905d40486f253d974483a9b788881c6ea9e02e6ba725989790e1` | 25 July 2026 |
 
-The original publication PDFs are not distributed in this repository. The
-citations, official entry points, source-file checksums, extraction notes, and
-model-relevant facts are retained here.
+The source PDFs are retained in the original working package when local
+redistribution is permitted. They are not committed to the public
+`CLEWs-FJI` repository. The official URLs, file checksums, extraction notes,
+and model-relevant facts are retained here so another authorized copy can be
+verified.
 
 The official entry points are:
 

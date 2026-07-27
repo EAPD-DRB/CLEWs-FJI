@@ -2,9 +2,18 @@
 
 ## Status
 
-The active case is `WebAPP/DataStorage/Fiji_v2`. It contains 131
-technologies, 105 commodities, four time slices, and a continuous 2020–2050
-horizon. The solved run is `Historical_Backcast`.
+The active case is `WebAPP/DataStorage/Fiji_v2`. It contains 130
+technologies, 103 commodities, four time slices, and a continuous 2020–2050
+horizon. The most recent stored solve is `Historical_Backcast`; it predates
+the 26 July OHC-only structural prune and was not rerun. The removed branch
+was dormant, so no dispatch change is expected, but exact current-input/solve
+parity has not been recertified.
+
+The source/input package on `EAPD-DRB/CLEWs-FJI` `main` is v2.0.1. Its
+portable `Fiji_v2_v2.0.1_MUIO.zip` contains the corrected editable inputs and
+excludes solver results. The latest tagged release and the stored calibration
+solve remain v2.0.0/pre-OHC until the documented Phase 0 recertification is
+performed.
 
 | Component | Current v2 status |
 |---|---|
@@ -47,13 +56,19 @@ finds zero positive lower-equals-upper activity or capacity locks.
 | Wind availability, 2020–2024 | 0.90 | 0.005909670 |
 | 2024 electricity requirement | 3.58 PJ | 4.3880616 PJ |
 | Malformed duplicate transmission branch | Present but inactive | Removed |
+| Unsupported other-hydrocarbons branch | Present but inactive | Removed |
+
+The `OHC` → `DEMINDOHC` → `INDOHC` branch was also removed. It had no
+Fiji supply, specified demand, cost, availability, capacity, or emissions
+data. The documented UNSD evidence does not establish material Fiji combustion
+of the corresponding fuel category.
 
 The hydro capacity factors and wet/dry shape are inherited without tuning.
 Future demand preserves the raw growth path and is rebased to the observed
 2024 grid-supply boundary. Corrected future residual-capacity paths preserve
 the raw retirement ratios. Both are scenario assumptions, not observations.
 
-## Results
+## Most recent stored results
 
 The MUIO solve is Optimal with objective `-1387.57013590`.
 

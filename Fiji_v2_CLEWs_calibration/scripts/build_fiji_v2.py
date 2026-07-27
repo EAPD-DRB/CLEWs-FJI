@@ -8,6 +8,7 @@ copy or delete solver results.
 
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import json
@@ -45,8 +46,8 @@ TECHNOLOGIES = {
     "oil": "PWROILFJIXX01",
     "wind": "PWRWONFJIXX01",
 }
-REMOVED_UPSTREAM_TECHNOLOGIES = {"PWRTRNA01"}
-REMOVED_UPSTREAM_FUELS = {"ELCFJI01", "ELCFJI02"}
+REMOVED_UPSTREAM_TECHNOLOGIES = {"DEMINDOHC", "PWRTRNA01"}
+REMOVED_UPSTREAM_FUELS = {"ELCFJI01", "ELCFJI02", "INDOHC", "OHC"}
 REMOVE_JSON_VALUE = object()
 OBSERVED_CAPACITY_GW = {
     "biomass": 0.034,
@@ -116,8 +117,8 @@ def update_csv(
     return changed
 
 
-def remove_upstream_branch_from_csvs() -> dict[str, int]:
-    """Remove the malformed land-code transmission branch from every CSV."""
+def remove_excluded_branches_from_csvs() -> dict[str, int]:
+    """Remove Fiji-excluded structural branches from every active CSV."""
     removed: dict[str, int] = {}
     for path in sorted(V2_INPUTS.glob("*.csv")):
         fields, rows = read_csv(path)
@@ -241,22 +242,23 @@ def set_json_parameter(
     return changed
 
 
-def transform_muiogo(
-    historical_demand: dict[int, float],
-    future_demand: dict[int, float],
-    residual_capacity: dict[str, dict[int, float]],
-    biomass_af: float,
-    wind_af: float,
+def remove_excluded_branches_from_muiogo(
+    *, extend_to_2020: bool = False
 ) -> dict[str, Any]:
+    """Remove Fiji-excluded entities from active MUIO JSON without solving."""
     gen_path = V2_CASE / "genData.json"
     gen_data = json.loads(gen_path.read_text(encoding="utf-8"))
-    tech_ids = {item["Tech"]: item["TechId"] for item in gen_data["osy-tech"]}
-    commodity_ids = {item["Comm"]: item["CommId"] for item in gen_data["osy-comm"]}
-    removed_ids = {
-        tech_ids[name] for name in REMOVED_UPSTREAM_TECHNOLOGIES
-    } | {
-        commodity_ids[name] for name in REMOVED_UPSTREAM_FUELS
+    tech_ids = {
+        item["Tech"]: item["TechId"]
+        for item in gen_data["osy-tech"]
+        if item["Tech"] in REMOVED_UPSTREAM_TECHNOLOGIES
     }
+    commodity_ids = {
+        item["Comm"]: item["CommId"]
+        for item in gen_data["osy-comm"]
+        if item["Comm"] in REMOVED_UPSTREAM_FUELS
+    }
+    removed_ids = set(tech_ids.values()) | set(commodity_ids.values())
     removal_targets = (
         REMOVED_UPSTREAM_TECHNOLOGIES
         | REMOVED_UPSTREAM_FUELS
@@ -271,13 +273,34 @@ def transform_muiogo(
     ]
     for path in json_paths:
         data = json.loads(path.read_text(encoding="utf-8"))
-        add_2020_to_json(data)
+        if extend_to_2020:
+            add_2020_to_json(data)
         cleaned, removed = remove_entities_from_json(data, removal_targets)
         if cleaned is REMOVE_JSON_VALUE:
             raise ValueError(f"Branch removal unexpectedly removed JSON root: {path}")
         if removed:
             json_removals[str(path.relative_to(V2_CASE))] = removed
-        path.write_text(json.dumps(cleaned, indent=4) + "\n", encoding="utf-8")
+            path.write_text(json.dumps(cleaned, indent=4) + "\n", encoding="utf-8")
+
+    return {
+        "technology_entities_found": sorted(tech_ids),
+        "fuel_entities_found": sorted(commodity_ids),
+        "muiogo_ids": sorted(removed_ids),
+        "json_references_removed": json_removals,
+    }
+
+
+def transform_muiogo(
+    historical_demand: dict[int, float],
+    future_demand: dict[int, float],
+    residual_capacity: dict[str, dict[int, float]],
+    biomass_af: float,
+    wind_af: float,
+) -> dict[str, Any]:
+    gen_path = V2_CASE / "genData.json"
+    excluded_branch_removal = remove_excluded_branches_from_muiogo(
+        extend_to_2020=True
+    )
 
     gen_data = json.loads(gen_path.read_text(encoding="utf-8"))
     tech_ids = {item["Tech"]: item["TechId"] for item in gen_data["osy-tech"]}
@@ -374,12 +397,7 @@ def transform_muiogo(
         },
         "demand_commodity_id": commodity_ids["ELCFJIXX02"],
         "power_technologies_blocked_2020_2024": len(power_ids),
-        "removed_upstream_electricity_branch": {
-            "technologies": sorted(REMOVED_UPSTREAM_TECHNOLOGIES),
-            "fuels": sorted(REMOVED_UPSTREAM_FUELS),
-            "muiogo_ids": sorted(removed_ids),
-            "json_references_removed": json_removals,
-        },
+        "removed_fiji_excluded_branches": excluded_branch_removal,
     }
 
 
@@ -391,14 +409,51 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def prune_excluded_branches_only() -> None:
+    """Surgically update the active v2 inputs and MUIO case; do not rebuild."""
+    csv_removals = remove_excluded_branches_from_csvs()
+    muiogo_removals = remove_excluded_branches_from_muiogo()
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    manifest["last_structural_edit_date"] = date.today().isoformat()
+    manifest["implementation"]["post_build_fiji_excluded_branch_prune"] = {
+        "configured_technologies": sorted(REMOVED_UPSTREAM_TECHNOLOGIES),
+        "configured_fuels": sorted(REMOVED_UPSTREAM_FUELS),
+        "csv_rows_removed": csv_removals,
+        **muiogo_removals,
+        "full_rebuild_run": False,
+        "solve_run": False,
+    }
+    MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    print(
+        json.dumps(
+            manifest["implementation"]["post_build_fiji_excluded_branch_prune"],
+            indent=2,
+        )
+    )
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--prune-excluded-branches-only",
+        action="store_true",
+        help=(
+            "Remove Fiji-excluded dormant branches from the current CSV and "
+            "MUIO inputs without cloning, recalibrating, or solving."
+        ),
+    )
+    args = parser.parse_args()
+    if args.prune_excluded_branches_only:
+        prune_excluded_branches_only()
+        return
+
     clone_raw_files()
     evidence = load_evidence()
 
     extended = 0
     for path in sorted(V2_INPUTS.glob("*.csv")):
         extended += int(extend_csv_to_2020(path))
-    csv_branch_removals = remove_upstream_branch_from_csvs()
+    csv_branch_removals = remove_excluded_branches_from_csvs()
 
     historical_demand = {
         year: float(evidence[year]["total_generation_mwh"]) * PJ_PER_MWH
@@ -504,7 +559,7 @@ def main() -> None:
         },
         "implementation": {
             "csv_files_extended_to_2020": extended,
-            "removed_upstream_electricity_branch_csv_rows": csv_branch_removals,
+            "removed_fiji_excluded_branch_csv_rows": csv_branch_removals,
             "historical_power_investment_cells_set_to_zero": blocked,
             **muiogo,
         },

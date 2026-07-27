@@ -75,7 +75,57 @@
         "RYTM.json": 130,
         "RYT.json": 11
       }
+    },
+    "post_build_fiji_excluded_branch_prune": {
+      "configured_technologies": [
+        "DEMINDOHC",
+        "PWRTRNA01"
+      ],
+      "configured_fuels": [
+        "ELCFJI01",
+        "ELCFJI02",
+        "INDOHC",
+        "OHC"
+      ],
+      "technology_entities_found": [
+        "DEMINDOHC"
+      ],
+      "fuel_entities_found": [
+        "INDOHC",
+        "OHC"
+      ],
+      "csv_rows_removed": {
+        "FUEL.csv": 2,
+        "InputActivityRatio.csv": 31,
+        "OutputActivityRatio.csv": 31,
+        "TECHNOLOGY.csv": 1
+      },
+      "muiogo_ids": [
+        "COM_33yz4",
+        "COM_acvja",
+        "TEC_dvguv"
+      ],
+      "json_references_removed": {
+        "RYTCM.json": 52,
+        "genData.json": 3,
+        "RYC.json": 4,
+        "RYCTs.json": 8,
+        "RT.json": 5,
+        "RYTTs.json": 4,
+        "RYTM.json": 130,
+        "RYT.json": 11,
+        "view/RYTMTs.json": 364,
+        "view/RYC.json": 6,
+        "view/RYCTs.json": 24,
+        "view/RYTE.json": 3,
+        "view/RT.json": 3,
+        "view/RYTM.json": 3,
+        "view/RYT.json": 24
+      },
+      "full_rebuild_run": false,
+      "solve_run": false
     }
   },
-  "claim_boundary": "Annual national grid-supply mix only. Total supply and installed fleet are exogenous. No land, water, agriculture, hourly dispatch, reliability, network, or reservoir calibration claim."
+  "claim_boundary": "Annual national grid-supply mix only. Total supply and installed fleet are exogenous. No land, water, agriculture, hourly dispatch, reliability, network, or reservoir calibration claim.",
+  "last_structural_edit_date": "2026-07-26"
 }

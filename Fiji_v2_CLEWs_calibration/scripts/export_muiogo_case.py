@@ -12,6 +12,11 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("case_folder", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument(
+        "--exclude-results",
+        action="store_true",
+        help="Exclude the case res/ folder from the portable archive.",
+    )
     args = parser.parse_args()
 
     case_folder = args.case_folder.resolve()
@@ -22,7 +27,10 @@ def main() -> None:
         for path in sorted(case_folder.rglob("*")):
             if not path.is_file() or path.name == "lp.lp":
                 continue
-            arcname = PurePosixPath(case_folder.name) / path.relative_to(case_folder)
+            relative_path = path.relative_to(case_folder)
+            if args.exclude_results and relative_path.parts[0] == "res":
+                continue
+            arcname = PurePosixPath(case_folder.name) / relative_path
             archive.write(path, str(arcname))
     print(f"Portable MUIO case backup: {args.output} ({args.output.stat().st_size} bytes)")
 

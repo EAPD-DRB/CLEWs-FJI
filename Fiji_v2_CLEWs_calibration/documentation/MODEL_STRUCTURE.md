@@ -26,6 +26,13 @@ actual electricity technologies and demand use the mapped grid-node code
 `FJIXX`; it had no producer at its input, no demand at its output, and zero
 activity in the pre-correction solve.
 
+The separate `OHC` → `DEMINDOHC` → `INDOHC` branch has also been removed
+from active Fiji v2. It was a dormant generic end-use branch: `OHC` had no
+producer or importer, `INDOHC` had no specified demand, and the conversion
+technology carried no Fiji cost, capacity, availability, or emissions data.
+The structural review is retained at
+`../data_sources/evidence/energy/OHC_BRANCH_REVIEW_2026-07-26.md`.
+
 The current structure pools Viti Levu, Vanua Levu, Taveuni, Ovalau,
 and other systems. It cannot represent island-specific capacity adequacy,
 dispatch, outages, or network constraints. Those are required structural

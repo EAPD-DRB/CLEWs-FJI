@@ -27,6 +27,14 @@ These limitations are part of the result, not optional caveats.
   not reproduce its year-to-year behavior reliably.
 - Small grid solar appears only in 2024 and is not separately represented in
   the historical fit.
+- Fiji v2 does not represent a generic industrial `Other hydrocarbons`
+  service. Reintroducing one requires evidence for its physical fuel,
+  material demand, supply chain, and accounting boundary; reported non-energy
+  lubricant or bitumen use must not be treated as combustion demand.
+- The stored `Historical_Backcast` solve predates the surgical removal of the
+  dormant OHC branch. No result change is expected, but exact solver parity
+  with the current structural input set has not been rerun at the user's
+  direction.
 - MUIO commodity descriptions remain generic placeholders, although
   identifier references resolve.
 

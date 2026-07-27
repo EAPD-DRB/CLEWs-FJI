@@ -27,6 +27,8 @@ EVIDENCE = (
 )
 REMOVED_UPSTREAM_TECHNOLOGIES = {"PWRTRNA01"}
 REMOVED_UPSTREAM_FUELS = {"ELCFJI01", "ELCFJI02"}
+REMOVED_OHC_TECHNOLOGIES = {"DEMINDOHC"}
+REMOVED_OHC_FUELS = {"INDOHC", "OHC"}
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
@@ -111,6 +113,30 @@ def main() -> None:
             "PWRTRNA01, ELCFJI01, and ELCFJI02 removed"
             if not branch_references
             else "; ".join(branch_references[:10])
+        ),
+        "model/inputs/*.csv; WebAPP/DataStorage/Fiji_v2/genData.json",
+    )
+
+    ohc_references: list[str] = []
+    ohc_targets = REMOVED_OHC_TECHNOLOGIES | REMOVED_OHC_FUELS
+    for path in INPUTS.glob("*.csv"):
+        for row_number, row in enumerate(read_rows(path), start=2):
+            if any(value in ohc_targets for value in row.values()):
+                ohc_references.append(f"{path.name}:{row_number}")
+    ohc_references.extend(
+        f"genData:{name}"
+        for name in sorted(
+            (muiogo_technologies & REMOVED_OHC_TECHNOLOGIES)
+            | (muiogo_fuels & REMOVED_OHC_FUELS)
+        )
+    )
+    check(
+        "Unsupported other-hydrocarbons branch is absent",
+        not ohc_references,
+        (
+            "OHC, DEMINDOHC, and INDOHC removed"
+            if not ohc_references
+            else "; ".join(ohc_references[:10])
         ),
         "model/inputs/*.csv; WebAPP/DataStorage/Fiji_v2/genData.json",
     )
