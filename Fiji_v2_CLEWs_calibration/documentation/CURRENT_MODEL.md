@@ -21,10 +21,18 @@ main-branch v2.0.1 inputs and diagnostics are recertified in
 | Land and crops | Structurally active; historically uncalibrated |
 | Water and climate | Structurally active; historically unvalidated |
 | Cross-nexus links | Present but not covered by the v2 calibration claim |
+| Commodity topology | Phase 1A audited; classified warnings remain for Phases 1B–1D |
 | Investment economics | Executable but not decision-grade calibrated |
 
 The assessment grade is **Good, 76.4/100, medium confidence** for annual
 national grid-supply energy only.
+
+Phase 1A's read-only topology audit is complete. It classifies all 103
+commodities and changes no input. Seventy-one are connected; 32 are produced,
+unconsumed and undemanded. The audit found no consumed-but-unproduced
+commodity and no positive demand without supply. Its strict mode fails
+intentionally until the classified structural warnings are resolved. See
+`history/structural/PHASE_1A_TOPOLOGY_AUDIT_2026-07-27.md`.
 
 ## Historical experiment
 

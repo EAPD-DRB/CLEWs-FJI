@@ -163,6 +163,29 @@
     "validation_summary": "diagnostics/calibration_runs/validation_summary.json",
     "note": "MUIOGO batch execution also regenerated Raw and Raw_ReserveProxy from the same active Fiji_v2 inputs. Those two folders are byte-identical to Historical_Backcast and are not preserved raw baselines."
   },
+  "phase_1a_topology_audit": {
+    "date": "2026-07-27",
+    "read_only": true,
+    "script": "scripts/audit_fiji_topology.py",
+    "report": "diagnostics/topology/2026-07-27_phase1a/REPORT.md",
+    "ledger": "diagnostics/topology/2026-07-27_phase1a/commodity_ledger.csv",
+    "dimensions": {
+      "technologies": 130,
+      "commodities": 103
+    },
+    "balance_status_counts": {
+      "connected": 71,
+      "produced_unconsumed_undemanded": 32
+    },
+    "warning_records": 37,
+    "commodities_with_warnings": 33,
+    "end_use_output_stubs": 25,
+    "inactive_end_use_output_stubs_2020_2024": 25,
+    "model_inputs_unchanged": true,
+    "technical_validation_checks_passed": 15,
+    "active_gen_data_sha256": "6a585ab82bc8064f4df87ad37a96deeec2f53c024673d62da0a717497d4a09be",
+    "next_gate": "Document the physical meaning and units of WTRGRCFJI plus the PUBWATFJI observation boundary before Phase 1B edits."
+  },
   "claim_boundary": "Annual national grid-supply mix only. Total supply and installed fleet are exogenous. No land, water, agriculture, hourly dispatch, reliability, network, or reservoir calibration claim.",
   "last_structural_edit_date": "2026-07-26"
 }

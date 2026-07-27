@@ -3,7 +3,7 @@
   "model": "Fiji_v2",
   "run": "Historical_Backcast",
   "status": "PASS",
-  "validated_at": "2026-07-27T16:50:56.908110+00:00",
+  "validated_at": "2026-07-27T19:07:29.897470+00:00",
   "provenance": {
     "case_folder": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2",
     "dimensions": {

@@ -28,6 +28,8 @@ operational reliability.
   `diagnostics/calibration_runs/historical_fit/scorecard.md`
 - Most recent post-OHC technical validation:
   `diagnostics/calibration_runs/validation_summary.json`
+- Phase 1A commodity topology audit:
+  `diagnostics/topology/2026-07-27_phase1a/REPORT.md`
 - Chronological record: `documentation/HISTORY.md`
 
 ## Version boundary
@@ -86,10 +88,20 @@ From the repository root:
 /opt/anaconda3/bin/python \
   Fiji_v2_CLEWs_calibration/scripts/validate_fiji_v2.py \
   --case-folder /path/to/MUIOGO/WebAPP/DataStorage/Fiji_v2
+
+/opt/anaconda3/bin/python \
+  Fiji_v2_CLEWs_calibration/scripts/audit_fiji_topology.py \
+  --case-folder /path/to/MUIOGO/WebAPP/DataStorage/Fiji_v2 \
+  --output-dir \
+  Fiji_v2_CLEWs_calibration/diagnostics/topology/2026-07-27_phase1a
 ```
 
 If the named run already exists, solve it with `--reuse-existing`. The reserve
 proxy check must report zero mismatches before a solve.
+
+The topology audit is read-only. It exits successfully with classified
+warnings by default; add `--strict` when unresolved warnings should return
+exit code 2.
 
 To reapply only the documented Fiji structural exclusions without cloning the
 raw reference, recalibrating, or solving:
