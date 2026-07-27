@@ -21,7 +21,7 @@ post-OHC correction and Phase 0 recertification.
 | Public water | 2020–2024 delivery and aggregate surface abstraction/loss accounting validated |
 | Other water and climate | Structurally active; historically unvalidated |
 | Cross-nexus links | Present but not covered by the v2 calibration claim |
-| Commodity topology | Phase 1B audited; classified warnings remain for Phases 1C–1D |
+| Commodity topology | Phase 1C.0 classified the 26 end-use warnings; no service quantity was invented |
 | Investment economics | Executable but not decision-grade calibrated |
 
 The assessment grade is **Good, 76.4/100, medium confidence** for annual
@@ -35,6 +35,16 @@ The post-change audit classifies all 104 commodities: 73 are connected and 31
 are produced, unconsumed and undemanded. Its strict mode still fails
 intentionally until later classified warnings are resolved. See
 `history/structural/PHASE_1B_PUBLIC_WATER_2026-07-27.md`.
+
+Phase 1C.0 is now complete as a documentation and evidence gate. The remaining
+26 energy warnings are inherited sector final-energy interfaces, not 26
+independent defects. FBoS data support an accounting-only split of the
+2020–2024 gross electricity requirement into commercial, industrial,
+grid-served domestic, distribution-loss and explicit residual components.
+The split has not yet been applied. The Fiji MICS identifies a credible
+residential cooking technology mix, but not a useful-energy quantity or
+efficiency set, so no cooking demand has been activated. See
+`history/structural/PHASE_1C_END_USE_SERVICE_GATE_2026-07-27.md`.
 
 ## Historical experiment
 

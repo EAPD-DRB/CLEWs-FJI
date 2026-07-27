@@ -261,6 +261,34 @@
     "validation_summary": "diagnostics/calibration_runs/phase1b/live_validation_summary.json",
     "next_gate": "Phase 1C evidence and design for useful end-use service boundaries and conversion efficiencies."
   },
+  "phase_1c_end_use_service_gate": {
+    "date": "2026-07-27",
+    "read_only": true,
+    "scope": "Twenty-six produced, unconsumed and undemanded AGR/COM/IND/RES/TRA final-energy carriers.",
+    "carrier_register": "data_sources/evidence/energy/phase1c_end_use_carrier_register_2026-07-27.csv",
+    "carrier_register_sha256": "d75e5415a1752f78224f8334aca0c51598f7a279a09068d88ff2b7ecdaeeebc3",
+    "source_review": "data_sources/evidence/energy/PHASE_1C_SOURCE_REVIEW_2026-07-27.md",
+    "electricity_boundary_evidence": "data_sources/evidence/energy/fiji_energy_account_2024_electricity_boundary_2020_2024.csv",
+    "electricity_boundary_evidence_sha256": "0f1cbed76432a4f0e3c03986af0e4389ce998b69b5b6cd85e43dde7cecd5b2c8",
+    "residential_cooking_share_evidence": "data_sources/evidence/energy/fiji_mics_2021_cooking_mix.csv",
+    "residential_cooking_share_evidence_sha256": "85ede14062be8768cf1c5064970ed6e768ec227a789204a739ab3ddc1395fbb8",
+    "external_source_sha256": {
+      "fiji_energy_account_2024_pdf": "24f869da57d75eb32523fd1c21f075ecfa48add56f103a41762d3fb663f974fa",
+      "energy_supply_and_use_workbook": "8850294afaaa4e70b6f276ae052da24e74e3743cca317d2a3b5ab007bf199ed4",
+      "fiji_mics_2021_report": "bd07375a3851447fa907ffbe15b4c9c708deb451e521f24074e269d17ffcfba7"
+    },
+    "decisions": {
+      "electricity_accounting_2020_2024": "GO",
+      "future_electricity_sector_allocation": "ASSUMPTION_REQUIRED",
+      "residential_cooking_technology_mix": "SHARE_EVIDENCE_READY",
+      "residential_cooking_active_demand": "NO_GO_QUANTITY_AND_EFFICIENCIES_MISSING",
+      "map_biogas_to_fossil_ngs": "REJECTED"
+    },
+    "model_inputs_unchanged": true,
+    "active_case_unchanged": true,
+    "solve_run": false,
+    "next_gate": "Select and document the 2025-2050 electricity sector-allocation rule, then implement the accounting-only partition as Phase 1C.1 through the full application and solver validation chain."
+  },
   "claim_boundary": "Annual national grid-supply mix plus 2020-2024 public-water delivery and aggregate surface abstraction/loss accounting. Electricity total supply and installed fleet are exogenous. No full land, hydrology, agriculture, hourly dispatch, reliability, network, reservoir, groundwater-source, or water-energy calibration claim.",
   "last_structural_edit_date": "2026-07-27"
 }
