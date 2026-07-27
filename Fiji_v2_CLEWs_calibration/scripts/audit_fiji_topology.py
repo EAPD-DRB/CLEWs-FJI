@@ -54,6 +54,7 @@ RENEWABLE_RESOURCE_CARRIERS = {"GEO", "HYD", "SOL", "WND"}
 WATER_RESOURCES = {"WTRPRCFJI", "WTRGRCFJI", "WTRSURFJI"}
 WATER_SINKS = {"WTREVTFJI"}
 WATER_SERVICES = {"AGRWATFJI", "PUBWATFJI"}
+WATER_INTERMEDIATES = {"WTRGWRFJI"}
 CROP_SERVICES = {"CRPCAS", "CRPCON", "CRPOTH", "CRPSGC", "CRPYAM"}
 LAND_STOCKS = {
     "LTOT",
@@ -121,10 +122,15 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--run", default="Historical_Backcast")
     parser.add_argument(
+        "--phase",
+        default="1A",
+        help="phase label written to the machine-readable and Markdown reports",
+    )
+    parser.add_argument(
         "--output-dir",
         type=Path,
         default=DEFAULT_OUTPUT,
-        help="directory for the Phase 1A reports",
+        help="directory for the topology reports",
     )
     parser.add_argument(
         "--strict",
@@ -267,6 +273,7 @@ def evidence_for(commodity: str) -> str:
         return "DS-FBS-WATER-2024;M-WTR-01"
     if (
         commodity in WATER_RESOURCES
+        or commodity in WATER_INTERMEDIATES
         or commodity in WATER_SINKS
         or commodity == "AGRWATFJI"
     ):
@@ -312,8 +319,8 @@ def disposition_for(
 ) -> str:
     if commodity == "COMELCFJIXX02":
         return (
-            "Phase 1B/1C: preserve commercial electricity as service evidence "
-            "and remove the nonsensical public-groundwater cross-sector use."
+            "Phase 1B removed the public-groundwater cross-sector use. Preserve "
+            "commercial electricity for the Phase 1C service redesign."
         )
     if commodity == "AGRELCFJIXX02":
         return (
@@ -322,13 +329,18 @@ def disposition_for(
         )
     if commodity == "PUBWATFJI":
         return (
-            "Phase 1B: add observed public-water service demand and repair the "
-            "surface/groundwater supply topology after documenting raw-water roles."
+            "Phase 1B connected observed 2020-2024 public-water demand to the "
+            "evidenced surface-water route; retain and validate."
         )
     if commodity == "WTRGRCFJI":
         return (
-            "Phase 1B: decide whether this is recharge, extractable groundwater "
-            "or an intermediate before adding an abstraction chain."
+            "Phase 1B classifies this as annual recharge and connects it to the "
+            "quarantined WTRABSFJI abstraction layer; retain as a resource."
+        )
+    if commodity == "WTRGWRFJI":
+        return (
+            "Retain as the Phase 1B raw-groundwater abstraction intermediate; "
+            "keep its public route quarantined pending Fiji evidence."
         )
     if commodity in {"WTRSURFJI", "WTRPRCFJI", "WTREVTFJI", "AGRWATFJI"}:
         return (
@@ -671,7 +683,7 @@ def main() -> int:
 
     report = {
         "schema_version": 1,
-        "phase": "1A",
+        "phase": args.phase,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "case_folder": str(case),
         "input_folder": str(input_folder),
@@ -739,7 +751,22 @@ def main() -> int:
         or row["code"]
         in {"likely_cross_sector_consumer", "output_only_resource_carrier"}
     ]
-    report_markdown = f"""# Fiji v2 Phase 1A topology audit
+    if args.phase == "1B":
+        interpretation = """Phase 1B now treats `WTRGRCFJI` as annual recharge,
+adds an explicit raw-groundwater abstraction layer, closes observed public
+water through the surface route, and quarantines public groundwater. The
+next structural step is Phase 1C: define useful-service boundaries and
+evidence gates for the inactive end-use carrier outputs. The agricultural
+groundwater chain remains deferred to Phase 1D."""
+    else:
+        interpretation = """The next structural step is Phase 1B, but it must
+begin with a documented decision on whether `WTRGRCFJI` is recharge,
+extractable groundwater, or an intermediate. No public-water link should be
+changed until that decision and its units are reviewed.
+`AGRELCFJIXX02 -> DEMAGRGWTFJI -> AGRWATFJI` has the same electricity-only
+groundwater pattern but is not a cross-sector link; retain it for the Phase
+1D agricultural-water review."""
+    report_markdown = f"""# Fiji v2 Phase {args.phase} topology audit
 
 ## Scope and status
 
@@ -783,13 +810,9 @@ an instruction to delete, suppress, demand, or rewire a commodity.
 ## Interpretation
 
 The complete commodity-by-commodity evidence is in `commodity_ledger.csv`.
-`warnings.csv` contains every machine-detected topology warning. The next
-structural step is Phase 1B, but it must begin with a documented decision on
-whether `WTRGRCFJI` is recharge, extractable groundwater, or an intermediate.
-No public-water link should be changed until that decision and its units are
-reviewed. `AGRELCFJIXX02 -> DEMAGRGWTFJI -> AGRWATFJI` has the same
-electricity-only groundwater pattern but is not a cross-sector link; retain it
-for the Phase 1D agricultural-water review.
+`warnings.csv` contains every machine-detected topology warning.
+
+{interpretation}
 """
     atomic_write_text(output_dir / "REPORT.md", report_markdown)
 

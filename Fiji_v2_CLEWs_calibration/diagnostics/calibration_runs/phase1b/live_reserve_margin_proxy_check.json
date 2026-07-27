@@ -1,0 +1,20 @@
+{
+    "status": "CURRENT",
+    "case_folder": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2",
+    "constraint_id": "CO_fji_reserve_proxy",
+    "constraint_name": "RESERVE_PROXY_RUN_CHECK_IF_DEMAND_OR_MARGIN_CHANGES",
+    "warning": "DERIVED RESERVE PROXY: run manage_reserve_margin_proxy.py --check after changing annual demand, demand profile, YearSplit, CapacityToActivityUnit, capacity credits, reserve margin, model years, timeslices, or scenarios. Run it with --update before solving when the check reports STALE.",
+    "input_fingerprint_sha256": "656ca888c6a06a96971a7621ea1f5dd5113b7305b9a33cb0d6bb8a36acaf1e71",
+    "scenarios": {
+        "SC_0": {
+            "reserve_margin": 1.0,
+            "first_year_requirement": 3.970080580879387,
+            "last_year_requirement": 11.726127279832154,
+            "peak_timeslices": [
+                "S1D1"
+            ]
+        }
+    },
+    "mismatch_count": 0,
+    "mismatches": []
+}

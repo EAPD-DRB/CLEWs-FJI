@@ -39,8 +39,8 @@ REMOVED_UPSTREAM_TECHNOLOGIES = {"PWRTRNA01"}
 REMOVED_UPSTREAM_FUELS = {"ELCFJI01", "ELCFJI02"}
 REMOVED_OHC_TECHNOLOGIES = {"DEMINDOHC"}
 REMOVED_OHC_FUELS = {"INDOHC", "OHC"}
-EXPECTED_POST_OHC_TECHNOLOGIES = 130
-EXPECTED_POST_OHC_COMMODITIES = 103
+EXPECTED_PHASE1B_TECHNOLOGIES = 131
+EXPECTED_PHASE1B_COMMODITIES = 104
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
@@ -119,10 +119,10 @@ def main() -> None:
         encoding="utf-8", errors="replace"
     ).splitlines()[0]
     check(
-        "Historical_Backcast solve is optimal",
+        f"{args.run} solve is optimal",
         first_line.startswith("Optimal"),
         first_line,
-        "WebAPP/DataStorage/Fiji_v2/res/Historical_Backcast/results.txt",
+        f"WebAPP/DataStorage/Fiji_v2/res/{args.run}/results.txt",
     )
 
     years = [int(row["VALUE"]) for row in read_rows(INPUTS / "YEAR.csv")]
@@ -138,9 +138,9 @@ def main() -> None:
     technology_count = len(gen_data["osy-tech"])
     commodity_count = len(gen_data["osy-comm"])
     check(
-        "MUIO dimensions match the post-OHC Fiji v2.0.1 structure",
-        technology_count == EXPECTED_POST_OHC_TECHNOLOGIES
-        and commodity_count == EXPECTED_POST_OHC_COMMODITIES,
+        "MUIO dimensions match the Phase 1B Fiji structure",
+        technology_count == EXPECTED_PHASE1B_TECHNOLOGIES
+        and commodity_count == EXPECTED_PHASE1B_COMMODITIES,
         f"{technology_count} technologies; {commodity_count} commodities",
         "WebAPP/DataStorage/Fiji_v2/genData.json",
     )
@@ -363,7 +363,7 @@ def main() -> None:
         "Held-out material generation fit meets the declared annual threshold",
         validation["generation_mape_percent"] <= 15,
         f"2023-2024 MAPE {validation['generation_mape_percent']:.3f}%",
-        "diagnostics/calibration_runs/historical_fit/summary.json",
+        str(fit_folder / "summary.json"),
     )
     check(
         "Held-out renewable-share fit meets the declared annual threshold",
@@ -372,7 +372,7 @@ def main() -> None:
             "2023-2024 renewable-share MAE "
             f"{validation['renewable_share_mae_percentage_points']:.3f} percentage points"
         ),
-        "diagnostics/calibration_runs/historical_fit/summary.json",
+        str(fit_folder / "summary.json"),
     )
 
     comparison_rows = read_rows(fit_folder / "history_comparisons.csv")
@@ -390,7 +390,7 @@ def main() -> None:
         "No held-out material annual generation outcome misses by more than 20%",
         worst_material[0] <= 20,
         f"Worst: {worst_material[1]} at {worst_material[0]:.3f}%",
-        "diagnostics/calibration_runs/historical_fit/history_comparisons.csv",
+        str(fit_folder / "history_comparisons.csv"),
     )
 
     active_input_files = [
@@ -420,7 +420,7 @@ def main() -> None:
             if not missing_result_files and oldest_result_mtime >= newest_input_mtime
             else f"Missing/stale artifacts: {missing_result_files}"
         ),
-        "MUIO source JSON and Historical_Backcast generated artifacts",
+        f"MUIO source JSON and {args.run} generated artifacts",
     )
 
     failed = [item for item in checks if item["status"] == "FAIL"]
@@ -452,8 +452,9 @@ def main() -> None:
         "checks": checks,
         "failed_checks": len(failed),
         "scope": (
-            "Technical and annual national grid-supply energy calibration only; "
-            "not a validation of the full land-water-agriculture nexus."
+            "Technical, annual national grid-supply energy calibration and "
+            "Phase 1B public-water closure; not a validation of the full "
+            "land-water-agriculture nexus."
         ),
     }
     output.parent.mkdir(parents=True, exist_ok=True)

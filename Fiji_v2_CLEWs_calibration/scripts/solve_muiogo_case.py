@@ -13,6 +13,11 @@ from pathlib import Path
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("run", nargs="?", default="Historical_Backcast")
+    parser.add_argument(
+        "--case",
+        default="Fiji_v2",
+        help="MUIO case directory under WebAPP/DataStorage/",
+    )
     parser.add_argument("--reuse-existing", action="store_true")
     parser.add_argument(
         "--muiogo-root",
@@ -28,7 +33,7 @@ def main() -> None:
     sys.path.insert(0, str(repo / "API"))
     from Classes.Case.DataFileClass import DataFile
 
-    case = "Fiji_v2"
+    case = args.case
     data_file = DataFile(case)
     scenarios = [
         {
@@ -41,7 +46,7 @@ def main() -> None:
     ]
     run_data = {
         "Case": args.run,
-        "CaseId": "fiji-v2-historical-backcast",
+        "CaseId": f"{case.lower().replace('_', '-')}-{args.run.lower()}",
         "Desc": (
             "Annual grid-supply backcast. 2020-2022 calibration and "
             "2023-2024 held-out validation."

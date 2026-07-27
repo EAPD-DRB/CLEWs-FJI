@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "phase": "1B public water",
+  "status": "PASS",
+  "validated_at": "2026-07-27T19:49:42.004569+00:00",
+  "case": "Fiji_v2",
+  "run": "Phase1B_Public_Water",
+  "baseline_case": "Fiji_v2",
+  "baseline_run": "Historical_Backcast",
+  "checks": [
+    {
+      "check": "Phase 1B dimensions and entities are present",
+      "status": "PASS",
+      "finding": {
+        "technologies": 131,
+        "commodities": 104
+      },
+      "evidence": "genData.json"
+    },
+    {
+      "check": "Water commodity metadata uses km3",
+      "status": "PASS",
+      "finding": "All seven water commodities use km3",
+      "evidence": "genData.json"
+    },
+    {
+      "check": "Public groundwater consumes raw groundwater, not commercial electricity",
+      "status": "PASS",
+      "finding": {
+        "IAR": [
+          "COM_phase1b_wtrgwr"
+        ]
+      },
+      "evidence": "genData.json"
+    },
+    {
+      "check": "Portable source carries the corrected and quarantined groundwater route",
+      "status": "PASS",
+      "finding": {
+        "bad_commercial_electricity_rows": 0,
+        "raw_groundwater_rows": 31,
+        "quarantine_rows": {
+          "TotalTechnologyAnnualActivityUpperLimit.csv": 31,
+          "TotalAnnualMaxCapacityInvestment.csv": 31
+        }
+      },
+      "evidence": "model/inputs/InputActivityRatio.csv and public-groundwater bounds"
+    },
+    {
+      "check": "UpdateCase preserved all Phase 1B activity relationships",
+      "status": "PASS",
+      "finding": {
+        "IAR:WTRABSFJI:WTRGRCFJI": {
+          "2020": 1.0,
+          "2021": 1.0,
+          "2022": 1.0,
+          "2023": 1.0,
+          "2024": 1.0
+        },
+        "OAR:WTRABSFJI:WTRGWRFJI": {
+          "2020": 1.0,
+          "2021": 1.0,
+          "2022": 1.0,
+          "2023": 1.0,
+          "2024": 1.0
+        },
+        "IAR:DEMPUBGWTFJI:WTRGWRFJI": {
+          "2020": 1.0,
+          "2021": 1.0,
+          "2022": 1.0,
+          "2023": 1.0,
+          "2024": 1.0
+        },
+        "OAR:DEMPUBGWTFJI:PUBWATFJI": {
+          "2020": 1.0,
+          "2021": 1.0,
+          "2022": 1.0,
+          "2023": 1.0,
+          "2024": 1.0
+        },
+        "IAR:DEMPUBSURFJI:WTRSURFJI": {
+          "2020": 2.0499721742604775,
+          "2021": 1.9836360822276315,
+          "2022": 2.039108725142148,
+          "2023": 2.033322601416613,
+          "2024": 2.257635152255891
+        },
+        "OAR:DEMPUBSURFJI:PUBWATFJI": {
+          "2020": 1.0,
+          "2021": 1.0,
+          "2022": 1.0,
+          "2023": 1.0,
+          "2024": 1.0
+        }
+      },
+      "evidence": "RYTCM.json"
+    },
+    {
+      "check": "Public-water annual demand matches the FBoS billed-delivery boundary",
+      "status": "PASS",
+      "finding": {
+        "2020": 0.070079,
+        "2021": 0.071071,
+        "2022": 0.069294,
+        "2023": 0.068332,
+        "2024": 0.067091
+      },
+      "evidence": "RYC.json; FBoS water-account extract"
+    },
+    {
+      "check": "Annual-only public demand uses a normalized flat-rate profile",
+      "status": "PASS",
+      "finding": {
+        "2020": 1.0,
+        "2021": 1.0,
+        "2022": 1.0,
+        "2023": 1.0,
+        "2024": 1.0
+      },
+      "evidence": "RYCTs.json; RYTs.json"
+    },
+    {
+      "check": "Public groundwater is quarantined for 2020-2050",
+      "status": "PASS",
+      "finding": {
+        "TAU": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        "TAMaxCI": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "evidence": "RYT.json"
+    },
+    {
+      "check": "Generated derived sets contain the intended Phase 1B mappings",
+      "status": "PASS",
+      "finding": {
+        "groundwater_mode": true,
+        "surface_mode": true,
+        "abstraction_mode": true,
+        "raw_groundwater_consumer": true,
+        "commercial_electricity_has_no_consumers": true
+      },
+      "evidence": "data_processed.txt"
+    },
+    {
+      "check": "Generation, preprocessing, matrix construction and CBC solve completed",
+      "status": "PASS",
+      "finding": {
+        "solver": "Optimal - objective value -1387.57010517",
+        "artifact_bytes": {
+          "data.txt": 268132,
+          "data_processed.txt": 302694,
+          "lp.lp": 58841287,
+          "results.txt": 41595014
+        }
+      },
+      "evidence": "MUIO DataFile generation/run chain"
+    },
+    {
+      "check": "Solved public-water delivery and raw-surface use close exactly",
+      "status": "PASS",
+      "finding": {
+        "surface_delivery_activity_km3": {
+          "2020": 0.070079,
+          "2021": 0.071071,
+          "2022": 0.069294,
+          "2023": 0.068332,
+          "2024": 0.067091
+        },
+        "public_balance_activity_km3": {
+          "2020": 0.070079,
+          "2021": 0.071071,
+          "2022": 0.069294,
+          "2023": 0.068332,
+          "2024": 0.067091
+        },
+        "remaining_surface_balance_km3": {
+          "2020": 13.242959,
+          "2021": 13.24564,
+          "2022": 13.246111,
+          "2023": 13.249259,
+          "2024": 13.237524
+        },
+        "groundwater_delivery_activity_km3": {
+          "2020": 0.0,
+          "2021": 0.0,
+          "2022": 0.0,
+          "2023": 0.0,
+          "2024": 0.0
+        },
+        "groundwater_abstraction_activity_km3": {
+          "2020": 0.0,
+          "2021": 0.0,
+          "2022": 0.0,
+          "2023": 0.0,
+          "2024": 0.0
+        },
+        "reported_balance_duals": 0.0
+      },
+      "evidence": "results.txt; FBoS water-account extract"
+    },
+    {
+      "check": "Objective change is limited to the added water-service operating cost",
+      "status": "PASS",
+      "finding": {
+        "baseline": -1387.5701359,
+        "phase1b": -1387.57010517,
+        "difference": 3.072999993491976e-05,
+        "percent_change": 2.2146628224300744e-06,
+        "expected_discounted_water_cost": 3.072534035314746e-05,
+        "difference_from_expected": 4.659581772299183e-09
+      },
+      "evidence": "ObjectiveValue.csv for baseline and Phase 1B"
+    },
+    {
+      "check": "No existing non-water technology activity changed",
+      "status": "PASS",
+      "finding": {
+        "compared_rows": 7409,
+        "missing_rows": 0,
+        "changed_rows": 0
+      },
+      "evidence": "baseline and Phase 1B TotalAnnualTechnologyActivityByMode.csv"
+    },
+    {
+      "check": "No existing technology emissions changed",
+      "status": "PASS",
+      "finding": {
+        "compared_rows": 4030,
+        "changed_rows": 0
+      },
+      "evidence": "baseline and Phase 1B AnnualTechnologyEmission.csv"
+    },
+    {
+      "check": "Result timestamps and case identity match Phase 1B",
+      "status": "PASS",
+      "finding": {
+        "case_name": "Fiji_v2",
+        "run": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2/res/Phase1B_Public_Water",
+        "all_results_newer_than_inputs": true
+      },
+      "evidence": "genData.json and run artifacts"
+    }
+  ],
+  "failed_checks": 0,
+  "artifact_hashes": {
+    "res/Phase1B_Public_Water/data.txt": "281fe0dcdf6e9e619aefa0e6e3dd9414cf59da4f67bd496ec78c54874d12c2f0",
+    "res/Phase1B_Public_Water/data_processed.txt": "6c77e2dfd0e32a8fa221c70992e46282b83bd0db27091b7eb340e80b6fd5968a",
+    "res/Phase1B_Public_Water/lp.lp": "b38e54d1f6306bed51de24f017edfef0f3e4d44536fbb9415531f2439bd4a7d4",
+    "res/Phase1B_Public_Water/results.txt": "4fcad8c3f90931295dc4dcbb32f8f4d35a6d37a9d44a157d6f3bbcfc39e78da2",
+    "res/Phase1B_Public_Water/csv/ObjectiveValue.csv": "500fc835ab6db8f61e4bbf4281b5fac1f230fa5b9a2b7c73dd568c961a87fc80"
+  },
+  "known_limitations": [
+    "No Fiji-specific public-water pumping/treatment electricity intensity.",
+    "Public groundwater is structurally represented but quarantined.",
+    "Annual-only water evidence is allocated with a flat-rate profile.",
+    "No future public-water demand is projected after 2024."
+  ]
+}

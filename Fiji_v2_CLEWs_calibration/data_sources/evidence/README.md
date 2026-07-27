@@ -16,3 +16,10 @@ Every retained file must be referenced by a source, assumption, calculation,
 or model-map record. Copyrighted reports may be represented by a citation,
 page/table locator, checksum, and extracted non-copyrightable facts rather
 than a copied publication.
+
+The active Phase 1B public-water extract is:
+
+- `water/fiji_water_account_2024_public_supply_2020_2024.csv` — annual
+  2020–2024 Water Authority of Fiji surface abstraction, losses, billed/carted
+  delivery, `ML -> km3` conversion and abstraction/delivery ratios from the
+  Fiji Bureau of Statistics water account.

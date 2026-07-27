@@ -186,6 +186,81 @@
     "active_gen_data_sha256": "6a585ab82bc8064f4df87ad37a96deeec2f53c024673d62da0a717497d4a09be",
     "next_gate": "Document the physical meaning and units of WTRGRCFJI plus the PUBWATFJI observation boundary before Phase 1B edits."
   },
-  "claim_boundary": "Annual national grid-supply mix only. Total supply and installed fleet are exogenous. No land, water, agriculture, hourly dispatch, reliability, network, or reservoir calibration claim.",
-  "last_structural_edit_date": "2026-07-26"
+  "phase_1b_public_water": {
+    "date": "2026-07-27",
+    "script": "scripts/apply_fiji_phase1b_public_water.py",
+    "evidence_file": "data_sources/evidence/water/fiji_water_account_2024_public_supply_2020_2024.csv",
+    "evidence_sha256": "700629cd41272588bf5cceb04fce6d0ac2405afc5ffd4ee27e005d4788da622e",
+    "case": "Fiji_v2",
+    "run": "Phase1B_Public_Water",
+    "baseline_run": "Historical_Backcast",
+    "dimensions": {
+      "technologies": 131,
+      "commodities": 104,
+      "years": 31,
+      "timeslices": 4
+    },
+    "structural_changes": {
+      "technology_added": "WTRABSFJI",
+      "commodity_added": "WTRGWRFJI",
+      "public_groundwater_input_removed": "COMELCFJIXX02",
+      "public_groundwater_input_added": "WTRGWRFJI",
+      "public_groundwater_quarantined_years": [
+        2020,
+        2050
+      ],
+      "water_commodity_unit": "km3"
+    },
+    "historical_public_demand_km3": {
+      "2020": 0.070079,
+      "2021": 0.071071,
+      "2022": 0.069294,
+      "2023": 0.068332,
+      "2024": 0.067091
+    },
+    "surface_input_per_delivered": {
+      "2020": 2.0499721742604775,
+      "2021": 1.9836360822276315,
+      "2022": 2.039108725142148,
+      "2023": 2.033322601416613,
+      "2024": 2.257635152255891
+    },
+    "solver": "CBC",
+    "status": "Optimal",
+    "baseline_objective": -1387.5701359,
+    "objective": -1387.57010517,
+    "objective_change": 0.00003072999993491976,
+    "active_gen_data_sha256": "2093888d4e1a84132496ecafca86d45056b1966a4dce4d17bca2ec08a82dedc9",
+    "generated_artifacts_sha256": {
+      "data.txt": "281fe0dcdf6e9e619aefa0e6e3dd9414cf59da4f67bd496ec78c54874d12c2f0",
+      "data_processed.txt": "6c77e2dfd0e32a8fa221c70992e46282b83bd0db27091b7eb340e80b6fd5968a",
+      "lp.lp": "b38e54d1f6306bed51de24f017edfef0f3e4d44536fbb9415531f2439bd4a7d4",
+      "results.txt": "4fcad8c3f90931295dc4dcbb32f8f4d35a6d37a9d44a157d6f3bbcfc39e78da2",
+      "ObjectiveValue.csv": "500fc835ab6db8f61e4bbf4281b5fac1f230fa5b9a2b7c73dd568c961a87fc80"
+    },
+    "reserve_margin_proxy": {
+      "status": "CURRENT",
+      "mismatch_count": 0,
+      "input_fingerprint_sha256": "656ca888c6a06a96971a7621ea1f5dd5113b7305b9a33cb0d6bb8a36acaf1e71"
+    },
+    "validation": {
+      "dedicated_checks_passed": 15,
+      "general_checks_passed": 15,
+      "existing_nonwater_activity_rows_changed": 0,
+      "existing_emission_rows_changed": 0,
+      "held_out_generation_mape_percent": 9.938823917805086,
+      "held_out_renewable_share_mae_percentage_points": 5.132770285403662
+    },
+    "topology_after": {
+      "connected": 73,
+      "produced_unconsumed_undemanded": 31,
+      "warning_records": 35
+    },
+    "portable_archive": "muio/Fiji_v2_v2.0.2_MUIO.zip",
+    "portable_archive_sha256": "62ef6b2b3ec683a0f0ae7d50eca9435c7214892186f75d87acb8358123262053",
+    "validation_summary": "diagnostics/calibration_runs/phase1b/live_validation_summary.json",
+    "next_gate": "Phase 1C evidence and design for useful end-use service boundaries and conversion efficiencies."
+  },
+  "claim_boundary": "Annual national grid-supply mix plus 2020-2024 public-water delivery and aggregate surface abstraction/loss accounting. Electricity total supply and installed fleet are exogenous. No full land, hydrology, agriculture, hourly dispatch, reliability, network, reservoir, groundwater-source, or water-energy calibration claim.",
+  "last_structural_edit_date": "2026-07-27"
 }

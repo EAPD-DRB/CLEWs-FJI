@@ -11,8 +11,26 @@ These limitations are part of the result, not optional caveats.
   public commissioning and retirement register was not found.
 - Calibration-period biomass and wind output receive no independent
   reproduction credit; their frozen 2023–2024 results do.
-- The full land, water, climate, agriculture, and nexus modules remain
-  uncalibrated.
+- The full land, climate, agriculture, hydrology, and nexus modules remain
+  uncalibrated. Phase 1B validates only the stated annual public-water
+  delivery and aggregate surface-abstraction boundary.
+
+## Public water
+
+- Public delivery is observed only for 2020–2024; no future demand path is
+  supplied after 2024.
+- Annual evidence is spread across the four time slices with a flat-rate
+  `YearSplit` profile; no seasonal demand data are represented.
+- Public groundwater is structurally represented but quarantined because no
+  Fiji-specific public-groundwater abstraction/source-share evidence was
+  retained.
+- No Fiji-specific pumping or treatment electricity intensity was found.
+  Omitting an explicit input avoids double-counting against the current gross
+  grid-supply boundary, but water-sector energy and emissions are not
+  endogenous.
+- Aggregate purification and distribution losses are embedded in the
+  historical surface input ratio. The model does not distinguish treatment
+  stages, assets, leakage locations, storage or pressure zones.
 
 ## Energy structure
 

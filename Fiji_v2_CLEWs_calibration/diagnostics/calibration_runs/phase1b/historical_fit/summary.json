@@ -1,0 +1,27 @@
+{
+  "run": "Phase1B_Public_Water",
+  "case_folder": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2_Phase1B_Test",
+  "calibration_years": [
+    2020,
+    2021,
+    2022
+  ],
+  "validation_years": [
+    2023,
+    2024
+  ],
+  "metrics": {
+    "calibration": {
+      "generation_mae_gwh": 41.88796296296292,
+      "generation_mape_percent": 9.123082850807199,
+      "renewable_share_mae_percentage_points": 4.072944307957298
+    },
+    "validation": {
+      "generation_mae_gwh": 42.10238888888888,
+      "generation_mape_percent": 9.938823917805086,
+      "renewable_share_mae_percentage_points": 5.132770285403662
+    }
+  },
+  "assessment_comparisons": "Fiji_v2_CLEWs_calibration/diagnostics/calibration_runs/phase1b/historical_fit/assessment_comparisons.csv",
+  "credit_rule": "Only class E rows receive independent reproduction credit. Demand/total supply and fleet are J. Calibration-period biomass and wind are H because their annual availability factors were estimated from 2020-2022 outcomes; their frozen 2023-2024 values are E. Wind is excluded from aggregate MAPE because its observed output is below 1 GWh and percentage errors are unstable."
+}

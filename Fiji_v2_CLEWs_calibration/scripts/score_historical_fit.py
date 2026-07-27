@@ -207,7 +207,9 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     comparison_path = output_dir / "history_comparisons.csv"
     with comparison_path.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(comparisons[0]))
+        writer = csv.DictWriter(
+            stream, fieldnames=list(comparisons[0]), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(comparisons)
 
@@ -283,7 +285,9 @@ def main() -> None:
         )
     assessment_path = output_dir / "assessment_comparisons.csv"
     with assessment_path.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(assessment_rows[0]))
+        writer = csv.DictWriter(
+            stream, fieldnames=list(assessment_rows[0]), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(assessment_rows)
 

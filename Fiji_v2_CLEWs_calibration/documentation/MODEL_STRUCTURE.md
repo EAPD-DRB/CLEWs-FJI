@@ -8,7 +8,7 @@ a spatial land–agriculture–water lineage.
 |---|---|---|
 | Energy supply | Imported fuels; hydro, biomass, oil, wind, solar, and other generation options; transmission; final energy demands | Supplies electricity and fuels to residential, commercial, industrial, transport, agriculture, and water services |
 | Land and crops | Crop-production options and four cluster allocation technologies | Uses land, precipitation, evapotranspiration, and irrigation; produces crop commodities |
-| Water | Surface-water and groundwater resources, agricultural water, and public-water supply | Irrigation and public supply share modeled raw-water pathways; groundwater pumping uses electricity |
+| Water | Surface-water and groundwater resources, agricultural water, and public-water supply | Phase 1B closes observed public delivery through surface abstraction; public groundwater has an explicit but quarantined abstraction chain |
 | Climate representation | GAEZ RCP4.5 precipitation, evapotranspiration, runoff, and potential-yield coefficients | Determines spatial crop and water coefficients; does not reproduce observed 2020–2024 weather |
 | MUIO reserve proxy | Annual capacity-credit user-defined constraints | Replaces native reserve tags unsupported by the installed MUIO formulation; does not calibrate historical output |
 
@@ -71,15 +71,32 @@ Potential yields are not observations of Fiji farm yields.
 ## Water representation
 
 `DEMAGRGWTFJI` and `DEMAGRSURFJI` supply agricultural water from modeled
-groundwater and surface-water pathways. `DEMPUBGWTFJI` and `DEMPUBSURFJI`
-serve public-water demand. Precipitation, evapotranspiration, runoff, and
-groundwater relationships are generated from the GAEZ-derived spatial
-coefficients.
+groundwater and surface-water pathways. Phase 1B represents public water as:
+
+```text
+WTRSURFJI -> DEMPUBSURFJI -> PUBWATFJI -> annual demand
+WTRGRCFJI -> WTRABSFJI -> WTRGWRFJI -> DEMPUBGWTFJI -> PUBWATFJI
+             inactive                    quarantined
+```
+
+`WTRGRCFJI` is modeled annual recharge. `WTRGWRFJI` is raw abstracted
+groundwater, separated by `WTRABSFJI`; both the abstraction and public
+groundwater delivery routes are inactive pending Fiji evidence. The surface
+route supplies observed 2020–2024 public delivery and uses annual Water
+Authority of Fiji abstraction/delivery ratios to represent purification and
+distribution losses. Annual-only evidence is allocated with `YearSplit`.
+All water flow and service commodities use `km3`.
+
+Precipitation, evapotranspiration, runoff, and groundwater relationships are
+generated from the GAEZ-derived spatial coefficients.
 
 The model does not currently contain calibrated reservoir operations, basin
-withdrawal constraints, environmental flows, or measured pumping electricity.
-Hydropower is part of the energy system and is not yet linked to a
-plant-specific historical reservoir balance.
+withdrawal constraints, environmental flows, groundwater source shares, or
+measured pumping/treatment electricity. No explicit public-water electricity
+input is added because no Fiji intensity was found and the gross grid-supply
+boundary already includes water-sector use. Hydropower is part of the energy
+system and is not yet linked to a plant-specific historical reservoir
+balance.
 
 ## Important accounting boundaries
 
