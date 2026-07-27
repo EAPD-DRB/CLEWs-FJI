@@ -6,7 +6,7 @@ For this Fiji model, the missing capacity-adequacy condition is represented
 with MUIO's existing annual user-defined constraint:
 
     -sum(CapacityToActivityUnit * capacity_credit * TotalCapacityAnnual)
-        <= -maximum_timeslice_demand_rate * reserve_margin
+        <= -maximum_aggregate_timeslice_demand_rate * reserve_margin
 
 The right-hand side is derived from live MUIO demand data. It therefore becomes
 stale if demand, its profile, YearSplit, or the reserve-margin assumption
@@ -136,17 +136,32 @@ def reserve_margin_for(config: dict[str, Any], scenario: str) -> float:
     return value
 
 
+def demand_commodity_names(config: dict[str, Any]) -> list[str]:
+    """Return the demand boundary, accepting the legacy singular key."""
+    configured = config.get("demand_commodities")
+    if configured is None:
+        configured = [config.get("demand_commodity")]
+    if not isinstance(configured, list) or not configured:
+        raise ValueError("At least one demand commodity is required")
+    names = [str(item) for item in configured if item not in (None, "")]
+    if len(names) != len(configured):
+        raise ValueError("Demand commodity names must be nonempty")
+    if len(names) != len(set(names)):
+        raise ValueError("Demand commodity names must be unique")
+    return names
+
+
 def validate_config(config: dict[str, Any]) -> None:
     required = {
         "constraint_id",
         "constraint_name",
-        "demand_commodity",
         "reserve_margin_by_scenario",
         "capacity_credit_by_technology",
     }
     missing = sorted(required - config.keys())
     if missing:
         raise ValueError(f"Proxy configuration is missing: {', '.join(missing)}")
+    demand_commodity_names(config)
     if not config["capacity_credit_by_technology"]:
         raise ValueError("At least one technology capacity credit is required")
     for technology, credit in config["capacity_credit_by_technology"].items():
@@ -188,10 +203,17 @@ def expected_proxy(
 ) -> dict[str, Any]:
     gen_data = case_data["genData.json"]
     commodity_ids, technology_ids = case_maps(gen_data)
-    demand_name = str(config["demand_commodity"])
-    if demand_name not in commodity_ids:
-        raise ValueError(f"Demand commodity is absent from MUIO: {demand_name}")
-    demand_id = commodity_ids[demand_name]
+    demand_names = demand_commodity_names(config)
+    missing_demand = sorted(set(demand_names) - commodity_ids.keys())
+    if missing_demand:
+        raise ValueError(
+            "Demand commodities are absent from MUIO: "
+            + ", ".join(missing_demand)
+        )
+    demand_ids = {
+        demand_name: commodity_ids[demand_name]
+        for demand_name in demand_names
+    }
 
     missing_technologies = sorted(
         set(config["capacity_credit_by_technology"]) - technology_ids.keys()
@@ -222,24 +244,8 @@ def expected_proxy(
         coefficients: dict[str, dict[str, float]] = {}
 
         for year in years:
-            demand = effective_year_value(
-                case_data["RYC.json"],
-                "SAD",
-                scenario,
-                ("CommId",),
-                (demand_id,),
-                year,
-            )
             rates: list[tuple[float, str]] = []
             for timeslice_id, timeslice_name in timeslices:
-                profile = effective_year_value(
-                    case_data["RYCTs.json"],
-                    "SDP",
-                    scenario,
-                    ("CommId", "TsId"),
-                    (demand_id, timeslice_id),
-                    year,
-                )
                 year_split = effective_year_value(
                     case_data["RYTs.json"],
                     "YS",
@@ -253,7 +259,31 @@ def expected_proxy(
                         f"YearSplit must be positive for {scenario}, "
                         f"{timeslice_name}, {year}"
                     )
-                rates.append((demand * profile / year_split * margin, timeslice_name))
+                aggregate_demand = 0.0
+                for demand_name, demand_id in demand_ids.items():
+                    demand = effective_year_value(
+                        case_data["RYC.json"],
+                        "SAD",
+                        scenario,
+                        ("CommId",),
+                        (demand_id,),
+                        year,
+                    )
+                    profile = effective_year_value(
+                        case_data["RYCTs.json"],
+                        "SDP",
+                        scenario,
+                        ("CommId", "TsId"),
+                        (demand_id, timeslice_id),
+                        year,
+                    )
+                    aggregate_demand += demand * profile
+                rates.append(
+                    (
+                        aggregate_demand / year_split * margin,
+                        timeslice_name,
+                    )
+                )
             peak_rate, peak_timeslice = max(rates)
             constants[year] = -peak_rate
             peak_timeslices[year] = peak_timeslice
@@ -282,7 +312,7 @@ def expected_proxy(
     fingerprint_source = {
         "constraint_id": config["constraint_id"],
         "constraint_name": config["constraint_name"],
-        "demand_commodity": demand_name,
+        "demand_commodities": demand_names,
         "capacity_credit_by_technology": config[
             "capacity_credit_by_technology"
         ],
@@ -295,7 +325,7 @@ def expected_proxy(
         "years": years,
         "scenarios": scenarios,
         "timeslices": [name for _, name in timeslices],
-        "demand_commodity_id": demand_id,
+        "demand_commodity_ids": demand_ids,
         "technology_ids": {
             name: technology_ids[name]
             for name in config["capacity_credit_by_technology"]

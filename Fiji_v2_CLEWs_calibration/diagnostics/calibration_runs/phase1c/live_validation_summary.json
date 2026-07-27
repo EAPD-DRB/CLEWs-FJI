@@ -1,0 +1,432 @@
+{
+  "artifact_sha256": {
+    "accounting/data.txt": "3e9c35b8b0075374de2cf9fc765ee8d5395804002e360ea362c1f49bcd8430f3",
+    "accounting/data_processed.txt": "dce480ccf60e06223e3a8f57e52c1b2f56e769e199d5691d0890ccaa2a8bb1fe",
+    "accounting/lp.lp": "88eeb9c82d32ef3b3722df81348ad132a2676f87123a78b1c02ca2629f0449c5",
+    "accounting/results.txt": "ec892cb18c0cf6e1426d61195b7b53c7239922b8f7ba55a01f7e06e651e89c60",
+    "bottom_up/data.txt": "97173701e0846a254de5fb9a0881e164172c7e3bb31783de66b5b8c48742b6bc",
+    "bottom_up/data_processed.txt": "73e34035a0c0ca6ad451410c9a79cd5e934633f161494786619e158611d80a2b",
+    "bottom_up/lp.lp": "5374d86d086be50dc51b1c088515fdf04e9806a0f1a296555019a7f49c39bb16",
+    "bottom_up/results.txt": "2a7a1f246c67ec613f2498d69207c88a308dbd1ece4ca0ead4c11747b899ed1d"
+  },
+  "cases": {
+    "accounting": {
+      "case": "Fiji_v2_Phase1C_Accounting_Test",
+      "run": "Phase1C_Accounting"
+    },
+    "baseline": {
+      "case": "Fiji_v2_Phase1B_Test",
+      "run": "Phase1B_Public_Water"
+    },
+    "bottom_up": {
+      "case": "Fiji_v2",
+      "run": "Phase1C_BottomUp"
+    }
+  },
+  "checks": [
+    {
+      "check": "Observed 2020-2024 sector split reconciles exactly in both checkpoints",
+      "evidence": "RYC.json; FBoS Energy Account extract",
+      "finding": {
+        "2020": {
+          "components_pj": {
+            "COMELCFJIXX02": 1.403463654,
+            "ELCFJIXX02": 0.4099964292,
+            "INDELCFJIXX02": 0.7115815476,
+            "RESELCFJIXX02": 0.9898975692
+          },
+          "difference_pj": 0.0,
+          "evidence_gross_pj": 3.5149392,
+          "gross_pj": 3.5149392
+        },
+        "2021": {
+          "components_pj": {
+            "COMELCFJIXX02": 1.2889292112,
+            "ELCFJIXX02": 0.3881015244,
+            "INDELCFJIXX02": 0.614161944,
+            "RESELCFJIXX02": 1.0820721204
+          },
+          "difference_pj": 0.0,
+          "evidence_gross_pj": 3.3732648,
+          "gross_pj": 3.3732648
+        },
+        "2022": {
+          "components_pj": {
+            "COMELCFJIXX02": 1.6062139728,
+            "ELCFJIXX02": 0.43480726199999997,
+            "INDELCFJIXX02": 0.7323638148,
+            "RESELCFJIXX02": 1.1198745504
+          },
+          "difference_pj": 0.0,
+          "evidence_gross_pj": 3.8932596,
+          "gross_pj": 3.8932596
+        },
+        "2023": {
+          "components_pj": {
+            "COMELCFJIXX02": 1.6826353596,
+            "ELCFJIXX02": 0.4340219364,
+            "INDELCFJIXX02": 0.7530394464,
+            "RESELCFJIXX02": 1.1658384576
+          },
+          "difference_pj": 0.0,
+          "evidence_gross_pj": 4.0355352,
+          "gross_pj": 4.0355352
+        },
+        "2024": {
+          "components_pj": {
+            "COMELCFJIXX02": 1.8214069392,
+            "ELCFJIXX02": 0.4674614076,
+            "INDELCFJIXX02": 0.84439053,
+            "RESELCFJIXX02": 1.2548027232
+          },
+          "difference_pj": 0.0,
+          "evidence_gross_pj": 4.3880616,
+          "gross_pj": 4.3880616
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "2025-2050 bottom-up demand matches the documented generator",
+      "evidence": "RYC.json; apply_fiji_phase1c_bottom_up_demand.py",
+      "finding": {
+        "2025": {
+          "components_pj": {
+            "COMELCFJIXX02": 1.8687635196192,
+            "ELCFJIXX02": 0.4749651785375242,
+            "INDELCFJIXX02": 0.8612783406,
+            "RESELCFJIXX02": 1.2534924809748682
+          },
+          "gross_pj": 4.458499519731593,
+          "residential_driver_index": 0.9989558181529997
+        },
+        "2030": {
+          "components_pj": {
+            "COMELCFJIXX02": 2.124668364542403,
+            "ELCFJIXX02": 0.5151924628759714,
+            "INDELCFJIXX02": 0.9509208820684112,
+            "RESELCFJIXX02": 1.2453314459545317
+          },
+          "gross_pj": 4.836113155441318,
+          "residential_driver_index": 0.992451979047898
+        },
+        "2040": {
+          "components_pj": {
+            "COMELCFJIXX02": 2.74640612661237,
+            "ELCFJIXX02": 0.6291433165485162,
+            "INDELCFJIXX02": 1.159167249097886,
+            "RESELCFJIXX02": 1.37105345979942
+          },
+          "gross_pj": 5.905770152058192,
+          "residential_driver_index": 1.0926446320605339
+        },
+        "2050": {
+          "components_pj": {
+            "COMELCFJIXX02": 3.5500818566188164,
+            "ELCFJIXX02": 0.7709996411713155,
+            "INDELCFJIXX02": 1.4130184084909958,
+            "RESELCFJIXX02": 1.503275979799674
+          },
+          "gross_pj": 7.237375886080802,
+          "residential_driver_index": 1.1980177855894487
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Accounting checkpoint leaves the inherited future path unchanged",
+      "evidence": "Phase 1B and accounting RYC.json",
+      "finding": {
+        "2025": {
+          "COMELCFJIXX02": 0.0,
+          "ELCFJIXX02": 4.473861687150837,
+          "INDELCFJIXX02": 0.0,
+          "RESELCFJIXX02": 0.0
+        },
+        "2050": {
+          "COMELCFJIXX02": 0.0,
+          "ELCFJIXX02": 10.381810545251396,
+          "INDELCFJIXX02": 0.0,
+          "RESELCFJIXX02": 0.0
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Every positive component has a normalized demand profile",
+      "evidence": "RYCTs.json",
+      "finding": {
+        "COMELCFJIXX02": {
+          "maximum_sum": 1.0,
+          "minimum_sum": 1.0
+        },
+        "ELCFJIXX02": {
+          "maximum_sum": 1.0,
+          "minimum_sum": 1.0
+        },
+        "INDELCFJIXX02": {
+          "maximum_sum": 1.0,
+          "minimum_sum": 1.0
+        },
+        "RESELCFJIXX02": {
+          "maximum_sum": 1.0,
+          "minimum_sum": 1.0
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Sector electricity adapters are zero-cost accounting routes",
+      "evidence": "RYTM.json VariableCost mode 1",
+      "finding": {
+        "DEMCOMELCFJIXX02": {
+          "maximum": 0.0,
+          "minimum": 0.0
+        },
+        "DEMINDELCFJIXX02": {
+          "maximum": 0.0,
+          "minimum": 0.0
+        },
+        "DEMRESELCFJIXX02": {
+          "maximum": 0.0,
+          "minimum": 0.0
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Generated derived sets include all three sector adapters",
+      "evidence": "data_processed.txt",
+      "finding": {
+        "DEMCOMELCFJIXX02": true,
+        "DEMINDELCFJIXX02": true,
+        "DEMRESELCFJIXX02": true,
+        "ELCFJIXX02 consumers": true
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Both disposable cases passed generation, preprocessing, GLPK and CBC",
+      "evidence": "MUIO DataFile generation/run chain",
+      "finding": {
+        "accounting": {
+          "artifact_bytes": {
+            "data.txt": 271801,
+            "data_processed.txt": 306363,
+            "lp.lp": 58792745,
+            "results.txt": 41595014
+          },
+          "case_name": "Fiji_v2_Phase1C_Accounting_Test",
+          "result_utc": "2026-07-27T21:18:51.937669+00:00",
+          "solver": "Optimal - objective value -1387.57010517",
+          "source_latest_utc": "2026-07-27T21:18:34.531471+00:00"
+        },
+        "bottom_up": {
+          "artifact_bytes": {
+            "data.txt": 273265,
+            "data_processed.txt": 307827,
+            "lp.lp": 58802796,
+            "results.txt": 41595014
+          },
+          "case_name": "Fiji_v2",
+          "result_utc": "2026-07-27T21:32:16.840902+00:00",
+          "solver": "Optimal - objective value -1573.67149091",
+          "source_latest_utc": "2026-07-27T21:31:59.313809+00:00"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Aggregate four-commodity reserve proxy is current",
+      "evidence": "reserve_margin_proxy.json and demand/profile inputs",
+      "finding": {
+        "accounting": {
+          "fingerprint": "be815b89bdeace1bb4d5a0120974cd4dabbbf43eef0487e6126c64fa50fa3fdb",
+          "mismatches": 0,
+          "status": "CURRENT"
+        },
+        "bottom_up": {
+          "fingerprint": "0be1ac66001dc45625f5a74bb8d7b5d5946b66cf883d6c931151b7376addc748",
+          "mismatches": 0,
+          "status": "CURRENT"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Accounting split leaves all non-adapter activity unchanged",
+      "evidence": "Phase 1B and Phase 1C accounting activity CSVs",
+      "finding": {
+        "changed_rows": 0,
+        "compared_rows": 7409,
+        "examples": [],
+        "maximum_absolute_difference": 0.0
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Bottom-up case preserves the complete historical activity solution",
+      "evidence": "Accounting and bottom-up activity CSVs, 2020-2024",
+      "finding": {
+        "changed_rows": 0,
+        "compared_rows": 1210,
+        "examples": [],
+        "maximum_absolute_difference": 0.0
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Historical capacities and emissions remain unchanged",
+      "evidence": "Accounting and bottom-up capacity/emission CSVs, 2020-2024",
+      "finding": {
+        "capacity": {
+          "changed_rows": 0,
+          "compared_rows": 655,
+          "examples": [],
+          "maximum_absolute_difference": 0.0
+        },
+        "emissions": {
+          "changed_rows": 0,
+          "compared_rows": 655,
+          "examples": [],
+          "maximum_absolute_difference": 0.0
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Solved sector activities and gross grid transmission close annually",
+      "evidence": "results.txt; sector demands and EBb4 balances",
+      "finding": {
+        "2020": {
+          "components": {
+            "COMELCFJIXX02": {
+              "activity_pj": 1.4034637,
+              "balance_pj": 1.4034637,
+              "dual": 0.0
+            },
+            "INDELCFJIXX02": {
+              "activity_pj": 0.71158155,
+              "balance_pj": 0.71158155,
+              "dual": 0.0
+            },
+            "RESELCFJIXX02": {
+              "activity_pj": 0.98989757,
+              "balance_pj": 0.98989757,
+              "dual": 0.0
+            }
+          },
+          "target_gross_pj": 3.5149392,
+          "transmission_activity_pj": 3.5149392
+        },
+        "2024": {
+          "components": {
+            "COMELCFJIXX02": {
+              "activity_pj": 1.8214069,
+              "balance_pj": 1.8214069,
+              "dual": 0.0
+            },
+            "INDELCFJIXX02": {
+              "activity_pj": 0.84439053,
+              "balance_pj": 0.84439053,
+              "dual": 0.0
+            },
+            "RESELCFJIXX02": {
+              "activity_pj": 1.2548027,
+              "balance_pj": 1.2548027,
+              "dual": 0.0
+            }
+          },
+          "target_gross_pj": 4.3880616,
+          "transmission_activity_pj": 4.3880616
+        },
+        "2025": {
+          "components": {
+            "COMELCFJIXX02": {
+              "activity_pj": 1.8687635,
+              "balance_pj": 1.8687635,
+              "dual": 0.0
+            },
+            "INDELCFJIXX02": {
+              "activity_pj": 0.86127834,
+              "balance_pj": 0.86127834,
+              "dual": 0.0
+            },
+            "RESELCFJIXX02": {
+              "activity_pj": 1.2534925,
+              "balance_pj": 1.2534925,
+              "dual": 0.0
+            }
+          },
+          "target_gross_pj": 4.458499519731593,
+          "transmission_activity_pj": 4.4584995
+        },
+        "2050": {
+          "components": {
+            "COMELCFJIXX02": {
+              "activity_pj": 3.5500819,
+              "balance_pj": 3.5500819,
+              "dual": 0.0
+            },
+            "INDELCFJIXX02": {
+              "activity_pj": 1.4130184,
+              "balance_pj": 1.4130184,
+              "dual": 0.0
+            },
+            "RESELCFJIXX02": {
+              "activity_pj": 1.503276,
+              "balance_pj": 1.503276,
+              "dual": 0.0
+            }
+          },
+          "target_gross_pj": 7.237375886080802,
+          "transmission_activity_pj": 7.2373759
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Accounting-only objective is identical to Phase 1B",
+      "evidence": "ObjectiveValue.csv",
+      "finding": {
+        "accounting": -1387.57010517,
+        "difference": 0.0,
+        "phase1b": -1387.57010517
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Bottom-up objective difference is reported against Phase 1B",
+      "evidence": "ObjectiveValue.csv",
+      "finding": {
+        "bottom_up": -1573.67149091,
+        "difference": -186.10138574000007,
+        "percent_change": -13.412034825959271,
+        "phase1b": -1387.57010517
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "Projection divergence is explicit rather than a frozen sector share",
+      "evidence": "Bottom-up generator and Phase 1B RYC.json",
+      "finding": {
+        "bottom_up_2050_pj": 7.237375886080802,
+        "difference_pj": -3.144434659170594,
+        "inherited_2050_pj": 10.381810545251396,
+        "percent_difference": -30.287921798080276,
+        "sector_components_pj": {
+          "COMELCFJIXX02": 3.5500818566188164,
+          "ELCFJIXX02": 0.7709996411713155,
+          "INDELCFJIXX02": 1.4130184084909958,
+          "RESELCFJIXX02": 1.503275979799674
+        }
+      },
+      "status": "PASS"
+    }
+  ],
+  "checks_failed": 0,
+  "checks_passed": 15,
+  "phase": "1C sector electricity accounting and bottom-up demand",
+  "status": "PASS",
+  "validated_utc": "2026-07-27T21:47:41.267471+00:00"
+}

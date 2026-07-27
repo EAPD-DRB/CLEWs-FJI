@@ -5,8 +5,9 @@ These limitations are part of the result, not optional caveats.
 ## Calibration boundary
 
 - Only annual national grid-supply energy is calibrated and validated.
-- Total grid generation is an exogenous requirement and cannot be claimed as
-  reproduced demand.
+- Historical grid generation remains an exogenous accounting boundary,
+  decomposed into observed sector demand and explicit overhead; it cannot be
+  claimed as reproduced demand.
 - The 2021 fleet is held constant over 2020–2024 because a complete annual
   public commissioning and retirement register was not found.
 - Calibration-period biomass and wind output receive no independent
@@ -36,8 +37,9 @@ These limitations are part of the result, not optional caveats.
 
 - One national copper plate does not represent Viti Levu, Vanua Levu, Ovalau,
   or isolated systems separately.
-- The grid conduit is lossless. Network losses and station auxiliary use are
-  reconciled only through the selected gross-generation boundary.
+- The grid conduit remains physically lossless. Distribution loss and
+  station-use/boundary overhead are represented as direct annual demand rather
+  than an explicit network technology.
 - Four wet/dry day/night slices cannot reproduce hourly renewable
   variability, evening peaks, unit commitment, storage chronology, outages,
   or cyclone recovery.
@@ -53,6 +55,11 @@ These limitations are part of the result, not optional caveats.
   score and reported calibration metrics. The removed OHC branch was dormant.
 - MUIO commodity descriptions remain generic placeholders, although
   identifier references resolve.
+- Commercial, industrial and residential demand share one aggregate
+  four-slice profile because sector-specific Fiji load shapes were not found.
+- The 23 remaining end-use output stubs are inactive. Phase 1C connects only
+  the three sector-electricity accounting routes; it does not add useful
+  cooking, heat, motive-power or mobility services.
 
 ## Hydro and biomass
 
@@ -71,11 +78,16 @@ These limitations are part of the result, not optional caveats.
   constraints have not been validated for Fiji v2.
 - The 5% discount rate remains an importer assumption rather than a
   question-specific social or financial rate.
-- Future demand is a rebased raw trajectory, not a forecast.
+- Future electricity demand is a documented Phase 1C scenario, not a forecast.
+  Commercial and industrial use fixed LEDS annual rates; residential demand
+  uses a household/appliance stock index; overhead intensity is fixed at its
+  2024 value.
 - Future residual-capacity paths preserve raw retirement ratios rather than a
   verified unit retirement schedule.
-- No formal demand, fuel-price, cost, weather, technology, target, or
-  structural sensitivity ensemble has yet been run.
+- The LEDS ±10% sector uncertainty and alternative conditional/high-ambition
+  demand assumptions have not yet been parameterized. No formal fuel-price,
+  cost, weather, technology, target, or structural sensitivity ensemble has
+  yet been run.
 - The objective and inherited negative forest activity credit require
   reconciliation before total-system-cost or welfare interpretation.
 

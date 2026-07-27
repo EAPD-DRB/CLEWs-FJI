@@ -1,8 +1,13 @@
 {
-    "schema_version": 1,
+    "schema_version": 2,
     "constraint_id": "CO_fji_reserve_proxy",
     "constraint_name": "RESERVE_PROXY_RUN_CHECK_IF_DEMAND_OR_MARGIN_CHANGES",
-    "demand_commodity": "ELCFJIXX02",
+    "demand_commodities": [
+        "ELCFJIXX02",
+        "COMELCFJIXX02",
+        "INDELCFJIXX02",
+        "RESELCFJIXX02"
+    ],
     "upstream_tagged_commodity": "ELCFJIXX01",
     "reserve_margin_by_scenario": {
         "SC_0": 1.0

@@ -23,3 +23,14 @@ The active Phase 1B public-water extract is:
   2020–2024 Water Authority of Fiji surface abstraction, losses, billed/carted
   delivery, `ML -> km3` conversion and abstraction/delivery ratios from the
   Fiji Bureau of Statistics water account.
+
+The active Phase 1C electricity records are:
+
+- `energy/PHASE_1C_PROJECTION_SOURCE_EXTRACTS_2026-07-27.md` — publication
+  identities, official links, page/table locators, checksums, extracted facts
+  and the full calculation-to-model chain;
+- `energy/fiji_energy_account_2024_electricity_boundary_2020_2024.csv` —
+  observed sector use and the reconciled gross-grid boundary; and
+- `energy/fiji_phase1c_bottom_up_electricity_projection_2020_2050.csv` —
+  frozen annual projection components, calculation drivers and comparison
+  with the validated Phase 1B accounting control.

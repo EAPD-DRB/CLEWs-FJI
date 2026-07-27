@@ -49,14 +49,19 @@ The reviewed 2020-2024 extraction and reconciliation is retained in
 - Relevant locators: Table SR.2.1, printed page 29; Table TC.4.1,
   printed page 157; Table TC.4.2, printed page 158.
 
-The weighted national results show that 52.1% of households used clean
+Table SR.2.1 reports central-grid electricity for 93.9% of urban households
+and 74.2% of rural households. Phase 1C uses those two rates only to distinguish
+central-grid residential demand from off-grid household electricity in its
+post-2024 residential driver.
+
+The weighted national cooking results show that 52.1% of households used clean
 cooking fuels and technologies. On a household-member basis, the main
 cookstove shares were 46.0% LPG, 27.2% non-alcohol liquid-fuel stove,
 19.3% open fire, 2.7% biogas, 1.3% traditional solid-fuel stove and 1.0%
 electric stove. Table TC.4.2 separately reports 28.0% primary reliance on
 kerosene/paraffin and 21.4% on wood.
 
-These are population or household shares, not energy quantities. They support
+The cooking values are population or household shares, not energy quantities. They support
 the candidate residential technology set and provide later share-validation
 targets. They do not establish annual fuel input, useful cooking demand, fuel
 stacking, appliance utilization or conversion efficiency.

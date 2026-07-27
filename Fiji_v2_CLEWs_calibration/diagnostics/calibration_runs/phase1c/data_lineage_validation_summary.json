@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "model": "Fiji_v2",
+  "phase": "1C bottom-up electricity",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Ledger identifiers are unique",
+      "status": "PASS",
+      "finding": {
+        "sources": 34,
+        "assumptions": 35,
+        "calculations": 21,
+        "model_map": 22
+      }
+    },
+    {
+      "check": "Every MODEL_DATA_MAP reference resolves",
+      "status": "PASS",
+      "finding": "All references resolve"
+    },
+    {
+      "check": "Every CALCULATIONS reference resolves",
+      "status": "PASS",
+      "finding": "All references resolve"
+    },
+    {
+      "check": "Projection evidence checksum matches the build manifest",
+      "status": "PASS",
+      "finding": {
+        "expected": "f58c1ec3df4b6017966a2ad542256dd2f3e1f847837bd8bdc722ab9175ac181a",
+        "actual": "f58c1ec3df4b6017966a2ad542256dd2f3e1f847837bd8bdc722ab9175ac181a"
+      }
+    },
+    {
+      "check": "Projection evidence covers 2020-2050 and preserves history",
+      "status": "PASS",
+      "finding": {
+        "years": [
+          2020,
+          2050
+        ],
+        "rows": 31,
+        "maximum_historical_control_difference_pj": 0.0,
+        "gross_2050_pj": 7.237375886081
+      }
+    },
+    {
+      "check": "Frozen projection matches portable demand inputs",
+      "status": "PASS",
+      "finding": {
+        "maximum_absolute_difference_pj": 4.965472477636013e-13,
+        "missing_rows": []
+      }
+    },
+    {
+      "check": "Active Phase 1C sources have locator and checksum records",
+      "status": "PASS",
+      "finding": {
+        "missing_source_ids": [],
+        "missing_hashes": []
+      }
+    },
+    {
+      "check": "Portable archive checksum matches the build manifest",
+      "status": "PASS",
+      "finding": {
+        "archive": "muio/Fiji_v2_v2.0.3_MUIO.zip",
+        "expected": "da1b1e078bb223636a33c50ba55b5cf63ec28d2b34705e4c67c4b252e1588c9d",
+        "actual": "da1b1e078bb223636a33c50ba55b5cf63ec28d2b34705e4c67c4b252e1588c9d"
+      }
+    }
+  ],
+  "checks_passed": 8,
+  "checks_total": 8,
+  "failed_checks": 0
+}

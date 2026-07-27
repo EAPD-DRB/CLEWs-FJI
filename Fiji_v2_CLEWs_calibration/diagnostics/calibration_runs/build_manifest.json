@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "build_date": "2026-07-26",
+  "schema_version": 2,
+  "build_date": "2026-07-27",
   "raw_package": "Fiji_CLEWs_Global",
   "raw_case": "WebAPP/DataStorage/Fiji_CLEWs_Global",
   "target_package": "Fiji_v2_CLEWs_calibration",
@@ -289,6 +289,122 @@
     "solve_run": false,
     "next_gate": "Select and document the 2025-2050 electricity sector-allocation rule, then implement the accounting-only partition as Phase 1C.1 through the full application and solver validation chain."
   },
-  "claim_boundary": "Annual national grid-supply mix plus 2020-2024 public-water delivery and aggregate surface abstraction/loss accounting. Electricity total supply and installed fleet are exogenous. No full land, hydrology, agriculture, hourly dispatch, reliability, network, reservoir, groundwater-source, or water-energy calibration claim.",
+  "phase_1c_bottom_up_electricity": {
+    "date": "2026-07-27",
+    "version": "2.0.3",
+    "application_script": "scripts/apply_fiji_phase1c_bottom_up_demand.py",
+    "validation_script": "scripts/validate_fiji_phase1c_bottom_up_demand.py",
+    "source_locator_record": "data_sources/evidence/energy/PHASE_1C_PROJECTION_SOURCE_EXTRACTS_2026-07-27.md",
+    "calculation_note": "data_sources/calculation_notes/PHASE_1C_BOTTOM_UP_ELECTRICITY.md",
+    "evidence": {
+      "historical_boundary_file": "data_sources/evidence/energy/fiji_energy_account_2024_electricity_boundary_2020_2024.csv",
+      "historical_boundary_sha256": "0f1cbed76432a4f0e3c03986af0e4389ce998b69b5b6cd85e43dde7cecd5b2c8",
+      "projection_file": "data_sources/evidence/energy/fiji_phase1c_bottom_up_electricity_projection_2020_2050.csv",
+      "projection_sha256": "f58c1ec3df4b6017966a2ad542256dd2f3e1f847837bd8bdc722ab9175ac181a",
+      "external_source_sha256": {
+        "efl_2024_annual_report": "b3427b8e597399f31aabc2ab315b1a72a24138e20cd8faa5c3fec2894f0fe956",
+        "fiji_energy_account_2024_pdf": "24f869da57d75eb32523fd1c21f075ecfa48add56f103a41762d3fb663f974fa",
+        "energy_supply_and_use_workbook": "8850294afaaa4e70b6f276ae052da24e74e3743cca317d2a3b5ab007bf199ed4",
+        "fiji_leds_2018_2050": "eb424c7f05c4e038dcf12cf28814f80c300b7127dfc4850f088bc1c25db191eb",
+        "fiji_mics_2021_report": "bd07375a3851447fa907ffbe15b4c9c708deb451e521f24074e269d17ffcfba7"
+      }
+    },
+    "case": "Fiji_v2",
+    "run": "Phase1C_BottomUp",
+    "accounting_control": {
+      "case": "Fiji_v2_Phase1C_Accounting_Test",
+      "run": "Phase1C_Accounting",
+      "baseline_case": "Fiji_v2_Phase1B_Test",
+      "baseline_run": "Phase1B_Public_Water",
+      "baseline_objective": -1387.57010517,
+      "objective": -1387.57010517,
+      "objective_difference": 0.0,
+      "nonadapter_activity_rows_changed": 0
+    },
+    "dimensions": {
+      "technologies": 131,
+      "commodities": 104,
+      "years": 31,
+      "timeslices": 4
+    },
+    "active_demand_commodities": [
+      "ELCFJIXX02",
+      "COMELCFJIXX02",
+      "INDELCFJIXX02",
+      "RESELCFJIXX02"
+    ],
+    "projection_assumptions": {
+      "commercial_growth": 0.026,
+      "industrial_growth": 0.02,
+      "household_growth": 0.0038,
+      "base_households_2013": 182282,
+      "urban_grid_access": 0.939,
+      "rural_grid_access": 0.742,
+      "overhead_ratio_on_sector_end_use": 0.119232103417779,
+      "profile": [
+        0.28,
+        0.25,
+        0.22,
+        0.25
+      ]
+    },
+    "selected_annual_gross_demand_pj": {
+      "2025": 4.458499519731593,
+      "2030": 4.836113155441318,
+      "2040": 5.905770152058192,
+      "2050": 7.237375886080802
+    },
+    "source_parameter_sha256": {
+      "genData.json": "3a736e37d010186b25f1eaf699f1af468528d71554ca7ea61c74725176d39db7",
+      "RYC.json": "ed6c35219c6505b05e0bdc1a0e57788b9eb9d45ed089a93b51c13718c65c78c9",
+      "RYCTs.json": "f572fec40c876afcbda3371a9ec9bf983ad3140e7be9daa5a500ede3cf681c82",
+      "RYTM.json": "17f300be055b2a0a2be19d62d4383134ead93a06bfd486dab8ce2a05d8dabf4b",
+      "RYCn.json": "9220622adb43e43feb59c02afac94aee4e2d283564ffdd1ec27ff9196f170677",
+      "reserve_margin_proxy.json": "9f1b9a451844881f5f38a1a2c913901190eef185b3feb3a60e8bc5cd3abd8a7f"
+    },
+    "portable_input_sha256": {
+      "SpecifiedAnnualDemand.csv": "2c3daa17fbdeafd26514c585cc31b42f2b72fb88f13dec42d67ead341f18debb",
+      "SpecifiedDemandProfile.csv": "32af002730880243dd53712ecbffc1f2fe47c01f180a744b37c8727ea2750266",
+      "VariableCost.csv": "68fa5aa48c5ff00cfba86083488ecfa0340819c1c95d3ef7541d40a496dd1ac9"
+    },
+    "solver": "CBC",
+    "status": "Optimal",
+    "objective": -1573.67149091,
+    "generated_artifacts_sha256": {
+      "data.txt": "97173701e0846a254de5fb9a0881e164172c7e3bb31783de66b5b8c48742b6bc",
+      "data_processed.txt": "73e34035a0c0ca6ad451410c9a79cd5e934633f161494786619e158611d80a2b",
+      "lp.lp": "5374d86d086be50dc51b1c088515fdf04e9806a0f1a296555019a7f49c39bb16",
+      "results.txt": "2a7a1f246c67ec613f2498d69207c88a308dbd1ece4ca0ead4c11747b899ed1d",
+      "ObjectiveValue.csv": "433205fc8c7df2ac8d25186951d77f9a56f0a3343e2526b721793dbe2561f9d6"
+    },
+    "reserve_margin_proxy": {
+      "status": "CURRENT",
+      "mismatch_count": 0,
+      "input_fingerprint_sha256": "0be1ac66001dc45625f5a74bb8d7b5d5946b66cf883d6c931151b7376addc748"
+    },
+    "validation": {
+      "dedicated_checks_passed": 15,
+      "general_checks_passed": 15,
+      "lineage_checks_passed": 8,
+      "historical_activity_rows_changed": 0,
+      "historical_capacity_rows_changed": 0,
+      "historical_emission_rows_changed": 0,
+      "held_out_generation_mape_percent": 9.938823917805086,
+      "held_out_renewable_share_mae_percentage_points": 5.132770285403662
+    },
+    "topology_after": {
+      "connected": 76,
+      "produced_unconsumed_undemanded": 28,
+      "inactive_end_use_output_stubs": 23,
+      "warning_records": 32
+    },
+    "portable_archive": "muio/Fiji_v2_v2.0.3_MUIO.zip",
+    "portable_archive_sha256": "da1b1e078bb223636a33c50ba55b5cf63ec28d2b34705e4c67c4b252e1588c9d",
+    "validation_summary": "diagnostics/calibration_runs/phase1c/live_validation_summary.json",
+    "general_validation_summary": "diagnostics/calibration_runs/phase1c/live_general_validation_summary.json",
+    "lineage_validation_summary": "diagnostics/calibration_runs/phase1c/data_lineage_validation_summary.json",
+    "next_gate": "Parameterize the documented demand-driver sensitivities and LEDS scenario variants before activating useful-service demand."
+  },
+  "claim_boundary": "Annual national grid-supply mix, 2020-2024 sector electricity accounting, a documented 2025-2050 bottom-up electricity base scenario, and 2020-2024 public-water delivery plus aggregate surface abstraction/loss accounting. Historical electricity total supply and installed fleet are exogenous. No full land, hydrology, agriculture, hourly dispatch, reliability, network, reservoir, groundwater-source, useful-service, or water-energy calibration claim.",
   "last_structural_edit_date": "2026-07-27"
 }

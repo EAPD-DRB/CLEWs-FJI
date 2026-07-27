@@ -5,6 +5,11 @@
 **Scope:** The 26 energy end-use carriers still reported as produced,
 unconsumed and undemanded after Phase 1B
 
+**Completion note:** The electricity-accounting recommendation was implemented
+with independently projected 2025–2050 sector paths in
+`PHASE_1C_BOTTOM_UP_ELECTRICITY_DEMAND_2026-07-27.md`. The cooking-service gate
+remains closed.
+
 ## Decision
 
 Proceed next with an **electricity-accounting implementation**, not yet with a

@@ -15,3 +15,9 @@ Each note should identify:
 
 Do not place exploratory work here until it affects an active parameter.
 Exploratory extracts belong under `../evidence/` or `../../diagnostics/`.
+
+Active detailed notes:
+
+- `PHASE_1C_BOTTOM_UP_ELECTRICITY.md` — historical sector reconciliation,
+  commercial and industrial growth, residential household/appliance stock,
+  direct overhead, demand profiles and the aggregate reserve proxy.
