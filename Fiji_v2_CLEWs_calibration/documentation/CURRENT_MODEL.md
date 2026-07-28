@@ -2,15 +2,15 @@
 
 ## Status
 
-The active case is `WebAPP/DataStorage/Fiji_v2`. It contains 134
+The active case is `WebAPP/DataStorage/Fiji_v2`. It contains 133
 technologies, 106 commodities, four time slices, and a continuous 2020–2050
 horizon. The most recent stored solve is the 28 July
-`Phase1D_Cane_Bagasse` run. It is Optimal and uses the current Phase 1D
+`Phase1D_Legacy_Removal` run. It is Optimal and uses the current Phase 1D
 inputs.
 
-The next prepared source/input package is v2.0.4. Its portable MUIOGO archive
-contains the editable Phase 1D inputs and excludes solver results. Earlier
-archives remain available for comparison.
+The current source/input package is v2.0.5. Its portable MUIOGO archive
+contains the editable Phase 1D inputs and excludes solver results and
+regenerated view caches. Earlier archives remain available for comparison.
 
 | Component | Current v2 status |
 |---|---|
@@ -56,7 +56,9 @@ BIOFJIXX                           -> PWRWODFJIXX01 -> ELCFJIXX01
 Historical processed-cane demand equals FSC cane crushed. The IRENA central
 engineering case supplies the bagasse-export coefficient, and wood-residue
 output is separately bounded from the 2020–2022 EFL/FSC residual. The former
-aggregate `PWRBIOFJIXX01` technology is disabled.
+aggregate `PWRBIOFJIXX01` migration shell is absent from the active source.
+Its inherited stock lineage remains traceable in earlier archives and the
+dated Phase 1D records.
 
 The source-to-parameter audit trail for this active demand path is in
 `../data_sources/evidence/energy/PHASE_1C_PROJECTION_SOURCE_EXTRACTS_2026-07-27.md`;

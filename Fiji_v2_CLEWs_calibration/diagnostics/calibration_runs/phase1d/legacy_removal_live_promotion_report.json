@@ -1,0 +1,91 @@
+{
+    "phase": "1D legacy-biomass structural cleanup",
+    "date": "2026-07-28",
+    "case": {
+        "dry_run": false,
+        "source_case": "Fiji_v2",
+        "target_case": "Fiji_v2",
+        "preconditions": {
+            "technology": "PWRBIOFJIXX01",
+            "technology_id": "TEC_w665d",
+            "source_parameter_maxima": {
+                "RC": 0.0,
+                "TAMaxC": 0.0,
+                "TAMaxCI": 0.0,
+                "TAMinC": 0.0,
+                "TAMinCI": 0.0,
+                "TAL": 0.0,
+                "TAU": 0.0
+            },
+            "control_run": "Phase1D_Cane_Bagasse",
+            "control_result_maxima": {
+                "TotalAnnualTechnologyActivityByMode.csv": 0.0,
+                "TotalCapacityAnnual.csv": 0.0,
+                "NewCapacity.csv": 0.0
+            }
+        },
+        "changed_files": [
+            "RT.json",
+            "RYC.json",
+            "RYT.json",
+            "RYTCM.json",
+            "RYTM.json",
+            "RYTTs.json",
+            "genData.json"
+        ],
+        "removal": {
+            "technologies": 133,
+            "commodities": 106,
+            "legacy_references": []
+        },
+        "reserve_proxy": {
+            "status": "CURRENT",
+            "mismatch_count": 0,
+            "input_fingerprint_sha256": "d4e56a9f2638e6836e18da230404de5caa0405593d0b6c5a16025827db7bd3a3"
+        },
+        "target_fingerprints_after": {
+            "R.json": "0978fc8ede7cd8dbd91633bfcc9c69407a90271d7a3d0e7e5acce9b371ed9856",
+            "RE.json": "e6bac1bb7748a268cae67d17fdfec2db4c5841cbe9d0cea5550bcf5b65d99337",
+            "RS.json": "7c15321b1985519e71a80d98cc941b66d5b8e40fddbcb0ecf802262539a66a3f",
+            "RT.json": "63342db6d3d67e0a198f31a1a343003a6fb6882678b00959b47f27fa93317191",
+            "RTSM.json": "43a6496497478ace6fa99840a655faceac97bbaebcad3fd5335d33543ad63f0e",
+            "RYC.json": "ad17a2eb8636c2683bd21d393dd11ad673db46a90419538b022f42b846312006",
+            "RYCTs.json": "eb62c758ae5132e1d62d8b672264c59975cd378ffe3ce1b2fc11625d7a545c57",
+            "RYCn.json": "9220622adb43e43feb59c02afac94aee4e2d283564ffdd1ec27ff9196f170677",
+            "RYDtb.json": "f796b64a09242d6dfafe3948c109c86611183c90fc6111ee104035f71e025e20",
+            "RYE.json": "15594e2a30d24203c97dd002ed3f5f0e76de5381cd26bf6b1280dc065be2cbf5",
+            "RYS.json": "0861dd319bc906ca2d94be02a1b2927c15b3f04ec5a692346f89a4ab2ae9e515",
+            "RYSeDt.json": "7ea7da13509c42e6762cbd5c68b251cf49b4a94f77f63b66616a67bc49c21f08",
+            "RYT.json": "2e27107efc24f4dffec64d80f2c1c9bb7131d4fa9c403545b561626dca303ecc",
+            "RYTC.json": "e680b24adf3b59557ffe8330b3c835ea4f122a0cfff09e4cf74b2b395956fa26",
+            "RYTCM.json": "b104ee2bee9b4d2c93021382092b577b83a2aada1bb2b69ffc1db6f6944fdc8a",
+            "RYTCn.json": "2cef4a20a9d19bfafe0e929e65fa08cf32a51fdf2e26f13d254f55652afaf5b5",
+            "RYTEM.json": "d4ccb87bc193ad049a8f975b055076b8da07fb6dd0ac1f9253897979ae96ee5a",
+            "RYTM.json": "d8e40c45cae0c198f860b1d0d9684fdc875f3efd409a81585001eba8f6575d9e",
+            "RYTTs.json": "a6c3d057ab1d010a67f018028c970ff033d5e6bf78a66e73bd044b9a4f2fadb7",
+            "RYTs.json": "e43e3e7d976abd35c5787bcaab807b56f621d90829ef3c2a23abe7d008366990",
+            "genData.json": "cf08081d732bc24ae70d056c7c35b70594f6a2d62404c2df776dbbbc4131facd",
+            "reserve_margin_proxy.json": "bda4f1b4a292f59cb4dad50fcd0256a8c8c335ebbc5c30cc96bee953744edabf"
+        }
+    },
+    "csv_inputs": {
+        "dry_run": false,
+        "technology": "PWRBIOFJIXX01",
+        "files": {
+            "AvailabilityFactor.csv": 31,
+            "CapacityToActivityUnit.csv": 1,
+            "CapitalCost.csv": 31,
+            "FixedCost.csv": 31,
+            "InputActivityRatio.csv": 31,
+            "OperationalLife.csv": 1,
+            "OutputActivityRatio.csv": 31,
+            "ReserveMarginTagTechnology.csv": 31,
+            "ResidualCapacity.csv": 31,
+            "TECHNOLOGY.csv": 1,
+            "TotalAnnualMaxCapacity.csv": 31,
+            "TotalAnnualMaxCapacityInvestment.csv": 31,
+            "TotalTechnologyAnnualActivityUpperLimit.csv": 31
+        },
+        "rows_removed": 313
+    }
+}

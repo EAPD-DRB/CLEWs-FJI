@@ -166,10 +166,11 @@ def main() -> None:
     )
     parser.add_argument("--accounting-run", default="Phase1D_Accounting")
     parser.add_argument(
-        "--physical-case", default="Fiji_v2_Phase1D_Physical_Test"
+        "--physical-case",
+        default="Fiji_v2_Phase1D_Legacy_Removal_Test",
     )
     parser.add_argument(
-        "--physical-run", default="Phase1D_Physical_Capped"
+        "--physical-run", default="Phase1D_Legacy_Removal"
     )
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args()
@@ -231,11 +232,13 @@ def main() -> None:
     check(
         "Phase 1D structural entities and dimensions are present",
         expected_entities
-        and len(tech) == 134
+        and OLD_POWER not in tech
+        and len(tech) == 133
         and len(comm) == 106,
         {
             "technologies": len(tech),
             "commodities": len(comm),
+            "legacy_technology_present": OLD_POWER in tech,
             "new_technologies": sorted(set(NEW_TECH_IDS) & tech.keys()),
             "new_commodities": sorted(set(NEW_COMM_IDS) & comm.keys()),
         },
@@ -381,13 +384,16 @@ def main() -> None:
         )
         return {year: float(row[str(year)]) for year in years}
 
-    old_rc = year_parameter("RC", OLD_POWER)
-    old_upper = year_parameter("TAU", OLD_POWER)
     bag_rc = year_parameter("RC", BAGASSE_POWER)
     wood_rc = year_parameter("RC", WOOD_POWER)
     baseline_ryt = read_json(baseline_case / "RYT.json")
+    baseline_gen = read_json(baseline_case / "genData.json")
+    baseline_tech_ids = {
+        row["Tech"]: row["TechId"]
+        for row in baseline_gen["osy-tech"]
+    }
     baseline_rc_row = parameter_row(
-        baseline_ryt, "RC", TechId=tech_ids[OLD_POWER]
+        baseline_ryt, "RC", TechId=baseline_tech_ids[OLD_POWER]
     )
     accounting_ryt = read_json(accounting_case / "RYT.json")
     accounting_gen = read_json(accounting_case / "genData.json")
@@ -421,9 +427,8 @@ def main() -> None:
         for year in years
     }
     check(
-        "The retired aggregate stock is disabled and split 25/9 MW",
-        all(value == 0.0 for value in old_rc.values())
-        and all(value == 0.0 for value in old_upper.values())
+        "The retired aggregate technology is absent and stock remains split 25/9 MW",
+        OLD_POWER not in tech
         and all(
             math.isclose(value, 0.0, rel_tol=0, abs_tol=1e-12)
             for value in split_errors.values()
@@ -431,15 +436,14 @@ def main() -> None:
         and math.isclose(bag_rc[2021], BAGASSE_CAPACITY_GW)
         and math.isclose(wood_rc[2021], WOOD_CAPACITY_GW),
         {
-            "old_residual_capacity_max": max(old_rc.values()),
-            "old_activity_upper_max": max(old_upper.values()),
+            "legacy_technology_present": OLD_POWER in tech,
             "bagasse_2021_gw": bag_rc[2021],
             "wood_2021_gw": wood_rc[2021],
             "maximum_split_error_gw": max(
                 abs(value) for value in split_errors.values()
             ),
         },
-        "RYT.json; Government of Fiji REI Investment Plan",
+        "genData.json; RYT.json; Government of Fiji REI Investment Plan",
     )
     wood_af = year_parameter("AF", WOOD_POWER)
     wood_tau = year_parameter("TAU", WOOD_POWER)
@@ -477,6 +481,7 @@ def main() -> None:
         "(1, SGCMILLFJI)" in generated
         and "(1, PWRBAGFJIXX01)" in generated
         and "(1, PWRWODFJIXX01)" in generated
+        and OLD_POWER not in generated
         and "MODExTECHNOLOGYperFUELout[BAGEXPFJI]" in generated
         and "MODExTECHNOLOGYperFUELin[BAGEXPFJI]" in generated
     )

@@ -407,15 +407,19 @@
   },
   "phase_1d_cane_bagasse_electricity": {
     "date": "2026-07-28",
-    "version": "2.0.4",
+    "version": "2.0.5",
     "application_script": "scripts/apply_fiji_phase1d_cane_bagasse.py",
     "application_script_sha256": "dc1f02540b69cd0eae02e398cbe463f6b73cd3a22933d8ad597bc9b607c8c248",
+    "cleanup_script": "scripts/remove_fiji_phase1d_legacy_biomass.py",
+    "cleanup_script_sha256": "44da32f6a8eba3266fb8e06297c77cd63570e676fa592f6e36802532ce0c0579",
     "validation_script": "scripts/validate_fiji_phase1d_cane_bagasse.py",
-    "validation_script_sha256": "ba69730c64b1b3d6b4d8e1ac4bd8aff18cf67d46cbbf99e15cc78abcdfb619a5",
+    "validation_script_sha256": "4f3554f9fed142d3fc212de8694e0d3bbcb77bf5161b8c013bd0156e722bf228",
+    "cleanup_validation_script": "scripts/validate_fiji_phase1d_legacy_removal.py",
+    "cleanup_validation_script_sha256": "78dbc07690b36b80a545b4f4a3627fcde80a36b17524119412f7ef04653376a7",
     "general_validation_script": "scripts/validate_fiji_v2.py",
-    "general_validation_script_sha256": "3530a3d75b481caa67cda9e85d37e8d0178ea41754030b778368a46ac3ddb1cf",
+    "general_validation_script_sha256": "29bb64ea734ac890c067d8243145c4df185ac91737aee72d867cbcfccf65b70c",
     "lineage_validation_script": "scripts/validate_fiji_data_lineage.py",
-    "lineage_validation_script_sha256": "a6eea882cf8ef15d693833638a7062986c0700d43d3a01bdcf51574519a0cd25",
+    "lineage_validation_script_sha256": "2b8006906a39222ff2a9e141ec611d4247580a378a333b93b5ffeabf7e3b9c3a",
     "source_locator_record": "data_sources/evidence/energy/PHASE_1D_SOURCE_EXTRACTS_2026-07-28.md",
     "calculation_note": "data_sources/calculation_notes/PHASE_1D_CANE_BAGASSE_ELECTRICITY.md",
     "evidence_file": "data_sources/evidence/energy/fiji_phase1d_cane_bagasse_power_balance_2020_2024.csv",
@@ -431,7 +435,8 @@
       "fiji_rei_investment_plan": "3d291fad4853905d40486f253d974483a9b788881c6ea9e02e6ba725989790e1"
     },
     "case": "Fiji_v2",
-    "run": "Phase1D_Cane_Bagasse",
+    "run": "Phase1D_Legacy_Removal",
+    "baseline_case": "Fiji_v2_Phase1C_BottomUp_Test",
     "baseline_run": "Phase1C_BottomUp",
     "accounting_control": {
       "case": "Fiji_v2_Phase1D_Accounting_Test",
@@ -445,7 +450,7 @@
       "unrelated_annual_activity_rows_changed": 0
     },
     "dimensions": {
-      "technologies": 134,
+      "technologies": 133,
       "commodities": 106,
       "years": 31,
       "timeslices": 4
@@ -478,20 +483,20 @@
       }
     },
     "source_parameter_sha256": {
-      "genData.json": "285e462dd133df7bd4909819df0ddee45c476c37e4f7cefa548274eeb2370227",
-      "RYC.json": "c8e8b42466ea41d028b911f77672e92b39e7013ef92fe9d5bf6d5219b9b81dea",
-      "RYT.json": "54f2d5b476403704bfe6b037cd6c67d1976c7ad035ab73200297acef39f911b1",
-      "RYTCM.json": "637054c2c6a3be6a247551e89fbe8a70ea68ec4daf18884f5c7992073a8b2f26",
+      "genData.json": "cf08081d732bc24ae70d056c7c35b70594f6a2d62404c2df776dbbbc4131facd",
+      "RYC.json": "ad17a2eb8636c2683bd21d393dd11ad673db46a90419538b022f42b846312006",
+      "RYT.json": "2e27107efc24f4dffec64d80f2c1c9bb7131d4fa9c403545b561626dca303ecc",
+      "RYTCM.json": "b104ee2bee9b4d2c93021382092b577b83a2aada1bb2b69ffc1db6f6944fdc8a",
       "RYCn.json": "9220622adb43e43feb59c02afac94aee4e2d283564ffdd1ec27ff9196f170677",
       "reserve_margin_proxy.json": "bda4f1b4a292f59cb4dad50fcd0256a8c8c335ebbc5c30cc96bee953744edabf"
     },
     "portable_input_sha256": {
       "AccumulatedAnnualDemand.csv": "ae208b56808959e45b0e23df01d93a39a3118f5fc2e23dd1cb19903ba53e0228",
-      "AvailabilityFactor.csv": "2cd00284c0c555b30faf6895806f0e4b994b9c63fe1da977c017beb2c232bbd6",
-      "InputActivityRatio.csv": "5bf613bbe5bf07ae5cea297b3c976d09b0a1115eae3f3f60bc9366b53833aae5",
-      "OutputActivityRatio.csv": "be822fe8d042d5d922f42253aa239f328aa198fba978ede59529a0a11866ee13",
-      "ResidualCapacity.csv": "c3c0bb499c760753c877da57601a51e2b22365113291ee081ae4fd8d3fce6c54",
-      "TotalTechnologyAnnualActivityUpperLimit.csv": "8b579e14ea4ba9489ca8a92d77c8a5dfdd5ab2ab2edc2f44c4cd90f448510f10"
+      "AvailabilityFactor.csv": "c05bb33256fa833716c8df541570298a99f0e88a3c0a2d4c827c1d3de28f1772",
+      "InputActivityRatio.csv": "3d88e1544e203bc557e5c8f18bab64bd5ba5362f313f522b7a827c6ce8fafadd",
+      "OutputActivityRatio.csv": "48c920ab8d6bc98997534220264f68b52b0bd861d4806ca9ba43f27aa1c66076",
+      "ResidualCapacity.csv": "cb10f72343b2df15280be95d004f48e2d77a54ada32b52f732230b2bc4a771e3",
+      "TotalTechnologyAnnualActivityUpperLimit.csv": "ba558c99c61d71ecc911ebf3ca06abe1d77e6a27783dc075110816d3388afe6f"
     },
     "solver": "CBC",
     "status": "Optimal",
@@ -499,15 +504,15 @@
     "objective_change_from_phase1c": 24.80525511,
     "objective_change_percent": 1.5762664097,
     "matrix": {
-      "rows": 161160,
-      "columns": 127358,
-      "nonzeros": 944969
+      "rows": 160383,
+      "columns": 126737,
+      "nonzeros": 937818
     },
     "generated_artifacts_sha256": {
-      "data.txt": "53195ba8d23d73ea2de43e1d3c24639f617bb84e63b379e82ab9f7d6a5002015",
-      "data_processed.txt": "57795e56660d5d00e716c6b50418cc17ddd617a880208747865d18e1c517daff",
-      "lp.lp": "6aece3a9f4f72a1e33edeb7b17c16b912c49706825f070002c94c4b09fa9517d",
-      "results.txt": "7aa324710970b80ddc64691094b3e52c34672b35fe8892549761fc50fc949691",
+      "data.txt": "9bde4c12416de84aa3293110ce9c06be7533ac918404dbf5528c144e6094ca2b",
+      "data_processed.txt": "a3694af78a33903d0381f04de60faff695c000554f95ed71e31668cf091e258b",
+      "lp.lp": "50a93e0883a4d5e1c94cae8b4c3679a07abca1c5e1c5a7c0a51418174deff296",
+      "results.txt": "986210e131efd2536e63030be5291935c17254574d686497b660682d90626a70",
       "ObjectiveValue.csv": "c91ea7b5033099f78af333e898dfaba33d183b1f2adc03a864f3f87ab84cecda"
     },
     "reserve_margin_proxy": {
@@ -517,10 +522,11 @@
     },
     "validation": {
       "dedicated_checks_passed": 15,
+      "cleanup_checks_passed": 11,
       "general_checks_passed": 14,
       "general_checks_total": 15,
-      "lineage_checks_passed": 12,
-      "lineage_checks_total": 12,
+      "lineage_checks_passed": 14,
+      "lineage_checks_total": 14,
       "general_failed_check": "2024 thermal generation 20.6466% above observation versus 20% threshold",
       "aggregate_ipp_calibration_mape_percent": 4.9757496127,
       "aggregate_ipp_validation_mape_percent": 8.9142974249,
@@ -533,13 +539,14 @@
       "inactive_end_use_output_stubs": 23,
       "warning_records": 32
     },
-    "portable_archive": "muio/Fiji_v2_v2.0.4_MUIO.zip",
-    "portable_archive_sha256": "cb835f3a70269b072d7dfbd8810f9f3dcdd605f301ca8c21589153351a739ddb",
-    "validation_summary": "diagnostics/calibration_runs/phase1d/live_validation_summary.json",
-    "disposable_validation_summary": "diagnostics/calibration_runs/phase1d/disposable_validation_summary.json",
-    "general_validation_summary": "diagnostics/calibration_runs/phase1d/live_technical_validation_summary.json",
-    "lineage_validation_summary": "diagnostics/calibration_runs/phase1d/data_lineage_validation_summary.json",
-    "next_gate": "Sensitivity-test the bagasse export coefficient and inferred wood bound; address the separate hydro/thermal held-out miss with hydro-condition evidence."
+    "portable_archive": "muio/Fiji_v2_v2.0.5_MUIO.zip",
+    "portable_archive_sha256": "d818202c10c9dc3eb7b1d827b2afb827b2e87abdca40abc86e43978e1476724c",
+    "validation_summary": "diagnostics/calibration_runs/phase1d/legacy_removal_live_phase1d_validation_summary.json",
+    "disposable_validation_summary": "diagnostics/calibration_runs/phase1d/legacy_removal_disposable_validation_summary.json",
+    "cleanup_validation_summary": "diagnostics/calibration_runs/phase1d/legacy_removal_disposable_validation_summary.json",
+    "general_validation_summary": "diagnostics/calibration_runs/phase1d/legacy_removal_live_general_validation_summary.json",
+    "lineage_validation_summary": "diagnostics/calibration_runs/phase1d/legacy_removal_data_lineage_validation_summary.json",
+    "next_gate": "Phase 1E hydro-water conditioning: source an independent rainfall, inflow or reservoir series; define an accounting control and frozen calibration/validation rule before introducing a physical hydro-availability constraint."
   },
   "claim_boundary": "Annual national grid-supply mix, 2020-2024 sector electricity accounting, a documented 2025-2050 bottom-up electricity base scenario, 2020-2024 public-water delivery plus aggregate surface abstraction/loss accounting, and an annual cane-linked bagasse balance with inferred wood-residue output. Historical electricity total supply and installed fleet are exogenous. No mill-engineering, full land, hydrology, agriculture, hourly dispatch, reliability, network, reservoir, groundwater-source, useful-service, or water-energy calibration claim.",
   "last_structural_edit_date": "2026-07-28"

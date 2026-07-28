@@ -113,6 +113,30 @@ the denominator is stable, energy-balance closure, fuel-to-generation
 consistency, and renewable-share error. Results must be shown for every year,
 not only as a five-year average.
 
+## Lessons loop and alternate optima
+
+Record case-specific incidents and model changes in `MODEL_FIXES*.md`. Record
+a reusable process lesson in `LESSONS_LEARNED.md` only when it creates a new
+guardrail. Promote a lesson into this protocol or a shared skill after it has
+a clear cross-case application.
+
+For structural deletion, reindexing or exporter-order changes:
+
+1. preserve an immutable baseline containing both source and result
+   artifacts;
+2. prove the removed entity is inactive from source equations and
+   full-precision control results;
+3. compare objective, primal feasibility, capacity/vintage envelopes,
+   demands, emissions, affected physical flows and aggregate services;
+4. classify any row-level activity substitution explicitly; and
+5. report dual/shadow-price instability rather than treating dual identity
+   as a physical parity requirement.
+
+MUIO derived set order and a degenerate feasible face can select a different
+cost-equivalent CBC solution. A shadow price is not decision-grade until it
+is stable across relevant alternate optima or the ambiguity is otherwise
+resolved.
+
 ## Claim boundary
 
 With the retained public evidence, this release is an annual

@@ -418,3 +418,88 @@ crushing-season timing and outages are not represented. Tropik Wood output is
 an inferred residual, and the future cane path is a scenario rather than an
 FSC forecast. Phase 1D is therefore implemented and dedicated-validated but
 not fully validated.
+
+## 28 July 2026 — remove the superseded aggregate biomass shell
+
+### Reason and prior/new formulation
+
+`PWRBIOFJIXX01` (`TEC_w665d`) was retained as an inactive migration shell
+when Phase 1D split the inherited aggregate biomass stock. It no longer
+represented a physical stock, conversion, pass-through, accounting device,
+backstop or demand.
+
+Before removal, every year had zero `RC`, `TAMaxC`, `TAMaxCI`, `TAMinC`,
+`TAMinCI`, `TAL` and `TAU`; the `Phase1D_Cane_Bagasse` result had zero
+capacity, new capacity and activity. After removal, the technology and its
+indexed source rows are absent. The active 25 MW bagasse and 9 MW
+wood-residue technologies, mill, processed-cane demand and resource
+constraints are unchanged.
+
+The exact equation mapping and removal condition are recorded under
+`C-1D-LEGACY-REMOVAL` in `data_sources/CALCULATIONS.csv`. No new external
+data source or empirical value was introduced. The original aggregate stock
+evidence remains `DS-FIJI-REI-IP`, and historical archives v2.0.0–v2.0.4
+preserve the retired identifier.
+
+### Source and portable-input changes
+
+The change was made in `genData.json` and regenerated through MUIOGO
+`UpdateCase`. Live source files changed:
+
+- `genData.json`;
+- `RT.json`;
+- `RYC.json`;
+- `RYT.json`;
+- `RYTCM.json`;
+- `RYTM.json`; and
+- `RYTTs.json`.
+
+After filtering only `TEC_w665d`, every nonlegacy source parameter matched
+the control. Portable inputs removed 313 rows from 13
+technology-indexed CSV files. The scripts are
+`scripts/remove_fiji_phase1d_legacy_biomass.py` and
+`scripts/validate_fiji_phase1d_legacy_removal.py`.
+
+### Generated artifacts, baseline and validation
+
+- Unchanged control: `Fiji_v2/Phase1D_Cane_Bagasse`.
+- Disposable candidate:
+  `Fiji_v2_Phase1D_Legacy_Removal_Test/Phase1D_Legacy_Removal`.
+- Preserved source/result baseline:
+  `Fiji_v2_Phase1C_BottomUp_Test/Phase1C_BottomUp`.
+- Live candidate: `Fiji_v2/Phase1D_Legacy_Removal`.
+- Cleanup validation: 11/11 passed.
+- Original Phase 1D validation: 15/15 passed on disposable and live.
+- Generation and preprocessing: passed through MUIOGO `DataFile`.
+- GLPK matrix validation: passed; 160,383 rows, 126,737 columns and 937,818
+  nonzeros.
+- CBC: Optimal at `-1548.8662358`; live wall time about 1.05 seconds.
+- Objective change from removal control: exactly zero.
+- Capacity, new capacity, emissions, demands and Phase 1D flows: unchanged.
+- Reserve proxy: `CURRENT`, zero mismatches.
+- Historical calibration and held-out metrics: unchanged.
+- Result timestamps and case/run identity: passed.
+
+Machine-readable evidence is in
+`diagnostics/calibration_runs/phase1d/legacy_removal_*`. The portable
+v2.0.5 archive is result-free, contains no legacy ID and has SHA-256
+`d818202c10c9dc3eb7b1d827b2afb827b2e87abdca40abc86e43978e1476724c`.
+
+### Issues and limitations
+
+The cleanup exposed an existing alternate optimum. Forty-four mode-level
+activity rows shift only within declared land and renewable substitute
+groups, while aggregate services remain unchanged. Six nonbinding water
+surplus rows change in 2044/2050, and 371 discounted annual-balance shadow
+prices change. All primal balances remain feasible and the maximum Phase 1D
+balance difference is `3.12e-12`.
+
+The broader validator still passes 14/15 because the inherited 2024 thermal
+generation error is `20.647%`, just above the `20%` threshold. This was not
+caused or repaired by the cleanup.
+
+The reusable lessons and adopted guardrails are in
+`documentation/LESSONS_LEARNED.md`. In particular, exact dual or
+technology-level dispatch identity must not substitute for physical
+invariant checks on a degenerate model, and each structural baseline must
+retain both source and results.

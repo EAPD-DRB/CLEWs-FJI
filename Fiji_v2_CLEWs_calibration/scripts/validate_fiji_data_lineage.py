@@ -10,6 +10,7 @@ import json
 import re
 from pathlib import Path
 from typing import Any
+from zipfile import ZipFile
 
 
 PACKAGE = Path(__file__).resolve().parents[1]
@@ -382,6 +383,50 @@ def main() -> None:
                 "actual": actual_archive_hash,
             },
             actual_archive_hash == phase1d["portable_archive_sha256"],
+        )
+    )
+
+    legacy = "PWRBIOFJIXX01"
+    legacy_id = "TEC_w665d"
+    legacy_input_references = [
+        str(path.relative_to(PACKAGE))
+        for path in sorted((PACKAGE / "model" / "inputs").glob("*.csv"))
+        if legacy in path.read_text(encoding="utf-8-sig")
+        or legacy_id in path.read_text(encoding="utf-8-sig")
+    ]
+    checks.append(
+        check(
+            "Portable CSV inputs exclude the retired aggregate biomass shell",
+            legacy_input_references or "No legacy references",
+            not legacy_input_references,
+        )
+    )
+
+    with ZipFile(archive) as bundle:
+        names = bundle.namelist()
+        generated_entries = [
+            name
+            for name in names
+            if name.startswith("Fiji_v2/res/")
+            or (
+                name.startswith("Fiji_v2/view/")
+                and name != "Fiji_v2/view/viewDefinitions.json"
+            )
+        ]
+        legacy_archive_references = [
+            name
+            for name in names
+            if legacy.encode() in bundle.read(name)
+            or legacy_id.encode() in bundle.read(name)
+        ]
+    checks.append(
+        check(
+            "Portable archive excludes legacy references and regenerable result/view artifacts",
+            {
+                "generated_entries": generated_entries,
+                "legacy_references": legacy_archive_references,
+            },
+            not generated_entries and not legacy_archive_references,
         )
     )
 

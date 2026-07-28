@@ -1,0 +1,476 @@
+{
+  "schema_version": 1,
+  "phase": "1D legacy-biomass structural cleanup",
+  "status": "PASS",
+  "validated_at": "2026-07-28T21:21:19.328488+00:00",
+  "control": {
+    "case": "Fiji_v2",
+    "run": "Phase1D_Cane_Bagasse"
+  },
+  "candidate": {
+    "case": "Fiji_v2_Phase1D_Legacy_Removal_Test",
+    "run": "Phase1D_Legacy_Removal"
+  },
+  "checks": [
+    {
+      "check": "Candidate removes exactly the legacy technology",
+      "status": "PASS",
+      "finding": {
+        "control_technologies": 134,
+        "candidate_technologies": 133,
+        "removed": [
+          "PWRBIOFJIXX01"
+        ],
+        "added": []
+      },
+      "evidence": "control and candidate genData.json"
+    },
+    {
+      "check": "Control source forces zero legacy stock, investment and activity",
+      "status": "PASS",
+      "finding": {
+        "RC": 0.0,
+        "TAMaxC": 0.0,
+        "TAMaxCI": 0.0,
+        "TAMinC": 0.0,
+        "TAMinCI": 0.0,
+        "TAL": 0.0,
+        "TAU": 0.0
+      },
+      "evidence": "control RYT.json; CAa2, NCC1, CAa4 and AAC2"
+    },
+    {
+      "check": "Control results contain no legacy stock, investment or activity",
+      "status": "PASS",
+      "finding": {
+        "activity": 0.0,
+        "capacity": 0.0,
+        "new_capacity": 0.0
+      },
+      "evidence": "control result CSVs"
+    },
+    {
+      "check": "Legacy technology is absent from candidate sources and generated artifacts",
+      "status": "PASS",
+      "finding": {
+        "source_references": [],
+        "generated_references": []
+      },
+      "evidence": "candidate source JSON and generated run artifacts"
+    },
+    {
+      "check": "Every nonlegacy source parameter survives UpdateCase unchanged",
+      "status": "PASS",
+      "finding": "All source parameters match after filtering the legacy ID",
+      "evidence": "control/candidate source JSON structural comparison"
+    },
+    {
+      "check": "Candidate generation, preprocessing, GLPK matrix and CBC solve completed",
+      "status": "PASS",
+      "finding": {
+        "status": "Optimal - objective value -1548.86623580",
+        "data_processed_bytes": 317351,
+        "lp_bytes": 59624323
+      },
+      "evidence": "candidate data_processed.txt, lp.lp and results.txt"
+    },
+    {
+      "check": "Objective is unchanged within numerical tolerance",
+      "status": "PASS",
+      "finding": {
+        "control": -1548.8662358,
+        "candidate": -1548.8662358,
+        "difference": 0.0,
+        "difference_percent": 0.0
+      },
+      "evidence": "ObjectiveValue.csv"
+    },
+    {
+      "check": "Stocks, investment, emissions, demands, Phase 1D flows and aggregate services are unchanged",
+      "status": "PASS",
+      "finding": {
+        "strict_comparisons": {
+          "capacity": {
+            "rows_compared": 4123,
+            "rows_changed": 0,
+            "maximum_absolute_difference": 0.0,
+            "examples": [],
+            "changed_technologies": [],
+            "tolerance": 1e-08
+          },
+          "new_capacity": {
+            "rows_compared": 4123,
+            "rows_changed": 0,
+            "maximum_absolute_difference": 0.0,
+            "examples": [],
+            "changed_technologies": [],
+            "tolerance": 1e-08
+          },
+          "emissions": {
+            "rows_compared": 4123,
+            "rows_changed": 0,
+            "maximum_absolute_difference": 0.0,
+            "examples": [],
+            "changed_technologies": [],
+            "tolerance": 1e-08
+          },
+          "demand": {
+            "rows_compared": 13144,
+            "rows_changed": 0,
+            "maximum_absolute_difference": 0.0,
+            "examples": [],
+            "changed_technologies": [],
+            "tolerance": 1e-08
+          }
+        },
+        "aggregate_comparisons": {
+          "unaffected_technology_year_activity": {
+            "rows_compared": 3844,
+            "rows_changed": 0,
+            "maximum_absolute_difference": 0.0,
+            "examples": [],
+            "changed_technologies": [],
+            "tolerance": 1e-06
+          },
+          "phase1d_chain_technology_year_activity": {
+            "rows_compared": 93,
+            "rows_changed": 0,
+            "maximum_absolute_difference": 0.0,
+            "examples": [],
+            "changed_technologies": [],
+            "tolerance": 1e-06
+          },
+          "land_technology_year_activity": {
+            "rows_compared": 93,
+            "rows_changed": 0,
+            "maximum_absolute_difference": 0.0,
+            "examples": [],
+            "changed_technologies": [],
+            "tolerance": 1e-06
+          },
+          "power_group_year_activity": {
+            "rows_compared": 31,
+            "rows_changed": 0,
+            "maximum_absolute_difference": 0.0,
+            "examples": [],
+            "changed_technologies": [],
+            "tolerance": 1e-06
+          },
+          "renewable_accounting_group_year_activity": {
+            "rows_compared": 31,
+            "rows_changed": 0,
+            "maximum_absolute_difference": 0.0,
+            "examples": [],
+            "changed_technologies": [],
+            "tolerance": 1e-06
+          }
+        },
+        "alternate_optimum_mode_activity": {
+          "rows_compared": 7564,
+          "rows_changed": 44,
+          "maximum_absolute_difference": 1.2544,
+          "examples": [
+            {
+              "key": [
+                "LNDAGRFJIC01",
+                "15",
+                "2044"
+              ],
+              "control": 1.2544,
+              "candidate": 0.0,
+              "difference": -1.2544
+            },
+            {
+              "key": [
+                "LNDAGRFJIC01",
+                "15",
+                "2050"
+              ],
+              "control": 1.2478,
+              "candidate": 0.0,
+              "difference": -1.2478
+            },
+            {
+              "key": [
+                "LNDAGRFJIC01",
+                "23",
+                "2044"
+              ],
+              "control": 0.3527,
+              "candidate": 1.6071,
+              "difference": 1.2544
+            },
+            {
+              "key": [
+                "LNDAGRFJIC01",
+                "23",
+                "2050"
+              ],
+              "control": 0.36,
+              "candidate": 1.6078,
+              "difference": 1.2477999999999998
+            },
+            {
+              "key": [
+                "LNDAGRFJIC02",
+                "15",
+                "2044"
+              ],
+              "control": 0.0,
+              "candidate": 0.9432,
+              "difference": 0.9432
+            },
+            {
+              "key": [
+                "LNDAGRFJIC02",
+                "15",
+                "2050"
+              ],
+              "control": 0.0,
+              "candidate": 0.9385,
+              "difference": 0.9385
+            },
+            {
+              "key": [
+                "LNDAGRFJIC02",
+                "23",
+                "2044"
+              ],
+              "control": 8.7102,
+              "candidate": 7.767,
+              "difference": -0.9432
+            },
+            {
+              "key": [
+                "LNDAGRFJIC02",
+                "23",
+                "2050"
+              ],
+              "control": 8.7102,
+              "candidate": 7.7717,
+              "difference": -0.9385000000000003
+            },
+            {
+              "key": [
+                "LNDAGRFJIC04",
+                "15",
+                "2044"
+              ],
+              "control": 0.0,
+              "candidate": 0.3111,
+              "difference": 0.3111
+            },
+            {
+              "key": [
+                "LNDAGRFJIC04",
+                "15",
+                "2050"
+              ],
+              "control": 0.0,
+              "candidate": 0.3093,
+              "difference": 0.3093
+            }
+          ],
+          "changed_technologies": [
+            "LNDAGRFJIC01",
+            "LNDAGRFJIC02",
+            "LNDAGRFJIC04",
+            "PWRHYDFJIXX01",
+            "PWRSPVFJIXX01",
+            "PWRWONFJIXX01",
+            "RNWHYDFJIXX",
+            "RNWSPVFJIXX",
+            "RNWWONFJIXX"
+          ],
+          "tolerance": 1e-08
+        },
+        "alternate_mode_changes_within_expected_scope": true
+      },
+      "evidence": "control/candidate result CSVs and full-precision results.txt; changes within the declared substitute groups are alternate optimal allocations"
+    },
+    {
+      "check": "Annual commodity balances remain feasible and physical-chain residuals are unchanged",
+      "status": "PASS",
+      "finding": {
+        "control_minimum_primal_balance": -3.3721618e-12,
+        "candidate_minimum_primal_balance": -1.8692142e-12,
+        "changed_primal_balance_rows": 6,
+        "changed_primal_balance_indices": [
+          [
+            "WTREVTFJI",
+            "2044"
+          ],
+          [
+            "WTREVTFJI",
+            "2050"
+          ],
+          [
+            "WTRGRCFJI",
+            "2044"
+          ],
+          [
+            "WTRGRCFJI",
+            "2050"
+          ],
+          [
+            "WTRSURFJI",
+            "2044"
+          ],
+          [
+            "WTRSURFJI",
+            "2050"
+          ]
+        ],
+        "maximum_primal_balance_difference": 0.47063300000000297,
+        "maximum_phase1d_balance_difference": 3.1138357699999997e-12,
+        "discounted_shadow_price_changes": {
+          "rows_compared": 3286,
+          "rows_changed": 371,
+          "maximum_absolute_difference": 54.217287677967406,
+          "examples": [
+            {
+              "key": [
+                "AGRWATFJI",
+                "2020"
+              ],
+              "control": 0.000102469507659596,
+              "candidate": 0.0,
+              "difference": -0.000102469507659596
+            },
+            {
+              "key": [
+                "AGRWATFJI",
+                "2021"
+              ],
+              "control": 0.00010759298304257579,
+              "candidate": 0.0,
+              "difference": -0.00010759298304257579
+            },
+            {
+              "key": [
+                "AGRWATFJI",
+                "2024"
+              ],
+              "control": 0.0001245523269946618,
+              "candidate": 0.0,
+              "difference": -0.0001245523269946618
+            },
+            {
+              "key": [
+                "AGRWATFJI",
+                "2025"
+              ],
+              "control": 0.00013077994334439492,
+              "candidate": 0.0,
+              "difference": -0.00013077994334439492
+            },
+            {
+              "key": [
+                "AGRWATFJI",
+                "2027"
+              ],
+              "control": 0.0,
+              "candidate": 0.0001441848875371954,
+              "difference": 0.0001441848875371954
+            },
+            {
+              "key": [
+                "AGRWATFJI",
+                "2028"
+              ],
+              "control": 0.0,
+              "candidate": 0.00015139413191405518,
+              "difference": 0.00015139413191405518
+            },
+            {
+              "key": [
+                "AGRWATFJI",
+                "2029"
+              ],
+              "control": 0.0,
+              "candidate": 0.00015896383850975797,
+              "difference": 0.00015896383850975797
+            },
+            {
+              "key": [
+                "AGRWATFJI",
+                "2030"
+              ],
+              "control": 0.00016691203043524587,
+              "candidate": 0.0,
+              "difference": -0.00016691203043524587
+            },
+            {
+              "key": [
+                "AGRWATFJI",
+                "2031"
+              ],
+              "control": 0.00017525763195700816,
+              "candidate": 0.0,
+              "difference": -0.00017525763195700816
+            },
+            {
+              "key": [
+                "AGRWATFJI",
+                "2032"
+              ],
+              "control": 0.00018402051355485857,
+              "candidate": 0.0,
+              "difference": -0.00018402051355485857
+            }
+          ],
+          "changed_technologies": [],
+          "tolerance": 1e-08
+        },
+        "interpretation": "Only nonbinding water-surplus balances move. Shadow prices are not unique under this alternate optimum and are recorded, not used as a parity gate."
+      },
+      "evidence": "full-precision results.txt EBb4 primal activities; EBb4_EnergyBalanceEachYear4_ICR.csv contains discounted duals/shadow prices"
+    },
+    {
+      "check": "Bagasse-balance residuals remain numerically zero in every year",
+      "status": "PASS",
+      "finding": {
+        "maximum_residual_difference": 3.1138357699999997e-12,
+        "maximum_dual_difference": 1.2288603e-05,
+        "dual_interpretation": "The changed bagasse shadow price is an allowed alternate-optimum effect; primal closure is the gate."
+      },
+      "evidence": "results.txt EBb4_EnergyBalanceEachYear4"
+    },
+    {
+      "check": "Candidate results postdate source inputs and identify the intended case/run",
+      "status": "PASS",
+      "finding": {
+        "case": "Fiji_v2_Phase1D_Legacy_Removal_Test",
+        "run": "Phase1D_Legacy_Removal",
+        "source_timestamp": "2026-07-28T20:51:56.707308+00:00",
+        "oldest_result_timestamp": "2026-07-28T20:53:33.849750+00:00"
+      },
+      "evidence": "candidate source and generated artifact timestamps"
+    }
+  ],
+  "checks_passed": 11,
+  "checks_total": 11,
+  "failed_checks": 0,
+  "artifacts": {
+    "res/Phase1D_Legacy_Removal/data.txt": {
+      "sha256": "9bde4c12416de84aa3293110ce9c06be7533ac918404dbf5528c144e6094ca2b",
+      "bytes": 282368
+    },
+    "res/Phase1D_Legacy_Removal/data_processed.txt": {
+      "sha256": "b77b0cc5e249bb181e55f40103840574dd438ca32592c7e1f3131bef6ff5a3ab",
+      "bytes": 317351
+    },
+    "res/Phase1D_Legacy_Removal/lp.lp": {
+      "sha256": "1d846ca4e41d62d33f07daac0dba88735088b26a35cabecb01cbc37872f4d048",
+      "bytes": 59624323
+    },
+    "res/Phase1D_Legacy_Removal/results.txt": {
+      "sha256": "ad7c95f434b6d60f5a2bbb4ece83198fa87d5e7663ee11fe38428aa19c344fb0",
+      "bytes": 42206534
+    },
+    "res/Phase1D_Legacy_Removal/csv/ObjectiveValue.csv": {
+      "sha256": "c91ea7b5033099f78af333e898dfaba33d183b1f2adc03a864f3f87ab84cecda",
+      "bytes": 35
+    }
+  }
+}

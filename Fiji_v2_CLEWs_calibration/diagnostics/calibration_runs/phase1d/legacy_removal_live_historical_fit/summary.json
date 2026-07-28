@@ -1,0 +1,27 @@
+{
+  "run": "Phase1D_Legacy_Removal",
+  "case_folder": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2",
+  "calibration_years": [
+    2020,
+    2021,
+    2022
+  ],
+  "validation_years": [
+    2023,
+    2024
+  ],
+  "metrics": {
+    "calibration": {
+      "generation_mae_gwh": 41.88796296296292,
+      "generation_mape_percent": 9.145295372482542,
+      "renewable_share_mae_percentage_points": 4.082327018247592
+    },
+    "validation": {
+      "generation_mae_gwh": 43.43816666666665,
+      "generation_mape_percent": 10.301385436817066,
+      "renewable_share_mae_percentage_points": 5.439113686194059
+    }
+  },
+  "assessment_comparisons": "Fiji_v2_CLEWs_calibration/diagnostics/calibration_runs/phase1d/legacy_removal_live_historical_fit/assessment_comparisons.csv",
+  "credit_rule": "Only class E rows receive independent reproduction credit. Demand/total supply and fleet are J. Calibration-period biomass and wind are H because their annual availability factors were estimated from 2020-2022 outcomes; their frozen 2023-2024 values are E. Wind is excluded from aggregate MAPE because its observed output is below 1 GWh and percentage errors are unstable."
+}

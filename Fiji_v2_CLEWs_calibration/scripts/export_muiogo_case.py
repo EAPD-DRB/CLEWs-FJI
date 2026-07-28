@@ -15,7 +15,10 @@ def main() -> None:
     parser.add_argument(
         "--exclude-results",
         action="store_true",
-        help="Exclude the case res/ folder from the portable archive.",
+        help=(
+            "Exclude res/ and regenerated view caches; preserve only "
+            "view/viewDefinitions.json."
+        ),
     )
     args = parser.parse_args()
 
@@ -28,8 +31,14 @@ def main() -> None:
             if not path.is_file() or path.name == "lp.lp":
                 continue
             relative_path = path.relative_to(case_folder)
-            if args.exclude_results and relative_path.parts[0] == "res":
-                continue
+            if args.exclude_results:
+                if relative_path.parts[0] == "res":
+                    continue
+                if (
+                    relative_path.parts[0] == "view"
+                    and path.name != "viewDefinitions.json"
+                ):
+                    continue
             arcname = PurePosixPath(case_folder.name) / relative_path
             archive.write(path, str(arcname))
     print(f"Portable MUIO case backup: {args.output} ({args.output.stat().st_size} bytes)")

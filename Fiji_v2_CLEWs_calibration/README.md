@@ -75,18 +75,20 @@ reliability.
 - Immutable raw reference: `Fiji_CLEWs_Global`
 - Fiji v2 build package: `Fiji_v2_CLEWs_calibration`
 - Active MUIO case: `WebAPP/DataStorage/Fiji_v2`
-- Most recent solved run: `Phase1D_Cane_Bagasse`
-- Current result-free MUIO archive: `muio/Fiji_v2_v2.0.4_MUIO.zip`
+- Most recent solved run: `Phase1D_Legacy_Removal`
+- Current result-free MUIO archive: `muio/Fiji_v2_v2.0.5_MUIO.zip`
 
 The raw package, raw MUIO case, retained sources, and v2 evidence are never
 silently overwritten. `scripts/build_fiji_v2.py` starts from the raw inputs
 and records every v2 transformation in a machine-readable manifest.
 
-The v2.0.4 source/input package retains the Phase 1B public-water closure and
+The v2.0.5 source/input package retains the Phase 1B public-water closure and
 Phase 1C sector-electricity path and adds the Phase 1D physical
-cane–bagasse–electricity connection. Its portable archive contains editable
-inputs and excludes saved solver results. The 28 July live solve is Optimal;
-the retained pre-Phase-1D grade is not silently extended to the new model.
+cane–bagasse–electricity connection. The superseded aggregate biomass shell
+is removed. Its portable archive contains editable inputs and excludes saved
+solver results and regenerated view caches. The 28 July live solve is
+Optimal; the retained pre-Phase-1D grade is not silently extended to the new
+model.
 
 ## What is supplied and what is tested
 

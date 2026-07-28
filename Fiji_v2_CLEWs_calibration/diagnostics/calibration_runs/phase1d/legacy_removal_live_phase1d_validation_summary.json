@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "phase": "1D cane-bagasse-electricity",
+  "status": "PASS",
+  "validated_at": "2026-07-28T21:26:12.496428+00:00",
+  "cases": {
+    "baseline": {
+      "case": "Fiji_v2_Phase1C_BottomUp_Test",
+      "run": "Phase1C_BottomUp"
+    },
+    "accounting": {
+      "case": "Fiji_v2_Phase1D_Accounting_Test",
+      "run": "Phase1D_Accounting"
+    },
+    "physical": {
+      "case": "Fiji_v2",
+      "run": "Phase1D_Legacy_Removal"
+    }
+  },
+  "objectives": {
+    "baseline": -1573.67149091,
+    "accounting": -1573.67381668,
+    "physical": -1548.8662358,
+    "accounting_difference_percent": -0.00014779259924353391,
+    "physical_difference_percent": 1.5762664096847916
+  },
+  "checks": [
+    {
+      "check": "Phase 1D structural entities and dimensions are present",
+      "status": "PASS",
+      "finding": {
+        "technologies": 133,
+        "commodities": 106,
+        "legacy_technology_present": false,
+        "new_technologies": [
+          "PWRBAGFJIXX01",
+          "PWRWODFJIXX01",
+          "SGCMILLFJI"
+        ],
+        "new_commodities": [
+          "BAGEXPFJI",
+          "SGCPROCFJI"
+        ]
+      },
+      "evidence": "genData.json"
+    },
+    {
+      "check": "Cane and bagasse metadata use the implemented physical units",
+      "status": "PASS",
+      "finding": {
+        "CRPSGC": "Mt",
+        "SGCPROCFJI": "Mt",
+        "BAGEXPFJI": "PJ"
+      },
+      "evidence": "genData.json; upstream clewsy.py FAOSTAT / 1,000,000 conversion"
+    },
+    {
+      "check": "FSC historical cane throughput and rebased future path are exact",
+      "status": "PASS",
+      "finding": {
+        "maximum_absolute_difference_mt": 0.0,
+        "historical_mt": {
+          "2020": 1.729171,
+          "2021": 1.417185,
+          "2022": 1.639004,
+          "2023": 1.565586,
+          "2024": 1.331922
+        },
+        "future_mt": {
+          "2025": 1.3376529810449589,
+          "2030": 1.3592407710687247,
+          "2040": 1.3806246406743528,
+          "2050": 1.3726016009819657
+        }
+      },
+      "evidence": "RYC.json; FSC annual reports; inherited Phase 1C path"
+    },
+    {
+      "check": "Cane-mill-bagasse-electricity coefficients are exact",
+      "status": "PASS",
+      "finding": {
+        "mill_raw_cane_input": 1.0,
+        "mill_processed_cane_output": 1.0,
+        "mill_bagasse_output": 0.34930079999999997,
+        "bagasse_power_input": 3.82,
+        "bagasse_power_output": 1.0,
+        "wood_power_output": 1.0
+      },
+      "evidence": "RYTCM.json; IRENA 2019 Table 3.1; inherited heat rate"
+    },
+    {
+      "check": "The retired aggregate technology is absent and stock remains split 25/9 MW",
+      "status": "PASS",
+      "finding": {
+        "legacy_technology_present": false,
+        "bagasse_2021_gw": 0.025,
+        "wood_2021_gw": 0.009,
+        "maximum_split_error_gw": 0.0
+      },
+      "evidence": "genData.json; RYT.json; Government of Fiji REI Investment Plan"
+    },
+    {
+      "check": "Bagasse is cane-limited and wood residue has a separate resource cap",
+      "status": "PASS",
+      "finding": {
+        "bagasse_availability": 1.0,
+        "wood_availability": 0.3385331303906646,
+        "wood_activity_upper_pj": 0.0960838272
+      },
+      "evidence": "RYT.json; 2020-2022 EFL/FSC residual calculation"
+    },
+    {
+      "check": "Generated solver sets contain every Phase 1D mode and fuel mapping",
+      "status": "PASS",
+      "finding": "Phase 1D technologies and BAGEXPFJI present in derived mappings",
+      "evidence": "data_processed.txt"
+    },
+    {
+      "check": "Physical checkpoint passed preprocessing, GLPK matrix creation and CBC",
+      "status": "PASS",
+      "finding": {
+        "solver_status": "Optimal - objective value -1548.86623580",
+        "lp_bytes": 59624323
+      },
+      "evidence": "data_processed.txt; lp.lp; results.txt"
+    },
+    {
+      "check": "Accounting-control objective remains within the declared parity tolerance",
+      "status": "PASS",
+      "finding": {
+        "baseline": -1573.67149091,
+        "accounting": -1573.67381668,
+        "difference": -0.002325769999970362,
+        "difference_percent": -0.00014779259924353391,
+        "tolerance_percent": 0.2
+      },
+      "evidence": "ObjectiveValue.csv; aggregate-equivalent stock split"
+    },
+    {
+      "check": "Accounting control preserves aggregate biomass and unrelated activity",
+      "status": "PASS",
+      "finding": {
+        "maximum_biomass_activity_error_pj": 1.1102230246251565e-16,
+        "unaffected": {
+          "compared_rows": 3999,
+          "changed_rows": 0,
+          "maximum_absolute_difference": 0.0,
+          "examples": []
+        }
+      },
+      "evidence": "TotalAnnualTechnologyActivityByMode.csv"
+    },
+    {
+      "check": "Solved cane and bagasse flows close in every model year",
+      "status": "PASS",
+      "finding": {
+        "2020": {
+          "mill_mt": 1.729171,
+          "bagasse_power_pj": 0.1581154,
+          "expected_bagasse_power_pj": 0.15811539623999998,
+          "wood_power_pj": 0.096083827
+        },
+        "2021": {
+          "mill_mt": 1.417185,
+          "bagasse_power_pj": 0.1295874,
+          "expected_bagasse_power_pj": 0.12958739639999997,
+          "wood_power_pj": 0.096083827
+        },
+        "2022": {
+          "mill_mt": 1.639004,
+          "bagasse_power_pj": 0.14987053,
+          "expected_bagasse_power_pj": 0.14987052575999998,
+          "wood_power_pj": 0.096083827
+        },
+        "2023": {
+          "mill_mt": 1.565586,
+          "bagasse_power_pj": 0.14315718,
+          "expected_bagasse_power_pj": 0.14315718383999998,
+          "wood_power_pj": 0.096083827
+        },
+        "2024": {
+          "mill_mt": 1.331922,
+          "bagasse_power_pj": 0.12179095,
+          "expected_bagasse_power_pj": 0.12179094768,
+          "wood_power_pj": 0.096083827
+        },
+        "2030": {
+          "mill_mt": 1.3592408,
+          "bagasse_power_pj": 0.12428898,
+          "expected_bagasse_power_pj": 0.12428897610652417,
+          "wood_power_pj": 0.096083827
+        },
+        "2050": {
+          "mill_mt": 1.3726016,
+          "bagasse_power_pj": 0.12551069,
+          "expected_bagasse_power_pj": 0.12551069039379092,
+          "wood_power_pj": 0.096083827
+        }
+      },
+      "evidence": "results.txt; FSC throughput; IRENA export coefficient"
+    },
+    {
+      "check": "Exportable-bagasse annual balance residuals are numerically zero",
+      "status": "PASS",
+      "finding": {
+        "2020": {
+          "residual_pj": 1.4402146e-17,
+          "dual": 0.0
+        },
+        "2021": {
+          "residual_pj": 6.2274665e-17,
+          "dual": 0.0
+        },
+        "2022": {
+          "residual_pj": -6.5057755e-17,
+          "dual": 0.0
+        },
+        "2023": {
+          "residual_pj": 9.9420992e-18,
+          "dual": 0.0
+        },
+        "2024": {
+          "residual_pj": 3.641657e-17,
+          "dual": 0.0
+        },
+        "2030": {
+          "residual_pj": 3.8972131e-17,
+          "dual": 0.0
+        },
+        "2050": {
+          "residual_pj": -0.0,
+          "dual": 5.911028e-06
+        }
+      },
+      "evidence": "results.txt EBb4_EnergyBalanceEachYear4"
+    },
+    {
+      "check": "Held-out 2023-2024 aggregate IPP generation stays within 15% MAPE",
+      "status": "PASS",
+      "finding": {
+        "calibration": {
+          "mape_percent": 4.97574961274433,
+          "years": {
+            "2020": {
+              "observed_mwh": 67094.0,
+              "modeled_mwh": 70610.89638888888,
+              "percent_error": 5.241744997896806
+            },
+            "2021": {
+              "observed_mwh": 61053.0,
+              "modeled_mwh": 62686.45194444444,
+              "percent_error": 2.675465488091392
+            },
+            "2022": {
+              "observed_mwh": 73471.0,
+              "modeled_mwh": 68320.65472222223,
+              "percent_error": -7.010038352244792
+            }
+          }
+        },
+        "validation": {
+          "mape_percent": 8.914297424915604,
+          "years": {
+            "2023": {
+              "observed_mwh": 76115.0,
+              "modeled_mwh": 66455.83527777778,
+              "percent_error": -12.690224952009753
+            },
+            "2024": {
+              "observed_mwh": 63799.0,
+              "modeled_mwh": 60520.77138888889,
+              "percent_error": -5.138369897821455
+            }
+          }
+        }
+      },
+      "evidence": "results.txt; EFL 2024 Annual Report"
+    },
+    {
+      "check": "Reserve-margin proxy is current after the biomass split",
+      "status": "PASS",
+      "finding": {
+        "status": "CURRENT",
+        "mismatch_count": 0
+      },
+      "evidence": "reserve_margin_proxy.json; reserve_margin_proxy_config.json"
+    },
+    {
+      "check": "Physical results postdate the disposable source and identify the selected run",
+      "status": "PASS",
+      "finding": {
+        "case": "Fiji_v2",
+        "run": "Phase1D_Legacy_Removal",
+        "result_timestamp": "2026-07-28T21:23:45.240911+00:00",
+        "source_timestamp": "2026-07-28T21:23:16.915073+00:00"
+      },
+      "evidence": "MUIO source and run artifact timestamps"
+    }
+  ],
+  "failed_checks": 0,
+  "artifacts": {
+    "res/Phase1D_Legacy_Removal/data.txt": {
+      "sha256": "9bde4c12416de84aa3293110ce9c06be7533ac918404dbf5528c144e6094ca2b",
+      "bytes": 282368
+    },
+    "res/Phase1D_Legacy_Removal/data_processed.txt": {
+      "sha256": "a3694af78a33903d0381f04de60faff695c000554f95ed71e31668cf091e258b",
+      "bytes": 317351
+    },
+    "res/Phase1D_Legacy_Removal/lp.lp": {
+      "sha256": "50a93e0883a4d5e1c94cae8b4c3679a07abca1c5e1c5a7c0a51418174deff296",
+      "bytes": 59624323
+    },
+    "res/Phase1D_Legacy_Removal/results.txt": {
+      "sha256": "986210e131efd2536e63030be5291935c17254574d686497b660682d90626a70",
+      "bytes": 42206534
+    },
+    "res/Phase1D_Legacy_Removal/csv/ObjectiveValue.csv": {
+      "sha256": "c91ea7b5033099f78af333e898dfaba33d183b1f2adc03a864f3f87ab84cecda",
+      "bytes": 35
+    }
+  }
+}
