@@ -55,7 +55,13 @@ WATER_RESOURCES = {"WTRPRCFJI", "WTRGRCFJI", "WTRSURFJI"}
 WATER_SINKS = {"WTREVTFJI"}
 WATER_SERVICES = {"AGRWATFJI", "PUBWATFJI"}
 WATER_INTERMEDIATES = {"WTRGWRFJI"}
-CROP_SERVICES = {"CRPCAS", "CRPCON", "CRPOTH", "CRPSGC", "CRPYAM"}
+CROP_SERVICES = {
+    "CRPCAS",
+    "CRPCON",
+    "CRPOTH",
+    "CRPYAM",
+    "SGCPROCFJI",
+}
 LAND_STOCKS = {
     "LTOT",
     "LBARTOT",
@@ -269,6 +275,8 @@ def evidence_for(commodity: str) -> str:
         return "DS-UNSD-ENERGY-FJI;A-ENE-01"
     if commodity in {"ELCFJIXX01", "ELCFJIXX02"}:
         return "DS-EFL-AR-2024;DS-FJI-REI-IP;M-V2-01"
+    if commodity in {"CRPSGC", "SGCPROCFJI", "BAGEXPFJI"}:
+        return "DS-FSC-ANNUAL-REPORTS;DS-IRENA-SUGARCANE-2019;M-1D-01"
     if commodity == "PUBWATFJI":
         return "DS-FBS-WATER-2024;M-WTR-01"
     if (
@@ -341,6 +349,21 @@ def disposition_for(
         return (
             "Retain as the Phase 1B raw-groundwater abstraction intermediate; "
             "keep its public route quarantined pending Fiji evidence."
+        )
+    if commodity == "CRPSGC":
+        return (
+            "Phase 1D treats this as harvested raw cane in million tonnes and "
+            "routes it through SGCMILLFJI; retain as an intermediate."
+        )
+    if commodity == "SGCPROCFJI":
+        return (
+            "Phase 1D final cane-throughput service. Retain the FSC historical "
+            "series and the documented post-2024 projection."
+        )
+    if commodity == "BAGEXPFJI":
+        return (
+            "Phase 1D exportable bagasse-energy intermediate. Retain the "
+            "cane-linked engineering coefficient and do not add direct demand."
         )
     if commodity in {"WTRSURFJI", "WTRPRCFJI", "WTREVTFJI", "AGRWATFJI"}:
         return (

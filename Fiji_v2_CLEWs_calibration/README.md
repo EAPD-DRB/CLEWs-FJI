@@ -5,16 +5,23 @@ raw `Fiji_CLEWs_Global` case. It covers 2020–2050, uses 2020–2022 for
 calibration, freezes the selected parameters, and tests 2023–2024 as held-out
 history.
 
-The result is **Good (76.4/100), medium confidence** for the claimed annual
-national grid-supply energy scope. In the held-out years, material generation
-has 9.94% mean absolute percentage error and renewable share has 5.13
-percentage-point mean absolute error. Phase 1B additionally closes observed
-2020–2024 public-water delivery and aggregate surface abstraction/loss
-accounting. This is not a calibration of the full land-water-agriculture
-nexus, investment economics, island networks, or operational reliability.
-Phase 1C additionally decomposes 2020–2024 grid electricity into commercial,
-industrial, central-grid residential and direct overhead demand and supplies
-independent 2025–2050 sector projections.
+The last formal scorecard is **Good (76.4/100), medium confidence** for the
+pre-Phase-1D annual national grid-supply scope. Phase 1D is implemented and
+its dedicated validator passes 15/15 checks, but it is not described as fully
+validated: the broader Fiji validator passes 14/15 because 2024 thermal
+generation is 20.65% above observation against a 20% threshold. Across the
+held-out years, material generation has 10.30% mean absolute percentage error
+and renewable share has 5.44 percentage-point mean absolute error.
+
+Phase 1B closes observed 2020–2024 public-water delivery and aggregate surface
+abstraction/loss accounting. Phase 1C decomposes 2020–2024 grid electricity
+into commercial, industrial, central-grid residential and direct overhead
+demand and supplies independent 2025–2050 sector projections. Phase 1D routes
+reported FSC cane through an explicit mill, co-produces exportable bagasse,
+and separates the documented 25 MW bagasse and 9 MW wood-residue power stocks.
+This is not a calibration of the full land-water-agriculture nexus, mill
+engineering, investment economics, island networks, or operational
+reliability.
 
 ## Start here
 
@@ -48,25 +55,38 @@ independent 2025–2050 sector projections.
   `diagnostics/calibration_runs/phase1c/live_validation_summary.json`
 - Phase 1C lineage validation:
   `diagnostics/calibration_runs/phase1c/data_lineage_validation_summary.json`
+- Phase 1D implementation and validation record:
+  `documentation/history/structural/PHASE_1D_CANE_BAGASSE_ELECTRICITY_2026-07-28.md`
+- Phase 1D source locators and checksums:
+  `data_sources/evidence/energy/PHASE_1D_SOURCE_EXTRACTS_2026-07-28.md`
+- Phase 1D detailed calculation:
+  `data_sources/calculation_notes/PHASE_1D_CANE_BAGASSE_ELECTRICITY.md`
+- Phase 1D live validation:
+  `diagnostics/calibration_runs/phase1d/live_validation_summary.json`
+- Phase 1D broader technical validation:
+  `diagnostics/calibration_runs/phase1d/live_technical_validation_summary.json`
+- Phase 1D topology audit:
+  `diagnostics/topology/2026-07-28_phase1d_live/REPORT.md`
 - Chronological record: `documentation/HISTORY.md`
-- Current cross-laptop handoff: `HANDOFF-2026-07-27.md`
+- Current cross-laptop handoff: `HANDOFF-2026-07-28.md`
 
 ## Version boundary
 
 - Immutable raw reference: `Fiji_CLEWs_Global`
 - Fiji v2 build package: `Fiji_v2_CLEWs_calibration`
 - Active MUIO case: `WebAPP/DataStorage/Fiji_v2`
-- Most recent solved run: `Phase1C_BottomUp`
-- Current result-free MUIO archive: `muio/Fiji_v2_v2.0.3_MUIO.zip`
+- Most recent solved run: `Phase1D_Cane_Bagasse`
+- Current result-free MUIO archive: `muio/Fiji_v2_v2.0.4_MUIO.zip`
 
 The raw package, raw MUIO case, retained sources, and v2 evidence are never
 silently overwritten. `scripts/build_fiji_v2.py` starts from the raw inputs
 and records every v2 transformation in a machine-readable manifest.
 
-The v2.0.3 source/input patch retains the Phase 1B public-water closure and
-adds the Phase 1C sector-electricity accounting and bottom-up demand path. Its
-portable archive contains editable inputs and excludes saved solver results.
-The 27 July live solve preserves the historical energy fit metrics and grade.
+The v2.0.4 source/input package retains the Phase 1B public-water closure and
+Phase 1C sector-electricity path and adds the Phase 1D physical
+cane–bagasse–electricity connection. Its portable archive contains editable
+inputs and excludes saved solver results. The 28 July live solve is Optimal;
+the retained pre-Phase-1D grade is not silently extended to the new model.
 
 ## What is supplied and what is tested
 
@@ -75,69 +95,87 @@ requirement, and the documented 2021 fleet is supplied as the historical
 installed stock. These are justified exogenous conditions (`J`), not
 independent reproduction.
 
-Hydro, thermal residual dispatch, IPP/biomass generation, wind generation,
-and renewable share remain model results. The biomass and wind availability
-factors use 2020–2022 generation evidence, so those calibration-period
-comparisons are conservatively classed `H`. The same frozen parameters are
-tested endogenously (`E`) in 2023–2024. No positive
+Hydro, thermal residual dispatch, bagasse and wood-residue generation, wind
+generation, and renewable share remain model results. Bagasse generation is
+bounded by reported cane throughput and an IRENA engineering export
+coefficient. The wood-residue availability and annual resource cap, and the
+wind availability factor, use 2020–2022 generation evidence, so those
+calibration-period comparisons are conservatively classed `H`. The same
+frozen parameters are tested endogenously (`E`) in 2023–2024. No positive
 lower-equals-upper generation or capacity outcome locks were introduced.
 
 ## Reproduce
 
-From the repository root:
+From the MUIOGO repository root, using its existing virtual environment:
 
 ```bash
-/opt/anaconda3/bin/python \
-  Fiji_v2_CLEWs_calibration/scripts/build_fiji_v2.py
+.venv/bin/python \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/scripts/build_fiji_v2.py
 
-/opt/anaconda3/bin/python \
-  Fiji_v2_CLEWs_calibration/scripts/apply_fiji_phase1b_public_water.py \
+.venv/bin/python \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/scripts/apply_fiji_phase1b_public_water.py \
   --source-case Fiji_v2 --target-case Fiji_v2 \
   --sync-csv-inputs
 
-/opt/anaconda3/bin/python \
-  Fiji_v2_CLEWs_calibration/scripts/apply_fiji_phase1c_bottom_up_demand.py \
+.venv/bin/python \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/scripts/apply_fiji_phase1c_bottom_up_demand.py \
   --source-case Fiji_v2 --target-case Fiji_v2 \
   --checkpoint bottom-up --sync-csv-inputs
 
-/opt/anaconda3/bin/python \
-  Fiji_v2_CLEWs_calibration/scripts/manage_reserve_margin_proxy.py \
+.venv/bin/python \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/scripts/apply_fiji_phase1d_cane_bagasse.py \
+  --source-case Fiji_v2 --target-case Fiji_v2 \
+  --checkpoint physical --sync-csv-inputs --write-evidence
+
+.venv/bin/python \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/scripts/manage_reserve_margin_proxy.py \
   WebAPP/DataStorage/Fiji_v2 --check
 
-/opt/anaconda3/bin/python \
-  Fiji_v2_CLEWs_calibration/scripts/solve_muiogo_case.py \
-  Phase1C_BottomUp \
+.venv/bin/python \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/scripts/solve_muiogo_case.py \
+  Phase1D_Cane_Bagasse \
   --case Fiji_v2 \
-  --muiogo-root /path/to/MUIOGO
+  --muiogo-root .
 
-/opt/anaconda3/bin/python \
-  Fiji_v2_CLEWs_calibration/scripts/score_historical_fit.py \
-  --case-folder /path/to/MUIOGO/WebAPP/DataStorage/Fiji_v2 \
-  --run Phase1C_BottomUp
-
-/opt/anaconda3/bin/python \
-  Fiji_v2_CLEWs_calibration/scripts/validate_fiji_v2.py \
-  --case-folder /path/to/MUIOGO/WebAPP/DataStorage/Fiji_v2 \
-  --run Phase1C_BottomUp
-
-/opt/anaconda3/bin/python \
-  Fiji_v2_CLEWs_calibration/scripts/validate_fiji_phase1c_bottom_up_demand.py \
-  --baseline-case Fiji_v2_Phase1B_Test \
-  --bottom-up-case Fiji_v2 --bottom-up-run Phase1C_BottomUp
-
-/opt/anaconda3/bin/python \
-  Fiji_v2_CLEWs_calibration/scripts/validate_fiji_data_lineage.py
-
-/opt/anaconda3/bin/python \
-  Fiji_v2_CLEWs_calibration/scripts/audit_fiji_topology.py \
-  --case-folder /path/to/MUIOGO/WebAPP/DataStorage/Fiji_v2 \
-  --run Phase1C_BottomUp --phase 1C \
+.venv/bin/python \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/scripts/score_historical_fit.py \
+  --case-folder WebAPP/DataStorage/Fiji_v2 \
+  --run Phase1D_Cane_Bagasse \
   --output-dir \
-  Fiji_v2_CLEWs_calibration/diagnostics/topology/2026-07-27_phase1c_live
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/diagnostics/calibration_runs/phase1d/live_historical_fit
+
+.venv/bin/python \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/scripts/validate_fiji_v2.py \
+  --case-folder WebAPP/DataStorage/Fiji_v2 \
+  --run Phase1D_Cane_Bagasse \
+  --fit-folder \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/diagnostics/calibration_runs/phase1d/live_historical_fit \
+  --output \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/diagnostics/calibration_runs/phase1d/live_technical_validation_summary.json
+
+.venv/bin/python \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/scripts/validate_fiji_phase1d_cane_bagasse.py \
+  --muiogo-root . \
+  --baseline-case Fiji_v2 --baseline-run Phase1C_BottomUp \
+  --accounting-case Fiji_v2_Phase1D_Accounting_Test \
+  --accounting-run Phase1D_Accounting \
+  --physical-case Fiji_v2 --physical-run Phase1D_Cane_Bagasse
+
+.venv/bin/python \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/scripts/validate_fiji_data_lineage.py
+
+.venv/bin/python \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/scripts/audit_fiji_topology.py \
+  --case-folder WebAPP/DataStorage/Fiji_v2 \
+  --run Phase1D_Cane_Bagasse --phase 1D \
+  --output-dir \
+  /path/to/CLEWs-FJI/Fiji_v2_CLEWs_calibration/diagnostics/topology/2026-07-28_phase1d_live
 ```
 
 If the named run already exists, solve it with `--reuse-existing`. The reserve
-proxy check must report zero mismatches before a solve.
+proxy check must report zero mismatches before a solve. The general validator
+currently exits nonzero on the documented 2024 thermal-generation check; this
+is a retained finding, not a reproduction failure.
 
 To regenerate the frozen annual Phase 1C calculation evidence after producing
 the accounting checkpoint:
@@ -164,8 +202,11 @@ python3 Fiji_v2_CLEWs_calibration/scripts/build_fiji_v2.py \
 
 ## Plain interpretation
 
-Fiji v2 shows that this model structure can reproduce the broad annual
+Fiji v2 now makes the annual sugar-cane-to-grid-electricity connection
+explicit: cane availability limits bagasse generation, while wood residue has
+a separate resource bound. The model broadly reproduces the annual
 hydro/thermal/IPP balance outside the calibration years without fixing those
-yearly outcomes. It does not show that the optimizer knows Fiji's future.
-Use it as a starting point for transparent scenario stress-testing, not as a
-single best-path oracle.
+yearly outcomes, but the 2024 thermal result narrowly misses the declared
+tolerance. It does not show that the optimizer knows Fiji's future. Use it as
+a starting point for transparent scenario stress-testing, not as a single
+best-path oracle.

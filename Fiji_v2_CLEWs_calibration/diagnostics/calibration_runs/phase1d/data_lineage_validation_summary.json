@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "model": "Fiji_v2",
+  "phase": "1D cane-bagasse-electricity",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Ledger identifiers are unique",
+      "status": "PASS",
+      "finding": {
+        "sources": 35,
+        "assumptions": 41,
+        "calculations": 26,
+        "model_map": 25
+      }
+    },
+    {
+      "check": "Every MODEL_DATA_MAP reference resolves",
+      "status": "PASS",
+      "finding": "All references resolve"
+    },
+    {
+      "check": "Every CALCULATIONS reference resolves",
+      "status": "PASS",
+      "finding": "All references resolve"
+    },
+    {
+      "check": "Projection evidence checksum matches the build manifest",
+      "status": "PASS",
+      "finding": {
+        "expected": "f58c1ec3df4b6017966a2ad542256dd2f3e1f847837bd8bdc722ab9175ac181a",
+        "actual": "f58c1ec3df4b6017966a2ad542256dd2f3e1f847837bd8bdc722ab9175ac181a"
+      }
+    },
+    {
+      "check": "Projection evidence covers 2020-2050 and preserves history",
+      "status": "PASS",
+      "finding": {
+        "years": [
+          2020,
+          2050
+        ],
+        "rows": 31,
+        "maximum_historical_control_difference_pj": 0.0,
+        "gross_2050_pj": 7.237375886081
+      }
+    },
+    {
+      "check": "Frozen projection matches portable demand inputs",
+      "status": "PASS",
+      "finding": {
+        "maximum_absolute_difference_pj": 4.965472477636013e-13,
+        "missing_rows": []
+      }
+    },
+    {
+      "check": "Active Phase 1C sources have locator and checksum records",
+      "status": "PASS",
+      "finding": {
+        "missing_source_ids": [],
+        "missing_hashes": []
+      }
+    },
+    {
+      "check": "Phase 1D evidence preserves the declared split and calculations",
+      "status": "PASS",
+      "finding": {
+        "years": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "splits": [
+          "calibration",
+          "calibration",
+          "calibration",
+          "validation",
+          "validation"
+        ],
+        "maximum_export_calculation_difference_mwh": 7.275957614183426e-12,
+        "maximum_residual_calculation_difference_mwh": 3.637978807091713e-12
+      }
+    },
+    {
+      "check": "Phase 1D evidence checksum matches the build manifest",
+      "status": "PASS",
+      "finding": {
+        "expected": "f3bc9cf7d1c0ddbbe15e2a3d08b84d3995732dfae49b118eb1970c2a0b2e9717",
+        "actual": "f3bc9cf7d1c0ddbbe15e2a3d08b84d3995732dfae49b118eb1970c2a0b2e9717"
+      }
+    },
+    {
+      "check": "FSC cane evidence matches portable processed-cane demand",
+      "status": "PASS",
+      "finding": {
+        "maximum_absolute_difference_mt": 0.0,
+        "missing_years": []
+      }
+    },
+    {
+      "check": "Active Phase 1D sources have registry, locator and checksum records",
+      "status": "PASS",
+      "finding": {
+        "missing_source_ids": [],
+        "missing_hashes": []
+      }
+    },
+    {
+      "check": "Phase 1D portable archive checksum matches the build manifest",
+      "status": "PASS",
+      "finding": {
+        "archive": "muio/Fiji_v2_v2.0.4_MUIO.zip",
+        "expected": "cb835f3a70269b072d7dfbd8810f9f3dcdd605f301ca8c21589153351a739ddb",
+        "actual": "cb835f3a70269b072d7dfbd8810f9f3dcdd605f301ca8c21589153351a739ddb"
+      }
+    }
+  ],
+  "checks_passed": 12,
+  "checks_total": 12,
+  "failed_checks": 0
+}

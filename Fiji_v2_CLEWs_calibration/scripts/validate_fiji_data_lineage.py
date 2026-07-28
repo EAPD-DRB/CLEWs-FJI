@@ -26,12 +26,24 @@ LOCATORS = (
     / "energy"
     / "PHASE_1C_PROJECTION_SOURCE_EXTRACTS_2026-07-27.md"
 )
+PHASE1D_EVIDENCE = (
+    DATA
+    / "evidence"
+    / "energy"
+    / "fiji_phase1d_cane_bagasse_power_balance_2020_2024.csv"
+)
+PHASE1D_LOCATORS = (
+    DATA
+    / "evidence"
+    / "energy"
+    / "PHASE_1D_SOURCE_EXTRACTS_2026-07-28.md"
+)
 MANIFEST = PACKAGE / "diagnostics" / "calibration_runs" / "build_manifest.json"
 DEFAULT_OUTPUT = (
     PACKAGE
     / "diagnostics"
     / "calibration_runs"
-    / "phase1c"
+    / "phase1d"
     / "data_lineage_validation_summary.json"
 )
 
@@ -127,6 +139,7 @@ def main() -> None:
 
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     phase = manifest["phase_1c_bottom_up_electricity"]
+    phase1d = manifest["phase_1d_cane_bagasse_electricity"]
     evidence = phase["evidence"]
     expected_projection_hash = evidence["projection_sha256"]
     actual_projection_hash = sha256(PROJECTION)
@@ -239,17 +252,136 @@ def main() -> None:
         )
     )
 
-    archive = PACKAGE / phase["portable_archive"]
+    _, phase1d_rows = read_csv(PHASE1D_EVIDENCE)
+    phase1d_years = [int(row["year"]) for row in phase1d_rows]
+    maximum_export_difference_mwh = max(
+        abs(
+            float(row["bagasse_export_electricity_mwh"])
+            - float(row["cane_crushed_t"])
+            * float(row["export_electricity_coefficient_kwh_per_t_cane"])
+            / 1000.0
+        )
+        for row in phase1d_rows
+    )
+    maximum_residual_difference_mwh = max(
+        abs(
+            float(row["residual_wood_generation_mwh"])
+            - (
+                float(row["observed_aggregate_ipp_mwh"])
+                - float(row["bagasse_export_electricity_mwh"])
+            )
+        )
+        for row in phase1d_rows
+    )
+    phase1d_shape_ok = (
+        phase1d_years == list(range(2020, 2025))
+        and [row["split"] for row in phase1d_rows]
+        == ["calibration", "calibration", "calibration", "validation", "validation"]
+        and maximum_export_difference_mwh <= 1e-6
+        and maximum_residual_difference_mwh <= 1e-6
+    )
+    checks.append(
+        check(
+            "Phase 1D evidence preserves the declared split and calculations",
+            {
+                "years": phase1d_years,
+                "splits": [row["split"] for row in phase1d_rows],
+                "maximum_export_calculation_difference_mwh": (
+                    maximum_export_difference_mwh
+                ),
+                "maximum_residual_calculation_difference_mwh": (
+                    maximum_residual_difference_mwh
+                ),
+            },
+            phase1d_shape_ok,
+        )
+    )
+
+    actual_phase1d_evidence_hash = sha256(PHASE1D_EVIDENCE)
+    checks.append(
+        check(
+            "Phase 1D evidence checksum matches the build manifest",
+            {
+                "expected": phase1d["evidence_sha256"],
+                "actual": actual_phase1d_evidence_hash,
+            },
+            actual_phase1d_evidence_hash == phase1d["evidence_sha256"],
+        )
+    )
+
+    _, accumulated_demand_rows = read_csv(
+        PACKAGE / "model" / "inputs" / "AccumulatedAnnualDemand.csv"
+    )
+    phase1d_demand = {
+        int(row["YEAR"]): float(row["VALUE"])
+        for row in accumulated_demand_rows
+        if row["FUEL"] == "SGCPROCFJI"
+    }
+    maximum_cane_input_difference_mt = 0.0
+    missing_cane_input_years: list[int] = []
+    for row in phase1d_rows:
+        year = int(row["year"])
+        if year not in phase1d_demand:
+            missing_cane_input_years.append(year)
+            continue
+        maximum_cane_input_difference_mt = max(
+            maximum_cane_input_difference_mt,
+            abs(
+                phase1d_demand[year]
+                - float(row["cane_crushed_t"]) / 1_000_000.0
+            ),
+        )
+    checks.append(
+        check(
+            "FSC cane evidence matches portable processed-cane demand",
+            {
+                "maximum_absolute_difference_mt": (
+                    maximum_cane_input_difference_mt
+                ),
+                "missing_years": missing_cane_input_years,
+            },
+            (
+                not missing_cane_input_years
+                and maximum_cane_input_difference_mt <= 1e-9
+            ),
+        )
+    )
+
+    phase1d_locator_text = PHASE1D_LOCATORS.read_text(encoding="utf-8")
+    required_phase1d_sources = {
+        "DS-FSC-ANNUAL-REPORTS",
+        "DS-IRENA-SUGARCANE-2019",
+        "DS-EFL-AR-2024",
+        "DS-FJI-REI-IP",
+    }
+    missing_phase1d_sources = sorted(required_phase1d_sources - source_ids)
+    missing_phase1d_hashes = sorted(
+        digest
+        for digest in phase1d["external_source_sha256"].values()
+        if digest not in phase1d_locator_text
+    )
+    checks.append(
+        check(
+            "Active Phase 1D sources have registry, locator and checksum records",
+            {
+                "missing_source_ids": missing_phase1d_sources,
+                "missing_hashes": missing_phase1d_hashes,
+            },
+            not missing_phase1d_sources and not missing_phase1d_hashes,
+        )
+    )
+
+    archive = PACKAGE / phase1d["portable_archive"]
     actual_archive_hash = sha256(archive)
     checks.append(
         check(
-            "Portable archive checksum matches the build manifest",
+            "Phase 1D portable archive checksum matches the build manifest",
             {
                 "archive": str(archive.relative_to(PACKAGE)),
-                "expected": phase["portable_archive_sha256"],
+                "expected": phase1d["portable_archive_sha256"],
                 "actual": actual_archive_hash,
             },
-            actual_archive_hash == phase["portable_archive_sha256"],
+            actual_archive_hash == phase1d["portable_archive_sha256"],
         )
     )
 
@@ -257,7 +389,7 @@ def main() -> None:
     report = {
         "schema_version": 1,
         "model": "Fiji_v2",
-        "phase": "1C bottom-up electricity",
+        "phase": "1D cane-bagasse-electricity",
         "status": "PASS" if not failures else "FAIL",
         "checks": checks,
         "checks_passed": len(checks) - len(failures),

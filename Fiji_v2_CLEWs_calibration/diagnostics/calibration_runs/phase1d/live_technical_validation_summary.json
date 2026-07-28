@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "model": "Fiji_v2",
+  "run": "Phase1D_Cane_Bagasse",
+  "status": "FAIL",
+  "validated_at": "2026-07-28T15:40:44.575955+00:00",
+  "provenance": {
+    "case_folder": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2",
+    "dimensions": {
+      "technologies": 134,
+      "commodities": 106,
+      "years": 31,
+      "timeslices": 4
+    },
+    "artifacts": {
+      "res/Phase1D_Cane_Bagasse/data.txt": {
+        "sha256": "53195ba8d23d73ea2de43e1d3c24639f617bb84e63b379e82ab9f7d6a5002015",
+        "modified_at": "2026-07-28T15:19:10.443201+00:00"
+      },
+      "res/Phase1D_Cane_Bagasse/data_processed.txt": {
+        "sha256": "57795e56660d5d00e716c6b50418cc17ddd617a880208747865d18e1c517daff",
+        "modified_at": "2026-07-28T15:19:11.053013+00:00"
+      },
+      "res/Phase1D_Cane_Bagasse/lp.lp": {
+        "sha256": "6aece3a9f4f72a1e33edeb7b17c16b912c49706825f070002c94c4b09fa9517d",
+        "modified_at": "2026-07-28T15:19:13.843293+00:00"
+      },
+      "res/Phase1D_Cane_Bagasse/results.txt": {
+        "sha256": "7aa324710970b80ddc64691094b3e52c34672b35fe8892549761fc50fc949691",
+        "modified_at": "2026-07-28T15:19:14.905450+00:00"
+      },
+      "res/Phase1D_Cane_Bagasse/csv/ObjectiveValue.csv": {
+        "sha256": "c91ea7b5033099f78af333e898dfaba33d183b1f2adc03a864f3f87ab84cecda",
+        "modified_at": "2026-07-28T15:19:15.138491+00:00"
+      }
+    },
+    "reserve_margin_proxy": {
+      "status": "CURRENT",
+      "case_folder": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/Fiji_v2",
+      "constraint_id": "CO_fji_reserve_proxy",
+      "constraint_name": "RESERVE_PROXY_RUN_CHECK_IF_DEMAND_OR_MARGIN_CHANGES",
+      "warning": "DERIVED RESERVE PROXY: run manage_reserve_margin_proxy.py --check after changing annual demand, demand profile, YearSplit, CapacityToActivityUnit, capacity credits, reserve margin, model years, timeslices, or scenarios. Run it with --update before solving when the check reports STALE.",
+      "input_fingerprint_sha256": "d4e56a9f2638e6836e18da230404de5caa0405593d0b6c5a16025827db7bd3a3",
+      "scenarios": {
+        "SC_0": {
+          "reserve_margin": 1.0,
+          "first_year_requirement": 3.9700805808793875,
+          "last_year_requirement": 8.174527019373233,
+          "peak_timeslices": [
+            "S1D1"
+          ]
+        }
+      },
+      "mismatch_count": 0,
+      "mismatches": []
+    }
+  },
+  "checks": [
+    {
+      "check": "Phase1D_Cane_Bagasse solve is optimal",
+      "status": "PASS",
+      "finding": "Optimal - objective value -1548.86623580",
+      "evidence": "WebAPP/DataStorage/Fiji_v2/res/Phase1D_Cane_Bagasse/results.txt"
+    },
+    {
+      "check": "CSV and MUIO horizons are identical and continuous",
+      "status": "PASS",
+      "finding": "2020-2050, 31 years",
+      "evidence": "model/inputs/YEAR.csv; WebAPP/DataStorage/Fiji_v2/genData.json"
+    },
+    {
+      "check": "MUIO dimensions match the Phase 1D Fiji structure",
+      "status": "PASS",
+      "finding": "134 technologies; 106 commodities",
+      "evidence": "WebAPP/DataStorage/Fiji_v2/genData.json"
+    },
+    {
+      "check": "Malformed land-code electricity branch is absent",
+      "status": "PASS",
+      "finding": "PWRTRNA01, ELCFJI01, and ELCFJI02 removed",
+      "evidence": "model/inputs/*.csv; WebAPP/DataStorage/Fiji_v2/genData.json"
+    },
+    {
+      "check": "Unsupported other-hydrocarbons branch is absent",
+      "status": "PASS",
+      "finding": "OHC, DEMINDOHC, and INDOHC removed",
+      "evidence": "model/inputs/*.csv; active MUIO JSON; regenerated solver files"
+    },
+    {
+      "check": "Valid grid-node electricity chain remains connected",
+      "status": "PASS",
+      "finding": "generation -> ELCFJIXX01 -> PWRTRNFJIXX -> ELCFJIXX02 -> demand",
+      "evidence": "InputActivityRatio.csv; OutputActivityRatio.csv; SpecifiedAnnualDemand.csv"
+    },
+    {
+      "check": "OSeMOSYS input indices are unique",
+      "status": "PASS",
+      "finding": "0 duplicates across 35803 rows",
+      "evidence": "Fiji_v2_CLEWs_calibration/model/inputs/*.csv"
+    },
+    {
+      "check": "No positive lower-equals-upper history locks",
+      "status": "PASS",
+      "finding": "0 positive exact locks",
+      "evidence": "Four activity/capacity lower-upper parameter pairs"
+    },
+    {
+      "check": "Reserve-margin proxy matches the active inputs",
+      "status": "PASS",
+      "finding": "CURRENT; 0 mismatch(es)",
+      "evidence": "WebAPP/DataStorage/Fiji_v2/reserve_margin_proxy.json and active inputs"
+    },
+    {
+      "check": "Primary-source checksums are registered and bundled files match",
+      "status": "PASS",
+      "finding": "2 source hashes registered; 0 source files bundled",
+      "evidence": "data_sources/evidence/calibration/SOURCE_EXTRACTS.md"
+    },
+    {
+      "check": "Build manifest pins evidence and the calibration/validation split",
+      "status": "PASS",
+      "finding": "evidence 88fdb0216ab5448029eeca4ab98e2af05f3c5b700b6c59569bc2b7fcfe176d75; calibration [2020, 2021, 2022]; validation [2023, 2024]",
+      "evidence": "diagnostics/calibration_runs/build_manifest.json"
+    },
+    {
+      "check": "Held-out material generation fit meets the declared annual threshold",
+      "status": "PASS",
+      "finding": "2023-2024 MAPE 10.301%",
+      "evidence": "/Users/sato/Documents/GitHub/CLEWs-FJI/Fiji_v2_CLEWs_calibration/diagnostics/calibration_runs/phase1d/live_historical_fit/summary.json"
+    },
+    {
+      "check": "Held-out renewable-share fit meets the declared annual threshold",
+      "status": "PASS",
+      "finding": "2023-2024 renewable-share MAE 5.439 percentage points",
+      "evidence": "/Users/sato/Documents/GitHub/CLEWs-FJI/Fiji_v2_CLEWs_calibration/diagnostics/calibration_runs/phase1d/live_historical_fit/summary.json"
+    },
+    {
+      "check": "No held-out material annual generation outcome misses by more than 20%",
+      "status": "FAIL",
+      "finding": "Worst: 2024 thermal_generation at 20.647%",
+      "evidence": "/Users/sato/Documents/GitHub/CLEWs-FJI/Fiji_v2_CLEWs_calibration/diagnostics/calibration_runs/phase1d/live_historical_fit/history_comparisons.csv"
+    },
+    {
+      "check": "Regenerated run is newer than the active model inputs",
+      "status": "PASS",
+      "finding": "All required run artifacts postdate the active inputs",
+      "evidence": "MUIO source JSON and Phase1D_Cane_Bagasse generated artifacts"
+    }
+  ],
+  "failed_checks": 1,
+  "scope": "Technical, annual national grid-supply energy calibration and Phase 1B public-water, Phase 1C electricity-demand and Phase 1D cane-bagasse closures; not a validation of the full land-water-agriculture nexus."
+}

@@ -290,3 +290,131 @@ have not yet been parameterized. Residential cooking remains inactive because
 the MICS supplies technology shares rather than an annual useful-energy or
 electricity magnitude. The next gate should add scenario sensitivities around
 the documented Phase 1C drivers before activating a useful-service branch.
+
+## Phase 1D cane–bagasse–electricity closure
+
+### Reason
+
+Sugar cane was produced by the land system but demanded directly, while
+grid-supplying biomass used an independent aggregate resource and generator.
+The model therefore did not require cane or mill throughput for bagasse
+electricity and combined documented FSC bagasse and Tropik Wood capacity in
+one expandable technology.
+
+### Source files and parameters changed
+
+Permanent changes originate in:
+
+- `scripts/apply_fiji_phase1d_cane_bagasse.py`;
+- `scripts/validate_fiji_phase1d_cane_bagasse.py`;
+- `model/inputs/TECHNOLOGY.csv` and `FUEL.csv`;
+- `model/inputs/AccumulatedAnnualDemand.csv`;
+- `model/inputs/InputActivityRatio.csv` and `OutputActivityRatio.csv`;
+- `model/inputs/ResidualCapacity.csv` and `AvailabilityFactor.csv`;
+- `model/inputs/TotalTechnologyAnnualActivityUpperLimit.csv`;
+- related cost, lifetime, capacity-factor and capacity-limit CSV files; and
+- `muio/reserve_margin_proxy_config.json`.
+
+The structural edit passed through MUIOGO `UpdateCase`. The live MUIO source
+changes are in `genData.json`, `RT.json`, `RYC.json`, `RYCTs.json`,
+`RYT.json`, `RYTCM.json`, `RYCn.json`, `RYTM.json`, `RYTTs.json` and
+`reserve_margin_proxy.json`. No generated solver file was edited.
+
+### Before and after
+
+Before:
+
+```text
+land -> CRPSGC -> direct demand
+RNWBIOFJIXX -> BIOFJIXX -> PWRBIOFJIXX01 -> ELCFJIXX01
+```
+
+After:
+
+```text
+land -> CRPSGC -> SGCMILLFJI -> SGCPROCFJI demand
+                              -> BAGEXPFJI
+                              -> PWRBAGFJIXX01 -> ELCFJIXX01
+RNWBIOFJIXX -> BIOFJIXX -> PWRWODFJIXX01 -> ELCFJIXX01
+```
+
+Added entities are `SGCMILLFJI`, `PWRBAGFJIXX01`,
+`PWRWODFJIXX01`, `SGCPROCFJI` and `BAGEXPFJI`. `CRPSGC` and
+`SGCPROCFJI` use `Mt`; `BAGEXPFJI` uses `PJ`.
+
+FSC 2020–2024 cane crushed is active processed-cane demand. Post-2024 demand
+is the inherited path rebased to the FSC 2024 actual. The mill produces
+0.3493008 PJ exportable bagasse per Mt cane; the generator consumes 3.82 PJ
+per PJ electricity, reproducing the IRENA 25.4 kWh/t-cane central case.
+
+The documented 34 MW aggregate stock is split into 25 MW bagasse and 9 MW
+wood residue. Wood availability is `0.338533130391`, and activity is capped
+at `0.0960838272 PJ/year`, derived only from the 2020–2022 EFL/FSC residual.
+The old aggregate shell has zero residual capacity, investment and activity.
+
+### Evidence
+
+The complete source locators, URLs and checksums are in
+`data_sources/evidence/energy/PHASE_1D_SOURCE_EXTRACTS_2026-07-28.md`.
+The retained calculation table is
+`data_sources/evidence/energy/fiji_phase1d_cane_bagasse_power_balance_2020_2024.csv`,
+SHA-256
+`f3bc9cf7d1c0ddbbe15e2a3d08b84d3995732dfae49b118eb1970c2a0b2e9717`.
+Equations are in
+`data_sources/calculation_notes/PHASE_1D_CANE_BAGASSE_ELECTRICITY.md`.
+
+### Generated artifacts and baseline
+
+- Baseline: `Fiji_v2/res/Phase1C_BottomUp`.
+- Baseline objective: `-1573.67149091`.
+- Accounting control:
+  `Fiji_v2_Phase1D_Accounting_Test/res/Phase1D_Accounting`.
+- Accounting objective: `-1573.67381668`.
+- Physical disposable:
+  `Fiji_v2_Phase1D_Physical_Test/res/Phase1D_Physical_Capped`.
+- Live: `Fiji_v2/res/Phase1D_Cane_Bagasse`.
+- Live objective: `-1548.8662358`.
+- Live objective change: `+24.80525511` (`+1.576266%`).
+
+Live generated-artifact hashes are recorded in
+`diagnostics/calibration_runs/phase1d/live_validation_summary.json`. They are
+not included in the portable archive.
+
+### Validation results
+
+- Disposable and live MUIO generation: passed.
+- Preprocessing: passed.
+- GLPK matrix creation: passed; 161,160 rows, 127,358 columns and 944,969
+  nonzeros.
+- CBC optimization: Optimal; about one second.
+- Accounting aggregate biomass activity difference: at most
+  `1.11 × 10^-16 PJ`.
+- Accounting unrelated activity: 3,999 annual rows compared, zero changed.
+- Dedicated Phase 1D validation: 15/15 passed.
+- Source-lineage validation: 12/12 passed.
+- Cane and bagasse flow closure: passed for all 31 years.
+- Exportable-bagasse annual residual: below `7 × 10^-17 PJ`.
+- Selected balance duals: zero through 2049; 2050 bagasse dual
+  `5.911028 × 10^-6`.
+- Reserve proxy: `CURRENT`, zero mismatches.
+- Live/disposable source and objective identity: passed.
+- Held-out aggregate IPP generation MAPE: 8.9143%.
+- Topology: 78 connected; 28 produced/unconsumed/undemanded; no new topology
+  error.
+
+### Incomplete check and limitations
+
+The general Fiji validator passes 14/15. It fails the existing single-outcome
+threshold because 2024 thermal generation is 20.6466% above observation
+against a 20% limit. Aggregate held-out material-generation MAPE is 10.3014%
+and renewable-share MAE is 5.4391 percentage points. Phase 1D slightly
+improves the 2024 absolute IPP error; the thermal miss reflects the existing
+hydro deficit and fixed total-supply boundary. The held-out year was not used
+to retune bagasse or wood parameters.
+
+The IRENA coefficient is not Fiji mill measurement. Individual mills,
+process steam, sugar/molasses co-products, bagasse storage, moisture,
+crushing-season timing and outages are not represented. Tropik Wood output is
+an inferred residual, and the future cane path is a scenario rather than an
+FSC forecast. Phase 1D is therefore implemented and dedicated-validated but
+not fully validated.

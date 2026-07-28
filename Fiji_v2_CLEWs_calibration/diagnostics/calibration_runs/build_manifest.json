@@ -405,6 +405,142 @@
     "lineage_validation_summary": "diagnostics/calibration_runs/phase1c/data_lineage_validation_summary.json",
     "next_gate": "Parameterize the documented demand-driver sensitivities and LEDS scenario variants before activating useful-service demand."
   },
-  "claim_boundary": "Annual national grid-supply mix, 2020-2024 sector electricity accounting, a documented 2025-2050 bottom-up electricity base scenario, and 2020-2024 public-water delivery plus aggregate surface abstraction/loss accounting. Historical electricity total supply and installed fleet are exogenous. No full land, hydrology, agriculture, hourly dispatch, reliability, network, reservoir, groundwater-source, useful-service, or water-energy calibration claim.",
-  "last_structural_edit_date": "2026-07-27"
+  "phase_1d_cane_bagasse_electricity": {
+    "date": "2026-07-28",
+    "version": "2.0.4",
+    "application_script": "scripts/apply_fiji_phase1d_cane_bagasse.py",
+    "application_script_sha256": "dc1f02540b69cd0eae02e398cbe463f6b73cd3a22933d8ad597bc9b607c8c248",
+    "validation_script": "scripts/validate_fiji_phase1d_cane_bagasse.py",
+    "validation_script_sha256": "ba69730c64b1b3d6b4d8e1ac4bd8aff18cf67d46cbbf99e15cc78abcdfb619a5",
+    "general_validation_script": "scripts/validate_fiji_v2.py",
+    "general_validation_script_sha256": "3530a3d75b481caa67cda9e85d37e8d0178ea41754030b778368a46ac3ddb1cf",
+    "lineage_validation_script": "scripts/validate_fiji_data_lineage.py",
+    "lineage_validation_script_sha256": "a6eea882cf8ef15d693833638a7062986c0700d43d3a01bdcf51574519a0cd25",
+    "source_locator_record": "data_sources/evidence/energy/PHASE_1D_SOURCE_EXTRACTS_2026-07-28.md",
+    "calculation_note": "data_sources/calculation_notes/PHASE_1D_CANE_BAGASSE_ELECTRICITY.md",
+    "evidence_file": "data_sources/evidence/energy/fiji_phase1d_cane_bagasse_power_balance_2020_2024.csv",
+    "evidence_sha256": "f3bc9cf7d1c0ddbbe15e2a3d08b84d3995732dfae49b118eb1970c2a0b2e9717",
+    "external_source_sha256": {
+      "fsc_2021_annual_report": "87a7d6751eb27122834c6cd3b1cf7db9ba534663cbea08ec93346a49d91b63eb",
+      "fsc_2022_annual_report": "6c26fdcf616bc36809c46c0865622a3c0a2e816334bb4baf6afaf2ae3f0ab002",
+      "fsc_2023_annual_report": "25456526f1fbd12f4a714166a4c0bdd61d4f4cc8e0e9456e471f0cbacda40c24",
+      "fsc_2024_annual_report": "c0fa0e21b53a8c14c5ba0d3fc7b9e88f2f4b8dab01293e1eadc6294240d76269",
+      "fsc_2025_annual_report": "c861fc8abe28673301cbd7a3c57c8c44b30e475bbbfb38258e3ab76231004940",
+      "irena_sugarcane_bioenergy_2019": "2b7c25413dabdff10d0b549c29aa53482dfa60b50d590ef483693619cf294a44",
+      "efl_2024_annual_report": "b3427b8e597399f31aabc2ab315b1a72a24138e20cd8faa5c3fec2894f0fe956",
+      "fiji_rei_investment_plan": "3d291fad4853905d40486f253d974483a9b788881c6ea9e02e6ba725989790e1"
+    },
+    "case": "Fiji_v2",
+    "run": "Phase1D_Cane_Bagasse",
+    "baseline_run": "Phase1C_BottomUp",
+    "accounting_control": {
+      "case": "Fiji_v2_Phase1D_Accounting_Test",
+      "run": "Phase1D_Accounting",
+      "baseline_objective": -1573.67149091,
+      "objective": -1573.67381668,
+      "objective_difference": -0.00232577,
+      "objective_difference_percent": -0.0001477926,
+      "maximum_aggregate_biomass_activity_difference_pj": 1.1102230246251565e-16,
+      "unrelated_annual_activity_rows_compared": 3999,
+      "unrelated_annual_activity_rows_changed": 0
+    },
+    "dimensions": {
+      "technologies": 134,
+      "commodities": 106,
+      "years": 31,
+      "timeslices": 4
+    },
+    "new_technologies": [
+      "SGCMILLFJI",
+      "PWRBAGFJIXX01",
+      "PWRWODFJIXX01"
+    ],
+    "new_commodities": [
+      "SGCPROCFJI",
+      "BAGEXPFJI"
+    ],
+    "parameters": {
+      "bagasse_capacity_gw": 0.025,
+      "wood_capacity_gw": 0.009,
+      "export_kwh_per_t_cane": 25.4,
+      "exportable_bagasse_pj_per_mt_cane": 0.3493008,
+      "power_heat_rate": 3.82,
+      "wood_availability": 0.3385331303906646,
+      "wood_activity_upper_pj": 0.0960838272,
+      "processed_cane_mt": {
+        "2020": 1.729171,
+        "2021": 1.417185,
+        "2022": 1.639004,
+        "2023": 1.565586,
+        "2024": 1.331922,
+        "2025": 1.3376529810449589,
+        "2050": 1.3726016009819657
+      }
+    },
+    "source_parameter_sha256": {
+      "genData.json": "285e462dd133df7bd4909819df0ddee45c476c37e4f7cefa548274eeb2370227",
+      "RYC.json": "c8e8b42466ea41d028b911f77672e92b39e7013ef92fe9d5bf6d5219b9b81dea",
+      "RYT.json": "54f2d5b476403704bfe6b037cd6c67d1976c7ad035ab73200297acef39f911b1",
+      "RYTCM.json": "637054c2c6a3be6a247551e89fbe8a70ea68ec4daf18884f5c7992073a8b2f26",
+      "RYCn.json": "9220622adb43e43feb59c02afac94aee4e2d283564ffdd1ec27ff9196f170677",
+      "reserve_margin_proxy.json": "bda4f1b4a292f59cb4dad50fcd0256a8c8c335ebbc5c30cc96bee953744edabf"
+    },
+    "portable_input_sha256": {
+      "AccumulatedAnnualDemand.csv": "ae208b56808959e45b0e23df01d93a39a3118f5fc2e23dd1cb19903ba53e0228",
+      "AvailabilityFactor.csv": "2cd00284c0c555b30faf6895806f0e4b994b9c63fe1da977c017beb2c232bbd6",
+      "InputActivityRatio.csv": "5bf613bbe5bf07ae5cea297b3c976d09b0a1115eae3f3f60bc9366b53833aae5",
+      "OutputActivityRatio.csv": "be822fe8d042d5d922f42253aa239f328aa198fba978ede59529a0a11866ee13",
+      "ResidualCapacity.csv": "c3c0bb499c760753c877da57601a51e2b22365113291ee081ae4fd8d3fce6c54",
+      "TotalTechnologyAnnualActivityUpperLimit.csv": "8b579e14ea4ba9489ca8a92d77c8a5dfdd5ab2ab2edc2f44c4cd90f448510f10"
+    },
+    "solver": "CBC",
+    "status": "Optimal",
+    "objective": -1548.8662358,
+    "objective_change_from_phase1c": 24.80525511,
+    "objective_change_percent": 1.5762664097,
+    "matrix": {
+      "rows": 161160,
+      "columns": 127358,
+      "nonzeros": 944969
+    },
+    "generated_artifacts_sha256": {
+      "data.txt": "53195ba8d23d73ea2de43e1d3c24639f617bb84e63b379e82ab9f7d6a5002015",
+      "data_processed.txt": "57795e56660d5d00e716c6b50418cc17ddd617a880208747865d18e1c517daff",
+      "lp.lp": "6aece3a9f4f72a1e33edeb7b17c16b912c49706825f070002c94c4b09fa9517d",
+      "results.txt": "7aa324710970b80ddc64691094b3e52c34672b35fe8892549761fc50fc949691",
+      "ObjectiveValue.csv": "c91ea7b5033099f78af333e898dfaba33d183b1f2adc03a864f3f87ab84cecda"
+    },
+    "reserve_margin_proxy": {
+      "status": "CURRENT",
+      "mismatch_count": 0,
+      "input_fingerprint_sha256": "d4e56a9f2638e6836e18da230404de5caa0405593d0b6c5a16025827db7bd3a3"
+    },
+    "validation": {
+      "dedicated_checks_passed": 15,
+      "general_checks_passed": 14,
+      "general_checks_total": 15,
+      "lineage_checks_passed": 12,
+      "lineage_checks_total": 12,
+      "general_failed_check": "2024 thermal generation 20.6466% above observation versus 20% threshold",
+      "aggregate_ipp_calibration_mape_percent": 4.9757496127,
+      "aggregate_ipp_validation_mape_percent": 8.9142974249,
+      "held_out_material_generation_mape_percent": 10.3013854368,
+      "held_out_renewable_share_mae_percentage_points": 5.4391136862
+    },
+    "topology_after": {
+      "connected": 78,
+      "produced_unconsumed_undemanded": 28,
+      "inactive_end_use_output_stubs": 23,
+      "warning_records": 32
+    },
+    "portable_archive": "muio/Fiji_v2_v2.0.4_MUIO.zip",
+    "portable_archive_sha256": "cb835f3a70269b072d7dfbd8810f9f3dcdd605f301ca8c21589153351a739ddb",
+    "validation_summary": "diagnostics/calibration_runs/phase1d/live_validation_summary.json",
+    "disposable_validation_summary": "diagnostics/calibration_runs/phase1d/disposable_validation_summary.json",
+    "general_validation_summary": "diagnostics/calibration_runs/phase1d/live_technical_validation_summary.json",
+    "lineage_validation_summary": "diagnostics/calibration_runs/phase1d/data_lineage_validation_summary.json",
+    "next_gate": "Sensitivity-test the bagasse export coefficient and inferred wood bound; address the separate hydro/thermal held-out miss with hydro-condition evidence."
+  },
+  "claim_boundary": "Annual national grid-supply mix, 2020-2024 sector electricity accounting, a documented 2025-2050 bottom-up electricity base scenario, 2020-2024 public-water delivery plus aggregate surface abstraction/loss accounting, and an annual cane-linked bagasse balance with inferred wood-residue output. Historical electricity total supply and installed fleet are exogenous. No mill-engineering, full land, hydrology, agriculture, hourly dispatch, reliability, network, reservoir, groundwater-source, useful-service, or water-energy calibration claim.",
+  "last_structural_edit_date": "2026-07-28"
 }

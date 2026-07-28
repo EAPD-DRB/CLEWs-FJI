@@ -23,10 +23,14 @@ EVIDENCE = (
 )
 OUT = PACKAGE / "diagnostics" / "calibration_runs" / "historical_fit"
 TECHNOLOGIES = {
-    "biomass_ipp": "PWRBIOFJIXX01",
-    "hydro": "PWRHYDFJIXX01",
-    "thermal": "PWROILFJIXX01",
-    "wind": "PWRWONFJIXX01",
+    "biomass_ipp": (
+        "PWRBIOFJIXX01",
+        "PWRBAGFJIXX01",
+        "PWRWODFJIXX01",
+    ),
+    "hydro": ("PWRHYDFJIXX01",),
+    "thermal": ("PWROILFJIXX01",),
+    "wind": ("PWRWONFJIXX01",),
 }
 OBSERVATION_FIELDS = {
     "biomass_ipp": "ipp_mwh",
@@ -104,8 +108,11 @@ def main() -> None:
     for year in sorted(evidence):
         split = evidence[year]["split"]
         model_by_category = {
-            category: production.get((technology, year), 0.0)
-            for category, technology in TECHNOLOGIES.items()
+            category: sum(
+                production.get((technology, year), 0.0)
+                for technology in technologies
+            )
+            for category, technologies in TECHNOLOGIES.items()
         }
         for category, model_gwh in model_by_category.items():
             observed_gwh = float(evidence[year][OBSERVATION_FIELDS[category]]) / 1000

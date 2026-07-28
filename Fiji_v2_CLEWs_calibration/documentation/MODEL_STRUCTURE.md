@@ -6,8 +6,8 @@ a spatial land–agriculture–water lineage.
 
 | System | Main model objects | Connection to the rest of the model |
 |---|---|---|
-| Energy supply | Imported fuels; hydro, biomass, oil, wind, solar, and other generation options; transmission; final energy demands | Supplies electricity and fuels to residential, commercial, industrial, transport, agriculture, and water services |
-| Land and crops | Crop-production options and four cluster allocation technologies | Uses land, precipitation, evapotranspiration, and irrigation; produces crop commodities |
+| Energy supply | Imported fuels; hydro, cane-linked bagasse, bounded wood residue, oil, wind, solar, and other generation options; transmission; final energy demands | Supplies electricity and fuels to residential, commercial, industrial, transport, agriculture, and water services |
+| Land and crops | Crop-production options and four cluster allocation technologies | Uses land, precipitation, evapotranspiration, and irrigation; Phase 1D routes raw sugar cane through an explicit mill |
 | Water | Surface-water and groundwater resources, agricultural water, and public-water supply | Phase 1B closes observed public delivery through surface abstraction; public groundwater has an explicit but quarantined abstraction chain |
 | Climate representation | GAEZ RCP4.5 precipitation, evapotranspiration, runoff, and potential-yield coefficients | Determines spatial crop and water coefficients; does not reproduce observed 2020–2024 weather |
 | MUIO reserve proxy | Annual capacity-credit user-defined constraints | Replaces native reserve tags unsupported by the installed MUIO formulation; does not calibrate historical output |
@@ -68,6 +68,35 @@ The mapping is documented in
 `../data_sources/evidence/raw_baseline/CROP_PROXY_MAPPING_2026-07-24.csv`.
 Potential yields are not observations of Fiji farm yields.
 
+## Cane–bagasse–electricity representation
+
+Phase 1D replaces direct demand on raw `CRPSGC` with processed-cane service
+demand:
+
+```text
+CRPSGC -> SGCMILLFJI -> SGCPROCFJI
+                       -> BAGEXPFJI -> PWRBAGFJIXX01 -> ELCFJIXX01
+
+BIOFJIXX -> PWRWODFJIXX01 -> ELCFJIXX01
+```
+
+`CRPSGC` and `SGCPROCFJI` are measured in million tonnes. `BAGEXPFJI` is
+exportable bagasse energy after the selected process-steam requirement, in
+PJ. `SGCMILLFJI` consumes one unit of raw cane and produces one unit of
+processed cane plus 0.3493008 PJ exportable bagasse per Mt cane.
+`PWRBAGFJIXX01` consumes 3.82 PJ bagasse per PJ electricity, reproducing the
+IRENA central-case export of 25.4 kWh per tonne cane.
+
+The former aggregate `PWRBIOFJIXX01` technology is disabled. Its documented
+34 MW historical stock is split into 25 MW FSC bagasse and 9 MW Tropik Wood.
+Bagasse output is limited by cane throughput; wood output has a separate
+0.0960838272 PJ annual cap and availability estimated from the 2020–2022
+aggregate IPP residual.
+
+The chain is an annual national balance. It does not represent individual FSC
+mills, sugar and molasses as co-products, process-steam dispatch, bagasse
+storage, residue moisture variability, or plant-specific outages.
+
 ## Water representation
 
 `DEMAGRGWTFJI` and `DEMAGRSURFJI` supply agricultural water from modeled
@@ -110,6 +139,9 @@ balance.
   household systems, and off-grid supply.
 - Crop potential, crop production, harvested area, and land allocation are
   different quantities and must not be interchanged.
+- Raw cane, processed cane, gross bagasse mass, exportable bagasse energy and
+  grid electricity are distinct quantities; the active coefficient links only
+  processed cane to exportable electricity after mill process needs.
 - The reserve proxy is a formulation-porting mechanism, not an observed
   reserve margin or a calibration lock.
 

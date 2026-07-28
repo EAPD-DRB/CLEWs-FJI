@@ -53,6 +53,10 @@ These limitations are part of the result, not optional caveats.
   lubricant or bitumen use must not be treated as combustion demand.
 - The post-OHC `Historical_Backcast` recertification preserved the objective,
   score and reported calibration metrics. The removed OHC branch was dormant.
+- The general Phase 1D technical validator passes 14 of 15 checks. The failed
+  check is 2024 thermal generation at 20.65% above observation against a 20%
+  single-outcome threshold. Aggregate held-out generation MAPE remains
+  10.30%; the model was not retuned to the held-out year.
 - MUIO commodity descriptions remain generic placeholders, although
   identifier references resolve.
 - Commercial, industrial and residential demand share one aggregate
@@ -67,9 +71,17 @@ These limitations are part of the result, not optional caveats.
   profile. There are no plant reservoirs, inflows, releases, spill,
   operating rules, rainfall response, or annual outage conditions.
 - The 2024 high-hydro year is therefore underpredicted by 16.52%.
-- Biomass/IPP output is represented through aggregate capacity and an
-  effective availability factor. It is not backed by a calibrated
-  cane-bagasse-mill balance.
+- Bagasse generation is now constrained by an annual cane–mill balance, but
+  the 25.4 kWh/t-cane coefficient is an IRENA central engineering proxy rather
+  than a Fiji mill heat-and-power measurement.
+- The model does not represent individual mills, sugar and molasses
+  co-products, process-steam dispatch, bagasse storage, moisture variation,
+  crushing-season timing, or mill outages.
+- Tropik Wood generation is inferred as the residual between aggregate EFL
+  IPP purchases and calculated bagasse output. No plant-level wood generation,
+  residue-supply, curtailment or outage series was retained.
+- The post-2024 cane path is the inherited SSP-shaped trajectory rebased to
+  FSC 2024 throughput, not an FSC or agriculture-sector forecast.
 
 ## Costs and future pathways
 

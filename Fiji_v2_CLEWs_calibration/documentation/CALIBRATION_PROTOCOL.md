@@ -87,7 +87,9 @@ before results are reported.
    supported by retained rainfall, inflow, or reservoir evidence.
 4. Reconcile customer demand, station use, network losses, IPPs, household
    generation, and off-grid supply.
-5. Constrain biomass through a documented cane–bagasse–mill balance.
+5. Replace the Phase 1D annual cane–bagasse proxy with Fiji mill-level steam,
+   electricity, co-product, storage and outage evidence when the intended use
+   requires that resolution.
 6. Represent thermal fuels, heat rates, prices, and availability explicitly.
 7. Increase temporal resolution only as far as the evidence and intended use
    justify.
@@ -114,8 +116,8 @@ not only as a five-year average.
 ## Claim boundary
 
 With the retained public evidence, this release is an annual
-electricity–hydro–IPP backcast. It does not claim hourly dispatch,
-reliability, precise reconstruction of historical investment choice, or a
-calibrated full nexus. Wider land, water, agriculture, and cross-nexus
-calibration must be released only after their own evidence and held-out tests
-are complete.
+electricity–hydro–IPP backcast with a cane-linked bagasse balance. It does not
+claim hourly dispatch, mill engineering fidelity, reliability, precise
+reconstruction of historical investment choice, or a calibrated full nexus.
+Wider land, water, agriculture, and cross-nexus calibration must be released
+only after their own evidence and held-out tests are complete.

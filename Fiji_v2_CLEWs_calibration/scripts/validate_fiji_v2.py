@@ -25,9 +25,27 @@ from manage_reserve_margin_proxy import (
 REPO = Path(__file__).resolve().parents[2]
 ROOT = REPO / "Fiji_v2_CLEWs_calibration"
 INPUTS = ROOT / "model" / "inputs"
-CASE = REPO / "WebAPP" / "DataStorage" / "Fiji_v2"
-FIT = ROOT / "diagnostics" / "calibration_runs" / "historical_fit"
-OUTPUT = ROOT / "diagnostics" / "calibration_runs" / "validation_summary.json"
+CASE = (
+    Path(__file__).resolve().parents[3]
+    / "MUIOGO"
+    / "WebAPP"
+    / "DataStorage"
+    / "Fiji_v2"
+)
+FIT = (
+    ROOT
+    / "diagnostics"
+    / "calibration_runs"
+    / "phase1d"
+    / "live_historical_fit"
+)
+OUTPUT = (
+    ROOT
+    / "diagnostics"
+    / "calibration_runs"
+    / "phase1d"
+    / "live_technical_validation_summary.json"
+)
 EVIDENCE = (
     ROOT
     / "data_sources"
@@ -39,8 +57,8 @@ REMOVED_UPSTREAM_TECHNOLOGIES = {"PWRTRNA01"}
 REMOVED_UPSTREAM_FUELS = {"ELCFJI01", "ELCFJI02"}
 REMOVED_OHC_TECHNOLOGIES = {"DEMINDOHC"}
 REMOVED_OHC_FUELS = {"INDOHC", "OHC"}
-EXPECTED_PHASE1B_TECHNOLOGIES = 131
-EXPECTED_PHASE1B_COMMODITIES = 104
+EXPECTED_PHASE1D_TECHNOLOGIES = 134
+EXPECTED_PHASE1D_COMMODITIES = 106
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
@@ -78,7 +96,7 @@ def parse_args() -> argparse.Namespace:
         default=CASE,
         help="Fiji_v2 MUIO case folder (defaults to the colocated MUIOGO case)",
     )
-    parser.add_argument("--run", default="Historical_Backcast")
+    parser.add_argument("--run", default="Phase1D_Cane_Bagasse")
     parser.add_argument(
         "--fit-folder",
         type=Path,
@@ -138,9 +156,9 @@ def main() -> None:
     technology_count = len(gen_data["osy-tech"])
     commodity_count = len(gen_data["osy-comm"])
     check(
-        "MUIO dimensions match the Phase 1B Fiji structure",
-        technology_count == EXPECTED_PHASE1B_TECHNOLOGIES
-        and commodity_count == EXPECTED_PHASE1B_COMMODITIES,
+        "MUIO dimensions match the Phase 1D Fiji structure",
+        technology_count == EXPECTED_PHASE1D_TECHNOLOGIES
+        and commodity_count == EXPECTED_PHASE1D_COMMODITIES,
         f"{technology_count} technologies; {commodity_count} commodities",
         "WebAPP/DataStorage/Fiji_v2/genData.json",
     )
@@ -453,7 +471,8 @@ def main() -> None:
         "failed_checks": len(failed),
         "scope": (
             "Technical, annual national grid-supply energy calibration and "
-            "Phase 1B public-water closure; not a validation of the full "
+            "Phase 1B public-water, Phase 1C electricity-demand and Phase 1D "
+            "cane-bagasse closures; not a validation of the full "
             "land-water-agriculture nexus."
         ),
     }

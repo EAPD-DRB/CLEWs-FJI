@@ -13,7 +13,7 @@
         "SC_0": 1.0
     },
     "capacity_credit_by_technology": {
-        "PWRBIOFJIXX01": 0.9,
+        "PWRBAGFJIXX01": 0.9,
         "PWRCCGFJIXX00": 0.9,
         "PWRCCGFJIXX01": 0.9,
         "PWRCOAFJIXX01": 0.9,
@@ -30,6 +30,7 @@
         "PWRWASFJIXX01": 0.9,
         "PWRWAVFJIXX01": 0.1,
         "PWRWOFFJIXX01": 0.1,
+        "PWRWODFJIXX01": 0.9,
         "PWRWONFJIXX01": 0.1
     }
 }
