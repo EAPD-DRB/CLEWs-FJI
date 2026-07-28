@@ -6,22 +6,23 @@ calculations, diagnostics, and portable MUIO cases.
 
 ## Current recommended model
 
-The current `main`-branch package is **Fiji v2.0.1**:
+The current `main`-branch package is **Fiji v2.0.5**:
 
 - model package: `Fiji_v2_CLEWs_calibration/`;
 - MUIO case: `Fiji_v2`;
 - portable archive:
-  `Fiji_v2_CLEWs_calibration/muio/Fiji_v2_v2.0.1_MUIO.zip`;
-- calibration scope: annual national grid-supply energy.
+  `Fiji_v2_CLEWs_calibration/muio/Fiji_v2_v2.0.5_MUIO.zip`;
+- calibration scope: annual national grid-supply energy, public-water
+  accounting and the Phase 1D cane–bagasse–electricity connection.
 
 The latest tagged release remains
 [v2.0.0](https://github.com/EAPD-DRB/CLEWs-FJI/releases/tag/v2.0.0).
-That release and its archive remain immutable. Version 2.0.1 applies the
-documented removal of the dormant unsupported
-`OHC -> DEMINDOHC -> INDOHC` branch to the active inputs and provides a
-result-free corrected MUIO archive. The 27 July post-OHC recertification is
-Optimal and preserves the objective, calibration metrics, grade and confidence
-of the earlier result.
+That release and its archive remain immutable. Version 2.0.5 retains the
+documented post-OHC correction and adds the recertified Phase 1A–1D work:
+topology review, public-water closure, bottom-up sector electricity demand,
+the cane–bagasse–electricity connection and removal of the retired aggregate
+biomass shell. The result-free archive and the current handoff note are under
+`Fiji_v2_CLEWs_calibration/`.
 
 Fiji v2 is not a calibration of the full land-water-agriculture nexus,
 investment economics, island networks, or operational reliability. Read
