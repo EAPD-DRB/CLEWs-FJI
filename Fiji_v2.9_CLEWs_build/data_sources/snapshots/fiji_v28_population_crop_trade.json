@@ -1,0 +1,197 @@
+{
+  "case": "Fiji_v2.8",
+  "access_date": "2026-08-03",
+  "sources": {
+    "population": {
+      "provider": "United Nations Department of Economic and Social Affairs, Population Division",
+      "product": "World Population Prospects 2024, medium variant",
+      "url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+      "locator": "ISO3_code=FJI; Variant=Medium; Time=2020..2050; TPopulation1July; source values are thousands of people"
+    },
+    "food": {
+      "provider": "Food and Agriculture Organization of the United Nations",
+      "product": "FAOSTAT Food Balance Sheets (2010-) and Supply Utilization Accounts (2010-)",
+      "food_balance_url": "https://bulks-faostat.fao.org/production/FoodBalanceSheets_E_All_Data_(Normalized).zip",
+      "sua_url": "https://bulks-faostat.fao.org/production/SUA_Crops_Livestock_E_All_Data_(Normalized).zip",
+      "locator": "Area=Fiji; Years=2021..2023; resident Food/Food supply only; Tourist consumption excluded",
+      "method": "Three-year arithmetic mean of resident kg/person/year. Exact SUA raw-item food quantities are divided by the matching FAOSTAT population where the aggregate FBS item is broader than the model crop."
+    },
+    "crop_group_mapping": {
+      "provider": "Food and Agriculture Organization of the United Nations",
+      "product": "FAOSTAT Production: Crops and livestock products",
+      "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+      "locator": "Area=Fiji; Year=2020; Elements=Area harvested and Production",
+      "method": "The six CRPOTH items are the unique six-item subset that exactly reproduces the inherited 2020 OTH area (12,162 ha) and production (62,669.04 t)."
+    },
+    "trade": {
+      "provider": "United Nations Statistics Division",
+      "product": "UN Comtrade annual HS trade data",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+      "locator": "period=2025; reporterCode=242 (Fiji); partnerCode=0 (World); flowCode=M or X; customsCode=C00; motCode=0; netWgt in kg",
+      "national_cross_check": "https://www.statsfiji.gov.fj/international-merchandise-trade-statistics-annual-2025/",
+      "limitation": "UN Comtrade X is used as the physical-volume proxy because the Fiji annual release separates domestic exports and re-exports in value tables but does not publish the required detailed physical tonnes. For the selected Fiji-grown crop codes, re-export contamination is expected to be small but is not proven."
+    }
+  },
+  "population_people": {
+    "2020": 914963,
+    "2021": 916711,
+    "2022": 919422,
+    "2023": 924146,
+    "2024": 928784,
+    "2025": 933154,
+    "2026": 937282,
+    "2027": 941326,
+    "2028": 945368,
+    "2029": 949282,
+    "2030": 953106,
+    "2031": 956699,
+    "2032": 960074,
+    "2033": 963356,
+    "2034": 966531,
+    "2035": 969628,
+    "2036": 972654,
+    "2037": 975656,
+    "2038": 978558,
+    "2039": 981282,
+    "2040": 983858,
+    "2041": 986424,
+    "2042": 988826,
+    "2043": 990872,
+    "2044": 992749,
+    "2045": 994457,
+    "2046": 995974,
+    "2047": 997337,
+    "2048": 998560,
+    "2049": 999546,
+    "2050": 1000261
+  },
+  "resident_food_observations": {
+    "FAOSTAT_population_people": {
+      "2021": 916710,
+      "2022": 919420,
+      "2023": 924150
+    },
+    "CAS_kg_per_person": {
+      "source_item": "Cassava and products",
+      "source": "FBS Food supply quantity (kg/capita/yr)",
+      "2021": 56.62,
+      "2022": 62.76,
+      "2023": 66.62
+    },
+    "YAM_tonnes": {
+      "source_item": "Taro",
+      "source": "SUA Food supply quantity (tonnes)",
+      "2021": 52014.32,
+      "2022": 62295.19,
+      "2023": 63704.55
+    },
+    "CON_kg_per_person": {
+      "source_item": "Coconuts - Incl Copra",
+      "source": "FBS Food supply quantity (kg/capita/yr)",
+      "2021": 23.56,
+      "2022": 24.24,
+      "2023": 29.23
+    },
+    "OTH": {
+      "Rice and products_kg_per_person": {
+        "2021": 60.89,
+        "2022": 56.65,
+        "2023": 58.84
+      },
+      "Sweet potatoes_kg_per_person": {
+        "2021": 9.85,
+        "2022": 10.54,
+        "2023": 13.17
+      },
+      "Pepper_kg_per_person": {
+        "2021": 0.16,
+        "2022": 0.18,
+        "2023": 0.21
+      },
+      "Other vegetables, fresh n.e.c._tonnes": {
+        "2021": 30900.0,
+        "2022": 35380.89,
+        "2023": 46259.23
+      },
+      "Other fruits, n.e.c._tonnes": {
+        "2021": 215.35,
+        "2022": 158.73,
+        "2023": 157.57
+      },
+      "Edible roots and tubers n.e.c._tonnes": {
+        "2021": 3003.33,
+        "2022": 2862.83,
+        "2023": 2874.14
+      }
+    },
+    "SGC_kg_sugar_per_person": {
+      "source_item": "Sugar (Raw Equivalent)",
+      "source": "FBS Food supply quantity (kg/capita/yr)",
+      "2021": 29.83,
+      "2022": 30.9,
+      "2023": 23.75
+    }
+  },
+  "conversion_assumptions": {
+    "milled_rice_per_paddy": 0.68,
+    "milled_rice_basis": "Fiji SUA Rice, 2021-2023: Rice, milled production divided by primary Rice processed is 0.68 in each year.",
+    "husked_rice_per_paddy": 0.8,
+    "husked_rice_basis": "Transparent screening conversion for the negligible HS100620 flow; upgrade with a Fiji milling coefficient if this flow becomes material.",
+    "raw_sugar_per_cane": 0.14,
+    "raw_sugar_basis": "Fiji SUA 2021-2023: raw centrifugal sugar production divided by sugar-cane processing is 0.14 in each year.",
+    "coconut_products": "HS080111, HS080112 and HS080119 net weights are added one-for-one because v2.8 adds no processed-coconut commodity. This is a disclosed no-new-commodity approximation."
+  },
+  "CRPOTH_components": [
+    "Rice",
+    "Sweet potatoes",
+    "Pepper (Piper spp.), raw",
+    "Other vegetables, fresh n.e.c.",
+    "Other fruits, n.e.c.",
+    "Edible roots and tubers with high starch or inulin content, n.e.c., fresh"
+  ],
+  "trade_2025_net_weight_kg": {
+    "imports": {
+      "071410": 0.0,
+      "071440": 0.0,
+      "080111": 156770.074,
+      "080112": 0.0,
+      "080119": 815.52,
+      "100610": 77.6,
+      "100620": 11.53,
+      "100630": 47419305.71,
+      "100640": 121995.7,
+      "071420": 623.5,
+      "0904": 153435.051,
+      "070999": 58967.98,
+      "081090": 36401.429,
+      "071490": 28532.71,
+      "1701": 15669247.589
+    },
+    "exports": {
+      "071410": 1052346.66,
+      "071440": 5405195.08,
+      "080111": 170.0,
+      "080112": 42100.03,
+      "080119": 28679.18,
+      "100610": 0.0,
+      "100620": 672.5,
+      "100630": 2457819.641,
+      "100640": 75176.88,
+      "071420": 20.0,
+      "0904": 23651.492,
+      "070999": 745572.29,
+      "081090": 60820.52,
+      "071490": 40837.24,
+      "1701": 52833641.73
+    }
+  },
+  "model_policy": {
+    "population_reference_year": 2025,
+    "food_baseline": "2021-2023 average resident food use per person",
+    "tourism": "excluded",
+    "import_rule": "2025 import crop-equivalent volume multiplied by each year's population/2025 population is a minimum; additional high-cost imports remain open",
+    "export_rule": "2025 export crop-equivalent volume multiplied by each year's population/2025 population is added to final demand",
+    "import_variable_cost": 10.0,
+    "import_variable_cost_role": "screening penalty only; not a calibrated border price. Set above the maximum observed 2025 crop-balance marginal value in the unchanged v2.7 control (2.8529169 discounted, about 3.64 undiscounted) so domestic supply is preferred when feasible."
+  }
+}

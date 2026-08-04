@@ -1,0 +1,144 @@
+{
+  "status": "pass",
+  "case": "Fiji_v2.8",
+  "control": {
+    "case": "Fiji_v2.7",
+    "run": "Fisheries_v2.7",
+    "objective": 4130.8237152,
+    "matrix": {
+      "rows": 169810,
+      "columns": 130447,
+      "nonzeros": 719047
+    }
+  },
+  "candidate": {
+    "objective": 4158.92072593,
+    "elapsed_seconds": 39.03937816619873
+  },
+  "live": {
+    "objective": 4158.92072593,
+    "elapsed_seconds": 37.32053089141846,
+    "matrix": {
+      "rows": 174098,
+      "columns": 133862,
+      "nonzeros": 732134
+    }
+  },
+  "objective_change": {
+    "absolute": 28.097010729999965,
+    "percent": 0.6801793701971093
+  },
+  "matrix_change": {
+    "rows": 4288,
+    "columns": 3415,
+    "nonzeros": 13087
+  },
+  "normal_import_activity_mt": {
+    "IMPCRPCAS": {
+      "2020": 0.0,
+      "2025": 0.0,
+      "2050": 0.0
+    },
+    "IMPCRPYAM": {
+      "2020": 0.0,
+      "2025": 0.0,
+      "2050": 0.0
+    },
+    "IMPCRPCON": {
+      "2020": 0.0076,
+      "2025": 0.0002,
+      "2050": 0.0002
+    },
+    "IMPCRPOTH": {
+      "2020": 0.0688,
+      "2025": 0.0702,
+      "2050": 0.0752
+    },
+    "IMPSUGFJI": {
+      "2020": 0.1097,
+      "2025": 0.1119,
+      "2050": 0.12
+    }
+  },
+  "drought_95pct_import_activity_mt": {
+    "IMPCRPCAS": {
+      "2020": 0.0578,
+      "2025": 0.0589,
+      "2050": 0.0631
+    },
+    "IMPCRPYAM": {
+      "2020": 0.0643,
+      "2025": 0.0656,
+      "2050": 0.0703
+    },
+    "IMPCRPCON": {
+      "2020": 0.0236,
+      "2025": 0.024,
+      "2050": 0.0258
+    },
+    "IMPCRPOTH": {
+      "2020": 0.1344,
+      "2025": 0.137,
+      "2050": 0.1469
+    },
+    "IMPSUGFJI": {
+      "2020": 0.2393,
+      "2025": 0.281,
+      "2050": 0.3216
+    }
+  },
+  "drought_increase_mt": {
+    "IMPCRPCAS": {
+      "2020": 0.0578,
+      "2025": 0.0589,
+      "2050": 0.0631
+    },
+    "IMPCRPYAM": {
+      "2020": 0.0643,
+      "2025": 0.0656,
+      "2050": 0.0703
+    },
+    "IMPCRPCON": {
+      "2020": 0.016,
+      "2025": 0.0238,
+      "2050": 0.0256
+    },
+    "IMPCRPOTH": {
+      "2020": 0.06559999999999999,
+      "2025": 0.06680000000000001,
+      "2050": 0.0717
+    },
+    "IMPSUGFJI": {
+      "2020": 0.1296,
+      "2025": 0.16910000000000003,
+      "2050": 0.2016
+    }
+  },
+  "drought_solve": {
+    "objective": 4276.25190973,
+    "elapsed_seconds": 33.13131809234619
+  },
+  "checks": {
+    "source": 25930,
+    "source_and_generated": 25935,
+    "glpsol_check": "pass",
+    "cbc_candidate": "optimal",
+    "cbc_drought": "optimal",
+    "cbc_live": "optimal"
+  },
+  "timestamps": {
+    "latest_parameter": 1785856904.687467,
+    "data": 1785856930.7817554,
+    "lp": 1785856933.8116603,
+    "result": 1785856965.4738467
+  },
+  "timestamp_order_pass": true,
+  "candidate_live_data_hash_match": true,
+  "candidate_live_objective_match": true,
+  "known_limitations": [
+    "Import VC=10 is a policy-ordering penalty, not a calibrated border price.",
+    "UN Comtrade physical exports cannot fully separate re-exports.",
+    "Coconut product weights are mapped one-for-one; rice and sugar use disclosed crop-equivalent factors.",
+    "Resident food availability is not a dietary recommendation; trade volumes remain exogenous per-capita assumptions."
+  ]
+}

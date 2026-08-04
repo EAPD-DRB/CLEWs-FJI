@@ -1,0 +1,83 @@
+{
+  "findings": [
+    {
+      "code": "no_positive_residual_capacity",
+      "evidence": {
+        "technologies": [
+          "TEC_fsh_aq_dsl",
+          "TEC_fsh_cap_ele"
+        ]
+      },
+      "level": "warning",
+      "message": "Confirm whether these Fisheries technologies had no pre-base-year stock"
+    }
+  ],
+  "model_folder": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/.Fiji_v2.7-fisheries-candidate",
+  "residual_capacity": {
+    "positive_technology_ids": [
+      "TEC_fsh_aq_ele",
+      "TEC_fsh_cap_dsl",
+      "TEC_fsh_post_dsl",
+      "TEC_fsh_post_ele",
+      "TEC_fsh_post_sol"
+    ],
+    "zero_or_missing_technology_ids": [
+      "TEC_fsh_aq_dsl",
+      "TEC_fsh_cap_ele"
+    ]
+  },
+  "screening_warning": "This is a structural screening tool. Review every finite physical limit and all reported UDC references against the provenance registers.",
+  "status": "pass",
+  "summary": {
+    "errors": 0,
+    "findings": 1,
+    "warnings": 1
+  },
+  "technology_ids": [
+    "TEC_fsh_aq_dsl",
+    "TEC_fsh_aq_ele",
+    "TEC_fsh_cap_dsl",
+    "TEC_fsh_cap_ele",
+    "TEC_fsh_post_dsl",
+    "TEC_fsh_post_ele",
+    "TEC_fsh_post_sol"
+  ],
+  "technology_metadata": {
+    "TEC_fsh_aq_dsl": {
+      "Desc": "Fisheries aquaculture pumps and equipment using diesel. Physical conversion; open activity and investment; residual stock may idle. Records: PAR_FSH_AQ_DSL_IAR; PAR_FSH_CO2.",
+      "Tech": "FSHAQDSL",
+      "TechId": "TEC_fsh_aq_dsl"
+    },
+    "TEC_fsh_aq_ele": {
+      "Desc": "Fisheries aquaculture pumps and equipment using grid electricity. Physical conversion; open activity and investment; residual stock may idle. Records: PAR_FSH_AQ_ELE_IAR; PAR_FSH_AQ_ELE_RC.",
+      "Tech": "FSHAQELE",
+      "TechId": "TEC_fsh_aq_ele"
+    },
+    "TEC_fsh_cap_dsl": {
+      "Desc": "Fisheries capture fleet propulsion using diesel. Physical conversion; open activity and investment; residual stock may idle. Records: PAR_FSH_CAP_DSL_IAR; PAR_FSH_CAP_DSL_RC; PAR_FSH_CO2.",
+      "Tech": "FSHCAPDSL",
+      "TechId": "TEC_fsh_cap_dsl"
+    },
+    "TEC_fsh_cap_ele": {
+      "Desc": "Fisheries capture fleet propulsion using grid electricity. Physical conversion; open activity and investment; residual stock may idle. Records: PAR_FSH_CAP_ELE_IAR; PAR_FSH_OPEN_BOUNDS.",
+      "Tech": "FSHCAPELE",
+      "TechId": "TEC_fsh_cap_ele"
+    },
+    "TEC_fsh_post_dsl": {
+      "Desc": "Fisheries cold-chain and processing equipment using diesel. Physical conversion; open activity and investment; residual stock may idle. Records: PAR_FSH_POST_DSL_IAR; PAR_FSH_POST_WATER_DSL; PAR_FSH_POST_DSL_RC; PAR_FSH_CO2.",
+      "Tech": "FSHPOSTDSL",
+      "TechId": "TEC_fsh_post_dsl"
+    },
+    "TEC_fsh_post_ele": {
+      "Desc": "Fisheries cold-chain and processing equipment using grid electricity. Physical conversion; open activity and investment; residual stock may idle. Records: PAR_FSH_POST_ELE_IAR; PAR_FSH_POST_WATER_ELE; PAR_FSH_POST_ELE_RC.",
+      "Tech": "FSHPOSTELE",
+      "TechId": "TEC_fsh_post_ele"
+    },
+    "TEC_fsh_post_sol": {
+      "Desc": "Integrated solar-powered fisheries freezer and cold-chain equipment. Physical conversion; open activity and investment; residual stock may idle. Records: PAR_FSH_POST_WATER_SOL; PAR_FSH_POST_SOL_RC.",
+      "Tech": "FSHPOSTSOL",
+      "TechId": "TEC_fsh_post_sol"
+    }
+  },
+  "technology_pattern": "FSH|fsh"
+}

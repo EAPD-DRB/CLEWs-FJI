@@ -1,0 +1,21 @@
+{
+  "counts": {
+    "assumptions": 15,
+    "boundaries": 13,
+    "calculations": 20,
+    "completeness": 19,
+    "parameters": 31,
+    "sources": 8
+  },
+  "errors": [],
+  "files": {
+    "assumptions": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/assumption-register.csv",
+    "boundaries": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/boundary-register.csv",
+    "calculations": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/calculation-register.csv",
+    "completeness": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/completeness-register.csv",
+    "parameters": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/parameter-register.csv",
+    "sources": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/source-register.csv"
+  },
+  "status": "pass",
+  "warnings": []
+}

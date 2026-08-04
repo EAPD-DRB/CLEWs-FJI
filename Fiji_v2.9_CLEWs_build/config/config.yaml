@@ -1,0 +1,7 @@
+country: Fiji
+iso3: FJI
+case: Fiji_v2.9
+scenario: SC_0
+horizon: 2020-2050
+live_case: WebAPP/DataStorage/Fiji_v2.9
+provenance_sha256_policy: intentionally_omitted_by_user_request

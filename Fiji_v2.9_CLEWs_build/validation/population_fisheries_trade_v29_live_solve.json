@@ -1,0 +1,19 @@
+{
+  "status": "optimal",
+  "case": "Fiji_v2.9",
+  "case_identity": "Fiji_v2.9",
+  "run": "Population_Fisheries_Trade_v2.9",
+  "model": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/SOLVERs/model.v.5.4.txt",
+  "generation_seconds": 0.4359128475189209,
+  "objective": 4170.87205658,
+  "first_line": "Optimal - objective value 4170.87205658",
+  "elapsed_seconds": 45.58399295806885,
+  "timer": "   Result - Optimal solution found - Total time (CPU seconds):       38.60   (Wallclock seconds):       39.14",
+  "matrix": null,
+  "hashes": {
+    "data.txt": "b56be6c2903d4123b33c003192bf15bd0d9f580983e7abf58029214b07e5f3c0",
+    "data_processed.txt": "bb5c4799956c2c8607095bbc12fe52a7a70631a75dfdd6c8731dd4985e302f0b",
+    "lp.lp": "f4a3bd642904c10bb9c3e110e80f8e6aec407dc773e66bde0441e4456079e1cc",
+    "results.txt": "86b4cb49ec9792a49f9e5e6162dfd194359b2625425772d6c69834da5d8f63a0"
+  }
+}

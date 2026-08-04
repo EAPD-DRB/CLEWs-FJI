@@ -6,29 +6,33 @@ calculations, diagnostics, and portable MUIO cases.
 
 ## Current recommended model
 
-The current `main`-branch package is **Fiji v2.0.5**:
+The current `main`-branch package is **Fiji v2.9.0**:
 
-- model package: `Fiji_v2_CLEWs_calibration/`;
-- MUIO case: `Fiji_v2`;
+- model package: `Fiji_v2.9_CLEWs_build/`;
+- MUIO case: `Fiji_v2.9`;
 - portable archive:
-  `Fiji_v2_CLEWs_calibration/muio/Fiji_v2_v2.0.5_MUIO.zip`;
-- calibration scope: annual national grid-supply energy, public-water
-  accounting and the Phase 1D cane–bagasse–electricity connection.
+  `Fiji_v2.9_CLEWs_build/muio/Fiji_v2.9_v2.9.0_MUIO.zip`;
+- validated live run: `Fisheries_Bounds_Table18_v2.9`;
+- scope: the earlier energy, water, land and crop improvements plus explicit
+  Fisheries services, population-driven crop/fish demand and trade, and
+  aggregate capture/aquaculture production ceilings.
 
-The latest tagged release remains
-[v2.0.0](https://github.com/EAPD-DRB/CLEWs-FJI/releases/tag/v2.0.0).
-That release and its archive remain immutable. Version 2.0.5 retains the
-documented post-OHC correction and adds the recertified Phase 1A–1D work:
-topology review, public-water closure, bottom-up sector electricity demand,
-the cane–bagasse–electricity connection and removal of the retired aggregate
-biomass shell. The result-free archive and the current handoff note are under
-`Fiji_v2_CLEWs_calibration/`.
+The Fisheries ceilings are deliberately simple. Capture is limited to the
+documented 23,661 tonne/year 2020 boundary; aquaculture follows the detailed
+2024–2028 national programme envelope and is held at 1,450 tonne/year
+thereafter. Neither route has a production floor, and fish imports remain open.
+The limits therefore prevent an unlimited least-cost switch to one domestic
+subsector without pretending to be biological stock, quota, feed, site or
+wastewater models.
 
-Fiji v2 is not a calibration of the full land-water-agriculture nexus,
-investment economics, island networks, or operational reliability. Read
-`Fiji_v2_CLEWs_calibration/documentation/CURRENT_MODEL.md` and
-`Fiji_v2_CLEWs_calibration/documentation/KNOWN_LIMITATIONS.md` before using
-the model.
+The earlier Fiji v2.0.5 package remains under
+`Fiji_v2_CLEWs_calibration/`, and the tagged
+[v2.0.0](https://github.com/EAPD-DRB/CLEWs-FJI/releases/tag/v2.0.0)
+release remains immutable.
+
+Read `Fiji_v2.9_CLEWs_build/documentation/CURRENT_MODEL.md` and
+`Fiji_v2.9_CLEWs_build/documentation/KNOWN_LIMITATIONS.md` before using the
+model.
 
 ## Raw reference model
 
@@ -51,10 +55,11 @@ solved.
 
 ## Repository structure
 
-The two model folders preserve the existing working-package structure:
+The model folders preserve the working-package structure:
 
 - `Fiji_CLEWs_Global/`: immutable raw reference;
-- `Fiji_v2_CLEWs_calibration/`: current calibrated model.
+- `Fiji_v2_CLEWs_calibration/`: earlier Fiji v2.0.5 package;
+- `Fiji_v2.9_CLEWs_build/`: current recommended Fiji v2.9.0 package.
 
 Within each package, `config/`, `data_sources/`, `documentation/`,
 `diagnostics/`, `geospatial/`, `licenses/`, `model/`, `muio/`, `overrides/`,

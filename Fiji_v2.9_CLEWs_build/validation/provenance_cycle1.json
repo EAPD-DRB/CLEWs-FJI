@@ -1,0 +1,28 @@
+{
+  "counts": {
+    "assumptions": 15,
+    "boundaries": 13,
+    "calculations": 20,
+    "completeness": 19,
+    "parameters": 31,
+    "sources": 8
+  },
+  "errors": [
+    "sources:5: SRC_FSH_FAO_FUEL missing publication_date",
+    "sources:6: SRC_FSH_FAO_PROCESS missing publication_date",
+    "sources:7: SRC_FSH_FAO_ICE missing publication_date",
+    "sources:8: SRC_FSH_UNSD_DSD missing publication_date",
+    "parameters:PAR_FSH_ALL_OAR: calculation_id must identify one calculation",
+    "parameters:PAR_FSH_ALL_OAR: calculation_id references unknown ID 'CALC_FSH_CAPTURE_SERVICE;CALC_FSH_AQ_SERVICE;CALC_FSH_POST_SERVICE'"
+  ],
+  "files": {
+    "assumptions": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/assumption-register.csv",
+    "boundaries": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/boundary-register.csv",
+    "calculations": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/calculation-register.csv",
+    "completeness": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/completeness-register.csv",
+    "parameters": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/parameter-register.csv",
+    "sources": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/source-register.csv"
+  },
+  "status": "fail",
+  "warnings": []
+}

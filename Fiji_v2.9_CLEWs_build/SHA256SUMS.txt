@@ -1,0 +1,1 @@
+# Not frozen: use validation/ledger_live_consistency.json for the documented working-tree hash checks.

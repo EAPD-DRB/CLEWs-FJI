@@ -1,0 +1,230 @@
+{
+  "case": "Fiji_v2.9",
+  "access_date": "2026-08-04",
+  "sources": {
+    "population": {
+      "provider": "United Nations Department of Economic and Social Affairs, Population Division",
+      "product": "World Population Prospects 2024, medium variant",
+      "url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz",
+      "locator": "ISO3_code=FJI; Variant=Medium; Time=2020..2050; TPopulation1July; source values are thousands of people",
+      "lineage": "Exact annual population snapshot already validated for Fiji v2.8."
+    },
+    "resident_food": {
+      "provider": "Food and Agriculture Organization of the United Nations",
+      "product": "FAOSTAT Food Balance Sheets (2010-)",
+      "url": "https://bulks-faostat.fao.org/production/FoodBalanceSheets_E_All_Data_(Normalized).zip",
+      "download_sha256": "26200855ed5da3d0805e34219124e241d0e0bc6959d0995ebc77a10dd84cbaf1",
+      "locator": "Area=Fiji; Item=Fish, Seafood; Element=Food supply quantity (kg/capita/yr); Years=2021..2023",
+      "method": "Three-year arithmetic mean of resident food availability. No separate tourism demand is added.",
+      "quality_note": "All three FAOSTAT observations carry flag E (estimated value)."
+    },
+    "trade": {
+      "provider": "United Nations Statistics Division",
+      "product": "UN Comtrade annual HS trade data",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+      "locator": "period=2025; reporterCode=242 (Fiji); partnerCode=0 (World); flowCode=M for imports and DX for domestic exports; customsCode=C00; motCode=0; HS0301..0309, HS1604 and HS1605; netWgt in kg",
+      "national_cross_check": "https://www.statsfiji.gov.fj/international-merchandise-trade-statistics-annual-2025/",
+      "method": "Four-digit aggregate net weights are used except HS1604 imports, whose aggregate net weight is blank and is reconstructed from available six-digit net weights. The minimum resident-market import proxy is calculated by HS heading as max(total imports minus reported re-exports, zero), then summed. This prevents processing/re-export throughput from displacing Fiji production.",
+      "limitations": [
+        "The HS160431 caviar import has USD 18181.555 of value but no reported weight and is excluded from the mass total.",
+        "Trade product weights are treated one-for-one as market-weight fish equivalent; no species, preservation-state or edible-yield conversion is imposed.",
+        "Domestic exports use flow DX and therefore exclude separately reported re-exports.",
+        "Same-year retained imports are an accounting proxy: re-exports can come from inventories imported in earlier years, so negative code-level differences are floored at zero rather than netted against unrelated fish products."
+      ]
+    },
+    "fisheries_service_calibration": {
+      "provider": "Fiji v2.7 Fisheries source-traceable calibration carried by Fiji v2.8",
+      "manifest": "WebAPP/DataStorage/Fiji_v2.8/fisheries_v27_manifest.json",
+      "detailed_sources": "docs/Fiji_v2.7_Fisheries/data_sources/fisheries/",
+      "method": "2020 useful-service demands are divided by observed 2020 capture landings, aquaculture harvest and total domestic harvest to create PJ/Mt mass-link coefficients. These are calibration coefficients, not independent 2020 activity requirements in v2.9."
+    },
+    "capture_activity_ceiling": {
+      "provider": "Fiji Ministry of Fisheries",
+      "product": "Annual Report 2020-2021",
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/02/Ministry-of-Fisheries-Annual-Report-2020%E2%80%932021.pdf",
+      "locator": "Reported 2020-2021 offshore longline catch of 12,661 tonnes plus estimated coastal commercial catch of 11,000 tonnes; retained from the v2.7 evidence ledger.",
+      "method": "The included 23,661 tonne capture boundary is held constant as a conservative full-horizon screening ceiling. It is not presented as a legal quota or a biological stock assessment."
+    },
+    "aquaculture_activity_ceiling": {
+      "provider": "Fiji Ministry of Fisheries and Forestry",
+      "product": "Fiji Aquaculture Development Plan 2024-2028",
+      "url": "https://faolex.fao.org/docs/pdf/fij235927.pdf",
+      "locator": "Table 18, Summary of deliverables: December 2024 targets of 300 tonnes tilapia, 15 tonnes giant river prawn and 35 tonnes black tiger shrimp; December 2028 targets of 600, 150 and 700 tonnes, respectively.",
+      "actuals_provider": "Fiji Ministry of Fisheries",
+      "actuals_product": "Annual Report 2021-2022",
+      "actuals_url": "https://www.parliament.gov.fj/wp-content/uploads/2023/07/Ministry-of-Fisheries-Annual-Report-2021%E2%80%932022.pdf",
+      "actuals_locator": "National production of 212.83 tonnes tilapia and 4.095 tonnes freshwater prawn, totaling 216.925 tonnes.",
+      "method": "The latest observed total is an upper envelope through 2023. The plan's detailed Table 18 annual deliverables for tilapia, giant river prawn and black tiger shrimp are summed for 2024-2028; the 2028 total is held constant from 2029 through 2050. These are maximum investible programme envelopes, not production demands."
+    }
+  },
+  "population_people": {
+    "2020": 914963,
+    "2021": 916711,
+    "2022": 919422,
+    "2023": 924146,
+    "2024": 928784,
+    "2025": 933154,
+    "2026": 937282,
+    "2027": 941326,
+    "2028": 945368,
+    "2029": 949282,
+    "2030": 953106,
+    "2031": 956699,
+    "2032": 960074,
+    "2033": 963356,
+    "2034": 966531,
+    "2035": 969628,
+    "2036": 972654,
+    "2037": 975656,
+    "2038": 978558,
+    "2039": 981282,
+    "2040": 983858,
+    "2041": 986424,
+    "2042": 988826,
+    "2043": 990872,
+    "2044": 992749,
+    "2045": 994457,
+    "2046": 995974,
+    "2047": 997337,
+    "2048": 998560,
+    "2049": 999546,
+    "2050": 1000261
+  },
+  "resident_food_observations_kg_per_person": {
+    "item": "Fish, Seafood",
+    "element": "Food supply quantity (kg/capita/yr)",
+    "2021": 28.18,
+    "2022": 28.1,
+    "2023": 27.95
+  },
+  "trade_2025_net_weight_kg": {
+    "imports": {
+      "0301": 31.0,
+      "0302": 185665.88,
+      "0303": 14494182.836,
+      "0304": 78926.77,
+      "0305": 21968.78,
+      "0306": 420449.242,
+      "0307": 171579.27,
+      "0308": 30.0,
+      "0309": 0.0,
+      "1604": 9317887.186,
+      "1605": 27390.57
+    },
+    "domestic_exports": {
+      "0301": 154346.22,
+      "0302": 992016.62,
+      "0303": 3703517.71,
+      "0304": 6941.07,
+      "0305": 0.0,
+      "0306": 4515.48,
+      "0307": 9966.66,
+      "0308": 3478.4,
+      "0309": 708.0,
+      "1604": 645605.23,
+      "1605": 3949.0
+    },
+    "re_exports": {
+      "0301": 0.0,
+      "0302": 377639.95,
+      "0303": 26821304.74,
+      "0304": 0.0,
+      "0305": 0.0,
+      "0306": 23320.0,
+      "0307": 2680.0,
+      "0308": 200.0,
+      "0309": 0.0,
+      "1604": 5976500.55,
+      "1605": 0.0
+    },
+    "hs1604_import_detail": {
+      "160411": 27766.43,
+      "160412": 853.0,
+      "160413": 179829.8,
+      "160414": 2646101.2,
+      "160415": 6433428.909,
+      "160416": 3672.44,
+      "160417": 312.0,
+      "160418": 0.0,
+      "160419": 12976.79,
+      "160420": 12946.617,
+      "160431": null,
+      "160432": 0.0
+    }
+  },
+  "service_calibration_2020": {
+    "capture_landings_tonnes": 23661.0,
+    "capture_service_pj": 0.033508266,
+    "aquaculture_harvest_tonnes": 4.32738,
+    "aquaculture_service_pj": 0.000005841963,
+    "post_harvest_throughput_tonnes": 23665.32738,
+    "post_service_pj": 0.019242795528,
+    "market_output_per_raw_input": 1.0,
+    "market_output_basis": "One tonne of raw domestic fish becomes one tonne of aggregate market-weight fish. Processing losses and product conversion are not represented in the aggregate v2.9 screen."
+  },
+  "fisheries_activity_upper_limit_tonnes": {
+    "capture": {
+      "2020_anchor": {
+        "offshore_longline": 12661.0,
+        "coastal_commercial": 11000.0,
+        "total": 23661.0
+      },
+      "rule": "Hold the included 2020 capture boundary constant from 2020 through 2050."
+    },
+    "aquaculture": {
+      "observed_total_2021_2022": {
+        "tilapia": 212.83,
+        "freshwater_prawn": 4.095,
+        "total": 216.925
+      },
+      "programme_components": {
+        "2024": {
+          "tilapia": 300.0,
+          "freshwater_prawn": 15.0,
+          "shrimp": 35.0,
+          "total": 350.0
+        },
+        "2025": {
+          "tilapia": 350.0,
+          "freshwater_prawn": 30.0,
+          "shrimp": 150.0,
+          "total": 530.0
+        },
+        "2026": {
+          "tilapia": 400.0,
+          "freshwater_prawn": 50.0,
+          "shrimp": 350.0,
+          "total": 800.0
+        },
+        "2027": {
+          "tilapia": 500.0,
+          "freshwater_prawn": 80.0,
+          "shrimp": 600.0,
+          "total": 1180.0
+        },
+        "2028": {
+          "tilapia": 600.0,
+          "freshwater_prawn": 150.0,
+          "shrimp": 700.0,
+          "total": 1450.0
+        }
+      },
+      "rule": "Use 216.925 tonnes in 2020-2023, the Table 18 programme totals in 2024-2028, then hold the 1,450-tonne 2028 envelope from 2029 through 2050."
+    }
+  },
+  "model_policy": {
+    "population_reference_year": 2025,
+    "resident_food_baseline": "2021-2023 mean FAOSTAT fish and seafood food availability per resident",
+    "tourism": "excluded as a separate demand",
+    "import_rule": "The 2025 retained-import proxy (max of imports minus reported re-exports at each HS heading) multiplied by each year's population/2025 population is a minimum; additional high-cost imports remain open",
+    "export_rule": "2025 domestic-export market-weight volume multiplied by each year's population/2025 population is added to final demand",
+    "import_variable_cost": 200.0,
+    "import_variable_cost_role": "Screening penalty in million USD/Mt, not a border price. The retained-import pilot with VC=1000 found a maximum FSHFOOD balance dual of 111.38863 discounted in 2024, equivalent to 138.737131 undiscounted; VC=200 remains safely above that observed domestic marginal value.",
+    "accounting_capacity_regularization_cost": 0.000001,
+    "accounting_capacity_regularization_role": "Numerical tie-breaker in million USD/(Mt/year) for the four one-year accounting capacities; prevents arbitrary 999999 capacity results while having immaterial cost.",
+    "service_demand_rule": "The former fixed SAD values for FSHCAPSERV, FSHAQSERV and FSHPOSTSERV are zero. Fish production now pulls those intermediate services endogenously.",
+    "capture_limit": "FSHCAPHARV annual activity is capped at 0.023661 Mt/year in 2020-2050 using the included 2020 capture boundary. This is a conservative screening ceiling, not a legal quota or biological stock model.",
+    "aquaculture_limit": "FSHAQHARV annual activity is capped by the observed/programme envelope: 0.000216925 Mt/year in 2020-2023, rising through the detailed 2024-2028 Table 18 deliverables to 0.00145 Mt/year in 2028, then held constant. This is a programme-based aggregate proxy for feed, land, water, farm-expansion and environmental limits; it does not model those resources separately.",
+    "production_floor": "No capture or aquaculture minimum is added. The upper limits do not force production; imports remain the feasibility backstop."
+  }
+}

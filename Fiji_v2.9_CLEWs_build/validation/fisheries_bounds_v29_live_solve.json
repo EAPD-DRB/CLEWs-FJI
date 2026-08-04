@@ -1,0 +1,19 @@
+{
+  "status": "optimal",
+  "case": "Fiji_v2.9",
+  "case_identity": "Fiji_v2.9",
+  "run": "Fisheries_Bounds_Table18_v2.9",
+  "model": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/SOLVERs/model.v.5.4.txt",
+  "generation_seconds": 0.46039819717407227,
+  "objective": 4182.52681513,
+  "first_line": "Optimal - objective value 4182.52681513",
+  "elapsed_seconds": 51.292304039001465,
+  "timer": "   Result - Optimal solution found - Total time (CPU seconds):       43.02   (Wallclock seconds):       43.95",
+  "matrix": null,
+  "hashes": {
+    "data.txt": "2773cd59f492c9871408cf34835076a8f81a5ad42c1584b5c1f609fb69e4e986",
+    "data_processed.txt": "93a179140d41b9b2c2bbbb048e85da149dfdddde543dbb32ed6c0b0d27a54271",
+    "lp.lp": "de88dc4afed6477337db497433a420944226dde7989908dbb5b35364856e3a3c",
+    "results.txt": "6aa2a45f27786b9cf5fbc73d30942aad48ddf076201cdb3fad781a5040756476"
+  }
+}

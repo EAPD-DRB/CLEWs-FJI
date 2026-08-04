@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "traffic_light": "green",
+  "accepted": true,
+  "budget": {
+    "bounded_cbc_seconds": 60,
+    "normal_chain_reference_seconds": 31.733,
+    "regression_stop_seconds": 63.466
+  },
+  "actual": {
+    "rows": 169810,
+    "columns": 130447,
+    "nonzeros": 719047,
+    "solve_seconds": 33.247735023498535,
+    "cbc_wall_seconds": 28.03
+  },
+  "control_actual": {
+    "rows": 162542,
+    "columns": 124829,
+    "nonzeros": 677671,
+    "solve_seconds": 31.733
+  },
+  "assessment": "The live normal-chain solve completed optimally inside the declared regression budget; matrix growth is attributable to the seven technologies and three services."
+}
