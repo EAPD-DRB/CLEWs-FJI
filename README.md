@@ -44,14 +44,15 @@ release and is not the recommended policy model.
 ## Use with MUIOGO
 
 1. Install or clone [MUIOGO](https://github.com/EAPD-DRB/MUIOGO).
-2. Extract the required archive from the appropriate package's `muio/`
-   folder.
-3. Place the extracted case folder under `MUIOGO/WebAPP/DataStorage/`.
+2. Extract the current archive into this repository as `case/Fiji_v3`.
+3. Create a relative symlink from
+   `MUIOGO/WebAPP/DataStorage/Fiji_v3` to `CLEWs-FJI/case/Fiji_v3`.
 4. Start MUIOGO and open the case.
 
-The archives contain the editable MUIO parameter JSON and view files. Solver
-outputs are intentionally excluded and are regenerated when the model is
-solved.
+The ignored `case/` tree is the live local working copy; editing through
+MUIOGO edits that same directory. The tracked result-free ZIP is the laptop
+handoff artifact. The push and pull handoff skills maintain the ZIP, local
+case, and symlink without committing the unzipped case or solver results.
 
 ## Repository structure
 
@@ -61,6 +62,10 @@ The model folders preserve the working-package structure:
 - `Fiji_v2_CLEWs_calibration/`: earlier Fiji v2.0.5 package;
 - `Fiji_v2.9_CLEWs_build/`: preserved Fiji v2.9.0 package;
 - `Fiji_v3_CLEWs_build/`: current identity-only Fiji v3.0.0 successor.
+
+The ignored local `case/Fiji_v3/` directory is populated from the current
+portable archive and exposed to MUIOGO through a relative symlink. It is not
+part of Git history.
 
 Within each package, `config/`, `data_sources/`, `documentation/`,
 `diagnostics/`, `geospatial/`, `licenses/`, `model/`, `muio/`, `overrides/`,

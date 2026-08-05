@@ -6,3 +6,6 @@ __pycache__/
 **/muio/*.xlsx
 **/model/data.txt
 **/data_sources/evidence/external/*.pdf
+
+# Live MUIOGO case: local working tree populated from the tracked ZIP.
+/case/
