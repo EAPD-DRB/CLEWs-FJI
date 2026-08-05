@@ -1,0 +1,20 @@
+item_id,subsector,parameter_or_flow,applicability,status,parameter_record_ids,data_gap,upgrade_source,priority,notes
+CMP_FSH_CAP_DEMAND,Capture,Useful-service demand,applicable,derived,PAR_FSH_CAP_DEMAND,,,high,
+CMP_FSH_CAP_INPUTS,Capture,Diesel and electricity alternatives,applicable,estimated,PAR_FSH_CAP_DSL_IAR;PAR_FSH_CAP_ELE_IAR,,,high,
+CMP_FSH_CAP_STOCK,Capture,Initial stock and retirement,applicable,estimated,PAR_FSH_CAP_DSL_RC,,Fiji vessel engine power age and utilization census,high,Electric alternative has no evidenced pre-base residual stock.
+CMP_FSH_AQ_DEMAND,Aquaculture,Useful-service demand,applicable,estimated,PAR_FSH_AQ_DEMAND,,Facility-metered electricity and fuel by species/system,high,
+CMP_FSH_AQ_INPUTS,Aquaculture,Energy alternatives,applicable,estimated,PAR_FSH_AQ_DSL_IAR;PAR_FSH_AQ_ELE_IAR,,Facility energy audits,high,
+CMP_FSH_AQ_STOCK,Aquaculture,Initial stock and retirement,applicable,estimated,PAR_FSH_AQ_ELE_RC,,Pump/aerator inventory with age and rating,high,
+CMP_FSH_POST_DEMAND,Post-harvest,Cold-chain and processing service,applicable,derived,PAR_FSH_POST_DEMAND,,Fiji processor throughput and product-form survey,high,
+CMP_FSH_POST_INPUTS,Post-harvest,"Diesel, electricity, solar and water inputs",applicable,estimated,PAR_FSH_POST_DSL_IAR;PAR_FSH_POST_ELE_IAR;PAR_FSH_POST_WATER_DSL;PAR_FSH_POST_WATER_ELE;PAR_FSH_POST_WATER_SOL,,Plant energy/water audits,high,
+CMP_FSH_POST_STOCK,Post-harvest,Initial stock and retirement,applicable,estimated,PAR_FSH_POST_ELE_RC;PAR_FSH_POST_DSL_RC;PAR_FSH_POST_SOL_RC,,Equipment register with capacities and commissioning years,high,
+CMP_FSH_COSTS,All,Capital and fixed costs,applicable,estimated,PAR_FSH_COSTS,,Fiji supplier quotations and project financials,high,
+CMP_FSH_EMISSIONS,All,Direct diesel CO2,applicable,derived,PAR_FSH_CO2,,,high,Grid emissions remain upstream.
+CMP_FSH_BOUNDARY,All,Aggregate-sector boundary corrections,applicable,derived,PAR_FSH_CAPTURE_AGR_SAD_CORR;PAR_FSH_CAPTURE_AGR_PIN_CORR;PAR_FSH_POST_IND_SAD_CORR;PAR_FSH_POST_IND_PIN_CORR;PAR_FSH_POST_ELEC_CORR;PAR_FSH_AQ_GRID_CORR;PAR_FSH_WATER_CORR,,,high,
+CMP_FSH_CATCH_CAP,Capture,Sustainable catch/resource dynamics,applicable,data_gap,,No stock-assessment-linked catch envelope by fleet and year,National stock assessments and management-plan limits,high,"No artificial catch cap is added."
+CMP_FSH_FEED,Aquaculture,Feed production and feed conversion,applicable,data_gap,,No complete feed sourcing/FCR account,Facility/species production surveys and import data,high,
+CMP_FSH_LAND,Aquaculture,Land/pond area,applicable,data_gap,,No reconciled pond-area and land-class linkage,Aquaculture farm registry and GIS,medium,
+CMP_FSH_AQ_WATER,Aquaculture,Freshwater and wastewater,applicable,data_gap,,No facility water withdrawal/return coefficients,Aquaculture water audits,high,
+CMP_FSH_WASTE,Post-harvest,Processing waste and wastewater,applicable,data_gap,,No product yield waste COD or discharge destination data,Processor environmental reports,high,
+CMP_FSH_REFRIGERANT,Post-harvest,Refrigerant leakage,applicable,data_gap,,No equipment refrigerant inventory or leakage factors,Cold-chain asset survey,medium,
+CMP_FSH_BYCATCH,Capture,Bycatch/discards,applicable,data_gap,,No modeled species/stock mass balance,Observer and logbook datasets,medium,

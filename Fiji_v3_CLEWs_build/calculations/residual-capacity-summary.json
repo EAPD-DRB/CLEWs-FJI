@@ -1,0 +1,44 @@
+{
+  "input": "/Users/sato/Documents/GitHub/MUIOGO/docs/Fiji_v2.7_Fisheries/data_sources/fisheries/residual-capacity-input.csv",
+  "input_sha256": "07885ee9b7e102a32f35ac126529460e485291c01f98fd1befe92d7c99805e29",
+  "output_row_count": 155,
+  "status": "pass",
+  "technologies": [
+    {
+      "base_capacity": 0.047868951428571435,
+      "last_nonzero_year": 2034,
+      "model_capacity_unit": "PJ service/year",
+      "retirement_method": "uniform_age",
+      "technology": "TEC_fsh_cap_dsl"
+    },
+    {
+      "base_capacity": 9.736605e-06,
+      "last_nonzero_year": 2031,
+      "model_capacity_unit": "PJ service/year",
+      "retirement_method": "uniform_age",
+      "technology": "TEC_fsh_aq_ele"
+    },
+    {
+      "base_capacity": 0.021702400971428573,
+      "last_nonzero_year": 2034,
+      "model_capacity_unit": "PJ service/year",
+      "retirement_method": "uniform_age",
+      "technology": "TEC_fsh_post_ele"
+    },
+    {
+      "base_capacity": 0.0057873069257142855,
+      "last_nonzero_year": 2034,
+      "model_capacity_unit": "PJ service/year",
+      "retirement_method": "uniform_age",
+      "technology": "TEC_fsh_post_dsl"
+    },
+    {
+      "base_capacity": 5.04576e-05,
+      "last_nonzero_year": 2029,
+      "model_capacity_unit": "PJ service/year",
+      "retirement_method": "uniform_age",
+      "technology": "TEC_fsh_post_sol"
+    }
+  ],
+  "technology_count": 5
+}

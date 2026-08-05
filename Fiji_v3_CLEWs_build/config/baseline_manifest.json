@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "not_frozen",
+  "model_status": "validated_and_promoted",
+  "created": "2026-08-04",
+  "source_package": "WebAPP/DataStorage/Fiji_v2.9",
+  "parent_case": "WebAPP/DataStorage/Fiji_v2.8",
+  "muio_archive": null,
+  "tree_hashes": {},
+  "notes": "Cryptographic delivery freeze is intentionally omitted; use ledger_live_consistency.json for retained-copy and authoritative-source hash checks."
+}

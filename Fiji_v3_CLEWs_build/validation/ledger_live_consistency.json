@@ -1,0 +1,79 @@
+{
+  "status": "pass",
+  "case": "Fiji_v2.9",
+  "package": "Fiji_v2.9_CLEWs_build",
+  "live_case": "WebAPP/DataStorage/Fiji_v2.9",
+  "checks": 2974,
+  "failure_count": 0,
+  "failures": [],
+  "retained_copy_hashes": {
+    "data_sources/snapshots/fiji_v28_population_crop_trade.json": {
+      "source": "scripts/data/fiji_v28_population_crop_trade.json",
+      "sha256": "38fcd9b23e57a68700621325a848cf92e5caeb6a4af17c40f94174767de31302",
+      "matches_source": true
+    },
+    "data_sources/snapshots/fiji_v29_population_fisheries_trade.json": {
+      "source": "scripts/data/fiji_v29_population_fisheries_trade.json",
+      "sha256": "a14cdff67bf9f102bd443f4d4627926f414110b9e555557bb389c9dc86f7654a",
+      "matches_source": true
+    },
+    "model/inputs/population_crop_trade_v28_manifest.json": {
+      "source": "WebAPP/DataStorage/Fiji_v2.9/population_crop_trade_v28_manifest.json",
+      "sha256": "97989a99c5e3f0cbb76d10af0e0f461d51a6dadce09360782baa721567836a2d",
+      "matches_source": true
+    },
+    "model/inputs/population_fisheries_trade_v29_manifest.json": {
+      "source": "WebAPP/DataStorage/Fiji_v2.9/population_fisheries_trade_v29_manifest.json",
+      "sha256": "f2c033909338acfc322a45344c6023ddf1579dc30a4659dc5e6a3d65bbec8a14",
+      "matches_source": true
+    },
+    "validation/population_crop_trade_v28_final.json": {
+      "source": "WebAPP/DataStorage/Fiji_v2.9/validation_population_crop_trade_v28_final.json",
+      "sha256": "6e56111548949eba974419102310c952da5ccda3174e49545baf26d60b322b35",
+      "matches_source": true
+    },
+    "validation/population_fisheries_trade_v29_source.json": {
+      "source": "WebAPP/DataStorage/Fiji_v2.9/validation_population_fisheries_trade_v29_live_design.json",
+      "sha256": "977347077fd1357307f66a4efe6125e43af964a8729fc6163f335c90198f6578",
+      "matches_source": true
+    },
+    "validation/population_fisheries_trade_v29_generated.json": {
+      "source": "WebAPP/DataStorage/Fiji_v2.9/validation_population_fisheries_trade_v29_live_generated_design.json",
+      "sha256": "82c4cd538e3b6ce3f8bae674d857e34aa2da742b77e3d35633844963ca59a8d7",
+      "matches_source": true
+    },
+    "validation/population_fisheries_trade_v29_live_solve.json": {
+      "source": "WebAPP/DataStorage/Fiji_v2.9/validation_population_fisheries_trade_v29_live_solve.json",
+      "sha256": "6a1b99eb6845b57286b090eec15d9d0342f8f0400b231bbfab7ec2b19b733988",
+      "matches_source": true
+    },
+    "validation/population_fisheries_trade_v29_final.json": {
+      "source": "WebAPP/DataStorage/Fiji_v2.9/validation_population_fisheries_trade_v29_final.json",
+      "sha256": "d873564a700edd92a3d5b5edc9ffbfa50d89f134ae2c42192e3115fa8a46a8ca",
+      "matches_source": true
+    },
+    "validation/fisheries_bounds_v29_final.json": {
+      "source": "WebAPP/DataStorage/Fiji_v2.9/validation_fisheries_bounds_v29_final.json",
+      "sha256": "100ba633e6aa5c7d1b9540c8a2b34d6112614f2b72447b25bd26c03b34dc8429",
+      "matches_source": true
+    }
+  },
+  "authoritative_live_source_hashes": {
+    "genData.json": "8987e3ae95a1a9b594278282a3930a822c56ad82ebeb3008ea85e2134baba8c4",
+    "RYC.json": "f75f5ef8b873bd59acc4031ee9d87378947686f1660684230c73dc0f2c5709a4",
+    "RYT.json": "ff8e8c9598c062767cc0bd76c4b0c1c7ff9d72eafff587f7d630d14ade5957cd",
+    "RT.json": "c3fcb7aded5d2c0edaad454e6a01abe445d43b5157438802fb23081d4085c075",
+    "RYTCM.json": "912ce0de12b2c319587dde5d85784fcd53bc2e5ae92ab083271493075ff2a662",
+    "RYTM.json": "58a1a3fbff88e95d8f3cefcc1965628f254580db80ec0da27fb8aa335b8bfe59",
+    "RYTTs.json": "ad7113924ee75accc23d93a3a6719b618e8a6d5b4923190733bdc402eb1c2cd4"
+  },
+  "verified_scope": [
+    "six-ledger identifiers and supersession",
+    "retained input snapshots, manifests and validation reports",
+    "population, crop demand/import and fish demand/import calculation outputs",
+    "live crop final demand and import backstops",
+    "live fish commodities, technologies, final demand, import floor, ratios, costs and envelopes",
+    "authoritative source hashes and final solver validation"
+  ],
+  "documentation_only": true
+}

@@ -6,13 +6,14 @@ calculations, diagnostics, and portable MUIO cases.
 
 ## Current recommended model
 
-The current `main`-branch package is **Fiji v2.9.0**:
+The current package is **Fiji v3.0.0**, prepared on the
+`codex/fiji-v3-canonical` migration branch:
 
-- model package: `Fiji_v2.9_CLEWs_build/`;
-- MUIO case: `Fiji_v2.9`;
+- model package: `Fiji_v3_CLEWs_build/`;
+- MUIO case: `Fiji_v3`;
 - portable archive:
-  `Fiji_v2.9_CLEWs_build/muio/Fiji_v2.9_v2.9.0_MUIO.zip`;
-- validated live run: `Fisheries_Bounds_Table18_v2.9`;
+  `Fiji_v3_CLEWs_build/muio/Fiji_v3_v3.0.0_MUIO.zip`;
+- numerical predecessor: the validated Fiji v2.9.0 release at tag `v2.9.0`;
 - scope: the earlier energy, water, land and crop improvements plus explicit
   Fisheries services, population-driven crop/fish demand and trade, and
   aggregate capture/aquaculture production ceilings.
@@ -30,8 +31,8 @@ The earlier Fiji v2.0.5 package remains under
 [v2.0.0](https://github.com/EAPD-DRB/CLEWs-FJI/releases/tag/v2.0.0)
 release remains immutable.
 
-Read `Fiji_v2.9_CLEWs_build/documentation/CURRENT_MODEL.md` and
-`Fiji_v2.9_CLEWs_build/documentation/KNOWN_LIMITATIONS.md` before using the
+Read `Fiji_v3_CLEWs_build/documentation/CURRENT_MODEL.md` and
+`Fiji_v3_CLEWs_build/documentation/KNOWN_LIMITATIONS.md` before using the
 model.
 
 ## Raw reference model
@@ -59,7 +60,8 @@ The model folders preserve the working-package structure:
 
 - `Fiji_CLEWs_Global/`: immutable raw reference;
 - `Fiji_v2_CLEWs_calibration/`: earlier Fiji v2.0.5 package;
-- `Fiji_v2.9_CLEWs_build/`: current recommended Fiji v2.9.0 package.
+- `Fiji_v2.9_CLEWs_build/`: preserved Fiji v2.9.0 package;
+- `Fiji_v3_CLEWs_build/`: current identity-only Fiji v3.0.0 successor.
 
 Within each package, `config/`, `data_sources/`, `documentation/`,
 `diagnostics/`, `geospatial/`, `licenses/`, `model/`, `muio/`, `overrides/`,

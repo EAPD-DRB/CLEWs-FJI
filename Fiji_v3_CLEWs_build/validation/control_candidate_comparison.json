@@ -1,0 +1,2535 @@
+{
+  "constraint_residuals_and_duals": {
+    "fisheries_service_max_abs_residual": 9.499999988060726e-10,
+    "land_closure": [
+      {
+        "dual": 0.0,
+        "residual": 0.0,
+        "year": "2020"
+      },
+      {
+        "dual": 1.7094394e-15,
+        "residual": 0.0,
+        "year": "2021"
+      },
+      {
+        "dual": 0.0,
+        "residual": 0.0,
+        "year": "2022"
+      },
+      {
+        "dual": 0.0,
+        "residual": 0.0,
+        "year": "2023"
+      },
+      {
+        "dual": -8.0288343,
+        "residual": 3.5527137e-15,
+        "year": "2024"
+      },
+      {
+        "dual": 0.0,
+        "residual": -3.5527137e-15,
+        "year": "2025"
+      },
+      {
+        "dual": 1.582206e-15,
+        "residual": -3.5527137e-15,
+        "year": "2026"
+      },
+      {
+        "dual": 0.0,
+        "residual": 0.0,
+        "year": "2027"
+      },
+      {
+        "dual": -5.5846965e-15,
+        "residual": 0.0,
+        "year": "2028"
+      },
+      {
+        "dual": 0.0,
+        "residual": 0.0,
+        "year": "2029"
+      },
+      {
+        "dual": -1.0828604e-06,
+        "residual": 3.5527137e-15,
+        "year": "2030"
+      },
+      {
+        "dual": 0.0,
+        "residual": 3.5527137e-15,
+        "year": "2031"
+      },
+      {
+        "dual": 0.0,
+        "residual": -3.5527137e-15,
+        "year": "2032"
+      },
+      {
+        "dual": 0.0,
+        "residual": -3.5527137e-15,
+        "year": "2033"
+      },
+      {
+        "dual": -4.9290078,
+        "residual": 3.5527137e-15,
+        "year": "2034"
+      },
+      {
+        "dual": -7.6856084e-16,
+        "residual": 3.5527137e-15,
+        "year": "2035"
+      },
+      {
+        "dual": 2.3207977e-15,
+        "residual": 0.0,
+        "year": "2036"
+      },
+      {
+        "dual": -4.2578623,
+        "residual": 0.0,
+        "year": "2037"
+      },
+      {
+        "dual": 0.0,
+        "residual": 0.0,
+        "year": "2038"
+      },
+      {
+        "dual": -4.0196521e-16,
+        "residual": 0.0,
+        "year": "2039"
+      },
+      {
+        "dual": -3.6781015,
+        "residual": 3.5527137e-15,
+        "year": "2040"
+      },
+      {
+        "dual": 0.0,
+        "residual": 0.0,
+        "year": "2041"
+      },
+      {
+        "dual": 1.5839391e-17,
+        "residual": 0.0,
+        "year": "2042"
+      },
+      {
+        "dual": 0.0,
+        "residual": 0.0,
+        "year": "2043"
+      },
+      {
+        "dual": 1.1791813e-08,
+        "residual": -3.5527137e-15,
+        "year": "2044"
+      },
+      {
+        "dual": 0.0,
+        "residual": 0.0,
+        "year": "2045"
+      },
+      {
+        "dual": 1.2474659e-16,
+        "residual": 7.1054274e-15,
+        "year": "2046"
+      },
+      {
+        "dual": -1.4781213e-15,
+        "residual": -3.5527137e-15,
+        "year": "2047"
+      },
+      {
+        "dual": 0.0,
+        "residual": 7.1054274e-15,
+        "year": "2048"
+      },
+      {
+        "dual": 0.0,
+        "residual": 0.0,
+        "year": "2049"
+      },
+      {
+        "dual": 0.0,
+        "residual": 0.0,
+        "year": "2050"
+      }
+    ],
+    "land_closure_max_abs_residual": 7.1054274e-15
+  },
+  "existing_model_comparison": {
+    "changed_by_function": {
+      "AAC1_TotalAnnualTechnologyActivity": {
+        "count": 937,
+        "max_abs_dual_delta": 8.028834630467301,
+        "max_abs_primal_delta": 3.55271364e-14
+      },
+      "AAC2_TotalAnnualTechnologyActivityUpperLimit": {
+        "count": 543,
+        "max_abs_dual_delta": 62.767123,
+        "max_abs_primal_delta": 0.207949491
+      },
+      "AAC3_TotalAnnualTechnologyActivityLowerLimit": {
+        "count": 22,
+        "max_abs_dual_delta": 18.588666,
+        "max_abs_primal_delta": 0.11169422000000001
+      },
+      "Acc3_AverageAnnualRateOfActivity": {
+        "count": 537,
+        "max_abs_dual_delta": 774953.53,
+        "max_abs_primal_delta": 3.5527137e-15
+      },
+      "AccumulatedNewCapacity": {
+        "count": 104,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 999999.0
+      },
+      "AnnualFixedOperatingCost": {
+        "count": 32,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 0.12817400000000134
+      },
+      "AnnualTechnologyEmission": {
+        "count": 108,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 0.0082765422
+      },
+      "AnnualTechnologyEmissionByMode": {
+        "count": 108,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 0.0082765422
+      },
+      "AnnualVariableOperatingCost": {
+        "count": 379,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 2.2338900000000024
+      },
+      "CAa2_TotalAnnualCapacity": {
+        "count": 11,
+        "max_abs_dual_delta": 103.28274,
+        "max_abs_primal_delta": 0.0
+      },
+      "CAa3_TotalActivityOfEachTechnology": {
+        "count": 273,
+        "max_abs_dual_delta": 6.3228335,
+        "max_abs_primal_delta": 0.0
+      },
+      "CAa4_Constraint_Capacity": {
+        "count": 4189,
+        "max_abs_dual_delta": 10179.607,
+        "max_abs_primal_delta": 999999.0
+      },
+      "CAb1_PlannedMaintenance": {
+        "count": 545,
+        "max_abs_dual_delta": 49086.405,
+        "max_abs_primal_delta": 999999.0
+      },
+      "CapitalInvestment": {
+        "count": 15,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 5.391299999999944
+      },
+      "Demand": {
+        "count": 516,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 0.0069808890000000005
+      },
+      "DiscountedSalvageValue": {
+        "count": 15,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 1.165140000000008
+      },
+      "E8_AnnualEmissionsLimit": {
+        "count": 33,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 0.009055899999999895
+      },
+      "E9_ModelPeriodEmissionsLimit": {
+        "count": 2,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 0.2333369999999988
+      },
+      "EBa11_EnergyBalanceEachTS5": {
+        "count": 2295,
+        "max_abs_dual_delta": 80.47077900000005,
+        "max_abs_primal_delta": 0.52941
+      },
+      "EBa9_EnergyBalanceEachTS3": {
+        "count": 516,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 0.0069808890000000005
+      },
+      "EBb4_EnergyBalanceEachYear4": {
+        "count": 772,
+        "max_abs_dual_delta": 50.464075,
+        "max_abs_primal_delta": 0.5294100000000005
+      },
+      "EBb4_EnergyBalanceEachYear4_ICR": {
+        "count": 740,
+        "max_abs_dual_delta": 50.464075,
+        "max_abs_primal_delta": 0.5294100000000005
+      },
+      "LU1_TechnologyActivityByModeUL": {
+        "count": 572,
+        "max_abs_dual_delta": 9.2943794,
+        "max_abs_primal_delta": 0.207949491
+      },
+      "LU2_TechnologyActivityByModeLL": {
+        "count": 550,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 0.207949491
+      },
+      "NCC1_TotalAnnualMaxNewCapacityConstraint": {
+        "count": 127,
+        "max_abs_dual_delta": 923.3891999999998,
+        "max_abs_primal_delta": 999999.0
+      },
+      "NewCapacity": {
+        "count": 272,
+        "max_abs_dual_delta": 1547988.9,
+        "max_abs_primal_delta": 999999.0
+      },
+      "RateOfActivity": {
+        "count": 4988,
+        "max_abs_dual_delta": 183579.0126538,
+        "max_abs_primal_delta": 171.209442
+      },
+      "RateOfTotalActivity": {
+        "count": 3887,
+        "max_abs_dual_delta": 6.3228335,
+        "max_abs_primal_delta": 171.2965073
+      },
+      "SalvageValue": {
+        "count": 15,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 5.2874799999999595
+      },
+      "TAC2_TotalModelHorizonTechnologyActivityUpperLimit": {
+        "count": 39,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 3.3395766
+      },
+      "TCC1_TotalAnnualMaxCapacityConstraint": {
+        "count": 104,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 999999.0
+      },
+      "TotalAnnualTechnologyActivityByMode": {
+        "count": 1062,
+        "max_abs_dual_delta": 774953.53,
+        "max_abs_primal_delta": 0.207949491
+      },
+      "TotalCapacityAnnual": {
+        "count": 115,
+        "max_abs_dual_delta": 103.28274,
+        "max_abs_primal_delta": 999999.0
+      },
+      "TotalTechnologyAnnualActivity": {
+        "count": 714,
+        "max_abs_dual_delta": 3.1354477999999997,
+        "max_abs_primal_delta": 0.207949491
+      },
+      "TotalTechnologyModelPeriodActivity": {
+        "count": 39,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 3.3395766
+      },
+      "UDC1_UserDefinedConstraintInequality": {
+        "count": 39,
+        "max_abs_dual_delta": 0.0,
+        "max_abs_primal_delta": 0.15684255000000003
+      },
+      "UDC2_UserDefinedConstraintEquality": {
+        "count": 40,
+        "max_abs_dual_delta": 8.0288343,
+        "max_abs_primal_delta": 2.13162824e-14
+      }
+    },
+    "common_rows_compared": 287370,
+    "dual_only_changed_rows_above_tolerance": 8835,
+    "interpretation": "Primal comparisons exclude 999999 host-open auxiliary capacity/slack values. Dual-only changes are counted because alternate optimal bases can change duals without changing physical outcomes.",
+    "primal_changed_rows_above_tolerance": 16420,
+    "top_meaningful_changes_outside_declared_energy_water_boundary": [
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 3.9038384,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 5.5074127,
+        "dual_delta": 0.0,
+        "key": "NewCapacity(RE1,RNWBIO,2041)",
+        "primal_delta": -1.6035742999999996
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 3.9038384,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 5.5074127,
+        "dual_delta": 0.0,
+        "key": "TotalCapacityAnnual(RE1,RNWBIO,2041)",
+        "primal_delta": -1.6035742999999996
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 87.909847,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 88.938121,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,MINOILINT,2022)",
+        "primal_delta": -1.0282739999999961
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 89.083375,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 90.042828,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,MINOILINT,2023)",
+        "primal_delta": -0.9594529999999963
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 113.01604,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 113.88669,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,MINOILINT,2024)",
+        "primal_delta": -0.8706499999999977
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 49.732553,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 50.550223,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,MINOILINT,2021)",
+        "primal_delta": -0.8176699999999997
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 46.980588,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 47.68804,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,MINOILINT,2020)",
+        "primal_delta": -0.7074520000000035
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 0.52941,
+        "control_dual_or_reduced_cost": -7.6544547e-16,
+        "control_primal": -4.2300672e-16,
+        "dual_delta": 7.6544547e-16,
+        "key": "EBb4_EnergyBalanceEachYear4_ICR(RE1,CRPSGC,2027)",
+        "primal_delta": 0.5294100000000005
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": -1.6409995e-16,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 0.52941,
+        "dual_delta": 0.0,
+        "key": "EBb4_EnergyBalanceEachYear4_ICR(RE1,CRPSGC,2028)",
+        "primal_delta": -0.5294100000000002
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 20.931719,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 20.654531,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPLPG,2046)",
+        "primal_delta": 0.27718800000000243
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 22.002982,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 21.748933,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPLPG,2047)",
+        "primal_delta": 0.2540489999999984
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 3.9510606,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 4.1909638,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,MINOILINT,2029)",
+        "primal_delta": -0.23990319999999965
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 3.8499773,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 4.0898071,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,MINOILINT,2028)",
+        "primal_delta": -0.23982979999999987
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 3.7512885,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 3.9910448,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,MINOILINT,2027)",
+        "primal_delta": -0.23975630000000026
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 3.6549361,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 3.894619,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,MINOILINT,2026)",
+        "primal_delta": -0.23968290000000003
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 3.5608637,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 3.8004732,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,MINOILINT,2025)",
+        "primal_delta": -0.2396094999999998
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 0.25359694,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 0.045647449,
+        "dual_delta": 0.0,
+        "key": "TotalAnnualTechnologyActivityByMode(RE1,DEMCOMBIO,1,2046)",
+        "primal_delta": 0.207949491
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 0.25359694,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 0.045647449,
+        "dual_delta": 0.0,
+        "key": "TotalAnnualTechnologyActivityByMode(RE1,HTCOMBIO,1,2046)",
+        "primal_delta": 0.207949491
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 1.8985611e-16,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 0.18070523,
+        "dual_delta": 0.0,
+        "key": "EBb4_EnergyBalanceEachYear4_ICR(RE1,CRPSGC,2034)",
+        "primal_delta": -0.1807052299999998
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 4.5254985,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 4.7060391,
+        "dual_delta": 0.0,
+        "key": "TotalAnnualTechnologyActivityByMode(RE1,DEMINDBIO,1,2050)",
+        "primal_delta": -0.1805405999999996
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 4.5254985,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 4.7060391,
+        "dual_delta": 0.0,
+        "key": "TotalAnnualTechnologyActivityByMode(RE1,HTINDBIO,1,2050)",
+        "primal_delta": -0.1805405999999996
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 0.27450148,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 0.093960904,
+        "dual_delta": 0.0,
+        "key": "TotalAnnualTechnologyActivityByMode(RE1,DEMCOMBIO,1,2050)",
+        "primal_delta": 0.180540576
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 0.27450148,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 0.093960904,
+        "dual_delta": 0.0,
+        "key": "TotalAnnualTechnologyActivityByMode(RE1,HTCOMBIO,1,2050)",
+        "primal_delta": 0.180540576
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 3.8084511,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 3.9814022,
+        "dual_delta": 0.0,
+        "key": "TotalAnnualTechnologyActivityByMode(RE1,DEMINDBIO,1,2046)",
+        "primal_delta": -0.1729510999999997
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 3.8084511,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 3.9814022,
+        "dual_delta": 0.0,
+        "key": "TotalAnnualTechnologyActivityByMode(RE1,HTINDBIO,1,2046)",
+        "primal_delta": -0.1729510999999997
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 3.1684616e-17,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 0.16943046,
+        "dual_delta": 0.0,
+        "key": "EBb4_EnergyBalanceEachYear4_ICR(RE1,CRPSGC,2021)",
+        "primal_delta": -0.16943045999999998
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 0.0,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 0.16417065,
+        "dual_delta": 0.0,
+        "key": "TotalAnnualTechnologyActivityByMode(RE1,HTCOMELC,1,2046)",
+        "primal_delta": -0.16417065
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 0.50634597,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 0.66429427,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,MINOILINT,2031)",
+        "primal_delta": -0.15794829999999993
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 3.1433219,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 3.3002277,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,MINOILINT,2030)",
+        "primal_delta": -0.1569058000000001
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 4.0796498,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 3.9228072,
+        "dual_delta": 0.0,
+        "key": "TotalAnnualTechnologyActivityByMode(RE1,ENV_LAND,3,2028)",
+        "primal_delta": 0.1568426000000005
+      }
+    ],
+    "top_meaningful_primal_changes": [
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 513.8946,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 508.5033,
+        "dual_delta": 0.0,
+        "key": "CapitalInvestment(RE1,PWRHYDFJIXX01,2025)",
+        "primal_delta": 5.391299999999944
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 111.50167,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 115.85684,
+        "dual_delta": 0.0,
+        "key": "CapitalInvestment(RE1,PWRHYDFJIXX01,2046)",
+        "primal_delta": -4.355170000000001
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 11.001452,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 14.905405,
+        "dual_delta": 0.0,
+        "key": "NewCapacity(RE1,IMPDSL,2043)",
+        "primal_delta": -3.9039529999999996
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 11.001452,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 14.905405,
+        "dual_delta": 0.0,
+        "key": "TotalCapacityAnnual(RE1,IMPDSL,2043)",
+        "primal_delta": -3.9039529999999996
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 27.186834,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 24.755687,
+        "dual_delta": 0.0,
+        "key": "CapitalInvestment(RE1,PWRSPVFJIXX01,2048)",
+        "primal_delta": 2.4311469999999993
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 203.30176,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 205.53565,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2034)",
+        "primal_delta": -2.2338900000000024
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 178.14372,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 180.37761,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2040)",
+        "primal_delta": -2.2338900000000024
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 182.93199,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 185.16588,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2039)",
+        "primal_delta": -2.233889999999974
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 206.71351,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 208.94739,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2033)",
+        "primal_delta": -2.233879999999999
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 199.67887,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 201.91275,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2035)",
+        "primal_delta": -2.233879999999999
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 195.83778,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 198.07166,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2036)",
+        "primal_delta": -2.233879999999999
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 191.77127,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 194.00515,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2037)",
+        "primal_delta": -2.233879999999999
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 187.47189,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 189.70577,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2038)",
+        "primal_delta": -2.233879999999999
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 170.2674,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 172.50128,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2041)",
+        "primal_delta": -2.233879999999999
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 162.01098,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 164.24486,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2042)",
+        "primal_delta": -2.233879999999999
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 153.36244,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 155.59632,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2043)",
+        "primal_delta": -2.233879999999999
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 144.30944,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 146.54332,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2044)",
+        "primal_delta": -2.233879999999999
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 134.83928,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 137.07316,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2045)",
+        "primal_delta": -2.233879999999999
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 124.93893,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 127.17281,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2046)",
+        "primal_delta": -2.233879999999999
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 114.73339,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 116.82889,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2047)",
+        "primal_delta": -2.0955000000000013
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 210.08634,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 212.15483,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2032)",
+        "primal_delta": -2.068489999999997
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 213.14667,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 215.16463,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2031)",
+        "primal_delta": -2.017959999999988
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 215.9677,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 217.98327,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2030)",
+        "primal_delta": -2.0155699999999968
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 211.50121,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 213.51451,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2025)",
+        "primal_delta": -2.013300000000015
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 212.48038,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 214.49365,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2026)",
+        "primal_delta": -2.0132700000000057
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 213.41888,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 215.43212,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2027)",
+        "primal_delta": -2.013239999999996
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 214.31471,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 216.32792,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2028)",
+        "primal_delta": -2.013210000000015
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 215.16583,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 217.17901,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2029)",
+        "primal_delta": -2.0131800000000055
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 39.292313,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 37.330644,
+        "dual_delta": 0.0,
+        "key": "CapitalInvestment(RE1,PWRSPVFJIXX01,2040)",
+        "primal_delta": 1.9616690000000006
+      },
+      {
+        "candidate_dual_or_reduced_cost": 0.0,
+        "candidate_primal": 104.24536,
+        "control_dual_or_reduced_cost": 0.0,
+        "control_primal": 106.02763,
+        "dual_delta": 0.0,
+        "key": "AnnualVariableOperatingCost(RE1,IMPDSL,2048)",
+        "primal_delta": -1.782269999999997
+      }
+    ]
+  },
+  "fisheries": {
+    "activity": {
+      "FSHAQDSL": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHAQELE": {
+        "2020": 5.841963e-06,
+        "2021": 6.1340611e-06,
+        "2022": 6.4407642e-06,
+        "2023": 6.7628024e-06,
+        "2024": 7.1009425e-06,
+        "2025": 7.4559897e-06,
+        "2026": 7.8287891e-06,
+        "2027": 8.2202286e-06,
+        "2028": 8.63124e-06,
+        "2029": 9.062802e-06,
+        "2030": 9.5159421e-06,
+        "2031": 9.9917392e-06,
+        "2032": 1.0491326e-05,
+        "2033": 1.1015893e-05,
+        "2034": 1.1566687e-05,
+        "2035": 1.2145022e-05,
+        "2036": 1.2752273e-05,
+        "2037": 1.3389886e-05,
+        "2038": 1.4059381e-05,
+        "2039": 1.476235e-05,
+        "2040": 1.5500467e-05,
+        "2041": 1.627549e-05,
+        "2042": 1.7089265e-05,
+        "2043": 1.7943728e-05,
+        "2044": 1.8840915e-05,
+        "2045": 1.978296e-05,
+        "2046": 2.0772108e-05,
+        "2047": 2.1810714e-05,
+        "2048": 2.2901249e-05,
+        "2049": 2.4046312e-05,
+        "2050": 2.5248627e-05
+      },
+      "FSHCAPDSL": {
+        "2020": 0.033508266,
+        "2021": 0.033508266,
+        "2022": 0.033508266,
+        "2023": 0.033508266,
+        "2024": 0.031593508,
+        "2025": 0.0030953582,
+        "2026": 0.0030953582,
+        "2027": 0.0030953582,
+        "2028": 0.0030953582,
+        "2029": 0.0030953582,
+        "2030": 0.0030953582,
+        "2031": 0.0030953582,
+        "2032": 0.0023733426,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHCAPELE": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0019147581,
+        "2025": 0.030412908,
+        "2026": 0.030412908,
+        "2027": 0.030412908,
+        "2028": 0.030412908,
+        "2029": 0.030412908,
+        "2030": 0.030412908,
+        "2031": 0.030412908,
+        "2032": 0.031134923,
+        "2033": 0.033508266,
+        "2034": 0.033508266,
+        "2035": 0.033508266,
+        "2036": 0.033508266,
+        "2037": 0.033508266,
+        "2038": 0.033508266,
+        "2039": 0.033508266,
+        "2040": 0.033508266,
+        "2041": 0.033508266,
+        "2042": 0.033508266,
+        "2043": 0.033508266,
+        "2044": 0.033508266,
+        "2045": 0.033508266,
+        "2046": 0.033508266,
+        "2047": 0.033508266,
+        "2048": 0.033508266,
+        "2049": 0.033508266,
+        "2050": 0.033508266
+      },
+      "FSHPOSTDSL": {
+        "2020": 0.0029633168,
+        "2021": 0.0029681103,
+        "2022": 0.0029729038,
+        "2023": 0.0029776973,
+        "2024": 0.0029824907,
+        "2025": 0.00056886598,
+        "2026": 0.00057011682,
+        "2027": 0.00057136767,
+        "2028": 0.00057261851,
+        "2029": 0.00057386935,
+        "2030": 0.00047822446,
+        "2031": 0.00038257957,
+        "2032": 0.00028693468,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHPOSTELE": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0024184182,
+        "2026": 0.0024219609,
+        "2027": 0.0024255035,
+        "2028": 0.0024290461,
+        "2029": 0.0024325887,
+        "2030": 0.006598584,
+        "2031": 0.0052218597,
+        "2032": 0.0053175046,
+        "2033": 0.0056044392,
+        "2034": 0.0056044392,
+        "2035": 0.0056044392,
+        "2036": 0.0056044392,
+        "2037": 0.0056044392,
+        "2038": 0.0056044392,
+        "2039": 0.0056044392,
+        "2040": 0.017770426,
+        "2041": 0.019242796,
+        "2042": 0.019242796,
+        "2043": 0.019242796,
+        "2044": 0.019242796,
+        "2045": 0.019242796,
+        "2046": 0.019242796,
+        "2047": 0.019242796,
+        "2048": 0.019242796,
+        "2049": 0.019242796,
+        "2050": 0.019242796
+      },
+      "FSHPOSTSOL": {
+        "2020": 0.016279479,
+        "2021": 0.016274685,
+        "2022": 0.016269892,
+        "2023": 0.016265098,
+        "2024": 0.016260305,
+        "2025": 0.016255511,
+        "2026": 0.016250718,
+        "2027": 0.016245924,
+        "2028": 0.016241131,
+        "2029": 0.016236337,
+        "2030": 0.012165987,
+        "2031": 0.013638356,
+        "2032": 0.013638356,
+        "2033": 0.013638356,
+        "2034": 0.013638356,
+        "2035": 0.013638356,
+        "2036": 0.013638356,
+        "2037": 0.013638356,
+        "2038": 0.013638356,
+        "2039": 0.013638356,
+        "2040": 0.0014723693,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      }
+    },
+    "adjacent_year_activity_changes": {
+      "FSHAQDSL": {},
+      "FSHAQELE": {
+        "2021": 2.9209810000000044e-07,
+        "2022": 3.0670309999999977e-07,
+        "2023": 3.2203820000000013e-07,
+        "2024": 3.3814009999999955e-07,
+        "2025": 3.550472000000001e-07,
+        "2026": 3.727994000000004e-07,
+        "2027": 3.9143949999999905e-07,
+        "2028": 4.110114000000015e-07,
+        "2029": 4.3156199999999877e-07,
+        "2030": 4.5314010000000014e-07,
+        "2031": 4.757970999999998e-07,
+        "2032": 4.995868000000007e-07,
+        "2033": 5.245669999999997e-07,
+        "2034": 5.507940000000001e-07,
+        "2035": 5.783349999999999e-07,
+        "2036": 6.072509999999994e-07,
+        "2037": 6.37613000000001e-07,
+        "2038": 6.694949999999989e-07,
+        "2039": 7.029690000000001e-07,
+        "2040": 7.381170000000021e-07,
+        "2041": 7.750229999999981e-07,
+        "2042": 8.137750000000005e-07,
+        "2043": 8.544629999999988e-07,
+        "2044": 8.971869999999999e-07,
+        "2045": 9.420450000000019e-07,
+        "2046": 9.891479999999983e-07,
+        "2047": 1.0386060000000003e-06,
+        "2048": 1.0905350000000016e-06,
+        "2049": 1.145062999999999e-06,
+        "2050": 1.2023150000000014e-06
+      },
+      "FSHCAPDSL": {
+        "2024": -0.0019147580000000025,
+        "2025": -0.0284981498,
+        "2032": -0.0007220156000000001,
+        "2033": -0.0023733426
+      },
+      "FSHCAPELE": {
+        "2024": 0.0019147581,
+        "2025": 0.0284981499,
+        "2032": 0.0007220149999999995,
+        "2033": 0.0023733430000000034
+      },
+      "FSHPOSTDSL": {
+        "2021": 4.7935000000000685e-06,
+        "2022": 4.7935000000000685e-06,
+        "2023": 4.7935000000000685e-06,
+        "2024": 4.7934000000000344e-06,
+        "2025": -0.0024136247200000002,
+        "2026": 1.250840000000062e-06,
+        "2027": 1.2508499999999137e-06,
+        "2028": 1.250840000000062e-06,
+        "2029": 1.2508399999999536e-06,
+        "2030": -9.564488999999995e-05,
+        "2031": -9.564489e-05,
+        "2032": -9.564489e-05,
+        "2033": -0.00028693468
+      },
+      "FSHPOSTELE": {
+        "2025": 0.0024184182,
+        "2026": 3.5426999999998467e-06,
+        "2027": 3.5426000000002462e-06,
+        "2028": 3.5425999999998126e-06,
+        "2029": 3.5426000000002462e-06,
+        "2030": 0.0041659953,
+        "2031": -0.0013767242999999998,
+        "2032": 9.564489999999964e-05,
+        "2033": 0.0002869346000000002,
+        "2040": 0.012165986799999999,
+        "2041": 0.0014723700000000006
+      },
+      "FSHPOSTSOL": {
+        "2021": -4.793999999998938e-06,
+        "2022": -4.792999999999464e-06,
+        "2023": -4.7940000000024074e-06,
+        "2024": -4.792999999999464e-06,
+        "2025": -4.793999999998938e-06,
+        "2026": -4.792999999999464e-06,
+        "2027": -4.7940000000024074e-06,
+        "2028": -4.792999999999464e-06,
+        "2029": -4.793999999998938e-06,
+        "2030": -0.00407035,
+        "2031": 0.0014723690000000011,
+        "2040": -0.0121659867,
+        "2041": -0.0014723693
+      }
+    },
+    "direct_co2": {
+      "FSHAQDSL": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHAQELE": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHCAPDSL": {
+        "2020": 0.0082765417,
+        "2021": 0.0082765417,
+        "2022": 0.0082765417,
+        "2023": 0.0082765417,
+        "2024": 0.0078035965,
+        "2025": 0.00076455347,
+        "2026": 0.00076455347,
+        "2027": 0.00076455347,
+        "2028": 0.00076455347,
+        "2029": 0.00076455347,
+        "2030": 0.00076455347,
+        "2031": 0.00076455347,
+        "2032": 0.00058621563,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHCAPELE": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHPOSTDSL": {
+        "2020": 0.00027447722,
+        "2021": 0.00027492122,
+        "2022": 0.00027536521,
+        "2023": 0.00027580921,
+        "2024": 0.0002762532,
+        "2025": 5.2691211e-05,
+        "2026": 5.2807071e-05,
+        "2027": 5.292293e-05,
+        "2028": 5.303879e-05,
+        "2029": 5.3154649e-05,
+        "2030": 4.4295541e-05,
+        "2031": 3.5436433e-05,
+        "2032": 2.6577324e-05,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHPOSTELE": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHPOSTSOL": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      }
+    },
+    "new_capacity": {
+      "FSHAQDSL": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHAQELE": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 2.1177116e-07,
+        "2024": 1.187095e-06,
+        "2025": 1.2058806e-06,
+        "2026": 1.2256054e-06,
+        "2027": 1.2463165e-06,
+        "2028": 1.2680631e-06,
+        "2029": 1.2908971e-06,
+        "2030": 1.3148728e-06,
+        "2031": 1.3400472e-06,
+        "2032": 1.3664804e-06,
+        "2033": 5.8285146e-07,
+        "2034": 6.1199403e-07,
+        "2035": 8.5436489e-07,
+        "2036": 1.8618184e-06,
+        "2037": 1.9143401e-06,
+        "2038": 1.969488e-06,
+        "2039": 2.0273932e-06,
+        "2040": 2.0881936e-06,
+        "2041": 2.1520341e-06,
+        "2042": 2.2190667e-06,
+        "2043": 2.2894508e-06,
+        "2044": 2.3633542e-06,
+        "2045": 1.6295689e-06,
+        "2046": 1.7110474e-06,
+        "2047": 2.0083709e-06,
+        "2048": 3.0735247e-06,
+        "2049": 3.1866318e-06,
+        "2050": 3.3053942e-06
+      },
+      "FSHCAPDSL": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHCAPELE": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.002127509,
+        "2025": 0.031664611,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.00080223951,
+        "2033": 0.0026370473,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.002127509,
+        "2040": 0.031664611,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.00080223951,
+        "2048": 0.0026370473,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHPOSTDSL": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHPOSTELE": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0014468267,
+        "2033": 0.0015589295,
+        "2034": 0.0014468267,
+        "2035": 0.0014468267,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.012806302,
+        "2041": 0.0015498624,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0014468267,
+        "2048": 0.0015589295,
+        "2049": 0.0014468267,
+        "2050": 0.0014468267
+      },
+      "FSHPOSTSOL": {
+        "2020": 0.017085836,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.012806302,
+        "2031": 0.0015498624,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      }
+    },
+    "service_balance_constraints": {
+      "FSHAQSERV": {
+        "2020": {
+          "constraint_activity": 5.841963e-06,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 5.841963e-06
+        },
+        "2021": {
+          "constraint_activity": 6.1340612e-06,
+          "dual": 0.0,
+          "residual": -9.99999999392329e-14,
+          "technology_output": 6.1340611e-06
+        },
+        "2022": {
+          "constraint_activity": 6.4407642e-06,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 6.4407642e-06
+        },
+        "2023": {
+          "constraint_activity": 6.7628024e-06,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 6.7628024e-06
+        },
+        "2024": {
+          "constraint_activity": 7.1009425e-06,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 7.1009425e-06
+        },
+        "2025": {
+          "constraint_activity": 7.4559897e-06,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 7.4559897e-06
+        },
+        "2026": {
+          "constraint_activity": 7.8287891e-06,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 7.8287891e-06
+        },
+        "2027": {
+          "constraint_activity": 8.2202286e-06,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 8.2202286e-06
+        },
+        "2028": {
+          "constraint_activity": 8.63124e-06,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 8.63124e-06
+        },
+        "2029": {
+          "constraint_activity": 9.062802e-06,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 9.062802e-06
+        },
+        "2030": {
+          "constraint_activity": 9.5159421e-06,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 9.5159421e-06
+        },
+        "2031": {
+          "constraint_activity": 9.9917392e-06,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 9.9917392e-06
+        },
+        "2032": {
+          "constraint_activity": 1.0491326e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.0491326e-05
+        },
+        "2033": {
+          "constraint_activity": 1.1015893e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.1015893e-05
+        },
+        "2034": {
+          "constraint_activity": 1.1566687e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.1566687e-05
+        },
+        "2035": {
+          "constraint_activity": 1.2145022e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.2145022e-05
+        },
+        "2036": {
+          "constraint_activity": 1.2752273e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.2752273e-05
+        },
+        "2037": {
+          "constraint_activity": 1.3389886e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.3389886e-05
+        },
+        "2038": {
+          "constraint_activity": 1.4059381e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.4059381e-05
+        },
+        "2039": {
+          "constraint_activity": 1.476235e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.476235e-05
+        },
+        "2040": {
+          "constraint_activity": 1.5500467e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.5500467e-05
+        },
+        "2041": {
+          "constraint_activity": 1.627549e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.627549e-05
+        },
+        "2042": {
+          "constraint_activity": 1.7089265e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.7089265e-05
+        },
+        "2043": {
+          "constraint_activity": 1.7943728e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.7943728e-05
+        },
+        "2044": {
+          "constraint_activity": 1.8840915e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.8840915e-05
+        },
+        "2045": {
+          "constraint_activity": 1.978296e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 1.978296e-05
+        },
+        "2046": {
+          "constraint_activity": 2.0772108e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 2.0772108e-05
+        },
+        "2047": {
+          "constraint_activity": 2.1810714e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 2.1810714e-05
+        },
+        "2048": {
+          "constraint_activity": 2.2901249e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 2.2901249e-05
+        },
+        "2049": {
+          "constraint_activity": 2.4046312e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 2.4046312e-05
+        },
+        "2050": {
+          "constraint_activity": 2.5248627e-05,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 2.5248627e-05
+        }
+      },
+      "FSHCAPSERV": {
+        "2020": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2021": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2022": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2023": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2024": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 9.999999439624929e-11,
+          "technology_output": 0.033508266099999996
+        },
+        "2025": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 1.999999957313925e-10,
+          "technology_output": 0.0335082662
+        },
+        "2026": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 1.999999957313925e-10,
+          "technology_output": 0.0335082662
+        },
+        "2027": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 1.999999957313925e-10,
+          "technology_output": 0.0335082662
+        },
+        "2028": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 1.999999957313925e-10,
+          "technology_output": 0.0335082662
+        },
+        "2029": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 1.999999957313925e-10,
+          "technology_output": 0.0335082662
+        },
+        "2030": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 1.999999957313925e-10,
+          "technology_output": 0.0335082662
+        },
+        "2031": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 1.999999957313925e-10,
+          "technology_output": 0.0335082662
+        },
+        "2032": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": -4.000000053405728e-10,
+          "technology_output": 0.033508265599999996
+        },
+        "2033": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2034": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2035": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2036": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2037": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2038": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2039": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2040": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2041": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2042": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2043": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2044": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2045": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2046": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2047": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2048": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2049": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        },
+        "2050": {
+          "constraint_activity": 0.033508266,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.033508266
+        }
+      },
+      "FSHPOSTSERV": {
+        "2020": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -1.9999999920083944e-10,
+          "technology_output": 0.0192427958
+        },
+        "2021": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -6.999999989376615e-10,
+          "technology_output": 0.0192427953
+        },
+        "2022": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -1.9999999920083944e-10,
+          "technology_output": 0.0192427958
+        },
+        "2023": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -7.000000024071085e-10,
+          "technology_output": 0.019242795299999997
+        },
+        "2024": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -3.0000000053598264e-10,
+          "technology_output": 0.0192427957
+        },
+        "2025": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -8.199999984581652e-10,
+          "technology_output": 0.01924279518
+        },
+        "2026": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -2.799999988811752e-10,
+          "technology_output": 0.01924279572
+        },
+        "2027": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -8.300000027550158e-10,
+          "technology_output": 0.019242795169999997
+        },
+        "2028": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -3.900000010437221e-10,
+          "technology_output": 0.01924279561
+        },
+        "2029": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -9.499999988060726e-10,
+          "technology_output": 0.01924279505
+        },
+        "2030": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -5.3999999957699e-10,
+          "technology_output": 0.01924279546
+        },
+        "2031": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -7.299999979504257e-10,
+          "technology_output": 0.01924279527
+        },
+        "2032": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -7.19999997123022e-10,
+          "technology_output": 0.019242795280000002
+        },
+        "2033": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -7.999999968033578e-10,
+          "technology_output": 0.019242795200000003
+        },
+        "2034": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -7.999999968033578e-10,
+          "technology_output": 0.019242795200000003
+        },
+        "2035": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -7.999999968033578e-10,
+          "technology_output": 0.019242795200000003
+        },
+        "2036": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -7.999999968033578e-10,
+          "technology_output": 0.019242795200000003
+        },
+        "2037": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -7.999999968033578e-10,
+          "technology_output": 0.019242795200000003
+        },
+        "2038": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -7.999999968033578e-10,
+          "technology_output": 0.019242795200000003
+        },
+        "2039": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -7.999999968033578e-10,
+          "technology_output": 0.019242795200000003
+        },
+        "2040": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": -7.000000024071085e-10,
+          "technology_output": 0.019242795299999997
+        },
+        "2041": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.019242796
+        },
+        "2042": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.019242796
+        },
+        "2043": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.019242796
+        },
+        "2044": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.019242796
+        },
+        "2045": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.019242796
+        },
+        "2046": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.019242796
+        },
+        "2047": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.019242796
+        },
+        "2048": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.019242796
+        },
+        "2049": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.019242796
+        },
+        "2050": {
+          "constraint_activity": 0.019242796,
+          "dual": 0.0,
+          "residual": 0.0,
+          "technology_output": 0.019242796
+        }
+      }
+    },
+    "total_capacity": {
+      "FSHAQDSL": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025": 0.0,
+        "2026": 0.0,
+        "2027": 0.0,
+        "2028": 0.0,
+        "2029": 0.0,
+        "2030": 0.0,
+        "2031": 0.0,
+        "2032": 0.0,
+        "2033": 0.0,
+        "2034": 0.0,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHAQELE": {
+        "2020": 9.736605e-06,
+        "2021": 8.9252213e-06,
+        "2022": 8.1138375e-06,
+        "2023": 7.5142249e-06,
+        "2024": 7.8899362e-06,
+        "2025": 8.284433e-06,
+        "2026": 8.6986546e-06,
+        "2027": 9.1335873e-06,
+        "2028": 9.5902667e-06,
+        "2029": 1.006978e-05,
+        "2030": 1.0573269e-05,
+        "2031": 1.1101932e-05,
+        "2032": 1.1657029e-05,
+        "2033": 1.2239881e-05,
+        "2034": 1.2851875e-05,
+        "2035": 1.3494468e-05,
+        "2036": 1.4169192e-05,
+        "2037": 1.4877651e-05,
+        "2038": 1.5621534e-05,
+        "2039": 1.6402611e-05,
+        "2040": 1.7222741e-05,
+        "2041": 1.8083878e-05,
+        "2042": 1.8988072e-05,
+        "2043": 1.9937476e-05,
+        "2044": 2.0934349e-05,
+        "2045": 2.1981067e-05,
+        "2046": 2.308012e-05,
+        "2047": 2.4234126e-05,
+        "2048": 2.5445833e-05,
+        "2049": 2.6718124e-05,
+        "2050": 2.805403e-05
+      },
+      "FSHCAPDSL": {
+        "2020": 0.047868951,
+        "2021": 0.044677688,
+        "2022": 0.041486425,
+        "2023": 0.038295161,
+        "2024": 0.035103898,
+        "2025": 0.031912634,
+        "2026": 0.028721371,
+        "2027": 0.025530107,
+        "2028": 0.022338844,
+        "2029": 0.019147581,
+        "2030": 0.015956317,
+        "2031": 0.012765054,
+        "2032": 0.0095737903,
+        "2033": 0.0063825269,
+        "2034": 0.0031912634,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHCAPELE": {
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.002127509,
+        "2025": 0.03379212,
+        "2026": 0.03379212,
+        "2027": 0.03379212,
+        "2028": 0.03379212,
+        "2029": 0.03379212,
+        "2030": 0.03379212,
+        "2031": 0.03379212,
+        "2032": 0.034594359,
+        "2033": 0.037231407,
+        "2034": 0.037231407,
+        "2035": 0.037231407,
+        "2036": 0.037231407,
+        "2037": 0.037231407,
+        "2038": 0.037231407,
+        "2039": 0.037231407,
+        "2040": 0.037231407,
+        "2041": 0.037231407,
+        "2042": 0.037231407,
+        "2043": 0.037231407,
+        "2044": 0.037231407,
+        "2045": 0.037231407,
+        "2046": 0.037231407,
+        "2047": 0.037231407,
+        "2048": 0.037231407,
+        "2049": 0.037231407,
+        "2050": 0.037231407
+      },
+      "FSHPOSTDSL": {
+        "2020": 0.0057873069,
+        "2021": 0.0054014865,
+        "2022": 0.005015666,
+        "2023": 0.0046298455,
+        "2024": 0.0042440251,
+        "2025": 0.0038582046,
+        "2026": 0.0034723842,
+        "2027": 0.0030865637,
+        "2028": 0.0027007432,
+        "2029": 0.0023149228,
+        "2030": 0.0019291023,
+        "2031": 0.0015432818,
+        "2032": 0.0011574614,
+        "2033": 0.00077164092,
+        "2034": 0.00038582046,
+        "2035": 0.0,
+        "2036": 0.0,
+        "2037": 0.0,
+        "2038": 0.0,
+        "2039": 0.0,
+        "2040": 0.0,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      },
+      "FSHPOSTELE": {
+        "2020": 0.021702401,
+        "2021": 0.020255574,
+        "2022": 0.018808748,
+        "2023": 0.017361921,
+        "2024": 0.015915094,
+        "2025": 0.014468267,
+        "2026": 0.013021441,
+        "2027": 0.011574614,
+        "2028": 0.010127787,
+        "2029": 0.0086809604,
+        "2030": 0.0072341337,
+        "2031": 0.0057873069,
+        "2032": 0.0057873069,
+        "2033": 0.0058994097,
+        "2034": 0.0058994097,
+        "2035": 0.0058994097,
+        "2036": 0.0058994097,
+        "2037": 0.0058994097,
+        "2038": 0.0058994097,
+        "2039": 0.0058994097,
+        "2040": 0.018705712,
+        "2041": 0.020255574,
+        "2042": 0.020255574,
+        "2043": 0.020255574,
+        "2044": 0.020255574,
+        "2045": 0.020255574,
+        "2046": 0.020255574,
+        "2047": 0.020255574,
+        "2048": 0.020255574,
+        "2049": 0.020255574,
+        "2050": 0.020255574
+      },
+      "FSHPOSTSOL": {
+        "2020": 0.017136293,
+        "2021": 0.017131248,
+        "2022": 0.017126202,
+        "2023": 0.017121156,
+        "2024": 0.01711611,
+        "2025": 0.017111065,
+        "2026": 0.017106019,
+        "2027": 0.017100973,
+        "2028": 0.017095927,
+        "2029": 0.017090882,
+        "2030": 0.012806302,
+        "2031": 0.014356165,
+        "2032": 0.014356165,
+        "2033": 0.014356165,
+        "2034": 0.014356165,
+        "2035": 0.014356165,
+        "2036": 0.014356165,
+        "2037": 0.014356165,
+        "2038": 0.014356165,
+        "2039": 0.014356165,
+        "2040": 0.0015498624,
+        "2041": 0.0,
+        "2042": 0.0,
+        "2043": 0.0,
+        "2044": 0.0,
+        "2045": 0.0,
+        "2046": 0.0,
+        "2047": 0.0,
+        "2048": 0.0,
+        "2049": 0.0,
+        "2050": 0.0
+      }
+    }
+  },
+  "identity": {
+    "candidate_case": ".Fiji_v2.7-fisheries-candidate",
+    "candidate_identity": "Fiji_v2.7",
+    "candidate_result": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/.Fiji_v2.7-fisheries-candidate/res/Fisheries_v2.7/results.txt",
+    "control_case": ".Fiji_v2.6-fisheries-control-20260803T163026Z",
+    "control_identity": "Fiji_v2.6",
+    "control_result": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/.Fiji_v2.6-fisheries-control-20260803T163026Z/res/Environmental_Accounting_v2.6/results.txt",
+    "timestamps_epoch": {
+      "data.txt": 1785775939.6335866,
+      "data_processed.txt": 1785775939.724662,
+      "genData.json": 1785775602.2759352,
+      "lp.lp": 1785775942.4998524,
+      "results.txt": 1785775969.3480809
+    },
+    "timestamps_ordered": true
+  },
+  "solver": {
+    "bounded_candidate_objective": 4130.8237152,
+    "bounded_matches_normal": true,
+    "candidate_elapsed_seconds": 32.04175305366516,
+    "candidate_matrix": {
+      "columns": 130447,
+      "nonzeros": 719047,
+      "rows": 169810
+    },
+    "candidate_objective": 4130.8237152,
+    "candidate_status": "optimal",
+    "control_elapsed_seconds": 31.733153820037842,
+    "control_matrix": {
+      "columns": 124829,
+      "nonzeros": 677671,
+      "rows": 162542
+    },
+    "control_objective": 4147.08805706,
+    "control_status": "optimal",
+    "matrix_delta": {
+      "columns": 5618,
+      "nonzeros": 41376,
+      "rows": 7268
+    },
+    "objective_delta": -16.26434186000006,
+    "objective_percent_change": -0.392187039103538,
+    "runtime_percent_change": 0.9724820778212562
+  },
+  "status": "pass"
+}

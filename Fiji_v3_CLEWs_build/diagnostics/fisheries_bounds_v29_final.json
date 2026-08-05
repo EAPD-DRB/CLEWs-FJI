@@ -1,0 +1,338 @@
+{
+    "status": "pass",
+    "case": "Fiji_v2.9",
+    "change": {
+        "source_file": "RYT.json",
+        "parameter": "TAU",
+        "technology_ids": [
+            "TEC_fsh_cap_harv",
+            "TEC_fsh_aq_harv"
+        ],
+        "year_values_changed": 62,
+        "equation": "AAC2_TotalAnnualTechnologyActivityUpperLimit",
+        "production_floor_added": false
+    },
+    "control": {
+        "case": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/.Fiji_v2.9-fisheries-bounds-control",
+        "run": "Fisheries_Bounds_Control",
+        "objective": 4170.87205658,
+        "elapsed_seconds": 48.51257801055908,
+        "matrix": {
+            "rows": 178353,
+            "columns": 137090,
+            "nonzeros": 743918
+        }
+    },
+    "candidate": {
+        "case": "/Users/sato/Documents/GitHub/MUIOGO/WebAPP/DataStorage/.Fiji_v2.9-fisheries-bounds-table18-candidate",
+        "run": "Fisheries_Bounds_Table18_Candidate",
+        "objective": 4182.52681513,
+        "bounded_cbc": {
+            "budget_seconds": 90,
+            "status": "optimal",
+            "optimization_wallclock_seconds": 44.82,
+            "total_wallclock_seconds": 45.57,
+            "objective": 4182.52681513
+        }
+    },
+    "live": {
+        "case": "Fiji_v2.9",
+        "run": "Fisheries_Bounds_Table18_v2.9",
+        "objective": 4182.52681513,
+        "elapsed_seconds": 51.292304039001465,
+        "solver_timer": "   Result - Optimal solution found - Total time (CPU seconds):       43.02   (Wallclock seconds):       43.95",
+        "matrix": {
+            "rows": 178353,
+            "columns": 137090,
+            "nonzeros": 743918
+        }
+    },
+    "objective_change": {
+        "absolute": 11.654758549999315,
+        "percent": 0.2794321760988261
+    },
+    "matrix_change": {
+        "rows": 0,
+        "columns": 0,
+        "nonzeros": 0
+    },
+    "activity_samples_mt": {
+        "FSHCAPHARV": {
+            "2020": 0.023661,
+            "2025": 0.023661,
+            "2029": 0.023661,
+            "2050": 0.023661
+        },
+        "FSHAQHARV": {
+            "2020": 0.000216925,
+            "2025": 0.00053,
+            "2029": 0.00145,
+            "2050": 0.00145
+        },
+        "FSHPOSTPRC": {
+            "2020": 0.023877925,
+            "2025": 0.024191,
+            "2029": 0.025111,
+            "2050": 0.025111
+        },
+        "IMPFSHFOOD": {
+            "2020": 0.0072285248,
+            "2025": 0.0075338982,
+            "2029": 0.0071622098,
+            "2050": 0.0088953681
+        }
+    },
+    "activity_2025_mt": {
+        "capture": 0.023661,
+        "aquaculture": 0.00053,
+        "post_harvest": 0.024191,
+        "imports": 0.0075338982,
+        "import_floor": 0.004035732268000001,
+        "import_above_floor": 0.003498165931999999,
+        "final_demand": 0.03172489819666667
+    },
+    "activity_ceiling_checks": {
+        "capture_maximum_violation_mt": 0.0,
+        "aquaculture_maximum_violation_mt": 0.0,
+        "capture_binding_years": 31,
+        "aquaculture_binding_years": 31,
+        "capture_maximum_absolute_slack_mt": 0.0,
+        "aquaculture_maximum_absolute_slack_mt": 0.0,
+        "capture_dual_maximum_absolute": 116.05255,
+        "aquaculture_dual_maximum_absolute": 139.28893,
+        "tal_zero_all_years": true
+    },
+    "balances": {
+        "maximum_absolute_raw_fish_balance_residual_mt": 3.469446951953614e-18,
+        "maximum_absolute_food_fish_balance_residual_mt": 4.735781905518266e-11,
+        "maximum_absolute_capture_service_residual_pj": 2.000000026702864e-10,
+        "maximum_absolute_aquaculture_service_residual_pj": 2.168404344971009e-19,
+        "maximum_absolute_post_service_residual_pj": 4.310422296871508e-10,
+        "minimum_import_floor_slack_mt": 0.002940587860288629,
+        "maximum_import_floor_slack_mt": 0.004569409475676524,
+        "maximum_balance_residual": 4.310422296871508e-10
+    },
+    "non_direct_activity_changes": {
+        "rows_changed_above_1e-7": 319,
+        "largest_twenty": [
+            {
+                "technology": "HTCOMBIO",
+                "year": "2042",
+                "control": 0.060913937,
+                "live": 0.23428437,
+                "difference": 0.173370433
+            },
+            {
+                "technology": "DEMCOMBIO",
+                "year": "2042",
+                "control": 0.060913937,
+                "live": 0.23428437,
+                "difference": 0.173370433
+            },
+            {
+                "technology": "HTINDBIO",
+                "year": "2042",
+                "control": 3.8775476,
+                "live": 3.7041772,
+                "difference": -0.17337040000000004
+            },
+            {
+                "technology": "DEMINDBIO",
+                "year": "2042",
+                "control": 3.8775476,
+                "live": 3.7041772,
+                "difference": -0.17337040000000004
+            },
+            {
+                "technology": "HTINDBIO",
+                "year": "2040",
+                "control": 3.4978901,
+                "live": 3.6555209,
+                "difference": 0.15763080000000018
+            },
+            {
+                "technology": "DEMINDBIO",
+                "year": "2040",
+                "control": 3.4978901,
+                "live": 3.6555209,
+                "difference": 0.15763080000000018
+            },
+            {
+                "technology": "HTCOMBIO",
+                "year": "2040",
+                "control": 0.22518683,
+                "live": 0.067556048,
+                "difference": -0.15763078200000002
+            },
+            {
+                "technology": "DEMCOMBIO",
+                "year": "2040",
+                "control": 0.22518683,
+                "live": 0.067556048,
+                "difference": -0.15763078200000002
+            },
+            {
+                "technology": "HTINDBIO",
+                "year": "2050",
+                "control": 4.5254985,
+                "live": 4.6627493,
+                "difference": 0.13725079999999945
+            },
+            {
+                "technology": "DEMINDBIO",
+                "year": "2050",
+                "control": 4.5254985,
+                "live": 4.6627493,
+                "difference": 0.13725079999999945
+            },
+            {
+                "technology": "HTCOMBIO",
+                "year": "2050",
+                "control": 0.27450148,
+                "live": 0.13725074,
+                "difference": -0.13725074
+            },
+            {
+                "technology": "DEMCOMBIO",
+                "year": "2050",
+                "control": 0.27450148,
+                "live": 0.13725074,
+                "difference": -0.13725074
+            },
+            {
+                "technology": "HTCOMELC",
+                "year": "2042",
+                "control": 0.1368714,
+                "live": 0.0,
+                "difference": -0.1368714
+            },
+            {
+                "technology": "DEMCOMELCFJIXX02",
+                "year": "2042",
+                "control": 3.0279472,
+                "live": 2.8910758,
+                "difference": -0.13687139999999998
+            },
+            {
+                "technology": "DEMINDELCFJIXX02",
+                "year": "2042",
+                "control": 2.3123073,
+                "live": 2.4491787,
+                "difference": 0.13687139999999998
+            },
+            {
+                "technology": "HTINDELC",
+                "year": "2042",
+                "control": 1.1265653,
+                "live": 1.2634367,
+                "difference": 0.13687139999999998
+            },
+            {
+                "technology": "HTCOMBIO",
+                "year": "2049",
+                "control": 0.2691191,
+                "live": 0.13455955,
+                "difference": -0.13455955
+            },
+            {
+                "technology": "DEMCOMBIO",
+                "year": "2049",
+                "control": 0.2691191,
+                "live": 0.13455955,
+                "difference": -0.13455955
+            },
+            {
+                "technology": "HTINDBIO",
+                "year": "2049",
+                "control": 4.4231886,
+                "live": 4.5577481,
+                "difference": 0.13455950000000083
+            },
+            {
+                "technology": "DEMINDBIO",
+                "year": "2049",
+                "control": 4.4231886,
+                "live": 4.5577481,
+                "difference": 0.13455950000000083
+            }
+        ],
+        "interpretation": "Indirect energy-system responses only; no non-Fisheries source parameter changed."
+    },
+    "source_hashes": {
+        "genData.json": {
+            "candidate": "8987e3ae95a1a9b594278282a3930a822c56ad82ebeb3008ea85e2134baba8c4",
+            "live": "8987e3ae95a1a9b594278282a3930a822c56ad82ebeb3008ea85e2134baba8c4"
+        },
+        "RYC.json": {
+            "candidate": "f75f5ef8b873bd59acc4031ee9d87378947686f1660684230c73dc0f2c5709a4",
+            "live": "f75f5ef8b873bd59acc4031ee9d87378947686f1660684230c73dc0f2c5709a4"
+        },
+        "RYT.json": {
+            "candidate": "ff8e8c9598c062767cc0bd76c4b0c1c7ff9d72eafff587f7d630d14ade5957cd",
+            "live": "ff8e8c9598c062767cc0bd76c4b0c1c7ff9d72eafff587f7d630d14ade5957cd"
+        },
+        "RT.json": {
+            "candidate": "c3fcb7aded5d2c0edaad454e6a01abe445d43b5157438802fb23081d4085c075",
+            "live": "c3fcb7aded5d2c0edaad454e6a01abe445d43b5157438802fb23081d4085c075"
+        },
+        "RYTCM.json": {
+            "candidate": "912ce0de12b2c319587dde5d85784fcd53bc2e5ae92ab083271493075ff2a662",
+            "live": "912ce0de12b2c319587dde5d85784fcd53bc2e5ae92ab083271493075ff2a662"
+        },
+        "RYTM.json": {
+            "candidate": "58a1a3fbff88e95d8f3cefcc1965628f254580db80ec0da27fb8aa335b8bfe59",
+            "live": "58a1a3fbff88e95d8f3cefcc1965628f254580db80ec0da27fb8aa335b8bfe59"
+        },
+        "RYTTs.json": {
+            "candidate": "ad7113924ee75accc23d93a3a6719b618e8a6d5b4923190733bdc402eb1c2cd4",
+            "live": "ad7113924ee75accc23d93a3a6719b618e8a6d5b4923190733bdc402eb1c2cd4"
+        }
+    },
+    "candidate_live_source_match": true,
+    "candidate_live_data_txt_match": true,
+    "candidate_live_activity_match": true,
+    "timestamps": {
+        "latest_authoritative_source": 1785883810.303501,
+        "data": 1785883819.0867305,
+        "processed_data": 1785883819.5676649,
+        "lp": 1785883822.6576617,
+        "result": 1785883866.662215
+    },
+    "timestamp_order_pass": true,
+    "checks": {
+        "deterministic_generated": {
+            "status": "pass",
+            "checks": 24635
+        },
+        "application_generation_and_preprocessing": "pass",
+        "glpsol_5_check": "pass",
+        "cbc_bounded_candidate": "optimal",
+        "cbc_full_control": "optimal",
+        "cbc_full_live": "optimal"
+    },
+    "known_limitations": [
+        "The constant capture ceiling is a conservative observed-boundary proxy, not a biological stock model or legal quota trajectory.",
+        "The aquaculture ceiling is an aggregate programme proxy for feed, suitable land/water, facility expansion and environmental restrictions; those drivers are not separate model commodities or constraints.",
+        "The plan contains broader headline goals that differ from its detailed Table 18 deliverables; the implementation uses the more conservative detailed annual table.",
+        "Fish remains one aggregate market-weight commodity; species, preservation state, edible yield and processing losses are not represented.",
+        "Neither domestic subsector has a minimum-production constraint; a different cost structure could select less domestic production while remaining feasible through imports."
+    ],
+    "required_checks": {
+        "control_identity": true,
+        "bounded_candidate_objective": true,
+        "candidate_live_objective_match": true,
+        "candidate_live_source_match": true,
+        "candidate_live_data_match": true,
+        "candidate_live_activity_match": true,
+        "capture_ceiling_respected": true,
+        "aquaculture_ceiling_respected": true,
+        "capture_ceiling_binds_all_years": true,
+        "aquaculture_ceiling_binds_all_years": true,
+        "no_production_floor": true,
+        "annual_balances": true,
+        "import_floor": true,
+        "2025_final_demand": true,
+        "timestamp_order": true,
+        "deterministic_generated": true
+    }
+}

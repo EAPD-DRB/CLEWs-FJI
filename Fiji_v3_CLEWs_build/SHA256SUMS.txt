@@ -1,0 +1,2 @@
+cf028bec99b0c8688f02cb293778a5bd91c324a574922ada1eec66615badaeb1  Fiji_v3_CLEWs_build/muio/Fiji_v3_v3.0.0_MUIO.zip
+9030cc3d68f1314fa9d621fd1269d2f3ac6243c23066a99ee186a631e63289e9  Fiji_v3_CLEWs_build/muio/Fiji_v2.9_v2.9.0_MUIO.zip

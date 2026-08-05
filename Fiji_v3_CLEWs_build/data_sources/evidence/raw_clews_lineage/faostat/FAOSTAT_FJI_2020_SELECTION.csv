@@ -1,0 +1,11 @@
+Item Code (CPC),Item,gaez_proxy_code,model_output_group,Value_harvested_area,Unit_harvested_area,Flag_harvested_area,Flag Description_harvested_area,_source_csv_line_harvested_area,Value_production,Unit_production,Flag_production,Flag Description_production,_source_csv_line_production
+01802,Sugar cane,SGC,SGC,38000,ha,A,Official figure,3229,1726000.0,t,A,Official figure,3281
+01460,"Coconuts, in shell",CON,CON,5420,ha,A,Official figure,3205,21679.5,t,A,Official figure,3257
+01550,Taro,YAM,YAM,4346,ha,A,Official figure,3231,53893.7,t,A,Official figure,3283
+01520.01,"Cassava, fresh",CAS,CAS,3595,ha,A,Official figure,3202,71890.0,t,A,Official figure,3254
+01290.90,"Other vegetables, fresh n.e.c.",VEG,OTH,3586,ha,I,Imputed value,3220,34419.5,t,A,Official figure,3272
+0113,Rice,RCP,OTH,2345,ha,A,Official figure,3227,8846.96,t,A,Official figure,3279
+01359.90,"Other fruits, n.e.c.",FRU,OTH,1671,ha,E,Estimated value,3217,5693.17,t,E,Estimated value,3269
+01651,"Pepper (Piper spp.), raw",VEG,OTH,1573,ha,E,Estimated value,3222,119.83,t,I,Imputed value,3274
+01599.10,"Edible roots and tubers with high starch or inulin content, n.e.c., fresh",YAM,OTH,1348,ha,E,Estimated value,3208,4019.4,t,E,Estimated value,3260
+01530,Sweet potatoes,PTS,OTH,1153,ha,A,Official figure,3230,9454.1,t,A,Official figure,3282

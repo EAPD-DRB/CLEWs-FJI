@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "candidate": "WebAPP/DataStorage/Fiji_v2.9",
+  "checks": 24382,
+  "failures": [],
+  "generated": {
+    "status": "pass",
+    "missing": []
+  },
+  "all_import_feasibility_witness": "Open IMPFSHFOOD activity and one-year capacity can meet all FSHFOOD demand in every year; this proves feasibility but is not the expected high-cost dispatch.",
+  "minimum_import_plus_domestic_2025_witness": {
+    "import_food_mt": 0.004035732268000001,
+    "domestic_raw_mt": 0.02768916592866667,
+    "domestic_food_mt": 0.02768916592866667,
+    "final_demand_mt": 0.03172489819666667,
+    "capture_service_pj_if_capture_only": 0.039212879305857734,
+    "post_service_pj": 0.02251466669996251
+  }
+}

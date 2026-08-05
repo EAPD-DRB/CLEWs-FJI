@@ -1,0 +1,22 @@
+{
+  "created": "2026-08-04",
+  "workflow": {
+    "repository": "https://github.com/EAPD-DRB/MUIOGO",
+    "commit": "e9f3823d11537655c9f7ddfd1b36a14f290eac56"
+  },
+  "muiogo": {
+    "repository": "https://github.com/EAPD-DRB/MUIOGO",
+    "commit": "e9f3823d11537655c9f7ddfd1b36a14f290eac56",
+    "version": "Fiji_v2.9 working tree; model format 5.4"
+  },
+  "provenance_tooling": {
+    "repository": "https://github.com/EAPD-DRB/Model-tools",
+    "commit": "4ee7b79639da9e5e01798ace8c8f2b5d5de770ba"
+  },
+  "toolchain": {
+    "python": ".venv",
+    "solver": "GLPK 5.0 matrix check; CBC 2.10.13 through MUIO chain",
+    "provenance_schema": "canonical six-ledger schema inherited from Fiji_v2.7"
+  },
+  "notes": "The commit is the already-inspected repository base. Fiji v2.8/v2.9 sources, ledgers and validation are explicitly documented as working-tree changes, not as contents of that commit."
+}

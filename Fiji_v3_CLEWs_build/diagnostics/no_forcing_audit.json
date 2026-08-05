@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "failure_count": 0,
+  "warning_count": 1,
+  "technology_count": 7,
+  "positive_residual_capacity_count": 5,
+  "open_activity_bounds": true,
+  "positive_activity_minima": 0,
+  "exact_positive_activity_pins": 0,
+  "staged_openings": 0,
+  "user_defined_constraints": 0,
+  "warning": "No pre-2020 stock is asserted for electric capture or diesel aquaculture; this is intentional and disclosed.",
+  "evidence": "../validation/live_fisheries_freedom.json"
+}

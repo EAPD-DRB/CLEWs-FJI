@@ -1,0 +1,3 @@
+archive,role,file_count,sha256,original_repository_path
+archives/Fiji_CLEWs_Global_source_raw_pre_tracking_2026-07-25.zip,Immutable pre-tracking raw CLEWs Global Fiji source package,190,6f53a3788a374ad86ebbc7ae2a41df5a8bc47d002aacc6a64d3b3b88d112c51d,Fiji_CLEWs_Global/backups/Fiji_CLEWs_Global_source_raw_pre_tracking_2026-07-25.zip
+archives/Fiji_v2_v2.5.0_HANDOFF_2026-07-29.zip,Complete result-free Fiji v2.5 handoff with evidence scripts ledgers model inputs and validation records,321,3dfe81379dc249cde99886be52923787064a7caefc4bde915f6b1eb4546ca729,Fiji_v2_CLEWs_calibration/handoffs/Fiji_v2_v2.5.0_HANDOFF_2026-07-29.zip
