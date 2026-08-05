@@ -1,7 +1,7 @@
 # Fiji v3.0.0 MUIO case
 
 - Current portable case: `Fiji_v3_v3.0.0_MUIO.zip`
-- SHA-256: `cf028bec99b0c8688f02cb293778a5bd91c324a574922ada1eec66615badaeb1`
+- SHA-256: `ef6d66ec26f7cbad223453f743ecaeb35f914dd51b24d1ae4a69d4d40a14430b`
 - Packaged: 5 August 2026
 - Installed case: `MUIOGO/WebAPP/DataStorage/Fiji_v3`
 - Numerical predecessor: Fiji v2.9.0
