@@ -373,7 +373,7 @@ preservation state, edible yield, processing losses, feed, biological stocks,
 catch quotas and aquaculture land/water limits are not represented. The import
 variable cost is a screening penalty, not a border price.
 
-Canonical documentation: `docs/Fiji_v2.9_Population_Crop_Fisheries_Trade/`
+Canonical documentation and schema ledger: `Fiji_v2.9_CLEWs_build/`
 contains the six schema ledgers, retained evidence, calculation notes and
 validation reports for the v2.8 crop and v2.9 Fisheries changes.
 
@@ -446,4 +446,3 @@ differ from its detailed Table 18 deliverables; this implementation deliberately
 uses the more conservative detailed annual table. Fish remains one aggregate
 market-weight commodity. The result is suitable for national screening of a plausible
 capture/aquaculture mix, not species-, fleet-, farm- or site-level planning.
-

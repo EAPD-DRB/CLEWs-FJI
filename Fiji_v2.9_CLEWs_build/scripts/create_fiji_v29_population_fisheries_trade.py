@@ -473,7 +473,7 @@ and wastewater are represented only by the two aggregate activity ceilings,
 not as explicit resources or equations. The import variable cost is a
 screening penalty, not a border price.
 
-Canonical documentation: `docs/Fiji_v2.9_Population_Crop_Fisheries_Trade/`
+Canonical documentation and schema ledger: `Fiji_v2.9_CLEWs_build/`
 contains the six schema ledgers, retained evidence, calculation notes and
 validation reports for the v2.8 crop and v2.9 Fisheries changes.
 """
@@ -514,7 +514,7 @@ annual series, assumptions and equation map. The validated bounded live run is
 baseline comparison and limitations.
 
 The canonical six-ledger provenance package is
-`docs/Fiji_v2.9_Population_Crop_Fisheries_Trade/`. It documents sources,
+`Fiji_v2.9_CLEWs_build/`. It documents sources,
 calculations, assumptions, source-to-model mappings, gaps and changes for the
 v2.8 crop and v2.9 Fisheries demand/trade layers.
 

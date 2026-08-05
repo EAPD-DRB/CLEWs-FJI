@@ -19,9 +19,14 @@ source parameter JSON. Solver inputs are produced through
 Validate this schema-ledger package with:
 
 ```sh
-.venv/bin/python docs/Fiji_v2.9_Population_Crop_Fisheries_Trade/scripts/validate_provenance.py \
-  docs/Fiji_v2.9_Population_Crop_Fisheries_Trade --stage build
-.venv/bin/python docs/Fiji_v2.9_Population_Crop_Fisheries_Trade/scripts/validate_fiji_v29_schema_ledger.py
+.venv/bin/python Fiji_v2.9_CLEWs_build/scripts/provenance.py \
+  Fiji_v2.9_CLEWs_build/data_sources --stage build \
+  --json Fiji_v2.9_CLEWs_build/validation/six_ledger_build.json
+.venv/bin/python Fiji_v2.9_CLEWs_build/scripts/validate_provenance.py \
+  Fiji_v2.9_CLEWs_build --stage build \
+  --output Fiji_v2.9_CLEWs_build/validation/schema_ledger_build.json
+.venv/bin/python Fiji_v2.9_CLEWs_build/scripts/validate_fiji_v29_schema_ledger.py \
+  --output Fiji_v2.9_CLEWs_build/validation/ledger_live_consistency.json
 ```
 
 The documented GLPK check for v2.9 is:

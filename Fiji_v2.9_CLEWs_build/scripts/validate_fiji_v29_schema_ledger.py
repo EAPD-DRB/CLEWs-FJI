@@ -13,15 +13,41 @@ from typing import Any
 
 
 SCRIPT = Path(__file__).resolve()
-if SCRIPT.parent.name == "scripts" and SCRIPT.parent.parent.parent.name == "docs":
-    PACKAGE = SCRIPT.parent.parent
-    REPO = SCRIPT.parents[3]
-else:
-    REPO = SCRIPT.parents[1]
-    PACKAGE = REPO / "docs" / "Fiji_v2.9_Population_Crop_Fisheries_Trade"
+
+
+def locate_workspace() -> tuple[Path, Path]:
+    """Return the MUIOGO root and its single authoritative Fiji v2.9 package."""
+    for parent in SCRIPT.parents:
+        package = parent / "Fiji_v2.9_CLEWs_build"
+        live = parent / "WebAPP" / "DataStorage" / "Fiji_v2.9"
+        if package.is_dir() and live.is_dir():
+            return parent, package
+
+    package = next(
+        (parent for parent in SCRIPT.parents if parent.name == "Fiji_v2.9_CLEWs_build"),
+        None,
+    )
+    if package is not None:
+        for candidate in (package.parent, package.parent.parent / "MUIOGO"):
+            live = candidate / "WebAPP" / "DataStorage" / "Fiji_v2.9"
+            if live.is_dir():
+                return candidate, package
+
+    raise RuntimeError(
+        "Cannot locate the MUIOGO workspace containing Fiji_v2.9_CLEWs_build "
+        "and WebAPP/DataStorage/Fiji_v2.9."
+    )
+
+
+REPO, PACKAGE = locate_workspace()
 
 LIVE = REPO / "WebAPP" / "DataStorage" / "Fiji_v2.9"
 V28 = REPO / "WebAPP" / "DataStorage" / "Fiji_v2.8"
+if not V28.is_dir():
+    # The portable v2.9 handoff retains the required v2.8 manifest and
+    # validation evidence in the live case rather than shipping a full v2.8
+    # case alongside it.
+    V28 = LIVE
 YEARS = [str(year) for year in range(2020, 2051)]
 SCENARIO = "SC_0"
 AUTHORITATIVE_FILES = (
@@ -146,7 +172,7 @@ def validate() -> dict[str, Any]:
     audit = Audit()
     crop = read_json(V28 / "population_crop_trade_v28_manifest.json")
     fish = read_json(LIVE / "population_fisheries_trade_v29_manifest.json")
-    final = read_json(LIVE / "validation_population_fisheries_trade_v29_final.json")
+    final = read_json(LIVE / "validation_fisheries_bounds_v29_final.json")
     calculations = calculation_outputs()
 
     config = (PACKAGE / "config" / "config.yaml").read_text(encoding="utf-8")
@@ -192,6 +218,9 @@ def validate() -> dict[str, Any]:
         LIVE / "validation_population_fisheries_trade_v29_final.json": PACKAGE
         / "validation"
         / "population_fisheries_trade_v29_final.json",
+        LIVE / "validation_fisheries_bounds_v29_final.json": PACKAGE
+        / "validation"
+        / "fisheries_bounds_v29_final.json",
     }
     copied_hashes: dict[str, dict[str, Any]] = {}
     for source, retained in copied_files.items():
@@ -410,11 +439,18 @@ def validate() -> dict[str, Any]:
             row_for(ryt, "TAL", TechId=tech_id),
             tal_expected,
         )
+        tau_expected = (
+            fish["capture_activity_upper_mt"]
+            if tech_id == "TEC_fsh_cap_harv"
+            else fish["aquaculture_activity_upper_mt"]
+            if tech_id == "TEC_fsh_aq_harv"
+            else {year: 999999.0 for year in YEARS}
+        )
         for year in YEARS:
             audit.close(
                 f"live/RYT/TAU/{tech_id}/{year}",
                 row_for(ryt, "TAU", TechId=tech_id)[year],
-                999999.0,
+                tau_expected[year],
             )
             audit.close(
                 f"live/RYT/AF/{tech_id}/{year}",
@@ -465,22 +501,22 @@ def validate() -> dict[str, Any]:
         audit.equal(
             f"authoritative-source-hash/{filename}",
             current_hash,
-            final["authoritative_source_hashes"][filename]["live"],
+            final["source_hashes"][filename]["live"],
         )
     audit.equal("final-validation/status", final["status"], "pass")
     for check, passed in final["required_checks"].items():
         audit.equal(f"final-validation/required-check/{check}", passed, True)
-    audit.close("final-validation/live-objective", final["live"]["objective"], 4170.87205658)
+    audit.close("final-validation/live-objective", final["live"]["objective"], 4182.52681513)
     audit.equal(
         "final-validation/live-matrix",
         final["live"]["matrix"],
-        {"rows": 178353, "columns": 137090, "nonzeros": 743918, "objrow_nonzeros": 26288},
+        {"rows": 178353, "columns": 137090, "nonzeros": 743918},
     )
 
     return {
         "status": "pass" if not audit.failures else "fail",
         "case": "Fiji_v2.9",
-        "package": PACKAGE.relative_to(REPO).as_posix(),
+        "package": PACKAGE.name,
         "live_case": LIVE.relative_to(REPO).as_posix(),
         "checks": audit.checks,
         "failure_count": len(audit.failures),

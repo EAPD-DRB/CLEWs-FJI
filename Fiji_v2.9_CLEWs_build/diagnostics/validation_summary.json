@@ -1,7 +1,7 @@
 {
   "case": "Fiji_v2.9",
   "status": "passed",
-  "objective": 4170.87205658,
+  "objective": 4182.52681513,
   "matrix": {
     "rows": 178353,
     "columns": 137090,
@@ -10,12 +10,15 @@
   },
   "crop_v28_validation": "pass",
   "fisheries_v29_validation": "pass",
+  "fisheries_bounds_v29_validation": "pass",
   "source_reports": [
     "validation/population_crop_trade_v28_final.json",
     "validation/population_fisheries_trade_v29_source.json",
     "validation/population_fisheries_trade_v29_generated.json",
     "validation/population_fisheries_trade_v29_live_solve.json",
     "validation/population_fisheries_trade_v29_final.json",
+    "validation/fisheries_bounds_v29_final.json",
+    "validation/six_ledger_build.json",
     "validation/schema_ledger_build.json",
     "validation/ledger_live_consistency.json"
   ],
