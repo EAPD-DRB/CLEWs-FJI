@@ -6,8 +6,7 @@ calculations, diagnostics, and portable MUIO cases.
 
 ## Current recommended model
 
-The current package is **Fiji v3.0.0**, prepared on the
-`codex/fiji-v3-canonical` migration branch:
+The current `main`-branch package is **Fiji v3.0.0**:
 
 - model package: `Fiji_v3_CLEWs_build/`;
 - MUIO case: `Fiji_v3`;
