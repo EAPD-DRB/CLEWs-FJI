@@ -3,12 +3,13 @@
 This is the current source, provenance and validation package for the MUIO
 case `Fiji_v2.9`, derived through solved Fiji v2.7 and v2.8.
 
-Start with `data_sources/DATA_SOURCES.md`. The ledgers document the complete
-source-to-parameter chain for population-driven crop and fish final demand,
-import floors, export commitments, crop and fish import backstops, fish mass
-links, and the final aggregate Fisheries production ceilings. Full annual and
-HS-level values are retained in the calculation ledger and
-`data_sources/snapshots/`.
+Start with `data_sources/DATA_SOURCES.md`. The ledgers now document the source
+chain from the pinned raw CLEWs/GAEZ country build through Fiji v2, public
+water, sectoral electricity demand, cane/bagasse, v2.4 and v2.5, as well as the
+complete population-driven crop and fish layers through v2.9. Exact retained
+archives, raw tables and reconstructed source selections are under
+`data_sources/evidence/`. Full annual and HS-level values are retained in the
+calculation ledger and `data_sources/snapshots/`.
 
 The simple Fisheries constraint uses `RYT.json/TAU` and the active
 `AAC2_TotalAnnualTechnologyActivityUpperLimit` equation. Capture is limited to
